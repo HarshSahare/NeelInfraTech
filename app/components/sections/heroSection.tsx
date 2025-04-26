@@ -1,15 +1,26 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function HeroSection() {
-  const [currentVideo, setCurrentVideo] = useState(1);
+  const [currentVideo, setCurrentVideo] = useState(0);
+  let timer: NodeJS.Timeout;
+
+  useEffect(() => {
+    timer = setInterval(() => {
+      setCurrentVideo((prev) => (prev + 1) % 3);
+    }, 2000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
   return (
     <div className="w-full h-dvh">
       <div className="overlay bg-[#12121277] absolute top-0 left-0 h-full w-full z-2"></div>
       <video
-        className={`absolute top-0 left-0 w-full h-full object-cover z-1 ${
-          currentVideo != 1 && "hidden"
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 ${
+          currentVideo != 0 && "opacity-0"
         }`}
         autoPlay
         muted
@@ -17,8 +28,8 @@ function HeroSection() {
         src="/videos/defaultHeroVideo.mp4"
       />
       <video
-        className={`absolute top-0 left-0 w-full h-full object-cover z-1 ${
-          currentVideo != 2 && "hidden"
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 ${
+          currentVideo != 1 && "opacity-0"
         }`}
         autoPlay
         muted
@@ -26,8 +37,8 @@ function HeroSection() {
         src="/videos/commercialHeroVideo.mp4"
       />
       <video
-        className={`absolute top-0 left-0 w-full h-full object-cover z-1 ${
-          currentVideo != 3 && "hidden"
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 ${
+          currentVideo != 2 && "opacity-0"
         }`}
         autoPlay
         muted
