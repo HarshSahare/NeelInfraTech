@@ -7,7 +7,6 @@ function Navbar() {
       <div className="w-[90%] m-auto flex justify-between content-center">
         <div className="flex content-center flex-wrap">
           <Image
-            className="w-[32px] h-[11px]"
             src="/images/hamburger.png"
             alt="hamburger"
             width={32}
