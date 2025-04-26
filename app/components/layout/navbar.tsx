@@ -3,7 +3,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="w-full flex bg-[#00000042] h-[94px] backdrop-blur-md">
+    <div className="w-full flex bg-[#00000042] h-[94px] backdrop-blur-md absolute top-0 left-0">
       <div className="w-[90%] m-auto flex justify-between content-center">
         <div className="flex content-center flex-wrap">
           <Image
