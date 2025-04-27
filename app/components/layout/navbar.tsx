@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import "./navbar.css";
 
 function Navbar() {
   return (
-    <div className="w-full flex bg-[#00000042] h-[94px] backdrop-blur-md fixed top-0 left-0 z-50">
+    <div className="w-full flex bg-[#00000042] opacity-0 fadeIn h-[94px] backdrop-blur-md fixed top-0 left-0 z-50">
       <div className="w-[90%] m-auto flex justify-between content-center">
         <div className="flex content-center flex-wrap">
           <Image
