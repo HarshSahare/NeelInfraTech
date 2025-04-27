@@ -49,12 +49,12 @@
     }
 
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
 }
 
 .bounce-up {
-    animation: bounceUp 1s ease-in-out infinite;
+    animation: bounceUp 2s ease-in-out infinite;
 }
 
 
