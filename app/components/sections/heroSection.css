@@ -29,16 +29,33 @@
     }
 }
 
-.fadeIn-scaleup {
-    animation: fadeIn 1s ease-in forwards, scaleUp 1s 2s ease-out forwards;
+.fadeIn {
+    animation: fadeIn 1s ease-in forwards
+}
+
+.delay-1s {
+    animation-delay: 1s !important;
+}
+
+
+.delay-3s {
+    animation-delay: 3s !important;
+}
+
+.delay-4s {
+    animation-delay: 4s !important;
+}
+
+.delay-5s {
+    animation-delay: 5s !important;
 }
 
 .fadeOut {
-    animation: fadeOut 1s 2s ease-out forwards;
+    animation: fadeOut 1s ease-out forwards;
 }
 
 .fadeIn {
-    animation: fadeIn 1s 3s ease-in forwards;
+    animation: fadeIn 1s ease-in forwards;
 }
 
 @keyframes bounceUp {

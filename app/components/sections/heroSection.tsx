@@ -45,15 +45,15 @@ function HeroSection() {
         src="/videos/residentialHeroVideo.mp4"
       />
       <div className="overlayTexts relative w-full h-full absolute top-0 left-0 z-3">
-        <div className="layer1 absolute top-0 left-0 w-full h-full flex justify-center content-center flex-wrap fadeOut">
+        <div className="layer1 absolute top-0 left-0 w-full h-full flex justify-center content-center delay-3s fadeOut  flex-wrap ">
           <div
-            className={`brandName uppercase w-fit h-fit font-bold text-white text-[100px] fadeIn-scaleup font-classica`}
+            className={`brandName uppercase w-fit h-fit font-bold text-white text-[100px] opacity-0 delay-1s fadeIn font-classica`}
           >
             Neel InfraTech
           </div>
         </div>
 
-        <div className="layer2 absolute top-0 text-white left-0 w-full h-full opacity-0 flex justify-center content-end flex-wrap fadeIn">
+        <div className="layer2 absolute top-0 text-white left-0 w-full h-full opacity-0 flex justify-center content-end flex-wrap delay-4s fadeIn">
           <div className="h-[60%] w-full flex items-center flex-col">
             <div className="top-section flex flex-col items-center">
               <div className="title font-classica uppercase text-[41.51px] font-[400]">
@@ -64,7 +64,7 @@ function HeroSection() {
                 your lifestyle and reflect a taste for only the finest.
               </div>
             </div>
-            <div className="bottom-section flex-1  mt-[100px] w-full flex max-w-[1000px] ">
+            <div className="bottom-section flex-1 opacity-0 fadeIn delay-5s  mt-[100px] w-full flex max-w-[1000px] ">
               <div
                 className={`flex flex-1 flex-col sectionTransition mt-auto ${
                   currentVideo == 1 ? "expandedSection" : "shrunkSection"
@@ -78,8 +78,8 @@ function HeroSection() {
                     Commercial Properties
                   </div>
                   <div
-                    className={`description font-poppins text-[12px]/[20px] mt-[15px] delay-500 transition-opacity  max-w-[350px] ${
-                      currentVideo == 1 ? "opacity-100" : "opacity-0"
+                    className={`description font-poppins text-[12px]/[20px] opacity-0  mt-[15px] delay-500 transition-opacity  max-w-[350px] ${
+                      currentVideo == 1 ? "fadeIn" : "fadeOut"
                     }`}
                   >
                     We offer prime commercial spaces ideal for shops, offices,
@@ -87,8 +87,8 @@ function HeroSection() {
                     investment.
                   </div>
                   <div
-                    className={`button w-fit px-4 py-2 cursor-pointer bg-white rounded mt-5 transition-opacity delay-500 text-black ${
-                      currentVideo == 1 ? "opacity-100" : "opacity-0"
+                    className={`button w-fit px-4 py-2 cursor-pointer opacity-0  bg-white rounded mt-5 transition-opacity delay-500 text-black ${
+                      currentVideo == 1 ? "fadeIn" : "fadeOut"
                     }`}
                   >
                     Learn More
@@ -109,8 +109,8 @@ function HeroSection() {
                     Residential properties
                   </div>
                   <div
-                    className={`description font-poppins text-[12px]/[20px] mt-[15px] delay-500 transition-opacity  max-w-[350px] ${
-                      currentVideo == 2 ? "opacity-100" : "opacity-0"
+                    className={`description font-poppins opacity-0 text-[12px]/[20px] mt-[15px] delay-500 transition-opacity  max-w-[350px] ${
+                      currentVideo == 2 ? "fadeIn" : "fadeOut"
                     }`}
                   >
                     We Offer Affordable residential plots and homes in prime
@@ -118,8 +118,8 @@ function HeroSection() {
                     home in a peaceful, well-connected area
                   </div>
                   <div
-                    className={`button w-fit px-4 py-2 cursor-pointer bg-white rounded mt-5 transition-opacity delay-500 text-black ${
-                      currentVideo == 2 ? "opacity-100" : "opacity-0"
+                    className={`button w-fit px-4 py-2 opacity-0 cursor-pointer bg-white rounded mt-5 transition-opacity delay-500 text-black ${
+                      currentVideo == 2 ? "fadeIn" : "fadeOut"
                     }`}
                   >
                     Learn More
