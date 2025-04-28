@@ -45,15 +45,15 @@ function HeroSection() {
         src="/videos/residentialHeroVideo.mp4"
       />
       <div className="overlayTexts relative w-full h-full absolute top-0 left-0 z-3">
-        <div className="layer1 absolute top-0 left-0 w-full h-full flex justify-center content-center delay-3s fadeOut  flex-wrap ">
+        <div className="layer1 absolute top-0 left-0 w-full h-full flex justify-center content-center delay-4s fadeOut  flex-wrap ">
           <div
-            className={`brandName uppercase w-fit h-fit font-bold text-white text-[100px] opacity-0 delay-1s fadeIn font-classica`}
+            className={`brandName uppercase w-fit h-fit font-bold text-white text-[100px] opacity-0 delay-2s fadeIn font-classica`}
           >
             Neel InfraTech
           </div>
         </div>
 
-        <div className="layer2 absolute top-0 text-white left-0 w-full h-full opacity-0 flex justify-center content-end flex-wrap delay-4s fadeIn">
+        <div className="layer2 absolute top-0 text-white left-0 w-full h-full opacity-0 flex justify-center content-end flex-wrap delay-5s fadeIn">
           <div className="h-[70%] w-full flex items-center flex-col">
             <div className="top-section flex flex-col items-center">
               <div className="title font-classica uppercase text-[30px] font-[400]">
@@ -64,7 +64,7 @@ function HeroSection() {
                 your lifestyle and reflect a taste for only the finest.
               </div>
             </div>
-            <div className="bottom-section flex-1 opacity-0 fadeIn delay-5s  mt-[100px] w-full flex max-w-[1000px] ">
+            <div className="bottom-section flex-1 opacity-0 fadeIn delay-6s  mt-[100px] w-full flex max-w-[1000px] ">
               <div
                 className={`flex flex-1 flex-col sectionTransition mt-auto ${
                   currentVideo == 1 ? "expandedSection" : "shrunkSection"
