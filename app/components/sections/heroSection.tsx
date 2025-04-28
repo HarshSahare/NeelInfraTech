@@ -72,7 +72,7 @@ function HeroSection() {
               >
                 <div className="mx-auto">
                   <div
-                    className="title text-[28px] font-[400] font-classica cursor-pointer"
+                    className="title text-[28px] font-[400] uppercase font-classica cursor-pointer"
                     onClick={() => toggleSections(1)}
                   >
                     Commercial Properties
@@ -103,7 +103,7 @@ function HeroSection() {
               >
                 <div className="mx-auto">
                   <div
-                    className="title text-[28px] font-[400] font-classica cursor-pointer"
+                    className="title text-[28px] font-[400] uppercase font-classica cursor-pointer"
                     onClick={() => toggleSections(2)}
                   >
                     Residential properties
