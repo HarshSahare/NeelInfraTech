@@ -64,7 +64,7 @@ function HeroSection() {
                 your lifestyle and reflect a taste for only the finest.
               </div>
             </div>
-            <div className="bottom-section flex-1 opacity-0 fadeIn delay-6s  mt-[100px] w-full flex max-w-[1000px] ">
+            <div className="bottom-section flex-1 opacity-0 fadeIn delay-6s  mt-[155px] w-full flex max-w-[1000px] ">
               <div
                 className={`flex flex-1 flex-col sectionTransition mt-auto ${
                   currentVideo == 1 ? "expandedSection" : "shrunkSection"
@@ -72,13 +72,13 @@ function HeroSection() {
               >
                 <div className="mx-auto">
                   <div
-                    className="title text-[28px] font-[400] font-classica cursor-pointer"
+                    className="title text-[28px] font-[100] font-classica cursor-pointer"
                     onClick={() => toggleSections(1)}
                   >
                     Commercial Properties
                   </div>
                   <div
-                    className={`description font-poppins text-[12px]/[20px] opacity-0  mt-[15px] delay-500 transition-opacity  max-w-[350px] ${
+                    className={`description font-poppins text-[14px]/[20px] font-[50] opacity-0  mt-[15px] delay-500 transition-opacity  max-w-[418px] ${
                       currentVideo == 1 ? "fadeIn" : "fadeOut"
                     }`}
                   >
@@ -103,13 +103,13 @@ function HeroSection() {
               >
                 <div className="mx-auto">
                   <div
-                    className="title text-[28px] font-[400] font-classica cursor-pointer"
+                    className="title text-[28px] font-[100] font-classica cursor-pointer"
                     onClick={() => toggleSections(2)}
                   >
                     Residential properties
                   </div>
                   <div
-                    className={`description font-poppins opacity-0 text-[12px]/[20px] mt-[15px] delay-500 transition-opacity  max-w-[350px] ${
+                    className={`description font-poppins opacity-0 text-[14px]/[20px] font-[50] mt-[15px] delay-500 transition-opacity  max-w-[418px] ${
                       currentVideo == 2 ? "fadeIn" : "fadeOut"
                     }`}
                   >
