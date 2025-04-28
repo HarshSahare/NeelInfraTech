@@ -95,7 +95,7 @@ function HeroSection() {
                   </div>
                 </div>
               </div>
-              <div className="flex w-[2px] h-[50%] bg-white"></div>
+              <div className="flex w-[.5px] h-[50%] bg-white"></div>
               <div
                 className={`flex flex-1 flex-col sectionTransition mt-auto ${
                   currentVideo == 2 ? "expandedSection" : "shrunkSection"
