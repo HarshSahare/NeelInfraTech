@@ -57,6 +57,10 @@
     animation-delay: 6s !important;
 }
 
+.delay-7s {
+    animation-delay: 7s !important;
+}
+
 .fadeOut {
     animation: fadeOut 1s ease-out forwards;
 }
