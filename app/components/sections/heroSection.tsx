@@ -56,10 +56,10 @@ function HeroSection() {
         <div className="layer2 absolute top-0 text-white left-0 w-full h-full opacity-0 flex justify-center content-end flex-wrap delay-5s fadeIn">
           <div className="h-[70%] w-full flex items-center flex-col">
             <div className="top-section flex flex-col items-center">
-              <div className="title font-classica uppercase text-[30px] font-[400]">
+              <div className="title font-classica uppercase text-[40px] font-[400]">
                 The Art of Fine Living.
               </div>
-              <div className="description font-poppins text-center text-[14px]/[22px] font-light my-[10px] max-w-[450px]">
+              <div className="description font-poppins text-center text-[16px]/[22px] font-light my-[10px] max-w-[450px]">
                 Where timeless design meets elite comfort, crafted to elevate
                 your lifestyle and reflect a taste for only the finest.
               </div>
