@@ -1,9 +1,56 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 function Navbar() {
+  const prevY = useRef(0);
+  const [loaded, setLoaded] = useState(false);
+  const navbar = useRef(null);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoaded(true);
+      navbar.current?.classList.remove("opacity-0");
+      navbar.current?.classList.remove("delay-7s");
+      navbar.current?.classList.remove("fadeIn");
+      navbar.current?.classList.add("transition-opacity", "duration-500");
+    }, 8000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!loaded) return;
+
+    const handleScroll = () => {
+      const prev = prevY.current;
+      console.log("Scroll Y:", window.scrollY, "Prev Y:", prev);
+      let currentY = window.scrollY;
+      if (currentY > prev) {
+        console.log("Here");
+
+        navbar.current?.classList.remove("opacity-100");
+        navbar.current?.classList.add("opacity-0");
+      } else {
+        navbar.current?.classList.add("opacity-100");
+        navbar.current?.classList.remove("opacity-0");
+      }
+      prevY.current = currentY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [loaded]);
   return (
-    <div className="w-full flex bg-[#00000042] opacity-0 fadeIn delay-7s h-[94px] backdrop-blur-md fixed top-0 left-0 z-50">
+    <div
+      ref={navbar}
+      className="w-full flex bg-[#00000042] opacity-0 fadeIn delay-7s h-[94px] backdrop-blur-md fixed top-0 left-0 z-50"
+    >
       <div className="w-[90%] m-auto flex justify-between content-center">
         <div className="flex content-center flex-wrap">
           <Image
