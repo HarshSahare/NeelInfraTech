@@ -5,7 +5,7 @@ import React, { useEffect, useState, useRef } from "react";
 function Navbar() {
   const prevY = useRef(0);
   const [loaded, setLoaded] = useState(false);
-  const navbar = useRef(null);
+  const navbar = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -26,11 +26,8 @@ function Navbar() {
 
     const handleScroll = () => {
       const prev = prevY.current;
-      console.log("Scroll Y:", window.scrollY, "Prev Y:", prev);
-      let currentY = window.scrollY;
+      const currentY = window.scrollY;
       if (currentY > prev) {
-        console.log("Here");
-
         navbar.current?.classList.remove("opacity-100");
         navbar.current?.classList.add("opacity-0");
       } else {
