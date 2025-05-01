@@ -1,4 +1,5 @@
 import HeroSection from "./components/sections/heroSection";
+import NeelWaySection from "./components/sections/neelWaySection";
 import PropertiesLandingSection from "./components/sections/propertiesLandingSection";
 import PropertiesSection from "./components/sections/propertiesSection";
 import AwardsSection from "./components/sections/rewardsSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <PropertiesLandingSection />
       <PropertiesSection />
       <StorySection />
+      <NeelWaySection />
     </>
   );
 }
