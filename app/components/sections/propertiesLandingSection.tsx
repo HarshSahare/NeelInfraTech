@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const PropertiesSection = () => {
+const PropertiesLandingSection = () => {
   return (
     <section className="flex flex-col lg:flex-row px-6 py-12 items-center gap-10 max-w-7xl mx-auto">
       {/* Left Column: Text Content */}
@@ -119,4 +119,4 @@ const PropertiesSection = () => {
   );
 };
 
-export default PropertiesSection;
+export default PropertiesLandingSection;
