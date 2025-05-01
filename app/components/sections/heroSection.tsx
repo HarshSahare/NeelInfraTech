@@ -129,6 +129,8 @@ function HeroSection() {
             </div>
           </div>
         </div>
+
+        <div className="layer3 absolute top-0 w-full min-h-svh z-20 pointer-events-none"></div>
       </div>
       <div className="floatingButton bounce-up cursor-pointer fixed bg-[#D9D9D9] z-4 aspect-square p-2 rounded-md flex flex-wrap content-center justify-center right-8 bottom-8">
         <Image
