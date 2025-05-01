@@ -1,5 +1,6 @@
 import HeroSection from "./components/sections/heroSection";
 import PropertiesLandingSection from "./components/sections/propertiesLandingSection";
+import PropertiesSection from "./components/sections/propertiesSection";
 import AwardsSection from "./components/sections/rewardsSection";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <AwardsSection />
       <PropertiesLandingSection />
+      <PropertiesSection />
     </>
   );
 }
