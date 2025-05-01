@@ -16,7 +16,8 @@ const PropertiesSection = () => {
         <p className="text-[#6A5F6C] font-poppins mb-8">
           Dur properties, located in prime areas, boast unique designs and
           aspirational lifestyles within vibrant Emaar communities, all
-          seamlessly managed by Emaar Community Management's dedicated team.
+          seamlessly managed by Emaar Community Management&apos;s dedicated
+          team.
         </p>
         <button className="bg-black font-poppins text-white px-6 py-3 rounded-full">
           View All Properties
