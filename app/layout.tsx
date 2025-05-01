@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "./components/layout/navbar";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
+import Footer from "./components/layout/footer";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Classica = localFont({
   src: [
@@ -38,6 +40,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
