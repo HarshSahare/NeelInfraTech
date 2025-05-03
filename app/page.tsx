@@ -6,12 +6,14 @@ import PropertiesSection from "./components/sections/propertiesSection";
 import AwardsSection from "./components/sections/rewardsSection";
 import StorySection from "./components/sections/storySection";
 import TestimonialSection from "./components/sections/testimonialSection";
+import VisionSection from "./components/sections/visionSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <AwardsSection />
+      <VisionSection />
       <PropertiesLandingSection />
       <PropertiesSection />
       <StorySection />
