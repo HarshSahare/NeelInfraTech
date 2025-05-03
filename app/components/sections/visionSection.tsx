@@ -43,7 +43,7 @@ function VisionSection() {
             Read More
           </button>
         </div>
-        <div className="right flex-1 pt-10 ">
+        <div className="right font-classica text-sm text-[#918F8F] font-[400]  flex-1 pt-10 ">
           Starting with nothing but a dream and determination, Mr. Pitambar Ikar
           built Neel Infratech into a trusted empire through vision, hard work,
           and unwavering belief. belief.
