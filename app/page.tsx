@@ -5,6 +5,7 @@ import PropertiesLandingSection from "./components/sections/propertiesLandingSec
 import PropertiesSection from "./components/sections/propertiesSection";
 import AwardsSection from "./components/sections/rewardsSection";
 import StorySection from "./components/sections/storySection";
+import TestimonialSection from "./components/sections/testimonialSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <PropertiesLandingSection />
       <PropertiesSection />
       <StorySection />
+      <TestimonialSection />
       <NeelWaySection />
       <ContactSection />
     </>
