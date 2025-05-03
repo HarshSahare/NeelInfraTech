@@ -13,12 +13,12 @@ export default function Home() {
     <>
       <HeroSection />
       <AwardsSection />
-      <VisionSection />
       <PropertiesLandingSection />
       <PropertiesSection />
       <StorySection />
-      <TestimonialSection />
+      <VisionSection />
       <NeelWaySection />
+      <TestimonialSection />
       <ContactSection />
     </>
   );
