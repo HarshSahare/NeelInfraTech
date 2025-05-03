@@ -1,3 +1,4 @@
+import ContactSection from "./components/sections/contactSection";
 import HeroSection from "./components/sections/heroSection";
 import NeelWaySection from "./components/sections/neelWaySection";
 import PropertiesLandingSection from "./components/sections/propertiesLandingSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <PropertiesSection />
       <StorySection />
       <NeelWaySection />
+      <ContactSection />
     </>
   );
 }
