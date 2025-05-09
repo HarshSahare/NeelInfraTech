@@ -3,7 +3,7 @@ import React from "react";
 
 function VisionSection() {
   return (
-    <div className="min-h-svh flex flex-col">
+    <div className="min-h-svh w-[95.5%] m-auto flex flex-col">
       <div>
         <div className="uppercase text-center font-classica text-[#757279] text-sm">
           Our Visionary Leader
@@ -19,10 +19,10 @@ function VisionSection() {
       </div>
 
       <div className="flex flex-1">
-        <div className="left flex font-classica text-sm text-[#918F8F] font-[400] flex-col justify-end  pb-50 flex-1">
-          <div className="p-5 pl-20">
+        <div className="left flex font-classica text-xs/[24px]  text-[#918F8F] font-[400] flex-col justify-end  pb-50 flex-1">
+          <div className="mr-[-79px]">
             APR 30 2025
-            <div className="h-0.5 w-80  text-sm/[24px] my-4 bg-[#918F8F]"></div>
+            <div className="h-[0.2px] w-[40%]  my-3 bg-[#918F8F]"></div>
             Today, his vision continues to guide a dedicated team, committed to
             building not just homes, but communities that inspire better living.
           </div>
@@ -43,12 +43,14 @@ function VisionSection() {
             Read More
           </button>
         </div>
-        <div className="right font-classica text-sm text-[#918F8F] font-[400]  flex-1 pt-10 ">
-          Starting with nothing but a dream and determination, Mr. Pitambar Ikar
-          built Neel Infratech into a trusted empire through vision, hard work,
-          and unwavering belief. belief.
-          <div className="h-0.5 w-100 text-sm/[24px] my-4 bg-[#918F8F]"></div>
-          Nov 21 2017
+        <div className="right font-classica text-xs/[24px] text-[#918F8F] font-[400]  flex-1 pt-10 ">
+          <div className="ml-[-104px]">
+            Starting with nothing but a dream and determination, Mr. Pitambar
+            Ikar built Neel Infratech into a trusted empire through vision, hard
+            work, and unwavering belief. belief.
+            <div className="h-[0.2px] w-[40%]  my-3 bg-[#918F8F]"></div>
+            Nov 21 2017
+          </div>
         </div>
       </div>
     </div>

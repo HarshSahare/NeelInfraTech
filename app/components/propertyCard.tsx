@@ -18,7 +18,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   status,
 }) => {
   return (
-    <div className="bg-[#D9D9D936] rounded-bl-[50px] overflow-hidden rounded-tr-[50px] w-full max-w-md flex-shrink-0">
+    <div className="bg-[#D9D9D936] rounded-bl-[50px] overflow-hidden pb-[13px] rounded-tr-[50px] w-full max-w-md flex-shrink-0">
       <div className="h-[350px] overflow-hidden rounded-bl-[50px]">
         <Image
           src={image}
@@ -32,8 +32,8 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         <h3 className="text-sm text-[#3B383E] font-classica font-[400] mt-4">
           {title}
         </h3>
-        <div className="flex font-poppins font-[300] items-center  text-[#5D5B68] text-xs mt-5 gap-4">
-          <div className="flex flex-1 items-center gap-1">
+        <div className="flex font-poppins font-[300] mt-[35px] items-center  text-[#5D5B68] text-xs gap-4">
+          <div className="flex flex-1 items-center  gap-1">
             <span>
               <Image
                 src={"/images/home-outline.png"}
@@ -44,7 +44,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             </span>
             <span>{location}</span>
           </div>
-          <div className="flex flex-1 items-center gap-1">
+          <div className="flex flex-1 items-center   gap-1">
             <span>
               <Image
                 src={"/images/bed-outline.png"}
@@ -56,7 +56,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             <span>{bedrooms}</span>
           </div>
         </div>
-        <div className="flex items-center mt-4 text-poppins font-[400] text-[#EF6692]  text-xs gap-2">
+        <div className="flex items-center mt-[35px] text-poppins font-[400] text-[#EF6692]  text-xs gap-2">
           <span>
             <Image
               src={"/images/red-circle-outline.png"}
@@ -67,7 +67,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </span>
           <span>{status}</span>
         </div>
-        <button className="bg-black text-white mt-4 py-2 px-6 rounded-full text-sm">
+        <button className="bg-black font-400 font-poppins text-[#F5F5F5] mt-[35px]  py-2 px-6 rounded-full text-xs">
           Learn More
         </button>
       </div>

@@ -8,7 +8,7 @@ function TestimonialSection() {
         What people think about NeelIfratech
       </div>
 
-      <div className="max-w-[300px] absolute top-10 left-20 bg-[#D9D9D940] p-10 px-7 rounded-2xl">
+      <div className="max-w-[300px] absolute top-10 text-[10px] left-20 bg-[#D9D9D940] p-10 px-7 rounded-2xl">
         <div className="top flex items-center">
           <Image
             alt="profile pic"
@@ -19,54 +19,7 @@ function TestimonialSection() {
           />
           <div className="font-classica text-[#161616B8] font-[400] flex flex-col">
             <p>Kathryn Murphy</p>
-            <div className="text-xs flex">
-              Nagpur -{" "}
-              <Image
-                src="/images/star.png"
-                alt="star"
-                className="mx-2"
-                width={15}
-                height={10}
-              />
-              3.5
-            </div>
-          </div>
-        </div>
-        <div className="text-classica  mt-4 text-sm text-[#918F8F] font-[400]">
-          Starting with nothing but a dream and determination, Mr. Pitambar Ikar
-          built Neel Infratech into a trusted empire through vision, hard work,
-          and unwavering belief. belief. into a trusted empire through vision,
-          hard work, and unwavering belief. belief.
-        </div>
-      </div>
-
-      <Image
-        src={"/images/testimonial-image1.jpg"}
-        alt="property Image"
-        height={500}
-        width={114}
-        className="absolute top-0 left-100 object-cover w-[235px] h-[144px] rounded-2xl"
-      />
-      <Image
-        src={"/images/testimonial-image2.jpg"}
-        alt="property Image"
-        height={219}
-        width={235}
-        className="absolute top-10 left-200 object-cover w-[219px] h-auto rounded-2xl"
-      />
-
-      <div className="max-w-[300px] absolute top-0 left-260 bg-[#D9D9D940] p-10 px-7 rounded-2xl">
-        <div className="top flex items-center">
-          <Image
-            alt="profile pic"
-            src={"/images/testimonials-profile-image-2.jpg"}
-            width={50}
-            height={50}
-            className="rounded-full w-[50px] object-cover  h-[50px] mr-2"
-          />
-          <div className="font-classica text-[#161616B8] font-[400] flex flex-col">
-            <p>Kathryn Murphy</p>
-            <div className="text-xs flex">
+            <div className="text-[8px] flex">
               Nagpur -
               <Image
                 src="/images/star.png"
@@ -79,7 +32,54 @@ function TestimonialSection() {
             </div>
           </div>
         </div>
-        <div className="text-classica  mt-4 text-sm text-[#918F8F] font-[400]">
+        <div className="text-classica  mt-4 text-[#918F8F] font-[400]">
+          Starting with nothing but a dream and determination, Mr. Pitambar Ikar
+          built Neel Infratech into a trusted empire through vision, hard work,
+          and unwavering belief. belief. into a trusted empire through vision,
+          hard work, and unwavering belief. belief.
+        </div>
+      </div>
+
+      <Image
+        src={"/images/testimonial-image1.jpg"}
+        alt="property Image"
+        height={173}
+        width={278}
+        className="absolute top-0 left-100 object-cover w-[278px] h-[173px] rounded-2xl"
+      />
+      <Image
+        src={"/images/testimonial-image2.jpg"}
+        alt="property Image"
+        height={219}
+        width={235}
+        className="absolute top-10 left-195 object-cover w-[247px] h-[192px] rounded-2xl"
+      />
+
+      <div className="max-w-[300px] absolute top-0 text-[10px] left-260 bg-[#D9D9D940] p-10 px-7 rounded-2xl">
+        <div className="top flex items-center">
+          <Image
+            alt="profile pic"
+            src={"/images/testimonials-profile-image-2.jpg"}
+            width={50}
+            height={50}
+            className="rounded-full w-[50px] object-cover  h-[50px] mr-2"
+          />
+          <div className="font-classica text-[#161616B8] font-[400] flex flex-col">
+            <p>Kathryn Murphy</p>
+            <div className="text-[8px] flex">
+              Nagpur -
+              <Image
+                src="/images/star.png"
+                alt="star"
+                className="mx-2"
+                width={15}
+                height={10}
+              />
+              3.5
+            </div>
+          </div>
+        </div>
+        <div className="text-classica  mt-4 text-[#918F8F] font-[400]">
           Starting with nothing but a dream and determination, Mr. Pitambar Ikar
           built Neel Infratech into a trusted empire through vision, hard work,
           and unwavering belief. belief.
@@ -94,7 +94,7 @@ function TestimonialSection() {
         className="absolute right-10 top-80 object-cover w-[219px] h-[162px] rounded-2xl"
       />
 
-      <div className="max-w-[300px] absolute right-60 top-100 bg-[#D9D9D940] p-10 px-7 rounded-2xl">
+      <div className="max-w-[300px] absolute right-[69px] text-[10px] bottom-[74px] bg-[#D9D9D940] p-10 px-7 rounded-2xl">
         <div className="top flex items-center">
           <Image
             alt="profile pic"
@@ -105,7 +105,7 @@ function TestimonialSection() {
           />
           <div className="font-classica text-[#161616B8] font-[400] flex flex-col">
             <p>Kathryn Murphy</p>
-            <div className="text-xs flex">
+            <div className="text-[8px] flex">
               Nagpur -
               <Image
                 src="/images/star.png"
@@ -118,7 +118,7 @@ function TestimonialSection() {
             </div>
           </div>
         </div>
-        <div className="text-classica  mt-4 text-sm text-[#918F8F] font-[400]">
+        <div className="text-classica  mt-4  text-[#918F8F] font-[400]">
           Starting with nothing but a dream and determination, Mr. Pitambar Ikar
           built Neel Infratech.
         </div>
@@ -129,10 +129,10 @@ function TestimonialSection() {
         alt="property Image"
         height={292}
         width={162}
-        className="absolute bottom-10  object-cover w-[292px] h-[162px] rounded-2xl"
+        className="absolute bottom-22 left-160  object-cover w-[292px] h-[162px] rounded-2xl"
       />
 
-      <div className="max-w-[300px] absolute bottom-0 left-80 bg-[#D9D9D940] p-10 px-7 rounded-2xl">
+      <div className="max-w-[300px] absolute bottom-15 text-[10px] left-80 bg-[#D9D9D940] p-10 px-7 rounded-2xl">
         <div className="top flex items-center">
           <Image
             alt="profile pic"
@@ -143,7 +143,7 @@ function TestimonialSection() {
           />
           <div className="font-classica text-[#161616B8] font-[400] flex flex-col">
             <p>Kathryn Murphy</p>
-            <div className="text-xs flex">
+            <div className="text-[8px] flex">
               Nagpur -
               <Image
                 src="/images/star.png"
@@ -156,7 +156,7 @@ function TestimonialSection() {
             </div>
           </div>
         </div>
-        <div className="text-classica  mt-4 text-sm text-[#918F8F] font-[400]">
+        <div className="text-classica  mt-4  text-[#918F8F] font-[400]">
           Starting with nothing but a dream and determination, Mr. Pitambar Ikar
           built Neel Infratech into a trusted empire through vision, hard work,
           and unwavering belief. belief.Starting with nothing but a dream and
@@ -170,7 +170,7 @@ function TestimonialSection() {
         alt="property Image"
         height={219}
         width={159}
-        className="absolute left-20 top-90 object-cover w-[219px] h-[159px] rounded-2xl"
+        className="absolute left-20 top-70 object-cover w-[219px] h-[159px] rounded-2xl"
       />
     </div>
   );

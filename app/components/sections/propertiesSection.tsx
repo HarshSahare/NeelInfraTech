@@ -4,16 +4,16 @@ import PropertyCard from "../propertyCard";
 
 const PropertiesSection = () => {
   return (
-    <section className="max-w-7xl min-h-svh flex flex-col justify-center mx-auto px-6 py-12">
+    <section className="w-[95.5%] min-h-svh flex flex-col justify-center mx-auto px-6 py-12">
       <div className="flex flex-col lg:flex-row justify-between  gap-12">
         {/* Text Content */}
-        <div className="lg:w-1/3">
+        <div className="lg:w-1/3 mt-[115px]">
           <p className="text-xs font-classica tracking-widest text-gray-500 flex items-center">
             PROPERTIES
             <span className="flex-grow max-w-[150px] border-t border-gray-300 ml-4"></span>
           </p>
           <h2 className="text-4xl font-classica font-[400] mt-4 mb-6 leading-snug">
-            Discover Our Newest Residential Property
+            Discover Our <br /> Newest Residential Property
           </h2>
           <p className="text-[#6A5F6C] font-poppins mb-8">
             Dur Meraas designs communities that respond to contemporary passions
