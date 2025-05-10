@@ -5,10 +5,10 @@ function TestimonialSection() {
   return (
     <div className="w-full min-h-svh relative flex justify-center items-center">
       <div className="heading font-classica font-[400] text-5xl max-w-[700px] text-center z-10 text-[#161616]">
-        What people think about NeelIfratech
+        What people think about Neel Infratech
       </div>
 
-      <div className="max-w-[300px] absolute top-10 text-[10px] left-20 bg-[#D9D9D940] p-10 px-7 rounded-2xl">
+      <div className="max-w-[300px] absolute top-20 text-[12px] left-15 bg-[#D9D9D940] py-5 px-7 rounded-2xl">
         <div className="top flex items-center">
           <Image
             alt="profile pic"
@@ -45,17 +45,17 @@ function TestimonialSection() {
         alt="property Image"
         height={173}
         width={278}
-        className="absolute top-0 left-100 object-cover w-[278px] h-[173px] rounded-2xl"
+        className="absolute top-10 left-95 object-cover w-[278px] h-[153px] rounded-2xl"
       />
       <Image
         src={"/images/testimonial-image2.jpg"}
         alt="property Image"
         height={219}
         width={235}
-        className="absolute top-10 left-195 object-cover w-[247px] h-[192px] rounded-2xl"
+        className="absolute top-20 left-195 object-cover w-[247px] h-[153px] rounded-2xl"
       />
 
-      <div className="max-w-[300px] absolute top-0 text-[10px] left-260 bg-[#D9D9D940] p-10 px-7 rounded-2xl">
+      <div className="max-w-[300px] absolute top-10 text-[10px] left-260 bg-[#D9D9D940] py-5 px-7 rounded-2xl">
         <div className="top flex items-center">
           <Image
             alt="profile pic"
@@ -91,10 +91,10 @@ function TestimonialSection() {
         alt="property Image"
         height={219}
         width={235}
-        className="absolute right-10 top-80 object-cover w-[219px] h-[162px] rounded-2xl"
+        className="absolute right-10 top-70 object-cover w-[219px] h-[162px] rounded-2xl"
       />
 
-      <div className="max-w-[300px] absolute right-[69px] text-[10px] bottom-[74px] bg-[#D9D9D940] p-10 px-7 rounded-2xl">
+      <div className="max-w-[300px] absolute right-[69px] text-[10px] top-115 bg-[#D9D9D940] p-5 px-7 rounded-2xl">
         <div className="top flex items-center">
           <Image
             alt="profile pic"
@@ -129,10 +129,10 @@ function TestimonialSection() {
         alt="property Image"
         height={292}
         width={162}
-        className="absolute bottom-22 left-160  object-cover w-[292px] h-[162px] rounded-2xl"
+        className="absolute bottom-17 left-150  object-cover w-[300px] h-[162px] rounded-2xl"
       />
 
-      <div className="max-w-[300px] absolute bottom-15 text-[10px] left-80 bg-[#D9D9D940] p-10 px-7 rounded-2xl">
+      <div className="max-w-[300px] absolute bottom-5 text-[10px] left-70 bg-[#D9D9D940] py-5 px-7 rounded-2xl">
         <div className="top flex items-center">
           <Image
             alt="profile pic"
@@ -169,8 +169,8 @@ function TestimonialSection() {
         src={"/images/testimonial-image5.jpg"}
         alt="property Image"
         height={219}
-        width={159}
-        className="absolute left-20 top-70 object-cover w-[219px] h-[159px] rounded-2xl"
+        width={160}
+        className="absolute left-15 top-78 object-cover w-[219px] h-[159px] rounded-2xl"
       />
     </div>
   );

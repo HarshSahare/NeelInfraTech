@@ -3,13 +3,13 @@ import Image from "next/image"; // or 'react' if not using Next.js
 
 const NeelWaySection = () => {
   return (
-    <section className="w-full bg-white py-12">
+    <section className="w-full mt-[150px] bg-white py-12">
       <div className="text-left mb-8 ml-[88px]">
         <p className="text-xs font-classica tracking-widest text-gray-500 flex items-center">
           YOUR FOREVER
           <span className="flex-grow border-t max-w-[150px] border-gray-300 ml-4"></span>
         </p>
-        <h2 className="text-[45px] md:text-5xl text-[#161616] font-classica font-[400]">
+        <h2 className="text-[45px] md:text-5xl mt-5 text-[#161616] font-classica font-[400]">
           A NEEL WAY OF LIFE
         </h2>
       </div>
