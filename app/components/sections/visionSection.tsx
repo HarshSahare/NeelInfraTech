@@ -9,22 +9,25 @@ function VisionSection() {
           Our Visionary Leader
         </div>
         <div className="mx-auto w-fit">
-          <div className="uppercase w-fit  font-classica text-6xl font-[400] text-center mt-5">
+          <div className="uppercase w-fit  font-classica text-[75px] font-[400] text-center mt-5">
             Mr. Pitambar ikar
           </div>
-          <div className="w-fit text-[#44404096] font-poppins">
+          <div className="w-fit text-[#44404096]  font-poppins">
             Founder & CEO Of NEEL INFRATECH
           </div>
         </div>
       </div>
 
       <div className="flex flex-1">
-        <div className="left flex font-classica text-xs/[24px]  text-[#918F8F] font-[400] flex-col justify-end  pb-50 flex-1">
-          <div className="mr-[-79px]">
+        <div className="left flex font-classica text-[12px]/[24px]  text-[#918F8F] font-[400] flex-col justify-end  pb-50 flex-1">
+          <div className="mr-[-10px] mb-[15px] pl-[54px]">
             APR 30 2025
-            <div className="h-[0.2px] w-[40%]  my-3 bg-[#918F8F]"></div>
-            Today, his vision continues to guide a dedicated team, committed to
-            building not just homes, but communities that inspire better living.
+            <div className="h-[0.2px] w-[40%] my-3 bg-[#918F8F]"></div>
+            <div className="text-left">
+              Today, his vision continues to guide a dedicated team, committed
+              to building
+              <br /> not just homes, but communities that inspire better living.
+            </div>
           </div>
         </div>
         <div className="center relative">
@@ -33,7 +36,7 @@ function VisionSection() {
             alt="Director"
             width={500}
             height={500}
-            className="w-auto h-full rounded-full mx-auto object-contain"
+            className="w-auto h-full  mt-[-47px] rounded-full mx-auto object-contain"
           />
           <div className="absolute bottom-0 h-[20%] w-full blur-md bg-white"></div>
           <button
@@ -43,11 +46,11 @@ function VisionSection() {
             Read More
           </button>
         </div>
-        <div className="right font-classica text-xs/[24px] text-[#918F8F] font-[400]  flex-1 pt-10 ">
-          <div className="ml-[-104px]">
+        <div className="right font-classica text-[12px]/[24px] text-[#918F8F] font-[400]  flex-1 pt-10 ">
+          <div className="mt-2 ml-[-5px]">
             Starting with nothing but a dream and determination, Mr. Pitambar
-            Ikar built Neel Infratech into a trusted empire through vision, hard
-            work, and unwavering belief. belief.
+            Ikar <br /> built Neel Infratech into a trusted empire through
+            vision, hard work, and <br /> unwavering belief. belief.
             <div className="h-[0.2px] w-[40%]  my-3 bg-[#918F8F]"></div>
             Nov 21 2017
           </div>
