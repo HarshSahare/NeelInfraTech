@@ -57,7 +57,7 @@ function Navbar() {
             height={11}
           />
         </div>
-        <div>
+        <div className="mr-[-72px]">
           <Image
             className="h-auto"
             src="/images/logo.png"
