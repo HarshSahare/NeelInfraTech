@@ -20,7 +20,7 @@ const PropertiesLandingSection = () => {
           dedicated team.
         </p>
         <button
-          className="bg-black text-[12px]  font-poppins text-white tracker-[1px] rounded-full"
+          className="bg-black  text-white text-[12px]  font-poppins tracker-[1px] rounded-full"
           style={{ padding: "17px 53px" }}
         >
           View All Properties

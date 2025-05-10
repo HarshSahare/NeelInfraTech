@@ -23,9 +23,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         <Image
           src={image}
           alt={title}
-          width={529}
-          height={349}
-          className="w-full h-full object-cover"
+          width={536}
+          height={402}
+          className="w-[536px] h-[402px] object-cover"
         />
       </div>
       <div className=" max-w-md py-2 px-6 flex-shrink-0">
@@ -44,7 +44,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             </span>
             <span>{location}</span>
           </div>
-          <div className="flex flex-1 items-center   gap-1">
+          <div className="flex flex-1 items-center gap-1">
             <span>
               <Image
                 src={"/images/bed-outline.png"}
@@ -67,7 +67,10 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </span>
           <span>{status}</span>
         </div>
-        <button className="bg-black font-400 font-poppins text-[#F5F5F5] mt-[35px]  py-2 px-6 rounded-full text-xs">
+        <button
+          className="bg-black font-400 font-poppins text-[#F5F5F5] mt-[35px]  py-2 px-6 rounded-[23px] text-[11px]"
+          style={{ padding: "15px 28px" }}
+        >
           Learn More
         </button>
       </div>

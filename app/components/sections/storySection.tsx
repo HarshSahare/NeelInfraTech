@@ -8,7 +8,7 @@ const StorySection = () => {
           Our Story
         </p>
         <h2 className="text-[62px] md:text-5xl font-[400] font-classica leading-tight text-[#161616] mb-4">
-          ORCHESTRATING <br /> PLACE AND PURPOSE
+          CREATING VALUE <br /> THROUGH DESIGN & SPACE
         </h2>
         <p className="font-[400] font-poppins text-[#44404096] text-sm max-w-3xl mx-auto">
           Driven by passion, we continuously push the boundaries of architecture
