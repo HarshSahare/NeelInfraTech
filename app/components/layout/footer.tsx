@@ -2,11 +2,13 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-white border-gray-300 mt-16">
+    <footer className="bg-white border-gray-300 mt-30">
       {/* Center Heading */}
       <div className="text-center font-classica py-10">
         <h2 className="text-6xl font-[400] tracking-wide">NEEL INFRATECH</h2>
-        <p className="text-3xl text-[#727673] mt-1">The Art of Living</p>
+        <p className="text-3xl text-[#727673] text-center mt-5">
+          The Art of Living
+        </p>
       </div>
 
       {/* Footer Columns */}
