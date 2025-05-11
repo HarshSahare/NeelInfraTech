@@ -17,10 +17,9 @@ function HeroSection() {
         scrollTrigger: {
           trigger: ".hero-section", // Ensure this exists
           start: "top top",
-          end: "top+=200",
+          end: "top+=300",
           scrub: 0.3,
           pin: true,
-          markers: true,
         },
       });
       timeline.to(
