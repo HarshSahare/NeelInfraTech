@@ -1,47 +1,7 @@
-"use client";
 import Image from "next/image";
 import React from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ContactSection = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  useGSAP(() => {
-    const ctx = gsap.context(() => {
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".contact-container",
-          start: "top 0%",
-        },
-      });
-      timeline.from(
-        ".contact-container .left",
-        {
-          opacity: 0,
-          duration: 1,
-          x: -50,
-          stagger: 0.2,
-        },
-        "items"
-      );
-
-      timeline.from(
-        ".contact-container .right",
-        {
-          opacity: 0,
-          duration: 1,
-          x: 50,
-          stagger: 0.2,
-        },
-        "items"
-      );
-    });
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <div className="flex contact-container min-h-screen">
       {/* Left Section */}
