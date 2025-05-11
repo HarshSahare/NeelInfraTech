@@ -25,11 +25,6 @@ function VisionSection() {
       });
     });
 
-    timeline.from(".vision-container .leader-image", {
-      opacity: 0,
-      duration: 1,
-    });
-
     timeline.from(".vision-container .right-section", {
       opacity: 0,
       duration: 1,
