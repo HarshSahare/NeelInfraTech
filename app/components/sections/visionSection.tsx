@@ -27,7 +27,6 @@ function VisionSection() {
 
     timeline.from(".vision-container .leader-image", {
       opacity: 0,
-      y: 100,
       duration: 1,
     });
 
