@@ -65,7 +65,7 @@ function TestimonialSection() {
   }, []);
 
   return (
-    <div className="w-full testimonials-container  min-h-svh relative flex justify-center items-center">
+    <div className="w-full testimonials-container mt-[50px] mb-[150px]  min-h-svh relative flex justify-center items-center">
       <div className="heading font-classica font-[400] text-5xl max-w-[700px] text-center z-10 text-[#161616]">
         What people think about Neel Infratech
       </div>
