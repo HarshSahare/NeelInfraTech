@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useRef } from "react";
+import React, {  useRef } from "react";
 import "./heroSection.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -10,7 +10,6 @@ function HeroSection() {
   gsap.registerPlugin(ScrollTrigger);
   const svg = useRef<SVGSVGElement>(null);
   const path = useRef<SVGPathElement>(null);
-  const [currentVideo, setCurrentVideo] = useState(0);
 
   useGSAP(() => {
     const ctx = gsap.context(() => {
@@ -57,14 +56,6 @@ function HeroSection() {
 
     return () => ctx.revert();
   }, [svg.current]);
-
-  const toggleSections = (num: number) => {
-    if (currentVideo == num) {
-      setCurrentVideo(0);
-    } else {
-      setCurrentVideo(num);
-    }
-  };
 
   return (
     <div className="w-full relative hero-section h-screen bg-black overflow-hidden">
