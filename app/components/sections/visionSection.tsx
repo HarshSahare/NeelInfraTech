@@ -33,13 +33,11 @@ function VisionSection() {
 
     timeline.from(".vision-container .right-section", {
       opacity: 0,
-      x: "100%",
       duration: 1,
     });
 
     timeline.from(".vision-container .left-section", {
       opacity: 0,
-      x: "-100%",
       duration: 1,
     });
 
