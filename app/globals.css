@@ -7,6 +7,10 @@ body {
     margin: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .font-classica {
     font-family: var(--font-classica), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

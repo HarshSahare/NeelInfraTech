@@ -18,14 +18,14 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   status,
 }) => {
   return (
-    <div className="bg-[#D9D9D936] rounded-bl-[50px] overflow-hidden pb-[13px] rounded-tr-[50px] w-full max-w-md flex-shrink-0">
-      <div className="h-[350px] overflow-hidden rounded-bl-[50px]">
+    <div className="bg-[#D9D9D936] rounded-bl-[50px] overflow-hidden pb-[13px] rounded-tr-[50px] w-full max-w-lg flex-shrink-0">
+      <div className="h-[350px] w-full overflow-hidden rounded-bl-[50px]">
         <Image
           src={image}
           alt={title}
           width={536}
           height={402}
-          className="w-[536px] h-[402px] object-cover"
+          className="w-full h-[402px] object-cover"
         />
       </div>
       <div className=" max-w-md py-2 px-6 flex-shrink-0">
