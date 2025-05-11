@@ -1,9 +1,49 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ContactSection = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    const ctx = gsap.context(() => {
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".contact-container",
+          start: "top 0%",
+        },
+      });
+      timeline.from(
+        ".contact-container .left",
+        {
+          opacity: 0,
+          duration: 1,
+          x: -50,
+          stagger: 0.2,
+        },
+        "items"
+      );
+
+      timeline.from(
+        ".contact-container .right",
+        {
+          opacity: 0,
+          duration: 1,
+          x: 50,
+          stagger: 0.2,
+        },
+        "items"
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="flex min-h-screen">
+    <div className="flex contact-container min-h-screen">
       {/* Left Section */}
       <div className="w-1/2 bg-cover bg-center text-white p-10 flex flex-col justify-center relative">
         <div className="w-full h-full absolute top-0 left-0 z-0">
@@ -15,7 +55,7 @@ const ContactSection = () => {
           />
           <div className="overlay absolute h-full w-full bg-[#00000060]"></div>
         </div>
-        <div className="z-1">
+        <div className="z-1 left">
           <div>
             <h1 className="text-5xl font-classica font-[700] leading-tight">
               EXPRESS
@@ -68,7 +108,7 @@ const ContactSection = () => {
 
       {/* Right Section */}
       <div className="w-1/2 p-18 bg-white  flex flex-col justify-center">
-        <form className="space-y-8">
+        <form className="space-y-8 right">
           <div>
             <label className="block text-lg font-[400] font-classica">
               NAME
