@@ -10,17 +10,6 @@ const PropertiesSection = () => {
 
   useGSAP(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".properties-container .heading", {
-        opacity: 0,
-        x: -50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".properties-container",
-          start: "top 0%",
-        },
-        stagger: 0.2,
-      });
-
       gsap.from(".scroll", {
         opacity: 0,
         duration: 1,
