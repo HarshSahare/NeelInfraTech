@@ -25,7 +25,6 @@ const NeelWaySection = () => {
         scrollTrigger: {
           trigger: ".way-section-grid",
           start: "top 20%",
-          markers: true,
         },
       });
 
