@@ -10,12 +10,12 @@ const AwardsSection = () => {
 
   useGSAP(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".container main .reward-heading", {
+      gsap.from(".awards-container main .reward-heading", {
         opacity: 0,
         y: -50,
         duration: 1,
         scrollTrigger: {
-          trigger: ".container main",
+          trigger: ".awards-container main",
           start: "top 50%",
         },
         stagger: 0.2,
@@ -35,7 +35,7 @@ const AwardsSection = () => {
   }, []);
 
   return (
-    <div className="bg-white mt-[60px] container text-black  min-h-svh flex items-center justify-center">
+    <div className="bg-white mt-[60px] awards-container text-black  min-h-svh flex items-center justify-center">
       <main className="text-center px-6 py-12">
         {/* "Awards & Recognition" */}
         <p className="text-sm tracking-wide reward-heading font-classica text-gray-600 text-[14px]">
