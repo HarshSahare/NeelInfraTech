@@ -1,87 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const NeelWaySection = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  useGSAP(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".way-section-container .heading", {
-        opacity: 0,
-        x: -50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".way-section-container",
-          start: "top 50%",
-        },
-        stagger: 0.2,
-      });
-
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".way-section-grid",
-          start: "top 20%",
-        },
-      });
-
-      timeline.from(
-        ".way-section-grid .left-image",
-        {
-          opacity: 0,
-          x: -50,
-          duration: 1,
-        },
-        "images"
-      );
-
-      timeline.from(
-        ".way-section-grid .up-text",
-        {
-          opacity: 0,
-          y: "100%",
-          duration: 1,
-        },
-        "text"
-      );
-
-      timeline.from(
-        ".way-section-grid .right-image",
-        {
-          opacity: 0,
-          x: 50,
-          duration: 1,
-        },
-        "images"
-      );
-
-      timeline.from(
-        ".way-section-grid .left-text",
-        {
-          opacity: 0,
-          x: "100%",
-          duration: 1,
-        },
-        "text"
-      );
-
-      timeline.from(
-        ".way-section-grid .right-text",
-        {
-          opacity: 0,
-          x: "-100%",
-          duration: 1,
-        },
-        "text"
-      );
-    });
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section className="w-full way-section-container bg-white py-20">
       <div className="text-left mb-8 ml-[88px]">
