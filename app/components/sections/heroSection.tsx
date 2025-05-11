@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, {  useRef } from "react";
+import React, { useRef } from "react";
 import "./heroSection.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -19,7 +19,6 @@ function HeroSection() {
           start: "top top",
           end: "top+=300",
           scrub: 0.3,
-          pin: true,
         },
       });
       timeline.to(
@@ -59,14 +58,16 @@ function HeroSection() {
 
   return (
     <div className="w-full relative hero-section h-screen bg-black overflow-hidden">
-      <div className="overlay bg-[#12121277] absolute top-0 left-0 h-full w-full z-2"></div>
-      <video
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1`}
-        autoPlay
-        muted
-        loop
-        src="/videos/defaultHeroVideo.mp4"
-      />
+      <div className="absolute top-0 left-0 w-full h-full z-1 overflow-hidden">
+        <div className="overlay bg-[#12121277] absolute top-0 left-0 h-full w-full z-2"></div>
+        <video
+          className={`object-cover transition-opacity duration-1000 `}
+          autoPlay
+          muted
+          loop
+          src="/videos/defaultHeroVideo.mp4"
+        />
+      </div>
 
       <div className="overlayTexts relative w-full h-full absolute top-0 left-0 z-3">
         <div className="layer1 absolute top-0 left-0 w-full h-full flex justify-center content-center delay-4s fadeOut  flex-wrap ">
@@ -99,7 +100,7 @@ function HeroSection() {
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
             ref={svg}
-            className="w-screen h-screen"
+            className="w-screen h-screen  overflow-hidden"
           >
             <path
               ref={path}
