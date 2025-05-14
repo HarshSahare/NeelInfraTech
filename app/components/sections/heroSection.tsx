@@ -77,12 +77,34 @@ function HeroSection() {
     <div className="w-full relative hero-section h-screen bg-black overflow-hidden">
       <div className="overlay bg-[#12121277] absolute top-0 left-0 h-full w-full z-2"></div>
       <video
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 `}
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 ${
+          currentVideo != 0 && "opacity-0"
+        }`}
         autoPlay
         muted
         loop
         src="/videos/defaultHeroVideo.mp4"
       />
+
+      <video
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 ${
+          currentVideo != 1 && "opacity-0"
+        }`}
+        autoPlay
+        muted
+        loop
+        src="/videos/commercialHeroVideo.mp4"
+      />
+      <video
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 ${
+          currentVideo != 2 && "opacity-0"
+        }`}
+        autoPlay
+        muted
+        loop
+        src="/videos/residentialHeroVideo.mp4"
+      />
+
       <div className="overlayTexts w-full h-full absolute top-0 left-0 z-3">
         <div className="layer1 absolute top-0 left-0 w-full h-full flex justify-center content-center delay-4s fadeOut  flex-wrap ">
           <div
