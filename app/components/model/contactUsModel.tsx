@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { FaUser, FaEnvelope } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { RiMessage2Fill } from "react-icons/ri";
