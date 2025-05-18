@@ -16,7 +16,7 @@ const AwardsSection = () => {
         duration: 1,
         scrollTrigger: {
           trigger: ".awards-container main",
-          start: "top 50%",
+          start: "top 60%",
         },
         stagger: 0.2,
       });
