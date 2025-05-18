@@ -11,7 +11,7 @@ const StorySection = () => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".story-container",
-        start: "top 0%",
+        start: "top 50%",
       },
     });
 
@@ -35,7 +35,10 @@ const StorySection = () => {
   }, []);
 
   return (
-    <section className="bg-white story-container pt-[160px] px-4 md:px-20 text-center">
+    <section
+      id="story"
+      className="bg-white story-container pt-[160px] px-4 md:px-20 text-center"
+    >
       <div className="mx-auto">
         <p className="text-[16px] font-classica heading font-[400] tracking-wider text-[#757279] uppercase mb-3">
           Our Story
