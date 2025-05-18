@@ -16,7 +16,7 @@ const PropertiesLandingSection = () => {
         duration: 1,
         scrollTrigger: {
           trigger: ".properties-landingpage-container",
-          start: "top 0%",
+          start: "top 60%",
         },
         stagger: 0.2,
       });
@@ -29,6 +29,7 @@ const PropertiesLandingSection = () => {
       scrollTrigger: {
         trigger: ".properties-landingpage-container",
         start: "top 0%",
+        end: "+=200",
         pin: true,
         scrub: 2,
       },
@@ -41,6 +42,7 @@ const PropertiesLandingSection = () => {
       scrollTrigger: {
         trigger: ".properties-landingpage-container",
         start: "top 0%",
+        end: "+=200",
         scrub: 2,
       },
     });
