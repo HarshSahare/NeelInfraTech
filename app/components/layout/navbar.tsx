@@ -61,7 +61,7 @@ function Navbar() {
             <a className="hover:text-white cursor-pointer" href="#story">
               Our Story
             </a>
-            <a className="hover:text-white cursor-pointer" href="ourProperties">
+            <a className="hover:text-white cursor-pointer" href="#ourProperties">
               Our properties
             </a>
           </div>
