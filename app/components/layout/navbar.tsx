@@ -27,6 +27,13 @@ function Navbar() {
     const handleScroll = () => {
       const prev = prevY.current;
       const currentY = window.scrollY;
+      if (currentY > 100) {
+        navbar.current?.classList.remove("bg-[#00000042]");
+        navbar.current?.classList.add("bg-[#0000009c]");
+      } else {
+        navbar.current?.classList.add("bg-[#00000042]");
+        navbar.current?.classList.remove("bg-[#0000009c]");
+      }
       if (currentY > prev) {
         navbar.current?.classList.remove("opacity-100");
         navbar.current?.classList.add("opacity-0");
@@ -48,16 +55,19 @@ function Navbar() {
       ref={navbar}
       className="w-full flex bg-[#00000042] opacity-0 fadeIn delay-7s h-[94px] backdrop-blur-md fixed top-0 left-0 z-50"
     >
-      <div className="w-[90%] m-auto flex justify-between content-center">
-        <div className="flex content-center flex-wrap">
-          <Image
-            src="/images/hamburger.png"
-            alt="hamburger"
-            width={32}
-            height={11}
-          />
+      <div className="w-[90%] m-auto flex justify-between content-center capitalize">
+        <div className="flex flex-1">
+          <div className="flex content-center gap-10 flex-wrap font-classica text-[#bab4bba8]">
+            <a className="hover:text-white cursor-pointer" href="#story">
+              Our Story
+            </a>
+            <a className="hover:text-white cursor-pointer" href="ourProperties">
+              Our properties
+            </a>
+          </div>
         </div>
-        <div className="mr-[-72px]">
+
+        <div className="">
           <Image
             className="h-auto"
             src="/images/logo.png"
@@ -67,7 +77,11 @@ function Navbar() {
             height={32}
           />
         </div>
-        <div className="bg-black text-white py-2 px-5">Contact Us</div>
+        <div className="flex flex-1 justify-end">
+          <div className="ring ring-black text-black py-2 px-5 hover:bg-black hover:text-white cursor-pointer">
+            Contact Us
+          </div>
+        </div>
       </div>
     </div>
   );
