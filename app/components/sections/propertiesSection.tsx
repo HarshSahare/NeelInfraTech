@@ -35,7 +35,10 @@ const PropertiesSection = () => {
   }, []);
 
   return (
-    <section className="w-[95.5%] properties-container min-h-svh flex flex-col justify-center ml-auto pl-6 mt-[174px] py-12">
+    <section
+      id="ourProperties"
+      className="w-[95.5%] properties-container min-h-svh flex flex-col justify-center ml-auto pl-6 mt-[174px] py-12"
+    >
       <div className="flex flex-col lg:flex-row justify-between  gap-12">
         {/* Text Content */}
         <div className="lg:w-1/3 mt-[115px]">
