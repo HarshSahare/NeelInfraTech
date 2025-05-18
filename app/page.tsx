@@ -1,3 +1,6 @@
+"use client";
+import { useState, useEffect } from "react";
+import ContactUsModel from "./components/model/contactUsModel";
 import ContactSection from "./components/sections/contactSection";
 import HeroSection from "./components/sections/heroSection";
 import NeelWaySection from "./components/sections/neelWaySection";
@@ -9,8 +12,20 @@ import TestimonialSection from "./components/sections/testimonialSection";
 import VisionSection from "./components/sections/visionSection";
 
 export default function Home() {
+  const [isModelOpen, setIsModelOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsModelOpen(true);
+    }, 8000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <>
+      <ContactUsModel state={isModelOpen} setModelState={setIsModelOpen} />
       <HeroSection />
       <AwardsSection />
       <PropertiesLandingSection />
