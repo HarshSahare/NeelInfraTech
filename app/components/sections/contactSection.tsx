@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="flex contact-container min-h-screen">
+    <div id="contact" className="flex contact-container min-h-screen">
       {/* Left Section */}
       <div className="w-1/2 bg-cover bg-center text-white p-10 flex flex-col justify-center relative">
         <div className="w-full h-full absolute top-0 left-0 z-0">

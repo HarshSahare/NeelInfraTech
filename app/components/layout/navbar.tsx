@@ -61,7 +61,10 @@ function Navbar() {
             <a className="hover:text-white cursor-pointer" href="#story">
               Our Story
             </a>
-            <a className="hover:text-white cursor-pointer" href="#ourProperties">
+            <a
+              className="hover:text-white cursor-pointer"
+              href="#ourProperties"
+            >
               Our properties
             </a>
           </div>
@@ -78,9 +81,12 @@ function Navbar() {
           />
         </div>
         <div className="flex flex-1 justify-end">
-          <div className="ring ring-black text-black py-2 px-5 hover:bg-black hover:text-white cursor-pointer">
+          <a
+            href="#contact"
+            className="ring ring-black text-black py-2 px-5 hover:bg-black hover:text-white cursor-pointer"
+          >
             Contact Us
-          </div>
+          </a>
         </div>
       </div>
     </div>
