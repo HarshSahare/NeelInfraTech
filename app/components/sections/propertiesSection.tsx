@@ -69,7 +69,7 @@ const PropertiesSection = () => {
 
         {/* Carousel / Scrollable Cards */}
         <div className="lg:w-2/3 overflow-x-hidden flex scroll-smooth scrollbar-hide">
-          <div className="w-fit flex gap-5 scroll">
+          <div className="w-fit flex gap-5 translate-x-[10%] scroll">
             <PropertyCard
               image="/images/property-4.jpg"
               title="The Acres Villas"
