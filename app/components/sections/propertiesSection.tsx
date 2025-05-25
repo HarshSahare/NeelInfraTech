@@ -74,24 +74,24 @@ const PropertiesSection = () => {
         <div className="lg:w-2/3 overflow-x-hidden flex scroll-smooth scrollbar-hide">
           <div className="w-fit flex gap-5 translate-x-[10%] scroll">
             <PropertyCard
-              image="/images/property-4.jpg"
-              title="The Acres Villas"
+              image="/images/property_1.png"
+              title="Vrindavan Park"
+              location="South Nagpur"
+              bedrooms="1200 sq.ft"
+              status="Remaining"
+            />
+            <PropertyCard
+              image="/images/property_2.png"
+              title="Silver Star"
               location="The Acres"
-              bedrooms="3 BR to 5 BR"
+              bedrooms="1030 sq.ft"
               status="Sold Out"
             />
             <PropertyCard
-              image="/images/property-5.jpg"
-              title="The Acres Villas"
+              image="/images/property_3.png"
+              title="Silver Icon"
               location="The Acres"
-              bedrooms="3 BR to 5 BR"
-              status="Sold Out"
-            />
-            <PropertyCard
-              image="/images/property-4.jpg"
-              title="The Acres Villas"
-              location="The Acres"
-              bedrooms="3 BR to 5 BR"
+              bedrooms="1090 sq.ft"
               status="Sold Out"
             />
           </div>

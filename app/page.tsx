@@ -10,7 +10,6 @@ import AwardsSection from "./components/sections/rewardsSection";
 import StorySection from "./components/sections/storySection";
 import TestimonialSection from "./components/sections/testimonialSection";
 import VisionSection from "./components/sections/visionSection";
-import DirectorsSection from "./components/sections/directorsSection";
 
 export default function Home() {
   const [isModelOpen, setIsModelOpen] = useState(false);
@@ -33,7 +32,7 @@ export default function Home() {
       <PropertiesSection />
       <StorySection />
       <VisionSection />
-      <DirectorsSection />
+
       <NeelWaySection />
       <TestimonialSection />
       <ContactSection />

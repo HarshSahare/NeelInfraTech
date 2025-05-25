@@ -35,63 +35,63 @@ function DirectorsSection() {
 
   useGSAP(() => {
     gsap.to(".director-1-image", {
-      x: `${currentIndex != 0 ? (2 - currentIndex) * 100 : 100}%`,
+      // x: `${currentIndex != 0 ? (2 - currentIndex) * 100 : 100}%`,
       opacity: `${currentIndex != 0 ? 0.5 : 1}`,
-      width: `100%`,
+      width: `${currentIndex != 0 && "100%"}`,
       duration: 0.5,
     });
     gsap.to(".director-2-image", {
-      x: `${
-        currentIndex != 1
-          ? currentIndex == 0
-            ? 200
-            : currentIndex == 2
-            ? 0
-            : currentIndex == 3
-            ? -100
-            : currentIndex == 4 && -200
-          : 50
-      }%`,
+      // x: `${
+      //   currentIndex != 1
+      //     ? currentIndex == 0
+      //       ? 200
+      //       : currentIndex == 2
+      //       ? 0
+      //       : currentIndex == 3
+      //       ? -100
+      //       : currentIndex == 4 && -200
+      //     : 50
+      // }%`,
       opacity: `${currentIndex != 1 ? 0.5 : 1}`,
-      width: `100%`,
+      width: `${currentIndex != 1 ? "80%" : "100%"}`,
       duration: 0.5,
     });
     gsap.to(".director-3-image", {
-      x: `${
-        currentIndex != 2
-          ? currentIndex == 0
-            ? 200
-            : currentIndex == 1
-            ? 100
-            : currentIndex == 3
-            ? -100
-            : currentIndex == 4 && -200
-          : 0
-      }%`,
+      // x: `${
+      //   currentIndex != 2
+      //     ? currentIndex == 0
+      //       ? 200
+      //       : currentIndex == 1
+      //       ? 100
+      //       : currentIndex == 3
+      //       ? -100
+      //       : currentIndex == 4 && -200
+      //     : 0
+      // }%`,
       opacity: `${currentIndex != 2 ? 0.5 : 1}`,
-      width: `100%`,
+
       duration: 0.5,
     });
     gsap.to(".director-4-image", {
-      x: `${
-        currentIndex != 3
-          ? currentIndex == 0
-            ? 200
-            : currentIndex == 2
-            ? 0
-            : currentIndex == 1
-            ? 100
-            : currentIndex == 4 && -200
-          : -50
-      }%`,
+      // x: `${
+      //   currentIndex != 3
+      //     ? currentIndex == 0
+      //       ? 200
+      //       : currentIndex == 2
+      //       ? 0
+      //       : currentIndex == 1
+      //       ? 100
+      //       : currentIndex == 4 && -200
+      //     : -50
+      // }%`,
       opacity: `${currentIndex != 3 ? 0.5 : 1}`,
-      width: `100%`,
+      width: `${currentIndex != 3 ? "80%" : "100%"}`,
       duration: 0.5,
     });
     gsap.to(".director-5-image", {
-      x: `${currentIndex != 4 ? (2 - currentIndex) * 100 : -100}%`,
+      // x: `${currentIndex != 4 ? (2 - currentIndex) * 100 : -100}%`,
       opacity: `${currentIndex != 4 ? 0.5 : 1}`,
-      width: `100%`,
+      width: `${currentIndex != 4 ? "80%" : "100%"}`,
       duration: 0.5,
     });
   }, [currentIndex]);
@@ -121,13 +121,13 @@ function DirectorsSection() {
         </div>
       </div>
 
-      <div className="grid mt-[-10%] grid-cols-6 items-end justify-center w-full m-auto max-w-[80%]">
+      <div className="grid mt-[-10%] grid-cols-6 items-end justify-items-center w-full m-auto max-w-[80%]">
         {images.map((image, index) => (
           <Image
             src={image}
             key={index}
             alt={`Director ${index + 1}`}
-            className={` h-auto w-full
+            className={` h-auto w-[80%]
             } director-${index + 1}-image  ${
               currentIndex == index ? " col-span-2" : "col-span-1"
             }`}
