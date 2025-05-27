@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
 
 function Navbar() {
@@ -61,12 +62,12 @@ function Navbar() {
             <a className="hover:text-white cursor-pointer" href="#story">
               Our Story
             </a>
-            <a
+            <Link
               className="hover:text-white cursor-pointer"
-              href="#ourProperties"
+              href="/properties"
             >
               Our properties
-            </a>
+            </Link>
           </div>
         </div>
 
