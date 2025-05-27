@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const ContactSection = ({ className }: { className: string }) => {
+const ContactSection = ({ className }: { className?: string }) => {
   return (
     <div
       id="contact"

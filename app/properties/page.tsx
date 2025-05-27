@@ -23,7 +23,7 @@ function Properties() {
               Vrindavan park
             </h1>
             <div className="md:py-10 py-5 text-sm">
-              Whether you're searching for a peaceful residential plot, a
+              Whether you&apos;re searching for a peaceful residential plot, a
               luxurious home, or <br /> a high-return commercial investment — we
               have the perfect property waiting for you.
             </div>
