@@ -17,8 +17,8 @@ function Properties() {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 md:w-[55%] w-full flex items-center md:items-end md:py-20 text-white">
-          <div className="md:px-20 px-10">
+        <div className="absolute inset-0 md:w-[55%] w-full flex items-center  md:py-20 text-white">
+          <div className="md:px-20 px-10 mt-30">
             <h1 className="font-classica md:text-7xl text-5xl uppercase">
               Vrindavan park
             </h1>
