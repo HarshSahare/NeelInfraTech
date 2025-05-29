@@ -8,6 +8,7 @@ interface PropertyCardProps {
   location: string;
   bedrooms: string;
   status: string;
+  className?: string;
 }
 
 const PropertyCard: React.FC<PropertyCardProps> = ({
@@ -16,9 +17,12 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   location,
   bedrooms,
   status,
+  className,
 }) => {
   return (
-    <div className="bg-[#D9D9D936] rounded-bl-[50px] overflow-hidden pb-[13px] rounded-tr-[50px] w-full max-w-lg flex-shrink-0">
+    <div
+      className={`bg-[#D9D9D936] rounded-bl-[50px] overflow-hidden pb-[13px] rounded-tr-[50px] w-full max-w-lg flex-shrink-0 ${className}`}
+    >
       <div className="h-[350px] w-full overflow-hidden rounded-bl-[50px]">
         <Image
           src={image}
