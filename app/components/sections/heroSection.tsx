@@ -77,9 +77,7 @@ function HeroSection() {
     <div className="w-full relative hero-section h-screen bg-black overflow-hidden">
       <div className="overlay bg-[#12121277] absolute top-0 left-0 h-full w-full z-2"></div>
       <video
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 ${
-          currentVideo != 0 && "opacity-0"
-        }`}
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 `}
         autoPlay
         muted
         loop
