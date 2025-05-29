@@ -83,26 +83,7 @@ function HeroSection() {
         autoPlay
         muted
         loop
-        src="/videos/defaultHeroVideo.mp4"
-      />
-
-      <video
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 ${
-          currentVideo != 1 && "opacity-0"
-        }`}
-        autoPlay
-        muted
-        loop
-        src="/videos/commercialHeroVideo.mp4"
-      />
-      <video
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 ${
-          currentVideo != 2 && "opacity-0"
-        }`}
-        autoPlay
-        muted
-        loop
-        src="/videos/residentialHeroVideo.mp4"
+        src="/videos/homepageHeroSectionBannerVideo.mp4"
       />
 
       <div className="overlayTexts w-full h-full absolute top-0 left-0 z-3">
