@@ -155,9 +155,9 @@ function Page() {
         <div className="font-classica text-center ">
           <div className="text-md text-[#757279]">Property</div>
           <div className="text-3xl uppercase font-[400] grid grid-cols-2 gap-5 w-fit mx-auto">
-            <div className="flex justify-center ">
+            <div className="flex justify-center text-sm md:text-3xl">
               <div
-                className={`uppercase w-fit py-5 ${
+                className={`uppercase w-fit py-3 ${
                   activeIndex === 0 && "border-b-1  border-b-[#6A5F6C]"
                 } cursor-pointer`}
                 onClick={() => setActiveIndex(0)}
@@ -165,9 +165,9 @@ function Page() {
                 Popular
               </div>
             </div>
-            <div className="flex justify-center ">
+            <div className="flex justify-center text-sm md:text-3xl">
               <div
-                className={`uppercase w-fit py-5 ${
+                className={`uppercase w-fit py-3 ${
                   activeIndex === 1 && "border-b-1  border-b-[#6A5F6C]"
                 } cursor-pointer`}
                 onClick={() => setActiveIndex(1)}
@@ -177,8 +177,7 @@ function Page() {
             </div>
           </div>
 
-          <div className="w-[90vw] overflow-x-hidden py-20 mx-auto">
-            {/* Slider container with width = 2 x 90vw */}
+          <div className="w-[90vw] overflow-x-hidden py-10 mx-auto">
             <div
               className="flex w-[180vw] transition-transform duration-500 ease-in-out"
               style={{
@@ -190,7 +189,10 @@ function Page() {
                 <div className="flex gap-6 overflow-x-auto scrollbar-hide whitespace-nowrap px-4">
                   {PopularProperties.map((property, index) => (
                     <div key={index} className="inline-block flex-shrink-0">
-                      <PropertyCard {...property} className="min-w-[500px]" />
+                      <PropertyCard
+                        {...property}
+                        className="md:min-w-[500px] w-[100vw]"
+                      />
                     </div>
                   ))}
                 </div>
