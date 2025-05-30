@@ -110,7 +110,7 @@ function Page() {
 
   return (
     <div className="flex flex-col">
-      <div className="h-svh w-screen bg-amber-50">
+      <div className="h-svh w-full bg-black-50">
         <Image
           src={"/images/propertiesDetailedBanner.png"}
           alt="Properties Background"
@@ -119,9 +119,9 @@ function Page() {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0  w-full flex items-center  md:py-20 text-white">
+        <div className="absolute inset-0  w-full flex items-center  md:py-20 bg-red text-white">
           <div className="md:px-20 px-10 md:mt-[10%]">
-            <h1 className="font-classica md:text-7xl text-5xl uppercase">
+            <h1 className="font-classica md:text-7xl text-4xl uppercase">
               Opportunities That Move <br /> With the City
             </h1>
             <div className="md:py-10 py-5 text-sm">
