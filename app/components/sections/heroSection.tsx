@@ -85,26 +85,36 @@ function HeroSection() {
       />
 
       <div className="overlayTexts w-full h-full absolute top-0 left-0 z-3">
-        <div className="layer1 absolute top-0 left-0 w-full h-full flex justify-center content-center delay-4s fadeOut  flex-wrap ">
+        <div className="layer1 absolute top-0 left-0 w-full h-full flex justify-center items-center flex-wrap delay-4s fadeOut">
           <div
-            className={`brandName uppercase w-fit h-fit font-bold text-white text-[100px] opacity-0 delay-2s fadeIn font-classica`}
+            className="brandName uppercase w-fit h-fit font-bold text-white 
+                 text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] 
+                 opacity-0 delay-2s fadeIn font-classica text-center px-4"
           >
             Neel InfraTech
           </div>
         </div>
 
-        <div className="layer2 absolute top-0 text-white left-0 w-full h-full opacity-0 flex justify-center content-end flex-wrap delay-5s z-3 fadeIn">
-          <div className="h-[70%] w-full flex items-center flex-col">
-            <div className="top-section flex flex-col items-center">
-              <div className="title font-classica heading uppercase text-[40px] font-[400]">
+        <div className="layer2 absolute top-0 text-white left-0 w-full h-full opacity-0 flex justify-center lg:content-end items-center flex-wrap delay-5s z-3 fadeIn">
+          <div className="h-fit lg:h-[70%] w-full flex items-center flex-col">
+            <div className="top-section flex flex-col items-center px-4 text-center">
+              <div
+                className="title font-classica heading uppercase font-[400] 
+                  text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px]"
+              >
                 The Art of Fine Living.
               </div>
-              <div className="description heading font-poppins text-center text-[16px]/[22px] font-light my-[10px] max-w-[450px]">
+              <div
+                className="description heading font-poppins font-light my-2 
+                  text-[14px] sm:text-[15px] md:text-[16px] leading-[20px] sm:leading-[22px] 
+                  max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[450px]"
+              >
                 Where timeless design meets elite comfort, crafted to elevate
                 your lifestyle and reflect a taste for only the finest.
               </div>
             </div>
-            <div className="bottom-section flex-1 opacity-0 fadeIn delay-6s  mt-[155px] w-full flex max-w-[1000px] ">
+
+            <div className="bottom-section flex-1 opacity-0 fadeIn delay-6s  mt-[155px] w-full lg:flex max-w-[1000px] hidden ">
               <div
                 className={`flex flex-1 flex-col sectionTransition mt-auto ${
                   currentVideo == 1 ? "expandedSection" : "shrunkSection"
