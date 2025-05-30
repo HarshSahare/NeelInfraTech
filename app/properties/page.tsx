@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useRef, useState } from "react";
+import React, { RefObject, useRef, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import PropertyCard from "../components/propertyCard";
 import ContactSection from "../components/sections/contactSection";
@@ -94,7 +94,10 @@ function Page() {
     },
   ];
 
-  const scroll = (ref, direction) => {
+  const scroll = (
+    ref: RefObject<HTMLDivElement | null>,
+    direction: "left" | "right"
+  ) => {
     const container = ref.current;
     if (!container) return;
 
