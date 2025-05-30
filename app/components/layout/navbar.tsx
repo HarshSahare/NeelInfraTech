@@ -74,7 +74,7 @@ function Navbar() {
         isMenuOpen ? "bg-black/80" : "bg-[#00000042]"
       } opacity-0 fadeIn delay-7s`}
     >
-      <div className="w-[90%] mx-auto flex items-center justify-between h-full">
+      <div className="w-[90%] mx-auto h-full items-center grid grid-cols-3">
         {/* Desktop Left */}
         <div className="hidden md:flex gap-10 font-classica text-[#bab4bba8]">
           <Link className="hover:text-white cursor-pointer" href="/stories">
@@ -85,8 +85,30 @@ function Navbar() {
           </Link>
         </div>
 
+        {/* Desktop Logo */}
+        <div className="hidden md:flex justify-center">
+          <Image
+            className="h-auto"
+            src="/images/logo.png"
+            alt="logo"
+            width={160}
+            height={32}
+            quality={80}
+          />
+        </div>
+
+        {/* Desktop Right */}
+        <div className="hidden md:flex justify-end">
+          <a
+            href="#contact"
+            className="ring ring-black text-black py-2 px-5 hover:bg-black hover:text-white cursor-pointer"
+          >
+            Contact Us
+          </a>
+        </div>
+
         {/* Mobile Layout */}
-        <div className="flex items-center justify-between w-full md:hidden">
+        <div className="flex items-center justify-between w-full md:hidden col-span-3 px-2">
           <div>
             <Image
               className="h-auto"
@@ -103,16 +125,6 @@ function Navbar() {
           >
             ☰
           </button>
-        </div>
-
-        {/* Desktop Right */}
-        <div className="hidden md:flex justify-end">
-          <a
-            href="#contact"
-            className="ring ring-black text-black py-2 px-5 hover:bg-black hover:text-white cursor-pointer"
-          >
-            Contact Us
-          </a>
         </div>
       </div>
 
