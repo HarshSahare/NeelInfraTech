@@ -59,9 +59,9 @@ function Navbar() {
       <div className="w-[90%] m-auto flex justify-between content-center capitalize">
         <div className="flex flex-1">
           <div className="flex content-center gap-10 flex-wrap font-classica text-[#bab4bba8]">
-            <a className="hover:text-white cursor-pointer" href="#story">
+            <Link className="hover:text-white cursor-pointer" href="/stories">
               Our Story
-            </a>
+            </Link>
             <Link
               className="hover:text-white cursor-pointer"
               href="/properties"

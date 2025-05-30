@@ -94,7 +94,6 @@ function Page() {
   return (
     <div className="flex flex-col">
       <div className="h-svh w-screen bg-amber-50">
-        <div className="absolute bg-linear-to-b from-[#1212121a] to-[#12121275] inset-0"></div>
         <Image
           src={"/images/propertiesDetailedBanner.png"}
           alt="Properties Background"
