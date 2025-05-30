@@ -49,10 +49,10 @@ function StoriesPage() {
             </h1>
             <div className="md:py-10 py-5 text-md">
               At Neel Infratech, we are on a mission to transform how real
-              estate is <br /> experienced in Nagpur. We don’t just deal in
+              estate is <br /> experienced in Nagpur. We don&apos;t just deal in
               properties — we help <br /> people find the right space to grow,
               live, and invest with confidence.
-              <br /> Whether you're looking for residential plots, bungalows,
+              <br /> Whether you&apos;re looking for residential plots, bungalows,
               villas, or
               <br /> commercial spaces.
             </div>
