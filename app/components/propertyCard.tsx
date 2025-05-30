@@ -22,7 +22,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-[#D9D9D936] rounded-bl-[50px] overflow-hidden pb-[13px] rounded-tr-[50px] w-full max-w-lg flex-shrink-0 ${className}`}
+      className={`bg-[#D9D9D936] rounded-bl-[50px] overflow-hidden pb-[13px] rounded-tr-[50px] w-full md:w-[500px] max-w-lg flex-shrink-0 ${className}`}
     >
       <div className="h-auto w-full overflow-hidden rounded-bl-[50px]">
         <Image

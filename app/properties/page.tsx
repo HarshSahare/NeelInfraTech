@@ -1,12 +1,15 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import PropertyCard from "../components/propertyCard";
 import ContactSection from "../components/sections/contactSection";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 function Page() {
   const [activeIndex, setActiveIndex] = useState(0); // 0: Popular, 1: Properties
+  const popularScrollRef = useRef(null);
+  const propertiesScrollRef = useRef(null);
   const featuredProperties = [
     {
       src: "/images/propertiesDetailedImage1.png",
@@ -91,6 +94,17 @@ function Page() {
     },
   ];
 
+  const scroll = (ref, direction) => {
+    const container = ref.current;
+    if (!container) return;
+
+    const scrollAmount = container.offsetWidth; // snap by container width
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="flex flex-col">
       <div className="h-svh w-screen bg-amber-50">
@@ -151,14 +165,14 @@ function Page() {
         </div>
       </div>
 
-      <div className="">
-        <div className="font-classica text-center ">
+      <div>
+        <div className="font-classica text-center">
           <div className="text-md text-[#757279]">Property</div>
           <div className="text-3xl uppercase font-[400] grid grid-cols-2 gap-5 w-fit mx-auto">
             <div className="flex justify-center text-sm md:text-3xl">
               <div
                 className={`uppercase w-fit py-3 ${
-                  activeIndex === 0 && "border-b-1  border-b-[#6A5F6C]"
+                  activeIndex === 0 ? "border-b border-b-[#6A5F6C]" : ""
                 } cursor-pointer`}
                 onClick={() => setActiveIndex(0)}
               >
@@ -168,7 +182,7 @@ function Page() {
             <div className="flex justify-center text-sm md:text-3xl">
               <div
                 className={`uppercase w-fit py-3 ${
-                  activeIndex === 1 && "border-b-1  border-b-[#6A5F6C]"
+                  activeIndex === 1 ? "border-b border-b-[#6A5F6C]" : ""
                 } cursor-pointer`}
                 onClick={() => setActiveIndex(1)}
               >
@@ -177,7 +191,32 @@ function Page() {
             </div>
           </div>
 
-          <div className="w-[90vw] overflow-x-hidden py-10 mx-auto">
+          <div className="relative w-[90vw] overflow-hidden py-10 mx-auto">
+            {/* Left Arrow */}
+            <button
+              onClick={() =>
+                scroll(
+                  activeIndex === 0 ? popularScrollRef : propertiesScrollRef,
+                  "left"
+                )
+              }
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow"
+            >
+              <HiChevronLeft size={24} />
+            </button>
+
+            <button
+              onClick={() =>
+                scroll(
+                  activeIndex === 0 ? popularScrollRef : propertiesScrollRef,
+                  "right"
+                )
+              }
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow"
+            >
+              <HiChevronRight size={24} />
+            </button>
+
             <div
               className="flex w-[180vw] transition-transform duration-500 ease-in-out"
               style={{
@@ -186,13 +225,16 @@ function Page() {
             >
               {/* Section 1: Popular Properties */}
               <div className="min-w-[90vw] flex justify-center">
-                <div className="flex gap-6 overflow-x-auto scrollbar-hide whitespace-nowrap px-4">
+                <div
+                  ref={popularScrollRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-hide whitespace-nowrap px-0 scroll-snap-x scroll-smooth"
+                >
                   {PopularProperties.map((property, index) => (
-                    <div key={index} className="inline-block flex-shrink-0">
-                      <PropertyCard
-                        {...property}
-                        className="md:min-w-[500px] w-[100vw]"
-                      />
+                    <div
+                      key={index}
+                      className="inline-block flex-shrink-0 w-[90vw] md:w-auto scroll-snap-align-start"
+                    >
+                      <PropertyCard {...property} className="w-full" />
                     </div>
                   ))}
                 </div>
@@ -200,10 +242,16 @@ function Page() {
 
               {/* Section 2: Properties */}
               <div className="min-w-[90vw] flex justify-center">
-                <div className="flex gap-6 overflow-x-auto scrollbar-hide whitespace-nowrap px-4">
+                <div
+                  ref={propertiesScrollRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-hide whitespace-nowrap px-0 scroll-snap-x scroll-smooth"
+                >
                   {Properties.map((property, index) => (
-                    <div key={index} className="inline-block flex-shrink-0">
-                      <PropertyCard {...property} className="min-w-[500px]" />
+                    <div
+                      key={index}
+                      className="inline-block flex-shrink-0 w-[90vw] md:w-auto scroll-snap-align-start"
+                    >
+                      <PropertyCard {...property} className="w-full" />
                     </div>
                   ))}
                 </div>

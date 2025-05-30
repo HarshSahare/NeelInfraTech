@@ -38,9 +38,11 @@ function Navbar() {
       if (currentY > prev) {
         navbar.current?.classList.remove("opacity-100");
         navbar.current?.classList.add("opacity-0");
+        navbar.current?.classList.add("pointer-events-none");
       } else {
         navbar.current?.classList.add("opacity-100");
         navbar.current?.classList.remove("opacity-0");
+        navbar.current?.classList.remove("pointer-events-none");
       }
       prevY.current = currentY;
     };
@@ -54,7 +56,7 @@ function Navbar() {
   return (
     <div
       ref={navbar}
-      className="w-full flex bg-[#00000042] opacity-0 fadeIn delay-7s h-[94px] backdrop-blur-md fixed top-0 left-0 z-50"
+      className="w-full flex bg-[#00000042]  opacity-0 fadeIn delay-7s h-[94px] backdrop-blur-md fixed top-0 left-0 z-50"
     >
       <div className="w-[90%] m-auto flex justify-between content-center capitalize">
         <div className="flex flex-1">
