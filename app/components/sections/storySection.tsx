@@ -35,47 +35,54 @@ const StorySection = () => {
   }, []);
 
   return (
-    <section
-      id="story"
-      className="bg-white story-container pt-[160px] px-4 md:px-20 text-center"
-    >
+    <section id="story" className="bg-white pt-28 px-4 md:px-20 text-center">
       <div className="mx-auto">
-        <p className="text-[16px] font-classica heading font-[400] tracking-wider text-[#757279] uppercase mb-3">
+        <p className="text-sm md:text-base font-classica font-[400] tracking-wider text-[#757279] uppercase mb-3">
           Our Story
         </p>
-        <h2 className="text-[62px] md:text-5xl heading font-[400] font-classica leading-tight text-[#161616] mb-[40px]">
-          CREATING VALUE <br /> THROUGH DESIGN & SPACE
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-classica font-[400] leading-tight text-[#161616] mb-10">
+          CREATING VALUE <br className="hidden md:block" />
+          THROUGH DESIGN & SPACE
         </h2>
-        <p className="font-[400] font-poppins heading text-[#44404096] text-md max-w-3xl mx-auto">
+        <p className="font-[400] font-poppins text-[#44404096] text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
           Driven by passion, we continuously push the boundaries of architecture
-          by constructing <br /> residential, commercial, hospitality, and
-          retail spaces that frame Dubai’s skyline.
+          by constructing residential, commercial, hospitality, and retail
+          spaces that frame Dubai’s skyline.
         </p>
       </div>
 
-      <div className="mt-[170px] story-grid-section grid grid-cols-1 md:grid-cols-3 gap-12 max-w-[85%] place-items-center-safe mx-auto text-left">
-        <div className="border-l-2 story-grid-content border-[#757279] overflow-hidden pl-6 w-fit">
-          <h3 className="text-[62px] font-[400] font-classica s text-[#757279]">
-            03
-          </h3>
-          <p className="text-[#999999] text-[18px] mt-[28px] ">Destinations</p>
+      <div className="mt-24 flex lg:flex-row lg:gap-0  flex-wrap flex-col justify-around gap-12 max-w-7xl mx-auto text-left px-4 md:py-10 lg:items-center">
+        <div className="w-fit flex justify-center h-fit min-w-fit">
+          <div className=" w-[2px] bg-[#757279] "></div>
+          <div className="px-8">
+            <h3 className="text-5xl sm:text-6xl font-classica text-[#757279] py-8 ">
+              03
+            </h3>
+            <p className="text-[#999999] text-lg mt-6">Destinations</p>
+          </div>
         </div>
-        <div className="border-l-2 story-grid-content overflow-hidden border-[#757279] pl-6 w-fit">
-          <h3 className="text-[62px] font-[400] font-classica text-[#757279]">
-            18
-          </h3>
-          <p className="text-[#999999] text-[18px] mt-[28px]">Masterpieces</p>
+        <div className="w-fit flex justify-center h-fit min-w-fit">
+          <div className=" w-[2px] bg-[#757279] "></div>
+          <div className="px-8">
+            <h3 className="text-5xl sm:text-6xl font-classica text-[#757279] py-8">
+              18
+            </h3>
+            <p className="text-[#999999] text-lg mt-6">Masterpieces</p>
+          </div>
         </div>
-        <div className="border-l-2 story-grid-content overflow-hidden border-[#757279] pl-6 w-fit">
-          <h3 className="text-[62px] font-[400] font-classica text-[#757279]">
-            $10bn
-          </h3>
-          <p className="text-[#999999] text-[18px] mt-[28px]">Portfolio</p>
+        <div className="w-fit flex justify-center h-fit min-w-fit">
+          <div className=" w-[2px] bg-[#757279] "></div>
+          <div className="px-8">
+            <h3 className="text-5xl sm:text-6xl font-classica text-[#757279] py-8">
+              $10bn
+            </h3>
+            <p className="text-[#999999] text-lg mt-6">Portfolio</p>
+          </div>
         </div>
       </div>
 
-      <div className="mt-12">
-        <button className="bg-black text-white px-18 py-3 mt-[80px]  text-sm hover:bg-gray-900 transition">
+      <div className="mt-16">
+        <button className="bg-black text-white px-8 sm:px-12 py-3 text-sm hover:bg-gray-900 transition">
           Discover Our Story
         </button>
       </div>
