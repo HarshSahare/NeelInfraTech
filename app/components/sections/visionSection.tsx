@@ -44,56 +44,67 @@ function VisionSection() {
   }, []);
 
   return (
-    <div className="min-h-svh overflow-hidden vision-container w-[95.5%] pt-30 m-auto flex flex-col">
-      <div>
-        <div className="uppercase text-center font-classica heading text-[#757279] text-sm">
+    <div className="min-h-svh overflow-hidden vision-container w-[95.5%] pt-20 mx-auto flex flex-col">
+      {/* Header Section */}
+      <div className="text-center">
+        <div className="uppercase font-classica text-[#757279] text-sm">
           Our Visionary Leader
         </div>
-        <div className="mx-auto w-fit">
-          <div className="uppercase w-fit  font-classica heading  text-[75px] font-[400] text-center mt-5">
-            Mr. Pitambar ikar
-          </div>
-          <div className="w-fit text-[#44404096] heading  font-poppins">
+        <div className="mt-5">
+          <h2 className="uppercase font-classica text-4xl sm:text-5xl md:text-[75px] font-[400] text-center">
+            Mr. Pitambar Ikar
+          </h2>
+          <p className="text-[#44404096] font-poppins text-sm sm:text-base mt-2">
             Founder & CEO Of NEEL INFRATECH
-          </div>
+          </p>
         </div>
       </div>
 
-      <div className="flex flex-1">
-        <div className="left flex font-classica text-[12px]/[24px]  text-[#918F8F] font-[400] flex-col justify-end  pb-50 flex-1">
-          <div className="mr-[-10px] mb-[15px] pl-[54px] left-section">
-            APR 30 2025
+      {/* Main Content Section */}
+      <div className="flex flex-col md:flex-row flex-1 mt-12 gap-8">
+        {/* Left Text */}
+        <div className="md:flex-1 font-classica text-xs sm:text-sm text-[#918F8F] font-[400] flex flex-col justify-end px-4 md:px-0 pb-10 md:pb-20">
+          <div className="mb-4 md:pl-12">
+            <p>APR 30 2025</p>
             <div className="h-[0.2px] w-[40%] my-3 bg-[#918F8F]"></div>
-            <div className="text-left">
+            <p className="text-left">
               Today, his vision continues to guide a dedicated team, committed
               to building
-              <br /> not just homes, but communities that inspire better living.
-            </div>
+              <br className="hidden sm:block" />
+              not just homes, but communities that inspire better living.
+            </p>
           </div>
         </div>
-        <div className="center relative">
-          <Image
-            src="/images/director-image.png"
-            alt="Director"
-            width={500}
-            height={500}
-            className="w-auto h-full leader-image mt-[-47px] rounded-full mx-auto object-contain"
-          />
-          <div className="absolute bottom-0 h-[20%] w-full blur-md bg-white"></div>
-          <button
-            className="absolute bottom-[9%] left-[50%] leader-image-button cursor-pointer bg-black text-white px-8 py-2 z-10"
-            style={{ transform: "translateX(-50%)" }}
-          >
-            Read More
-          </button>
+
+        {/* Center Image & Button */}
+        <div className="relative md:flex-1 flex justify-center items-center">
+          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md">
+            <Image
+              src="/images/director-image.png"
+              alt="Director"
+              width={500}
+              height={500}
+              className="w-full h-auto rounded-full object-contain"
+            />
+            <div className="absolute bottom-[-20px] h-[20%] w-full blur-md bg-white"></div>
+            <button className="absolute bottom-[9%] left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm sm:text-base z-10">
+              Read More
+            </button>
+          </div>
         </div>
-        <div className="right font-classica right-section text-[12px]/[24px] text-[#918F8F] font-[400]  flex-1 pt-10 ">
-          <div className="mt-2 ml-[-5px]">
-            Starting with nothing but a dream and determination, Mr. Pitambar
-            Ikar <br /> built Neel Infratech into a trusted empire through
-            vision, hard work, and <br /> unwavering belief. belief.
-            <div className="h-[0.2px] w-[40%]  my-3 bg-[#918F8F]"></div>
-            Nov 21 2017
+
+        {/* Right Text */}
+        <div className="md:flex-1 font-classica text-xs sm:text-sm text-[#918F8F] font-[400] px-4 md:px-0 pt-4 md:pt-10">
+          <div className="ml-0 md:ml-[-5px]">
+            <p>
+              Starting with nothing but a dream and determination, Mr. Pitambar
+              Ikar <br className="hidden sm:block" />
+              built Neel Infratech into a trusted empire through vision, hard
+              work, and <br className="hidden sm:block" />
+              unwavering belief.
+            </p>
+            <div className="h-[0.2px] w-[40%] my-3 bg-[#918F8F]"></div>
+            <p>Nov 21 2017</p>
           </div>
         </div>
       </div>

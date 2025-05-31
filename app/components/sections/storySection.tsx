@@ -35,7 +35,7 @@ const StorySection = () => {
   }, []);
 
   return (
-    <section id="story" className="bg-white pt-28 px-4 md:px-20 text-center">
+    <section id="story" className="bg-white py-28 px-4 md:px-20 text-center">
       <div className="mx-auto">
         <p className="text-sm md:text-base font-classica font-[400] tracking-wider text-[#757279] uppercase mb-3">
           Our Story
