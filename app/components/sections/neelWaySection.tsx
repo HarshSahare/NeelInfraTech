@@ -4,12 +4,12 @@ import Image from "next/image";
 const NeelWaySection = () => {
   return (
     <section className="w-full way-section-container bg-white py-20">
-      <div className="text-left mb-8 ml-[88px]">
-        <p className="text-xs font-classica heading tracking-widest text-gray-500 flex items-center">
+      <div className="text-left mb-8 px-4 sm:px-10 md:px-20">
+        <p className="text-xs sm:text-sm font-classica heading tracking-widest text-gray-500 flex items-center">
           YOUR FOREVER
-          <span className="flex-grow border-t heading max-w-[150px] border-gray-300 ml-4"></span>
+          <span className="flex-grow border-t heading max-w-[100px] sm:max-w-[150px] border-gray-300 ml-4"></span>
         </p>
-        <h2 className="text-[45px] md:text-5xl heading mt-5 text-[#161616] font-classica font-[400]">
+        <h2 className="text-[32px] sm:text-[40px] md:text-[45px] lg:text-5xl heading mt-5 text-[#161616] font-classica font-[400] leading-tight">
           A NEEL WAY OF LIFE
         </h2>
       </div>
