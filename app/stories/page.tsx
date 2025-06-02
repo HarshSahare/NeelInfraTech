@@ -12,22 +12,34 @@ interface DirectorsInfoInterface {
 function StoriesPage() {
   const DirectorsInfo: DirectorsInfoInterface[] = [
     {
-      name: "Mr. Ajay Dandekar",
-      description:
-        "Neel Infratech is driven by a dynamic team of five visionary directors, each bringing their own expertise, leadership, and commitment to building a trustworthy and progressive real estate brand in Nagpur.Together, our directors share a common goal — to transform land into lasting value and guide clients toward smart and secure real estate decisions. With diverse backgrounds in real estate development, customer relations, finance, and strategy, they ensure every project reflects the company’s core values: transparency, integrity, and client satisfaction.",
+      name: "Mr. Pushparaj Meshram",
+      description: `Pushparaj Meshram’s story is one of grit and growth. Born near Bhivapoor village, Umred, he began working while in 7th grade to support his education. After moving to Nagpur, he completed his 12th, graduation, LLB, and LLM—working jobs like digging, selling books, and tutoring to fund his studies.
+
+        <br/><br/>Starting his legal career in 2000, he practiced law with dedication. In 2007, he stepped into real estate, where he found his true calling. By 2009, he was excelling in the field, eventually dedicating himself fully to real estate.
+        
+        <br/><br/>With over 18 years in the industry, including 10 years at Neel Infratech, he has helped over 2,000 clients buy property and empowered 500+ individuals to build their own real estate businesses. His hard work has taken him from rural beginnings to international milestones, including visits to Andaman & Nicobar (2010) and Thailand (2012).
+        
+        <br/><br/>> "Hume zarurat ke hisaab se nahi, chahat ke hisaab se jeena chahiye."        
+        `,
       image: "/images/storiesImage3.png",
       subDescription:
-        '"The directors at Neel Infratech are professional, honest, and easy to trust. Their teamwork made my investment journey smooth and stress-free."',
-      quoteAuthor: "Mr. Ajay Dandekar",
+        '"Mr. Meshram’s experience and honesty gave us full confidence during our property purchase. A true professional we deeply trust."',
+      quoteAuthor: "Mr. Rajesh K. Homebuyer",
     },
     {
-      name: "Mr. Satendra sir",
-      description:
-        "Neel Infratech is driven by a dynamic team of five visionary directors, each bringing their own expertise, leadership, and commitment to building a trustworthy and progressive real estate brand in Nagpur.Together, our directors share a common goal — to transform land into lasting value and guide clients toward smart and secure real estate decisions. With diverse backgrounds in real estate development, customer relations, finance, and strategy, they ensure every project reflects the company’s core values: transparency, integrity, and client satisfaction.",
+      name: "Mr. Satendra Sir",
+      description: `Hailing from Manjhuriya village in Darbhanga district, Satendra Sir's life journey reflects resilience and responsibility. Married at a young age, he moved to Nagpur at 25 with his wife and three children, determined to give them a better future through education.
+
+        <br/><br/>To support his family, he took on various jobs over the years—never stepping back from hard work. With the support of a friend, he entered the real estate industry, where his dedication and sincerity led him to co-build a company and eventually become its Director.
+        
+        <br/><br/>Through his real estate earnings, he educated his children, arranged their marriages, and secured their futures by buying properties and land. By the age of 45, he had firmly established himself. Today, he stands proud with 700–800 happy clients across Nagpur, having sold property in both private and government sectors—with customer satisfaction at the core of his journey.
+        
+        <br/><br/>> "Karam pe vishvash rakho, result pe nahi — result aapka karam hi dilayega."
+        `,
       image: "/images/storiesImage3.png",
       subDescription:
-        '"The directors at Neel Infratech are professional, honest, and easy to trust. Their teamwork made my investment journey smooth and stress-free."',
-      quoteAuthor: "Mr. Satendra sir",
+        '"Satendra Sir treats every client like family. His honesty and long-term thinking gave me full confidence in my property purchase. A rare gem in this industry!"',
+      quoteAuthor: "Mr. Sameer P., Government Employee",
     },
   ];
   return (
@@ -52,8 +64,8 @@ function StoriesPage() {
               estate is <br /> experienced in Nagpur. We don&apos;t just deal in
               properties — we help <br /> people find the right space to grow,
               live, and invest with confidence.
-              <br /> Whether you&apos;re looking for residential plots, bungalows,
-              villas, or
+              <br /> Whether you&apos;re looking for residential plots,
+              bungalows, villas, or
               <br /> commercial spaces.
             </div>
           </div>
@@ -163,14 +175,14 @@ function StoriesPage() {
         <div
           className={`flex ${
             index % 2 == 0 ? "xl:flex-row" : "xl:flex-row-reverse xl:text-right"
-          } flex-col w-[90%] mx-auto  gap-10 xl:gap-0 ${
+          } flex-col w-[90%] mx-auto  gap-10 xl:gap-0  ${
             index % 2 == 0 && index != DirectorsInfo.length - 1
               ? "py-20"
               : "py-0"
           }`}
           key={index}
         >
-          <div className=" flex-1">
+          <div className=" flex-1 ">
             <Image
               alt="property image"
               src={director.image}
@@ -194,9 +206,10 @@ function StoriesPage() {
                 }`}
               ></div>
 
-              <div className="text-md text-[#6A5F6C]">
-                {director.description}
-              </div>
+              <div
+                className="text-md text-[#6A5F6C]"
+                dangerouslySetInnerHTML={{ __html: director.description }}
+              ></div>
 
               <div className="text-[#6A5F6C] font-[300] italic py-10">
                 {director.subDescription}
