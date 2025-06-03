@@ -130,23 +130,23 @@ function StoriesPage() {
         </div>
       </div>
 
-      <div className="flex xl:flex-row flex-col w-[90%] mx-auto py-20 gap-10 xl:gap-0 xl:py-40">
-        <div className="xl:flex-2 flex-1">
+      <div className="flex md:flex-row flex-col w-[90%] mx-auto py-20 gap-10 md:gap-0 md:py-40">
+        <div className="md:flex-2 flex-1">
           <Image
             alt="property image"
             src="/images/storiesImage1.png"
             width={1920}
             height={1080}
-            className="w-full h-auto object-cover"
+            className="w-full h-full lg:h-auto object-cover"
           />
         </div>
-        <div className="xl:flex-3 flex-1 flex items-center justify-center">
-          <div className="xl:px-30 max-w-[70%]">
-            <div className="font-classica font-[400]  uppercase text-5xl">
+        <div className="md:flex-3 flex-1 flex items-center justify-center text-center md:text-left">
+          <div className="md:px-30">
+            <div className="font-classica font-[400]  uppercase md:text-5xl text-3xl">
               Why Choose Neel <br /> Infratech?
             </div>
 
-            <div className="h-[0.5px] w-[50%] bg-[#6A5F6C] my-10"></div>
+            <div className="h-[0.5px] w-[50%] translate-x-[50%] md:translate-x-0 bg-[#6A5F6C] my-6 md:10"></div>
 
             <div className="text-md text-[#6A5F6C]">
               Choosing the right real estate partner can make all the difference
@@ -162,23 +162,23 @@ function StoriesPage() {
         </div>
       </div>
 
-      <div className="flex xl:flex-row-reverse flex-col w-[90%] mx-auto py-20 gap-10 xl:gap-0">
+      <div className="flex md:flex-row-reverse flex-col w-[90%] mx-auto  gap-10 md:gap-0">
         <div className=" flex-1">
           <Image
             alt="property image"
             src="/images/storiesImage2.png"
             width={1920}
             height={1080}
-            className="w-full h-auto object-cover"
+            className="w-full md:h-full lg:h-auto object-cover"
           />
         </div>
-        <div className="flex-1 flex items-center justify-center">
-          <div className="xl:px-30 max-w-[85%]">
-            <div className="font-classica font-[400] uppercase text-5xl">
+        <div className="flex-1 flex items-center justify-center md:text-left text-center">
+          <div className="xl:px-30 px-10">
+            <div className="font-classica font-[400] uppercase md:text-5xl text-3xl">
               Our Mission & <br /> Vision
             </div>
 
-            <div className="h-[0.5px] w-[50%] bg-[#6A5F6C] my-10"></div>
+            <div className="h-[0.5px] w-[50%] translate-x-[50%] md:translate-x-0 bg-[#6A5F6C] my-6 md:10"></div>
 
             <div className="text-md text-[#6A5F6C]">
               At Neel Infratech, our mission is simple — to make real estate
@@ -193,8 +193,8 @@ function StoriesPage() {
         </div>
       </div>
 
-      <div className="flex xl:flex-row flex-col w-[90%] mx-auto py-20 gap-10 xl:gap-0 xl:py-40">
-        <div className="xl:flex-2 flex-1">
+      <div className="flex lg:flex-row flex-col w-[90%] mx-auto py-20 gap-10 lg:gap-0 lg:py-40">
+        <div className="lg:flex-2 flex-1">
           <Image
             alt="property image"
             src="/images/storiesImage3.png"
@@ -203,16 +203,16 @@ function StoriesPage() {
             className="w-full h-auto object-cover"
           />
         </div>
-        <div className="xl:flex-3 flex-1 flex items-center justify-center">
-          <div className="xl:px-30 ">
+        <div className="lg:flex-3 flex-1 flex items-center justify-center text-center lg:text-left">
+          <div className="lg:px-30 ">
             <div className="font-classica text-[#757279] py-2 text-md font-[400] ">
               Our Leader
             </div>
-            <div className="font-classica font-[400]   uppercase text-5xl">
+            <div className="font-classica font-[400]   uppercase lg:text-5xl text-3xl">
               Mr. Pitambar ikar
             </div>
 
-            <div className="h-[0.5px] w-[50%] bg-[#6A5F6C] my-10"></div>
+            <div className="h-[0.5px] w-[50%] translate-x-[50%] md:translate-x-0 bg-[#6A5F6C] my-6 md:10"></div>
 
             <div className="text-md text-[#6A5F6C]">
               At the heart of Neel Infratech’s growth and values is our founder
@@ -232,9 +232,9 @@ function StoriesPage() {
       {DirectorsInfo.map((director, index) => (
         <div
           className={`flex ${
-            index % 2 == 0 ? "xl:flex-row" : "xl:flex-row-reverse xl:text-right"
-          } flex-col w-[90%] mx-auto  gap-10 xl:gap-0  ${
-            index % 2 == 0 ? "py-20" : "py-0"
+            index % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse md:text-right"
+          } flex-col w-[90%] mx-auto  gap-10 lg:gap-0  text-center md:text-left  ${
+            index % 2 == 0 ? "py-0" : "py-20"
           }`}
           key={index}
         >
@@ -244,22 +244,22 @@ function StoriesPage() {
               src={director.image}
               width={1920}
               height={1080}
-              className="w-full h-auto object-cover"
+              className="w-full lg:h-full xl:h-auto object-cover"
             />
           </div>
-          <div className="xl:flex-3 flex-1 flex items-center justify-center">
-            <div className="xl:px-30 ">
+          <div className="lg:flex-3 flex-1 flex items-center justify-center">
+            <div className="lg:px-30 ">
               <div className="font-classica text-[#757279] py-2 text-md font-[400] ">
                 Our Director
               </div>
-              <div className="font-classica font-[400]   uppercase text-5xl">
+              <div className="font-classica font-[400] uppercase md:text-5xl text-3xl">
                 {director.name}
               </div>
               <div className="italic m-2 text-[#6A5F6C]">{director.quote}</div>
 
               <div
-                className={`h-[0.5px] w-[50%] bg-[#6A5F6C] my-10 ${
-                  index % 2 != 0 && "xl:ml-[50%]"
+                className={`h-[0.5px] w-[50%] translate-x-[50%] md:translate-x-0 bg-[#6A5F6C] my-6 md:10 ${
+                  index % 2 != 0 && "lg:ml-[50%]"
                 }`}
               ></div>
 
@@ -277,7 +277,7 @@ function StoriesPage() {
         </div>
       ))}
 
-      <div className="py-20">
+      <div className="md:py-20 px-10">
         <div className="font-classica text-center">
           <div className="text-md text-[#757279]">Our Vision </div>
           <div className="text-3xl py-3 uppercase font-[400]">
@@ -301,7 +301,7 @@ function StoriesPage() {
           complete transparency, and personalized service that continues even
           after the deal is done.
         </div>
-        <div className="w-fit mx-auto bg-black text-white font-classica px-6 py-2 my-20">
+        <div className="w-fit mx-auto bg-black text-white font-classica px-6 py-2 md:my-20 my-15">
           Contact Us
         </div>
       </div>
@@ -315,7 +315,7 @@ function StoriesPage() {
         </div>
 
         <div className="grid grid-cols-5 px-5 lg:px-20 py-10 lg:py-20 gap-5 lg:gap-10">
-          <div className="col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-lg overflow-hidden">
             <Image
               src={"/images/storiesImage7.png"}
               alt="happy moments image"
@@ -324,7 +324,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-3 rounded-4xl overflow-hidden">
+          <div className="col-span-3 rounded-lg overflow-hidden">
             <Image
               src={"/images/storiesImage6.png"}
               alt="happy moments image"
@@ -333,7 +333,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-lg overflow-hidden">
             <Image
               src={"/images/storiesImage5.png"}
               alt="happy moments image"
@@ -342,7 +342,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-lg overflow-hidden">
             <Image
               src={"/images/storiesImage8.png"}
               alt="happy moments image"
@@ -351,7 +351,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-3 rounded-4xl overflow-hidden">
+          <div className="col-span-3 rounded-lg overflow-hidden">
             <Image
               src={"/images/storiesImage9.png"}
               alt="happy moments image"
@@ -360,7 +360,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-lg overflow-hidden">
             <Image
               src={"/images/storiesImage10.png"}
               alt="happy moments image"
@@ -369,7 +369,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-lg overflow-hidden">
             <Image
               src={"/images/storiesImage11.png"}
               alt="happy moments image"
@@ -378,7 +378,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-3 rounded-4xl overflow-hidden">
+          <div className="col-span-3 rounded-lg overflow-hidden">
             <Image
               src={"/images/storiesImage12.png"}
               alt="happy moments image"
@@ -387,7 +387,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-lg overflow-hidden">
             <Image
               src={"/images/storiesImage5.png"}
               alt="happy moments image"
