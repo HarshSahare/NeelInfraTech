@@ -3,6 +3,7 @@ import React from "react";
 
 interface DirectorsInfoInterface {
   name: string;
+  quote: string;
   description: string;
   image: string;
   subDescription: string;
@@ -13,13 +14,14 @@ function StoriesPage() {
   const DirectorsInfo: DirectorsInfoInterface[] = [
     {
       name: "Mr. Pushparaj Meshram",
+      quote:
+        '"Hume zarurat ke hisaab se nahi, chahat ke hisaab se jeena chahiye."',
       description: `Pushparaj Meshram’s story is one of grit and growth. Born near Bhivapoor village, Umred, he began working while in 7th grade to support his education. After moving to Nagpur, he completed his 12th, graduation, LLB, and LLM—working jobs like digging, selling books, and tutoring to fund his studies.
 
         <br/><br/>Starting his legal career in 2000, he practiced law with dedication. In 2007, he stepped into real estate, where he found his true calling. By 2009, he was excelling in the field, eventually dedicating himself fully to real estate.
         
         <br/><br/>With over 18 years in the industry, including 10 years at Neel Infratech, he has helped over 2,000 clients buy property and empowered 500+ individuals to build their own real estate businesses. His hard work has taken him from rural beginnings to international milestones, including visits to Andaman & Nicobar (2010) and Thailand (2012).
-        
-        <br/><br/>> "Hume zarurat ke hisaab se nahi, chahat ke hisaab se jeena chahiye."        
+             
         `,
       image: "/images/storiesImage3.png",
       subDescription:
@@ -28,20 +30,76 @@ function StoriesPage() {
     },
     {
       name: "Mr. Satendra Sir",
-      description: `Hailing from Manjhuriya village in Darbhanga district, Satendra Sir's life journey reflects resilience and responsibility. Married at a young age, he moved to Nagpur at 25 with his wife and three children, determined to give them a better future through education.
-
-        <br/><br/>To support his family, he took on various jobs over the years—never stepping back from hard work. With the support of a friend, he entered the real estate industry, where his dedication and sincerity led him to co-build a company and eventually become its Director.
-        
-        <br/><br/>Through his real estate earnings, he educated his children, arranged their marriages, and secured their futures by buying properties and land. By the age of 45, he had firmly established himself. Today, he stands proud with 700–800 happy clients across Nagpur, having sold property in both private and government sectors—with customer satisfaction at the core of his journey.
-        
-        <br/><br/>> "Karam pe vishvash rakho, result pe nahi — result aapka karam hi dilayega."
+      quote:
+        '"Karam pe vishvash rakho, result pe nahi — result aapka karam hi dilayega."',
+      description: `
+      Hailing from Manjhuriya village in Darbhanga district, Satendra Sir's life journey reflects resilience and responsibility. Married at a young age, he moved to Nagpur at 25 with his wife and three children, determined to give them a better future through education.
+      <br/><br/>To support his family, he took on various jobs over the years—never stepping back from hard work. With the support of a friend, he entered the real estate industry, where his dedication and sincerity led him to co-build a company and eventually become its Director.
+      <br/><br/>Through his real estate earnings, he educated his children, arranged their marriages, and secured their futures by buying properties and land. By the age of 45, he had firmly established himself. Today, he stands proud with 700–800 happy clients across Nagpur, having sold property in both private and government sectors—with customer satisfaction at the core of his journey.
         `,
       image: "/images/storiesImage3.png",
       subDescription:
         '"Satendra Sir treats every client like family. His honesty and long-term thinking gave me full confidence in my property purchase. A rare gem in this industry!"',
       quoteAuthor: "Mr. Sameer P., Government Employee",
     },
+    {
+      name: "Mr. Ajay Dandekar",
+      quote: `"Rasta chalna, saaf chalna – chahe usme darr lage."`,
+      description: `
+      Ajay Dandekar’s journey from self-doubt to self-made is both inspiring and humbling. After completing his college in 1988 and pursuing BSW and MSW, he entered network marketing during his M.A. studies. Though he reached the Silver Star level, he fell into a debt of ₹3.5 lakhs—a turning point that taught him that wealth comes not just from building networks, but from delivering value through products and services.
+      <br/><br/>Naturally introverted, he initially disliked public speaking. Yet, network marketing transformed him—today, his phone holds 8,000–9,000 contacts, a reflection of the lives he’s touched. Despite being told by his father that a Maharashtrian can’t be a businessman, he held on to his entrepreneurial dreams. His father once told him,
+      <br/><br/> “If I can’t help myself, I’ll at least never harm others.”
+      <br/>—words that stayed with him forever.
+      <br/></br>Even after marriage, he struggled with ₹4.5 lakhs in debt. But a pivotal meeting with former marketing colleagues sparked the idea of launching a real estate company. He was the first to commit—and the rest is history. In 2010, he bought his first car. Real estate not only helped him clear all his debts but also empowered him to help 400+ people build their own businesses.
+      <br/></br>In 2021, he fulfilled a long-awaited dream: a foreign trip with his family. With real estate, he also purchased five properties and his dream car. He proudly says:
+      <br/></br>> “My real life began at 35.”
+      <br/></br>Now, with 14 years as a founding director at Neel Infratech, his only regret is that his parents aren't here to witness his success.
+      `,
+      image: "/images/storiesImage3.png",
+      subDescription:
+        '"Ajay Sir\'s journey shows what belief and consistency can achieve. He’s more than a real estate expert—he’s a guide who uplifts others while rising himself."',
+      quoteAuthor: "Mr. Pooja R., Entrepreneur",
+    },
+    {
+      name: "Mr. Rupesh Sir",
+      quote: `"Aadmi zindagi mein utna hi bada ban sakta hai, jitni badi uski soch ho."`,
+      description: `
+      Born into a humble farming family, Rupesh Sir has always believed in the power of vision and effort. While pursuing his B.A., he stepped into the world of business and soon met Ikar Sir, the current owner of Neel Infratech. That meeting marked the beginning of his journey in the real estate industry.
+      <br/><br/>Over the past 11 years at Neel Infratech, he has not only contributed to the company’s success but also achieved several personal milestones—buying his first car, supporting his daughter’s education, purchasing his dream car, and successfully closing multiple property deals across Nagpur.
+      `,
+      image: "/images/storiesImage3.png",
+      subDescription:
+        '"Rupesh Sir’s calm approach and genuine advice helped us make a confident decision. He treats every deal like it’s his own."',
+      quoteAuthor: "Mr. Ravi P., Government Officer",
+    },
+    {
+      name: "Mr. Dekate Sir",
+      quote: `"Jab tak thakte nahi, tab tak haarte nahi."`,
+      description: `
+      Born in Kargaon village, Tah. Bilapur, Nagpur, Dekate Sir comes from a humble farming background. After completing his 10th in the village, he moved to Nagpur for higher education—pursuing 12th with English Literature, followed by an M.A. in English Literature from Morris College, along with B.Ed. and BML. In 1995, he began his career as a Junior College Lecturer.
+      <br/><br/>Despite a stable job, his heart was set on building something of his own. He tried various businesses—from selling farm products and running a dairy farm to a nursery and MLM. But those efforts led him into a ₹35 lakh debt.
+      <br/><br/>In 2009, a friend introduced him to real estate, which turned out to be a turning point. After leaving a non-performing company, he joined Neel Infratech at age 42, and by 45, he achieved financial freedom.
+      <br/><br/>With real estate, he paid off his debts, bought a house in Nagpur, built another in his village, purchased farmland at Neel Farms, and secured both commercial and residential plots—proving that with the right path, success is possible at any stage.
+      `,
+      image: "/images/storiesImage3.png",
+      subDescription:
+        '"Dekate Sir’s resilience and honesty gave us confidence in our investment. He truly leads by example."',
+      quoteAuthor: "Mr. Meena A., Businesswoman",
+    },
+    {
+      name: "Mr. Onkar Sonwani Sir",
+      quote: `""Irade nek ho aur mehnat sacchi ho toh har sapna haqiqat ban sakta hai."`,
+      description: `
+      Onkar Sir began his journey of hard work and ambition at the young age of 20. Starting with network marketing, he moved into health product-based marketing, where he gained valuable experience in sales, communication, and team building.
+      <br/><br/>Through his network, he met Ikar Sir, which led him to enter the world of real estate. That decision changed his life. With determination and the support of Neel Infratech, he turned dreams into reality—buying a house and multiple plots in Nagpur, securing a stable and successful future for his family.
+      `,
+      image: "/images/storiesImage3.png",
+      subDescription:
+        '"Onkar Sir’s dedication and genuine nature made our property buying experience smooth and trustworthy."',
+      quoteAuthor: "Mr. Anjali P., Homemaker",
+    },
   ];
+
   return (
     <div className="flex flex-col">
       <div className="h-svh w-screen bg-amber-50">
@@ -176,9 +234,7 @@ function StoriesPage() {
           className={`flex ${
             index % 2 == 0 ? "xl:flex-row" : "xl:flex-row-reverse xl:text-right"
           } flex-col w-[90%] mx-auto  gap-10 xl:gap-0  ${
-            index % 2 == 0 && index != DirectorsInfo.length - 1
-              ? "py-20"
-              : "py-0"
+            index % 2 == 0 ? "py-20" : "py-0"
           }`}
           key={index}
         >
@@ -199,6 +255,7 @@ function StoriesPage() {
               <div className="font-classica font-[400]   uppercase text-5xl">
                 {director.name}
               </div>
+              <div className="italic m-2 text-[#6A5F6C]">{director.quote}</div>
 
               <div
                 className={`h-[0.5px] w-[50%] bg-[#6A5F6C] my-10 ${
@@ -220,7 +277,7 @@ function StoriesPage() {
         </div>
       ))}
 
-      <div className="py-40">
+      <div className="py-20">
         <div className="font-classica text-center">
           <div className="text-md text-[#757279]">Our Vision </div>
           <div className="text-3xl py-3 uppercase font-[400]">
@@ -257,8 +314,8 @@ function StoriesPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-5 px-20 py-20 gap-10">
-          <div className="col-span-5 md:col-span-1 rounded-4xl overflow-hidden">
+        <div className="grid grid-cols-5 px-5 lg:px-20 py-10 lg:py-20 gap-5 lg:gap-10">
+          <div className="col-span-1 rounded-4xl overflow-hidden">
             <Image
               src={"/images/storiesImage7.png"}
               alt="happy moments image"
@@ -267,7 +324,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-5 md:col-span-3 rounded-4xl overflow-hidden">
+          <div className="col-span-3 rounded-4xl overflow-hidden">
             <Image
               src={"/images/storiesImage6.png"}
               alt="happy moments image"
@@ -276,7 +333,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-5 md:col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-4xl overflow-hidden">
             <Image
               src={"/images/storiesImage5.png"}
               alt="happy moments image"
@@ -285,7 +342,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-5 md:col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-4xl overflow-hidden">
             <Image
               src={"/images/storiesImage8.png"}
               alt="happy moments image"
@@ -294,7 +351,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-5 md:col-span-3 rounded-4xl overflow-hidden">
+          <div className="col-span-3 rounded-4xl overflow-hidden">
             <Image
               src={"/images/storiesImage9.png"}
               alt="happy moments image"
@@ -303,7 +360,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-5 md:col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-4xl overflow-hidden">
             <Image
               src={"/images/storiesImage10.png"}
               alt="happy moments image"
@@ -312,7 +369,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-5 md:col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-4xl overflow-hidden">
             <Image
               src={"/images/storiesImage11.png"}
               alt="happy moments image"
@@ -321,7 +378,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-5 md:col-span-3 rounded-4xl overflow-hidden">
+          <div className="col-span-3 rounded-4xl overflow-hidden">
             <Image
               src={"/images/storiesImage12.png"}
               alt="happy moments image"
@@ -330,7 +387,7 @@ function StoriesPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="col-span-5 md:col-span-1 rounded-4xl overflow-hidden">
+          <div className="col-span-1 rounded-4xl overflow-hidden">
             <Image
               src={"/images/storiesImage5.png"}
               alt="happy moments image"
