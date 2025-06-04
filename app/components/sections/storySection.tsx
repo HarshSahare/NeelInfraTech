@@ -44,13 +44,12 @@ const StorySection = () => {
           Our Story
         </p>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-classica font-[400] leading-tight text-[#161616] mb-10 heading">
-          CREATING VALUE <br className="hidden md:block" />
-          THROUGH DESIGN & SPACE
+          From One Family to Thousand
         </h2>
         <p className="font-[400] font-poppins text-[#44404096] text-base sm:text-lg max-w-4xl mx-auto leading-relaxed heading">
-          Driven by passion, we continuously push the boundaries of architecture
-          by constructing residential, commercial, hospitality, and retail
-          spaces that frame Dubai’s skyline.
+          We didn’t start with skyscrapers. We started with a single home – for
+          a single mother who had been denied loans elsewhere. That home changed
+          her life.
         </p>
       </div>
 
@@ -86,7 +85,7 @@ const StorySection = () => {
 
       <div className="mt-16">
         <button className="bg-black text-white px-8 sm:px-12 py-3 text-sm hover:bg-gray-900 transition">
-          Discover Our Story
+          Explore Our Journey
         </button>
       </div>
     </section>

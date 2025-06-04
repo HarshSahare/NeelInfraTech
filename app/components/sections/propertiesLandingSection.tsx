@@ -46,8 +46,7 @@ const PropertiesLandingSection = () => {
           <div className="w-[50%] border-t max-w-[150px] mx-auto heading border-gray-300"></div>
         </div>
         <h2 className="text-[40px] font-classica font-[400] heading mt-4 mb-[40px] leading-snug">
-          Our Premium Properties <br /> in the Best Locations –
-          <i className="text-gray-500">“Your Address Says It All”</i>
+          Your Address Says It All
         </h2>
         <p className="text-[#6A5F6C] text-[13px]/[22px] heading font-poppins mb-[48px]">
           From the heart of the city to nature-kissed suburbs, our handpicked
@@ -115,7 +114,7 @@ const PropertiesLandingSection = () => {
           <div
             className="mt-[.5%]"
             style={{
-              clipPath: "polygon(100% 0%, 100% 0%, 100% 100% , 100% 100%)",
+              clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
             }}
           >
             <Image
@@ -136,7 +135,7 @@ const PropertiesLandingSection = () => {
           {/* Image 4 */}
           <div
             style={{
-              clipPath: "polygon(100% 0%, 100% 0%, 100% 100% , 100% 100%)",
+              clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
             }}
           >
             <Image
@@ -155,7 +154,7 @@ const PropertiesLandingSection = () => {
           </div>
           <div
             style={{
-              clipPath: "polygon(100% 0%, 100% 0%, 100% 100% , 100% 100%)",
+              clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
             }}
           >
             <Image

@@ -16,7 +16,7 @@ const PropertiesSection = () => {
   return (
     <section
       id="ourProperties"
-      className="w-[95.5%]  properties-container min-h-svh flex flex-col justify-center lg:ml-auto mx-auto px-6 lg:mt-[174px] py-10 lg:py-12"
+      className="w-[95.5%]  properties-container min-h-svh flex flex-col justify-center lg:ml-auto mx-auto px-6 lg:mt-[174px] py-20"
     >
       <div className="flex flex-col lg:flex-row justify-between   gap-12 text-center lg:text-left">
         {/* Text Content */}
@@ -30,7 +30,7 @@ const PropertiesSection = () => {
             <div className="w-[50%] border-t max-w-[150px] mx-auto heading border-gray-300"></div>
           </div>
           <h2 className="text-4xl font-classica heading font-[400] mt-4 mb-[40px] leading-snug">
-            Discover Our <br /> Newest Residential Property
+            The Future Has a <br /> New Address
           </h2>
           <p className="text-[#6A5F6C] heading text-[11px]/[20px] font-poppins mb-[48px]">
             Be the first to own tomorrow’s most iconic addresses.
