@@ -3,33 +3,12 @@ import React from "react";
 import PropertyCard from "../propertyCard";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 const PropertiesSection = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
+  gsap.registerPlugin(ScrollToPlugin);
   useGSAP(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".scroll", {
-        opacity: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".properties-container",
-          start: "top 0%",
-        },
-      });
-
-      gsap.to(".scroll", {
-        x: "-100%",
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".properties-container",
-          start: "top 0%",
-          pin: true,
-          scrub: 2,
-        },
-      });
-    });
+    const ctx = gsap.context(() => {});
 
     return () => ctx.revert();
   }, []);
@@ -37,30 +16,24 @@ const PropertiesSection = () => {
   return (
     <section
       id="ourProperties"
-      className="w-[95.5%] properties-container min-h-svh flex flex-col justify-center ml-auto pl-6 mt-[174px] py-12"
+      className="w-[95.5%]  properties-container min-h-svh flex flex-col justify-center lg:ml-auto mx-auto px-6 lg:mt-[174px] py-10 lg:py-12"
     >
-      <div className="flex flex-col lg:flex-row justify-between  gap-12">
+      <div className="flex flex-col lg:flex-row justify-between   gap-12 text-center lg:text-left">
         {/* Text Content */}
-        <div className="lg:w-1/3 mt-[115px]">
-          <p className="text-xs font-classica heading tracking-widest text-gray-500 flex items-center">
+        <div className="lg:w-1/3 lg:mt-[115px]">
+          <p className="hidden lg:flex text-xs font-classica heading tracking-widest text-gray-500  items-center">
             PROPERTIES
             <span className="flex-grow max-w-[150px] heading border-t border-gray-300 ml-4"></span>
           </p>
+          <div className="lg:hidden text-[10px] font-classica heading tracking-widest text-gray-500 flex flex-col gap-2">
+            <div className="">PROPERTIES</div>
+            <div className="w-[50%] border-t max-w-[150px] mx-auto heading border-gray-300"></div>
+          </div>
           <h2 className="text-4xl font-classica heading font-[400] mt-4 mb-[40px] leading-snug">
             Discover Our <br /> Newest Residential Property
           </h2>
           <p className="text-[#6A5F6C] heading text-[11px]/[20px] font-poppins mb-[48px]">
-            Dur Meraas designs communities that respond to <br /> contemporary
-            passions for every lifestyle. <br /> Choose from alluring waterfront
-            locations, <br />
-            bustling urban neighbourhoods or secluded <br />
-            lush green communities well-connected to the
-            <br />
-            City.Meraas designs communities that respond to
-            <br />
-            contemporary passions for every lifestyle.
-            <br />
-            City
+            Be the first to own tomorrow’s most iconic addresses.
           </p>
           <button
             className="border border-black heading text-[#747176] hover:bg-black hover:text-white transition text-[12px]  font-poppins tracker-[1px] rounded-full"
@@ -71,8 +44,8 @@ const PropertiesSection = () => {
         </div>
 
         {/* Carousel / Scrollable Cards */}
-        <div className="lg:w-2/3 overflow-x-hidden flex scroll-smooth scrollbar-hide">
-          <div className="w-fit flex gap-5 translate-x-[10%] scroll">
+        <div className="lg:w-2/3 overflow-x-scroll flex scrollbar-hide">
+          <div className="w-fit flex gap-5  scroll">
             <PropertyCard
               image="/images/property_1.png"
               title="Vrindavan Park"

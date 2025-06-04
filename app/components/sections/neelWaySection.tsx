@@ -23,7 +23,7 @@ const NeelWaySection = () => {
             fill
             className="object-cover rounded-md left-image"
           />
-          <div className="absolute px-[69px] up-text font-classica font-[400] bottom-0 left-0 h-[30%] flex flex-col justify-end w-full bg-black/40 text-white p-4 text-base md:text-lg">
+          <div className="absolute px-[69px] up-text font-classica font-[400] bottom-0 left-0 min-h-[30%] h-fit flex flex-col justify-end w-full bg-black/40 text-white p-4 text-base md:text-lg">
             Life Feels Complete When You Find A Place That Feels Like Home.
           </div>
         </div>

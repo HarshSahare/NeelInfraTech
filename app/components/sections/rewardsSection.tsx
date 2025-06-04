@@ -47,13 +47,12 @@ const AwardsSection = () => {
 
         {/* Main title */}
         <h1 className="text-[28px] sm:text-[36px] md:text-[45px] reward-heading font-classica font-[400] text-[rgba(22,22,22,1)] my-4">
-          OUR PROUD MOMENTS
+          The Trust We’ve Earned
         </h1>
 
         {/* Subtext */}
         <p className="text-gray-500 reward-heading max-w-md mx-auto text-sm sm:text-base">
-          Where timeless design meets elite comfort, crafted to elevate your
-          lifestyle and reflect a taste for only the finest.
+          Our passion has been recognized by the industry’s finest.
         </p>
 
         {/* Divider */}

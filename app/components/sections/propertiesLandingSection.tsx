@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 const PropertiesLandingSection = () => {
   useGSAP(() => {
@@ -45,26 +46,29 @@ const PropertiesLandingSection = () => {
           <div className="w-[50%] border-t max-w-[150px] mx-auto heading border-gray-300"></div>
         </div>
         <h2 className="text-[40px] font-classica font-[400] heading mt-4 mb-[40px] leading-snug">
-          PREMIUM <br /> PROPERTIES IN THE <br /> BEST LOCATIONS
+          Our Premium Properties <br /> in the Best Locations –
+          <i className="text-gray-500">“Your Address Says It All”</i>
         </h2>
         <p className="text-[#6A5F6C] text-[13px]/[22px] heading font-poppins mb-[48px]">
-          Dur properties, located in prime areas, boast unique <br /> designs
-          and aspirational lifestyles within vibrant Emaar <br /> communities,
-          all seamlessly managed by Emaar <br /> Community Management&apos;s
-          dedicated team.
+          From the heart of the city to nature-kissed suburbs, our handpicked
+          premium properties redefine luxury and lifestyle.
         </p>
-        <button
+        <Link
+          href={"/properties"}
           className="bg-black  text-white text-[12px] heading font-poppins tracker-[1px] rounded-full"
           style={{ padding: "17px 53px" }}
         >
-          View All Properties
-        </button>
+          View All Premium Listings
+        </Link>
       </div>
 
       {/* Right Column: Image Grid */}
-      <div className="lg:w-2/3 flex gap-6" id="property-images">
+      <div
+        className="lg:w-2/3  flex lg:flex-nowrap flex-wrap gap-6"
+        id="property-images"
+      >
         {/* Column 1 */}
-        <div className="flex up-grid flex-col gap-6 w-1/2">
+        <div className="flex up-grid flex-col gap-6 lg:w-1/2 w-full">
           <div
             style={{
               clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
@@ -106,7 +110,7 @@ const PropertiesLandingSection = () => {
         </div>
 
         {/* Column 2 */}
-        <div className="flex down-grid flex-col gap-6 w-1/2">
+        <div className="flex down-grid flex-col gap-6 lg:w-1/2 w-full">
           {/* Image 2 */}
           <div
             className="mt-[.5%]"
