@@ -182,6 +182,9 @@ function Navbar() {
         >
           &times;
         </button>
+        <Link href="/" onClick={() => setIsMenuOpen(false)}>
+          Home
+        </Link>
         <Link href="/stories" onClick={() => setIsMenuOpen(false)}>
           Our Story
         </Link>
