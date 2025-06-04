@@ -35,8 +35,8 @@ const AwardsSection = () => {
   }, []);
 
   return (
-    <div className="bg-white mt-[60px] awards-container text-black min-h-screen flex items-center justify-center">
-      <main className="text-center px-4 sm:px-6 py-12 w-full max-w-7xl">
+    <div className="bg-white py-20 awards-container text-black min-h-screen flex items-center justify-center">
+      <main className="text-center px-4 sm:px-6  w-full max-w-7xl">
         {/* "Awards & Recognition" */}
         <p className="text-xs sm:text-sm tracking-wide reward-heading font-classica text-gray-600">
           <span className="font-[400] text-black">Awards</span> & Recognition

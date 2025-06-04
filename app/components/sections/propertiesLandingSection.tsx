@@ -3,11 +3,8 @@ import Image from "next/image";
 import React from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const PropertiesLandingSection = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
   useGSAP(() => {
     const ctx = gsap.context(() => {
       gsap.from(".properties-landingpage-container .heading", {
@@ -22,28 +19,13 @@ const PropertiesLandingSection = () => {
       });
     });
 
-    gsap.from(".up-grid", {
-      opacity: 0,
-      y: "-100%",
-      duration: 1,
+    gsap.to(".up-grid > div ,.down-grid > div", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100% , 0% 100%)",
+      duration: 2,
+      ease: "power2.out",
       scrollTrigger: {
         trigger: ".properties-landingpage-container",
-        start: "top 0%",
-        end: "+=200",
-        pin: true,
-        scrub: 2,
-      },
-    });
-
-    gsap.from(".down-grid", {
-      opacity: 0,
-      y: "100%",
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".properties-landingpage-container",
-        start: "top 0%",
-        end: "+=200",
-        scrub: 2,
+        start: "top 60%",
       },
     });
 
@@ -53,11 +35,15 @@ const PropertiesLandingSection = () => {
   return (
     <section className="flex properties-landingpage-container flex-col lg:flex-row gap-[75px] max-w-[93.5%] mx-auto">
       {/* Left Column: Text Content */}
-      <div className="lg:w-1/3  mt-[151px] lg:mb-0">
-        <p className="text-[10px] font-classica heading tracking-widest text-gray-500 flex items-center">
+      <div className="lg:w-1/3  lg:mt-[151px] lg:mb-0 text-center lg:text-left ">
+        <p className=" hidden lg:flex text-[10px] font-classica heading tracking-widest text-gray-500  items-center">
           PROPERTIES
           <span className="flex-grow border-t max-w-[150px] heading border-gray-300 ml-4"></span>
         </p>
+        <div className="lg:hidden text-[10px] font-classica heading tracking-widest text-gray-500 flex flex-col gap-2">
+          <div className="">PROPERTIES</div>
+          <div className="w-[50%] border-t max-w-[150px] mx-auto heading border-gray-300"></div>
+        </div>
         <h2 className="text-[40px] font-classica font-[400] heading mt-4 mb-[40px] leading-snug">
           PREMIUM <br /> PROPERTIES IN THE <br /> BEST LOCATIONS
         </h2>
@@ -79,8 +65,11 @@ const PropertiesLandingSection = () => {
       <div className="lg:w-2/3 flex gap-6" id="property-images">
         {/* Column 1 */}
         <div className="flex up-grid flex-col gap-6 w-1/2">
-          {/* Image 1 */}
-          <div>
+          <div
+            style={{
+              clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+            }}
+          >
             <Image
               src="/images/property-1.png"
               alt="Palace Villas"
@@ -97,7 +86,9 @@ const PropertiesLandingSection = () => {
           </div>
 
           {/* Image 3 */}
-          <div>
+          <div
+            style={{ clipPath: "polygon(0% 0% , 0% 0% , 0% 100%,  0% 100%)" }}
+          >
             <Image
               src="/images/property-3.png"
               alt="Address Grand Downtown"
@@ -117,7 +108,12 @@ const PropertiesLandingSection = () => {
         {/* Column 2 */}
         <div className="flex down-grid flex-col gap-6 w-1/2">
           {/* Image 2 */}
-          <div className="mt-[.5%]">
+          <div
+            className="mt-[.5%]"
+            style={{
+              clipPath: "polygon(100% 0%, 100% 0%, 100% 100% , 100% 100%)",
+            }}
+          >
             <Image
               src="/images/property-2.png"
               alt="Golf Meadow at Emaar South"
@@ -134,7 +130,11 @@ const PropertiesLandingSection = () => {
           </div>
 
           {/* Image 4 */}
-          <div>
+          <div
+            style={{
+              clipPath: "polygon(100% 0%, 100% 0%, 100% 100% , 100% 100%)",
+            }}
+          >
             <Image
               src="/images/property-3.png"
               alt="Address Grand Downtown"
@@ -149,7 +149,11 @@ const PropertiesLandingSection = () => {
               <span className="flex-grow border-t border-gray-300 ml-2"></span>
             </div>
           </div>
-          <div>
+          <div
+            style={{
+              clipPath: "polygon(100% 0%, 100% 0%, 100% 100% , 100% 100%)",
+            }}
+          >
             <Image
               src="/images/property-3.png"
               alt="Address Grand Downtown"

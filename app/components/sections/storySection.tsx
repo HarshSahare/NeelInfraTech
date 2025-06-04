@@ -35,23 +35,26 @@ const StorySection = () => {
   }, []);
 
   return (
-    <section id="story" className="bg-white py-28 px-4 md:px-20 text-center">
+    <section
+      id="story"
+      className="bg-white py-28 px-4 md:px-20 text-center story-container"
+    >
       <div className="mx-auto">
-        <p className="text-sm md:text-base font-classica font-[400] tracking-wider text-[#757279] uppercase mb-3">
+        <p className="text-sm md:text-base font-classica font-[400] tracking-wider text-[#757279] uppercase mb-3 heading">
           Our Story
         </p>
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-classica font-[400] leading-tight text-[#161616] mb-10">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-classica font-[400] leading-tight text-[#161616] mb-10 heading">
           CREATING VALUE <br className="hidden md:block" />
           THROUGH DESIGN & SPACE
         </h2>
-        <p className="font-[400] font-poppins text-[#44404096] text-base sm:text-lg max-w-4xl mx-auto leading-relaxed">
+        <p className="font-[400] font-poppins text-[#44404096] text-base sm:text-lg max-w-4xl mx-auto leading-relaxed heading">
           Driven by passion, we continuously push the boundaries of architecture
           by constructing residential, commercial, hospitality, and retail
           spaces that frame Dubai’s skyline.
         </p>
       </div>
 
-      <div className="mt-24 flex lg:flex-row lg:gap-0  flex-wrap flex-col justify-around gap-12 max-w-7xl mx-auto text-left px-4 md:py-10 lg:items-center">
+      <div className="mt-24 flex story-grid-content lg:flex-row lg:gap-0  flex-wrap flex-col justify-around gap-12 max-w-7xl mx-auto text-left px-4 md:py-10 lg:items-center">
         <div className="w-fit flex justify-center h-fit min-w-fit">
           <div className=" w-[2px] bg-[#757279] "></div>
           <div className="px-8">
