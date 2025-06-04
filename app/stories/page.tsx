@@ -17,7 +17,7 @@ function StoriesPage() {
       quote:
         '"Hume zarurat ke hisaab se nahi, chahat ke hisaab se jeena chahiye."',
       description: `
-      <br/><br/>Born near Bhivapoor village, Umred, Pushparaj Sir started working in 7th grade to support his education. After moving to Nagpur, he completed his LLB and LLM—taking up jobs like digging, book selling, and tutoring to fund his journey.
+      Born near Bhivapoor village, Umred, Pushparaj Sir started working in 7th grade to support his education. After moving to Nagpur, he completed his LLB and LLM—taking up jobs like digging, book selling, and tutoring to fund his journey.
       <br/><br/>He began practicing law in 2000, but in 2007, real estate sparked a new direction. By 2009, he committed fully to the field. With 18+ years of experience and 10 years at Neel Infratech, he’s served over 2,000 clients and mentored 500+ budding realtors.
       <br/><br/>From rural roots to international trips like Andaman and Thailand, his journey proves that dedication changes destiny.
       `,
@@ -44,7 +44,7 @@ function StoriesPage() {
       name: "Mr. Ajay Dandekar",
       quote: `"Rasta chalna, saaf chalna – chahe usme darr lage."`,
       description: `
-      <br/><br/>Ajay Dandekar’s path from debt to direction began in 1988, after completing his BSW and MSW. During his M.A., he entered network marketing, rose to Silver Star, but landed in ₹3.5 lakhs debt—realizing success lies in selling value, not just dreams.
+      Ajay Dandekar’s path from debt to direction began in 1988, after completing his BSW and MSW. During his M.A., he entered network marketing, rose to Silver Star, but landed in ₹3.5 lakhs debt—realizing success lies in selling value, not just dreams.
       <br/><br/>An introvert turned communicator, Ajay now holds over 8,000 contacts in his phone. Despite early setbacks and ₹4.5 lakhs debt post-marriage, he co-founded Neel Infratech with ex-marketing peers—becoming the first to join.
       <br/><br/>Real estate changed everything. He paid off his debts, bought five properties, helped 400+ people build businesses, and fulfilled his dream of a family foreign trip in 2021. His only regret: his parents didn’t see this success.
 `,
@@ -69,7 +69,7 @@ function StoriesPage() {
       name: "Mr. Dekate Sir",
       quote: `"Jab tak thakte nahi, tab tak haarte nahi."`,
       description: `
-      <br/><br/>Born in Kargaon village, Nagpur, Dekate Sir came from a humble farming background. After completing his M.A. in English Literature from Morris College along with B.Ed. and BML, he began working as a Junior College Lecturer in 1995.
+      Born in Kargaon village, Nagpur, Dekate Sir came from a humble farming background. After completing his M.A. in English Literature from Morris College along with B.Ed. and BML, he began working as a Junior College Lecturer in 1995.
       <br/><br/>Despite a stable job, he pursued business—trying dairy, nursery, and MLM—which led to a ₹35 lakh debt. In 2009, real estate became his turning point. Joining Neel Infratech at 42, he cleared his debt and achieved financial freedom by 45.
       <br/><br/>Today, he owns homes in Nagpur and his village, farmland, and commercial/residential plots, proving it's never too late to succeed.
 `,
