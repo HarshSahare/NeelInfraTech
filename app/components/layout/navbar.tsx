@@ -98,7 +98,7 @@ function Navbar() {
     <>
       <div
         ref={navbar}
-        className={`fixed top-0 left-0 z-50 w-full h-[94px] backdrop-blur-md ${
+        className={`fixed top-0 left-0 z-50 w-full h-[var(--navbar-h)] backdrop-blur-md ${
           isMenuOpen ? "bg-black/80" : "bg-[#00000042]"
         } opacity-0 fadeIn delay-7s`}
       >
@@ -132,7 +132,7 @@ function Navbar() {
           <div className="hidden md:flex justify-end">
             <a
               href="#contact"
-              className="ring ring-black text-black py-2 px-5 hover:bg-black hover:text-white cursor-pointer"
+              className=" py-2 px-5 bg-black text-white cursor-pointer"
             >
               Contact Us
             </a>
@@ -177,23 +177,28 @@ function Navbar() {
         }}
       >
         <button
-          className="text-5xl self-end cursor-pointer"
+          className="text-5xl self-end cursor-pointer font-[100]"
           onClick={() => setIsMenuOpen(false)}
         >
           &times;
         </button>
-        <Link href="/" onClick={() => setIsMenuOpen(false)}>
-          Home
-        </Link>
-        <Link href="/stories" onClick={() => setIsMenuOpen(false)}>
-          Our Story
-        </Link>
-        <Link href="/properties" onClick={() => setIsMenuOpen(false)}>
-          Our Properties
-        </Link>
-        <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-          Contact Us
-        </a>
+        <div className="flex-1 flex flex-col gap-4 py-5">
+          <Link href="/" onClick={() => setIsMenuOpen(false)}>
+            Home
+          </Link>
+          <Link href="/stories" onClick={() => setIsMenuOpen(false)}>
+            Our Story
+          </Link>
+          <Link href="/properties" onClick={() => setIsMenuOpen(false)}>
+            Our Properties
+          </Link>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+            Contact Us
+          </a>
+        </div>
+        <div className="border-1 border-white text-white  text-center py-2 cursor-pointer hover:text-black hover:bg-white">
+          Call Us
+        </div>
       </div>
     </>
   );

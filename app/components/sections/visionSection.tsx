@@ -44,7 +44,7 @@ function VisionSection() {
   }, []);
 
   return (
-    <div className="min-h-svh overflow-hidden vision-container w-[95.5%] pt-20 mx-auto flex flex-col">
+    <div className="min-h-svh lg:py-50 py-20 overflow-hidden vision-container w-[95.5%]  mx-auto flex flex-col">
       {/* Header Section */}
       <div className="text-center">
         <div className="uppercase font-classica text-[#757279] text-sm">

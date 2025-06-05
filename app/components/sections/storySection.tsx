@@ -37,7 +37,7 @@ const StorySection = () => {
   return (
     <section
       id="story"
-      className="bg-white py-28 px-4 md:px-20 text-center story-container"
+      className="bg-white px-4 md:px-20 text-center story-container"
     >
       <div className="mx-auto">
         <p className="text-sm md:text-base font-classica font-[400] tracking-wider text-[#757279] uppercase mb-3 heading">
@@ -53,7 +53,7 @@ const StorySection = () => {
         </p>
       </div>
 
-      <div className="mt-24 flex story-grid-content lg:flex-row lg:gap-0  flex-wrap flex-col justify-around gap-12 max-w-7xl mx-auto text-left px-4 md:py-10 lg:items-center">
+      <div className="flex story-grid-content lg:flex-row lg:gap-0  flex-wrap flex-col justify-around gap-12 max-w-7xl mx-auto text-left px-4 md:py-45 lg:items-center">
         <div className="w-fit flex justify-center h-fit min-w-fit">
           <div className=" w-[2px] bg-[#757279] "></div>
           <div className="px-8">
@@ -83,7 +83,7 @@ const StorySection = () => {
         </div>
       </div>
 
-      <div className="mt-16">
+      <div className="">
         <button className="bg-black text-white px-8 sm:px-12 py-3 text-sm hover:bg-gray-900 transition">
           Explore Our Journey
         </button>

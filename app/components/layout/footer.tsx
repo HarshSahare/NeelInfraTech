@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Footer() {
@@ -50,9 +51,10 @@ function Footer() {
             className="text-sm text-[#727673]  space-y-3"
             style={{ paddingLeft: "0px" }}
           >
-            <li>Our Story</li>
-            <li>Contact Us</li>
-            <li>News</li>
+            <Link href="/stories">Our Story</Link>
+            <li>
+              <a href="#contact">Contact Us</a>
+            </li>
           </ul>
         </div>
 

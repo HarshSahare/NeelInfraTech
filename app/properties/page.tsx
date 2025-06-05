@@ -120,16 +120,16 @@ function Page() {
         />
 
         <div className="absolute inset-0  w-full flex items-center  md:py-20 bg-red text-white">
-          <div className="md:px-20 px-10 md:mt-[10%]">
+          <div className="md:px-20 px-10 md:mt-[5%]">
             <h1 className="font-classica md:text-7xl text-4xl uppercase">
               Opportunities That Move <br /> With the City
             </h1>
-            <div className="md:py-10 py-5 text-sm">
-              At Neel Infratech, we are on a mission to transform how real
-              estate is
-              <br /> experienced in Nagpur. We don&apos;t just deal in
-              properties — we help <br /> people find the right space to grow,
-              live, and invest with confidence.
+            <div className="md:py-10 py-5 text-sm max-w-[50%]">
+              Explore our curated selection of residential, commercial, and
+              investment-ready properties located in fast-developing areas.
+              These properties grow in value as the city expands, offering you
+              the chance to invest smartly and stay ahead. Find the right space
+              where growth and opportunity meet.
             </div>
           </div>
         </div>
