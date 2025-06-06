@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PropertyCard from "../propertyCard";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -7,67 +7,60 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Link from "next/link";
 
 const PropertiesSection = () => {
-  // const [seletedIndex, setseletedIndex] = useState(0);
-  const cardContainer = useRef(null);
-  // const [noOfDots, setNoOfDots] = useState([0]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const cardContainer = useRef<HTMLDivElement>(null);
+  const [noOfDots, setNoOfDots] = useState([0]);
 
-  gsap.registerPlugin(ScrollToPlugin);
   useGSAP(() => {
     const ctx = gsap.context(() => {});
 
     return () => ctx.revert();
   }, []);
 
-  // useEffect(() => {
-  //   if (cardContainer.current) {
-  //     const container = cardContainer.current as HTMLDivElement;
-  //     const cards = container.querySelectorAll(".property-card");
-  //     console.log(
-  //       Math.ceil(
-  //         cards.length /
-  //           Math.floor(container.clientWidth / cards[0].clientWidth)
-  //       )
-  //     );
-  //     const dots = [];
-  //     for (
-  //       let i = 0;
-  //       i <
-  //       Math.ceil(
-  //         cards.length /
-  //           Math.floor(container.clientWidth / cards[0].clientWidth)
-  //       );
-  //       i++
-  //     ) {
-  //       dots.push(i);
-  //     }
+  useEffect(() => gsap.registerPlugin(ScrollToPlugin), []);
 
-  //     setNoOfDots(dots);
-  //   }
-  // }, [cardContainer]);
+  useEffect(() => {
+    const updateDots = () => {
+      if (cardContainer.current) {
+        const container = cardContainer.current;
+        const cards = container.querySelectorAll(".property-card");
+        if (cards.length === 0) return;
 
-  // const handelDots = (index: number) => {
-  //   if (cardContainer.current) {
-  //     setseletedIndex(index);
-  //     const container = cardContainer.current as HTMLDivElement;
-  //     const cards = container.querySelectorAll(".property-card");
+        const cardsPerView = Math.floor(
+          container.clientWidth / cards[0].clientWidth
+        );
+        const totalDots = Math.ceil(cards.length / cardsPerView);
+        const dots = Array.from({ length: totalDots }, (_, i) => i);
+        setNoOfDots(dots);
+      }
+    };
 
-  //     console.log(
-  //       "This is the ",
-  //       Math.floor(container.clientWidth / cards[0].clientWidth) *
-  //         cards[0].clientWidth
-  //     );
+    updateDots();
+    window.addEventListener("resize", updateDots);
 
-  //     gsap.to(container, {
-  //       scrollTo: {
-  //         x:
-  //           index *
-  //           Math.floor(container.clientWidth / cards[0].clientWidth) *
-  //           cards[0].clientWidth,
-  //       },
-  //       duration: 0.5,
-  //     });
-  //   }
-  // };
+    return () => window.removeEventListener("resize", updateDots);
+  }, []);
+
+  const handelDots = (index: number) => {
+    if (cardContainer.current) {
+      const container = cardContainer.current;
+      const cards = container.querySelectorAll(".property-card");
+
+      if (cards.length === 0) return;
+
+      setSelectedIndex(index);
+
+      const cardsPerView = Math.floor(
+        container.clientWidth / cards[0].clientWidth
+      );
+      const scrollX = index * (cardsPerView * cards[0].clientWidth + 20);
+
+      gsap.to(container, {
+        scrollTo: { x: scrollX },
+        duration: 0.5,
+      });
+    }
+  };
 
   return (
     <section
@@ -106,7 +99,7 @@ const PropertiesSection = () => {
             ref={cardContainer}
             className="flex overflow-x-scroll scrollbar-hide"
           >
-            <div className="w-fit flex gap-5 scroll">
+            <div className="w-full md:w-fit flex gap-5 scroll">
               <PropertyCard
                 image="/images/property_1.png"
                 title="Vrindavan Park"
@@ -132,19 +125,19 @@ const PropertiesSection = () => {
 
             {/* Add more cards if needed */}
           </div>
-          {/* <div className="w-full flex gap-2 py-10 justify-center items-center">
+          <div className="w-full flex gap-2 py-10 justify-center items-center">
             {noOfDots.map((index) => (
               <div
                 key={index}
                 className={`cursor-pointer ${
-                  seletedIndex === index
+                  selectedIndex === index
                     ? "w-5 h-5 bg-[#000000]"
                     : "w-3 h-3 bg-[#99999977]"
                 } rounded-[50%] transition-all duration-300`}
                 onClick={() => handelDots(index)}
               ></div>
             ))}
-          </div> */}
+          </div>
         </div>
       </div>
 
