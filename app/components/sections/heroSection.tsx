@@ -56,7 +56,7 @@ function HeroSection() {
         "hero-same"
       );
       timeline.to(
-        ".layer2",
+        ".layerText",
         {
           color: "#000",
         },
@@ -156,7 +156,7 @@ function HeroSection() {
         src="/videos/homepageHeroSectionBannerVideo.mp4"
       />
 
-      <div className="overlayTexts w-full h-full absolute top-0 left-0 z-3">
+      <div className=" overlayTexts w-full h-full absolute top-0 left-0 z-3">
         <div className="absolute top-0 text-white left-0 w-full h-full  flex flex-wrap z-3 pt-[var(--navbar-h)]">
           <div className="flex flex-col h-full w-full py-10 justify-center ">
             <div className="h-fit w-full flex items-center flex-col mx-auto">
@@ -181,7 +181,7 @@ function HeroSection() {
               <div
                 className={`flex flex-1 flex-col sectionTransition mt-auto `}
               >
-                <div className="mx-auto section1 overflow-hidden">
+                <div className="mx-auto section1 layerText  overflow-hidden">
                   <div
                     className="title text-[28px] font-[100] uppercase font-classica cursor-pointer"
                     onClick={() => toggleSections(1)}
@@ -208,7 +208,7 @@ function HeroSection() {
               <div
                 className={`flex flex-1 flex-col sectionTransition mt-auto `}
               >
-                <div className="mx-auto section2 overflow-hidden">
+                <div className="mx-auto layerText section2 overflow-hidden">
                   <div
                     className="title text-[28px] font-[100] uppercase font-classica cursor-pointer"
                     onClick={() => toggleSections(2)}

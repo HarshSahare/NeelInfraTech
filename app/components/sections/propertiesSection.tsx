@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import PropertyCard from "../propertyCard";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -7,9 +7,9 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Link from "next/link";
 
 const PropertiesSection = () => {
-  const [seletedIndex, setseletedIndex] = useState(0);
+  // const [seletedIndex, setseletedIndex] = useState(0);
   const cardContainer = useRef(null);
-  const [noOfDots, setNoOfDots] = useState([0]);
+  // const [noOfDots, setNoOfDots] = useState([0]);
 
   gsap.registerPlugin(ScrollToPlugin);
   useGSAP(() => {
