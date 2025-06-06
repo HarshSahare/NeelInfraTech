@@ -1,15 +1,21 @@
 "use client";
 import Image from "next/image";
-import React, { RefObject, useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import PropertyCard from "../components/propertyCard";
 import ContactSection from "../components/sections/contactSection";
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 function Page() {
   const [activeIndex, setActiveIndex] = useState(0); // 0: Popular, 1: Properties
-  const popularScrollRef = useRef(null);
-  const propertiesScrollRef = useRef(null);
+
+  // Refs to the scroll containers
+  const popularScrollRef = useRef<HTMLDivElement>(null);
+  const propertiesScrollRef = useRef<HTMLDivElement>(null);
+
+  // Active page index for dots of each container
+  const [popularPage, setPopularPage] = useState(0);
+  const [propertiesPage, setPropertiesPage] = useState(0);
+
   const featuredProperties = [
     {
       src: "/images/propertiesDetailedImage1.png",
@@ -94,19 +100,84 @@ function Page() {
     },
   ];
 
-  const scroll = (
-    ref: RefObject<HTMLDivElement | null>,
-    direction: "left" | "right"
-  ) => {
-    const container = ref.current;
+  // Calculate total pages given container and card widths
+  function calculatePages(
+    container: HTMLDivElement | null,
+    cardsCount: number
+  ) {
+    if (!container || cardsCount === 0) return 0;
+
+    // Width of visible area
+    const containerWidth = container.clientWidth;
+
+    // Width of one card (assume all same width)
+    const firstCard = container.querySelector<HTMLElement>("div");
+    if (!firstCard) return 0;
+    const cardWidth =
+      firstCard.clientWidth +
+        parseInt(getComputedStyle(firstCard).marginRight) || 0;
+
+    // Calculate how many cards fit per "page"
+    const cardsPerPage = Math.floor(containerWidth / cardWidth);
+
+    // Calculate total pages needed
+    return Math.ceil(cardsCount / cardsPerPage);
+  }
+
+  // Scroll to page index in container
+  function scrollToPage(
+    container: HTMLDivElement | null,
+    pageIndex: number,
+    cardsCount: number,
+    setPage: React.Dispatch<React.SetStateAction<number>>
+  ) {
     if (!container) return;
 
-    const scrollAmount = container.offsetWidth; // snap by container width
-    container.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
-      behavior: "smooth",
-    });
-  };
+    const containerWidth = container.clientWidth;
+    const firstCard = container.querySelector<HTMLElement>("div");
+    if (!firstCard) return;
+    const cardWidth =
+      firstCard.clientWidth +
+        parseInt(getComputedStyle(firstCard).marginRight) || 0;
+    const cardsPerPage = Math.floor(containerWidth / cardWidth);
+
+    // Scroll amount = pageIndex * cardsPerPage * cardWidth
+    const scrollLeft = pageIndex * cardsPerPage * cardWidth;
+
+    container.scrollTo({ left: scrollLeft, behavior: "smooth" });
+    setPage(pageIndex);
+  }
+
+  // On manual scroll, update active page dots
+  function onScroll(
+    e: React.UIEvent<HTMLDivElement>,
+    cardsCount: number,
+    setPage: React.Dispatch<React.SetStateAction<number>>
+  ) {
+    const container = e.currentTarget;
+    const scrollLeft = container.scrollLeft;
+    const containerWidth = container.clientWidth;
+
+    const firstCard = container.querySelector<HTMLElement>("div");
+    if (!firstCard) return;
+    const cardWidth =
+      firstCard.clientWidth +
+        parseInt(getComputedStyle(firstCard).marginRight) || 0;
+    const cardsPerPage = Math.floor(containerWidth / cardWidth);
+
+    const currentPage = Math.round(scrollLeft / (cardsPerPage * cardWidth));
+    setPage(currentPage);
+  }
+
+  // Number of pages for each container
+  const popularPages = calculatePages(
+    popularScrollRef.current,
+    PopularProperties.length
+  );
+  const propertiesPages = calculatePages(
+    propertiesScrollRef.current,
+    Properties.length
+  );
 
   return (
     <div className="flex flex-col">
@@ -195,31 +266,6 @@ function Page() {
           </div>
 
           <div className="relative w-[90vw] overflow-hidden py-10 mx-auto">
-            {/* Left Arrow */}
-            <button
-              onClick={() =>
-                scroll(
-                  activeIndex === 0 ? popularScrollRef : propertiesScrollRef,
-                  "left"
-                )
-              }
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow"
-            >
-              <HiChevronLeft size={24} />
-            </button>
-
-            <button
-              onClick={() =>
-                scroll(
-                  activeIndex === 0 ? popularScrollRef : propertiesScrollRef,
-                  "right"
-                )
-              }
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow"
-            >
-              <HiChevronRight size={24} />
-            </button>
-
             <div
               className="flex w-[180vw] transition-transform duration-500 ease-in-out"
               style={{
@@ -227,9 +273,12 @@ function Page() {
               }}
             >
               {/* Section 1: Popular Properties */}
-              <div className="min-w-[90vw] flex justify-center">
+              <div className="min-w-[90vw] flex flex-col justify-center">
                 <div
                   ref={popularScrollRef}
+                  onScroll={(e) =>
+                    onScroll(e, PopularProperties.length, setPopularPage)
+                  }
                   className="flex gap-6 overflow-x-auto scrollbar-hide whitespace-nowrap px-0 scroll-snap-x scroll-smooth"
                 >
                   {PopularProperties.map((property, index) => (
@@ -241,12 +290,36 @@ function Page() {
                     </div>
                   ))}
                 </div>
+
+                {/* Dots for Popular */}
+                <div className="flex justify-center gap-3 mt-6">
+                  {Array.from({ length: popularPages }, (_, i) => (
+                    <button
+                      key={i}
+                      onClick={() =>
+                        scrollToPage(
+                          popularScrollRef.current,
+                          i,
+                          PopularProperties.length,
+                          setPopularPage
+                        )
+                      }
+                      className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                        popularPage === i ? "bg-black" : "bg-gray-400"
+                      }`}
+                      aria-label={`Go to page ${i + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
 
               {/* Section 2: Properties */}
-              <div className="min-w-[90vw] flex justify-center">
+              <div className="min-w-[90vw] flex flex-col justify-center">
                 <div
                   ref={propertiesScrollRef}
+                  onScroll={(e) =>
+                    onScroll(e, Properties.length, setPropertiesPage)
+                  }
                   className="flex gap-6 overflow-x-auto scrollbar-hide whitespace-nowrap px-0 scroll-snap-x scroll-smooth"
                 >
                   {Properties.map((property, index) => (
@@ -256,6 +329,27 @@ function Page() {
                     >
                       <PropertyCard {...property} className="w-full" />
                     </div>
+                  ))}
+                </div>
+
+                {/* Dots for Properties */}
+                <div className="flex justify-center gap-3 mt-6">
+                  {Array.from({ length: propertiesPages }, (_, i) => (
+                    <button
+                      key={i}
+                      onClick={() =>
+                        scrollToPage(
+                          propertiesScrollRef.current,
+                          i,
+                          Properties.length,
+                          setPropertiesPage
+                        )
+                      }
+                      className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                        propertiesPage === i ? "bg-black" : "bg-gray-400"
+                      }`}
+                      aria-label={`Go to page ${i + 1}`}
+                    />
                   ))}
                 </div>
               </div>
