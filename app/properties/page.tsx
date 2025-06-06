@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import PropertyCard from "../components/propertyCard";
 import ContactSection from "../components/sections/contactSection";
