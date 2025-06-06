@@ -14,7 +14,7 @@ const PropertiesLandingSection = () => {
         duration: 1,
         scrollTrigger: {
           trigger: ".properties-landingpage-container",
-          start: "top 60%",
+          start: "top bottom",
         },
         stagger: 0.2,
       });
@@ -26,7 +26,7 @@ const PropertiesLandingSection = () => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".properties-landingpage-container",
-        start: "top 60%",
+        start: "top bottom",
       },
     });
 
@@ -89,23 +89,6 @@ const PropertiesLandingSection = () => {
           </div>
 
           {/* Image 3 */}
-          <div
-            style={{ clipPath: "polygon(0% 0% , 0% 0% , 0% 100%,  0% 100%)" }}
-          >
-            <Image
-              src="/images/property-3.png"
-              alt="Address Grand Downtown"
-              width={600}
-              height={400}
-              className="w-full object-cover"
-            />
-            <div className="mt-2 flex items-center justify-between text-xs text-[#757378] font-classica">
-              <span>ADDRESS GRAND DOWNTOWN</span>
-              <span className="mx-2">|</span>
-              <span>DOWNTOWN DUBAI</span>
-              <span className="flex-grow border-t border-gray-300 ml-2"></span>
-            </div>
-          </div>
         </div>
 
         {/* Column 2 */}
@@ -144,25 +127,6 @@ const PropertiesLandingSection = () => {
               width={600}
               height={260}
               className="w-full h-[260px] object-cover"
-            />
-            <div className="mt-2 flex items-center justify-between text-xs text-[#757378] font-classica">
-              <span>ADDRESS GRAND DOWNTOWN</span>
-              <span className="mx-2">|</span>
-              <span>DOWNTOWN DUBAI</span>
-              <span className="flex-grow border-t border-gray-300 ml-2"></span>
-            </div>
-          </div>
-          <div
-            style={{
-              clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-            }}
-          >
-            <Image
-              src="/images/property-3.png"
-              alt="Address Grand Downtown"
-              width={600}
-              height={400}
-              className="w-full object-cover"
             />
             <div className="mt-2 flex items-center justify-between text-xs text-[#757378] font-classica">
               <span>ADDRESS GRAND DOWNTOWN</span>
