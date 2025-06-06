@@ -73,13 +73,18 @@ const PropertiesLandingSection = () => {
               clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
             }}
           >
-            <Image
-              src="/images/property-1.png"
-              alt="Palace Villas"
-              width={600}
-              height={400}
-              className="w-full object-cover"
-            />
+            <video
+              loop
+              autoPlay
+              muted
+              className="w-full max-h-[750px] object-cover"
+            >
+              <source
+                src="/videos/propertiesLandingPageVideo1.mp4"
+                type="video/mp4"
+              />
+            </video>
+
             <div className="mt-2 flex items-center justify-between text-xs text-[#757378] font-classica">
               <span>PALACE VILLAS – OSTRA</span>
               <span className="mx-2">|</span>
@@ -101,7 +106,7 @@ const PropertiesLandingSection = () => {
             }}
           >
             <Image
-              src="/images/property-2.png"
+              src="/images/landingPropertiesImage3.jpg"
               alt="Golf Meadow at Emaar South"
               width={600}
               height={260}
@@ -122,7 +127,7 @@ const PropertiesLandingSection = () => {
             }}
           >
             <Image
-              src="/images/property-3.png"
+              src="/images/propertiesLandingImage2.jpg"
               alt="Address Grand Downtown"
               width={600}
               height={260}
