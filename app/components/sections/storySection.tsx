@@ -1,17 +1,19 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const StorySection = () => {
-  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+  }, []);
 
   useGSAP(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".story-container",
-        start: "top 50%",
+        start: "top bottom-=20%",
       },
     });
 
