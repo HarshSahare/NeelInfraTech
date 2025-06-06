@@ -146,7 +146,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 
-const designers = [
+const directors = [
   {
     name: "Zaha Hadid",
     image: "/images/director-image.png",
@@ -166,23 +166,25 @@ const designers = [
 ];
 
 export default function DirectorsSection() {
-  const scrollContainerRef = useRef(null);
-  const cardRefs = useRef([]);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const scroll = (direction: "left" | "right") => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    const cards = cardRefs.current.filter(Boolean);
+    const cards = cardRefs.current.filter(
+      (card): card is HTMLDivElement => card !== null
+    );
+
     const scrollLeft = container.scrollLeft;
 
-    let targetCard = null;
+    let targetCard: HTMLDivElement | null = null;
 
     if (direction === "right") {
-      // Find the first card whose left edge is after the current scroll position + small offset
-      targetCard = cards.find((card) => card.offsetLeft > scrollLeft + 10);
+      targetCard =
+        cards.find((card) => card.offsetLeft > scrollLeft + 10) || null;
     } else {
-      // Find the last card whose right edge is before current scroll
       for (let i = cards.length - 1; i >= 0; i--) {
         const card = cards[i];
         if (card.offsetLeft + card.offsetWidth < scrollLeft - 10) {
@@ -193,7 +195,6 @@ export default function DirectorsSection() {
     }
 
     if (targetCard) {
-      // Scroll so the left edge of the card aligns with the container's left edge
       container.scrollTo({
         left: targetCard.offsetLeft,
         behavior: "smooth",
@@ -207,10 +208,12 @@ export default function DirectorsSection() {
         ref={scrollContainerRef}
         className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide py-6"
       >
-        {designers.map((designer, index) => (
+        {directors.map((designer, index) => (
           <div
             key={index}
-            ref={(el) => (cardRefs.current[index] = el)}
+            ref={(el) => {
+              cardRefs.current[index] = el;
+            }}
             className="flex-shrink-0 border border-gray-200 shadow-md rounded-md"
           >
             <Image
