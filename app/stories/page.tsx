@@ -13,34 +13,6 @@ interface DirectorsInfoInterface {
 function StoriesPage() {
   const DirectorsInfo: DirectorsInfoInterface[] = [
     {
-      name: "Mr. Pushparaj Meshram",
-      quote:
-        '"Hume zarurat ke hisaab se nahi, chahat ke hisaab se jeena chahiye."',
-      description: `
-      Born near Bhivapoor village, Umred, Pushparaj Sir started working in 7th grade to support his education. After moving to Nagpur, he completed his LLB and LLM—taking up jobs like digging, book selling, and tutoring to fund his journey.
-      <br/><br/>He began practicing law in 2000, but in 2007, real estate sparked a new direction. By 2009, he committed fully to the field. With 18+ years of experience and 10 years at Neel Infratech, he’s served over 2,000 clients and mentored 500+ budding realtors.
-      <br/><br/>From rural roots to international trips like Andaman and Thailand, his journey proves that dedication changes destiny.
-      `,
-      image: "/images/storiesImage3.png",
-      subDescription:
-        '"Mr. Meshram’s experience and honesty gave us full confidence during our property purchase. A true professional we deeply trust."',
-      quoteAuthor: "Mr. Rajesh K. Homebuyer",
-    },
-    {
-      name: "Mr. Satendra Sir",
-      quote:
-        '"Karam pe vishvash rakho, result pe nahi — result aapka karam hi dilayega."',
-      description: `
-      Hailing from Manjhuriya village in Darbhanga district, Satendra Sir's life journey reflects resilience and responsibility. Married at a young age, he moved to Nagpur at 25 with his wife and three children, determined to give them a better future through education.
-      <br/><br/>To support his family, he took on various jobs over the years—never stepping back from hard work. With the support of a friend, he entered the real estate industry, where his dedication and sincerity led him to co-build a company and eventually become its Director.
-      <br/><br/>Through his real estate earnings, he educated his children, arranged their marriages, and secured their futures by buying properties and land. By the age of 45, he had firmly established himself. Today, he stands proud with 700–800 happy clients across Nagpur, having sold property in both private and government sectors—with customer satisfaction at the core of his journey.
-        `,
-      image: "/images/storiesImage3.png",
-      subDescription:
-        '"Satendra Sir treats every client like family. His honesty and long-term thinking gave me full confidence in my property purchase. A rare gem in this industry!"',
-      quoteAuthor: "Mr. Sameer P., Government Employee",
-    },
-    {
       name: "Mr. Ajay Dandekar",
       quote: `"Rasta chalna, saaf chalna – chahe usme darr lage."`,
       description: `
@@ -50,33 +22,8 @@ function StoriesPage() {
 `,
       image: "/images/storiesImage3.png",
       subDescription:
-        '"Ajay Sir\'s journey shows what belief and consistency can achieve. He’s more than a real estate expert—he’s a guide who uplifts others while rising himself."',
-      quoteAuthor: "Mr. Pooja R., Entrepreneur",
-    },
-    {
-      name: "Mr. Rupesh Sir",
-      quote: `"Aadmi zindagi mein utna hi bada ban sakta hai, jitni badi uski soch ho."`,
-      description: `
-      Born into a humble farming family, Rupesh Sir has always believed in the power of vision and effort. While pursuing his B.A., he stepped into the world of business and soon met Ikar Sir, the current owner of Neel Infratech. That meeting marked the beginning of his journey in the real estate industry.
-      <br/><br/>Over the past 11 years at Neel Infratech, he has not only contributed to the company’s success but also achieved several personal milestones—buying his first car, supporting his daughter’s education, purchasing his dream car, and successfully closing multiple property deals across Nagpur.
-      `,
-      image: "/images/storiesImage3.png",
-      subDescription:
-        '"Rupesh Sir’s calm approach and genuine advice helped us make a confident decision. He treats every deal like it’s his own."',
-      quoteAuthor: "Mr. Ravi P., Government Officer",
-    },
-    {
-      name: "Mr. Dekate Sir",
-      quote: `"Jab tak thakte nahi, tab tak haarte nahi."`,
-      description: `
-      Born in Kargaon village, Nagpur, Dekate Sir came from a humble farming background. After completing his M.A. in English Literature from Morris College along with B.Ed. and BML, he began working as a Junior College Lecturer in 1995.
-      <br/><br/>Despite a stable job, he pursued business—trying dairy, nursery, and MLM—which led to a ₹35 lakh debt. In 2009, real estate became his turning point. Joining Neel Infratech at 42, he cleared his debt and achieved financial freedom by 45.
-      <br/><br/>Today, he owns homes in Nagpur and his village, farmland, and commercial/residential plots, proving it's never too late to succeed.
-`,
-      image: "/images/storiesImage3.png",
-      subDescription:
-        '"Dekate Sir’s resilience and honesty gave us confidence in our investment. He truly leads by example."',
-      quoteAuthor: "Mr. Meena A., Businesswoman",
+        '"Dandekar Sir and Neel Infratech didn’t just sell us a plot — they educated us. The site visit gave us full clarity, and we were convinced to invest. Today, we’re seeing great returns thanks to the location.”',
+      quoteAuthor: "Mr. Praful Gourkar",
     },
     {
       name: "Mr. Onkar Sonwani Sir",
@@ -87,8 +34,62 @@ function StoriesPage() {
       `,
       image: "/images/storiesImage3.png",
       subDescription:
-        '"Onkar Sir’s dedication and genuine nature made our property buying experience smooth and trustworthy."',
-      quoteAuthor: "Mr. Anjali P., Homemaker",
+        "“Onkar Sir guided us throughout the entire process, making it easy and trustworthy. Thanks to his support, we confidently invested with Neel Infratech. The location, planning, and transparency were impressive — and we’re already seeing growth in our investment.”",
+      quoteAuthor: "Mr. Wakodekar",
+    },
+    {
+      name: "Mr. Satendra Chaudhari Sir",
+      quote:
+        '"Karam pe vishvash rakho, result pe nahi — result aapka karam hi dilayega."',
+      description: `
+      Hailing from Manjhuriya village in Darbhanga district, Satendra Sir's life journey reflects resilience and responsibility. Married at a young age, he moved to Nagpur at 25 with his wife and three children, determined to give them a better future through education.
+      <br/><br/>To support his family, he took on various jobs over the years—never stepping back from hard work. With the support of a friend, he entered the real estate industry, where his dedication and sincerity led him to co-build a company and eventually become its Director.
+      <br/><br/>Through his real estate earnings, he educated his children, arranged their marriages, and secured their futures by buying properties and land. By the age of 45, he had firmly established himself. Today, he stands proud with 700–800 happy clients across Nagpur, having sold property in both private and government sectors—with customer satisfaction at the core of his journey.
+        `,
+      image: "/images/storiesImage3.png",
+      subDescription:
+        '"What Chaudhari Sir promises is exactly what he delivers. I purchased property from Neel Infratech through him, and I’m very satisfied. The property is excellent, and their support with technical documentation was smooth and reliable — we didn’t have to worry about a thing. I’m truly happy with my decision to buy from Chaudhari Sir."',
+      quoteAuthor: "Mr. Gagaram Sakharkar",
+    },
+    {
+      name: "Mr. Dekate Sir",
+      quote: `"Jab tak thakte nahi, tab tak haarte nahi."`,
+      description: `
+      Born in Kargaon village, Nagpur, Dekate Sir came from a humble farming background. After completing his M.A. in English Literature from Morris College along with B.Ed. and BML, he began working as a Junior College Lecturer in 1995.
+      <br/><br/>Despite a stable job, he pursued business—trying dairy, nursery, and MLM—which led to a ₹35 lakh debt. In 2009, real estate became his turning point. Joining Neel Infratech at 42, he cleared his debt and achieved financial freedom by 45.
+      <br/><br/>Today, he owns homes in Nagpur and his village, farmland, and commercial/residential plots, proving it's never too late to succeed.
+    `,
+      image: "/images/storiesImage3.png",
+
+      subDescription:
+        "“I bought a property from Dekate Sir and I’m very happy with my purchase. The company is trustworthy, the owner is supportive, and all the documentation was done properly. It was a smooth and satisfying experience.”",
+      quoteAuthor: "Mr. Vilas Kature",
+    },
+    {
+      name: "Mr. Rupesh Sir",
+      quote: `"Aadmi zindagi mein utna hi bada ban sakta hai, jitni badi uski soch ho."`,
+      description: `
+      Born into a humble farming family, Rupesh Sir has always believed in the power of vision and effort. While pursuing his B.A., he stepped into the world of business and soon met Ikar Sir, the current owner of Neel Infratech. That meeting marked the beginning of his journey in the real estate industry.
+      <br/><br/>Over the past 11 years at Neel Infratech, he has not only contributed to the company’s success but also achieved several personal milestones—buying his first car, supporting his daughter’s education, purchasing his dream car, and successfully closing multiple property deals across Nagpur.
+      `,
+      image: "/images/storiesImage3.png",
+      subDescription:
+        "“I bought a property from Rupesh Sir and Neel Infratech, and I’m very happy with the experience. The process was smooth, the title was clear, and I’m glad I got a plot on Wardha Road — the best area to invest today.”",
+      quoteAuthor: "Mr. Rajesh Bandale",
+    },
+    {
+      name: "Mr. Pushparaj Meshram",
+      quote:
+        '"Hume zarurat ke hisaab se nahi, chahat ke hisaab se jeena chahiye."',
+      description: `
+      Born near Bhivapoor village, Umred, Pushparaj Sir started working in 7th grade to support his education. After moving to Nagpur, he completed his LLB and LLM—taking up jobs like digging, book selling, and tutoring to fund his journey.
+      <br/><br/>He began practicing law in 2000, but in 2007, real estate sparked a new direction. By 2009, he committed fully to the field. With 18+ years of experience and 10 years at Neel Infratech, he’s served over 2,000 clients and mentored 500+ budding realtors.
+      <br/><br/>From rural roots to international trips like Andaman and Thailand, his journey proves that dedication changes destiny.
+      `,
+      image: "/images/storiesImage3.png",
+      subDescription:
+        '"Pushparaj Sir made buying my property easy and clear. He helped me find a great home with no hassle. Very honest and professional"',
+      quoteAuthor: "Mr. Rajesh K. Homebuyer",
     },
   ];
 
