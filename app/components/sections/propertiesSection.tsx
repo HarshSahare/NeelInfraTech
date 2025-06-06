@@ -13,7 +13,27 @@ const PropertiesSection = () => {
 
   useGSAP(() => {
     const ctx = gsap.context(() => {});
+    const containers = document.querySelectorAll("#ourProperties > div > div");
+    console.log(containers);
+    gsap.from(containers[0], {
+      opacity: 0,
+      x: -50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: containers[0],
+        start: "top bottom-=20%",
+      },
+    });
 
+    gsap.from(containers[1], {
+      opacity: 0,
+      x: 50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: containers[1],
+        start: "top bottom-=20%",
+      },
+    });
     return () => ctx.revert();
   }, []);
 
@@ -140,15 +160,6 @@ const PropertiesSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Pagination dots
-      <div className="flex justify-center mt-8 gap-2">
-        <span className="w-2 h-2 rounded-full bg-black"></span>
-        <span className="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span className="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span className="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span className="w-2 h-2 rounded-full bg-gray-300"></span>
-      </div> */}
     </section>
   );
 };
