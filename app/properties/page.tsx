@@ -71,14 +71,14 @@ function Page() {
       image: "/images/property_2.png",
     },
     {
-      title: "Silver Icon",
+      title: "Silver Icon 4",
       status: "Sold Out",
       location: "The Acres",
       bedrooms: "1090 sq.ft",
       image: "/images/property_3.png",
     },
     {
-      title: "Silver Park - 15",
+      title: "Silver Park 15",
       status: "Remaining ",
       location: "South Nagpur",
       bedrooms: "1200 sq.ft",
@@ -106,14 +106,7 @@ function Page() {
       image: "/images/property_7.png",
     },
     {
-      title: "Silver Star , Amravati Road",
-      status: "Sold Out",
-      location: "The Acres",
-      bedrooms: "1030 sq.ft",
-      image: "/images/property_8.png",
-    },
-    {
-      title: "Silver Icon, Gotal , Panjri , Nagpur",
+      title: "Silver Icon",
       status: "Sold Out",
       location: "The Acres",
       bedrooms: "1090 sq.ft",
