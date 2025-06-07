@@ -55,7 +55,7 @@ const StorySection = () => {
         </p>
       </div>
 
-      <div className="flex story-grid-content lg:flex-row lg:gap-0  flex-wrap flex-col justify-around gap-12 max-w-7xl mx-auto text-left px-4 md:py-45 lg:items-center">
+      <div className="flex story-grid-content lg:flex-row lg:gap-0  flex-wrap flex-col justify-around gap-12 max-w-7xl mx-auto text-left px-4 py-8 md:py-45 lg:items-center">
         <div className="w-fit flex justify-center h-fit min-w-fit">
           <div className=" w-[2px] bg-[#757279] "></div>
           <div className="px-8">
