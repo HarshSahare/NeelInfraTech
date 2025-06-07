@@ -68,7 +68,7 @@ export default function DirectorsSection() {
     <section className="bg-white px-4 md:px-10 director-section">
       <div className="text-left mb-8 px-4">
         <h2 className="text-[32px] sm:text-[40px] md:text-[45px] lg:text-5xl heading mt-5 text-[#161616] font-classica font-[400] leading-tight">
-          Directors
+          Our Directors
         </h2>
       </div>
       <div
