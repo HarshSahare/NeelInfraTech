@@ -151,8 +151,8 @@ const PropertiesSection = () => {
                 key={index}
                 className={`cursor-pointer ${
                   selectedIndex === index
-                    ? "w-5 h-5 bg-[#000000]"
-                    : "w-3 h-3 bg-[#99999977]"
+                    ? "w-3 h-3 bg-[#000000]"
+                    : "w-2 h-2 bg-[#99999977]"
                 } rounded-[50%] transition-all duration-300`}
                 onClick={() => handelDots(index)}
               ></div>

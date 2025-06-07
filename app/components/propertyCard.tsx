@@ -73,13 +73,15 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </span>
           <span>{status}</span>
         </div>
-        <Link
-          className="bg-black font-400 font-poppins cursor-pointer text-[#F5F5F5] mt-5 w-fit  py-2 px-6 rounded-[23px] text-[11px]"
-          style={{ padding: "15px 28px" }}
-          href={`/properties/${title.replaceAll(" ", "-").toLowerCase()}`}
-        >
-          Learn More
-        </Link>
+        <div className="w-fit mt-5 h-fit ">
+          <Link
+            className="bg-black font-400 font-poppins cursor-pointer text-[#F5F5F5]   py-2 px-6 rounded-[23px] text-[11px]"
+            style={{ padding: "15px 28px" }}
+            href={`/properties/${title.replaceAll(" ", "-").toLowerCase()}`}
+          >
+            Learn More
+          </Link>
+        </div>
       </div>
     </div>
   );
