@@ -78,25 +78,53 @@ function Page() {
       image: "/images/property_3.png",
     },
     {
-      title: "Vrindavan Park",
+      title: "Silver Park - 15",
       status: "Remaining ",
       location: "South Nagpur",
       bedrooms: "1200 sq.ft",
-      image: "/images/property_1.png",
+      image: "/images/property_4.png",
     },
     {
-      title: "Silver Star",
+      title: "Silver Woods",
       status: "Sold Out",
       location: "The Acres",
       bedrooms: "1030 sq.ft",
-      image: "/images/property_2.png",
+      image: "/images/property_5.png",
     },
     {
-      title: "Silver Icon",
+      title: "Sliver Wind",
       status: "Sold Out",
       location: "The Acres",
       bedrooms: "1090 sq.ft",
-      image: "/images/property_3.png",
+      image: "/images/property_6.png",
+    },
+    {
+      title: "Vrindavan Park Residentail and commercial plots",
+      status: "Remaining ",
+      location: "South Nagpur",
+      bedrooms: "1200 sq.ft",
+      image: "/images/property_7.png",
+    },
+    {
+      title: "Silver Star , Amravati Road",
+      status: "Sold Out",
+      location: "The Acres",
+      bedrooms: "1030 sq.ft",
+      image: "/images/property_8.png",
+    },
+    {
+      title: "Silver Icon, Gotal , Panjri , Nagpur",
+      status: "Sold Out",
+      location: "The Acres",
+      bedrooms: "1090 sq.ft",
+      image: "/images/property_9.png",
+    },
+    {
+      title: "Rajatbhoomi 12",
+      status: "Remaining ",
+      location: "South Nagpur",
+      bedrooms: "1200 sq.ft",
+      image: "/images/property_10.png",
     },
   ];
 
@@ -333,7 +361,7 @@ function Page() {
                 </div>
 
                 {/* Dots for Properties */}
-                <div className="flex justify-center gap-3 mt-6">
+                <div className="flex justify-center items-center gap-3 mt-6">
                   {Array.from({ length: propertiesPages }, (_, i) => (
                     <button
                       key={i}
@@ -345,8 +373,10 @@ function Page() {
                           setPropertiesPage
                         )
                       }
-                      className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                        propertiesPage === i ? "bg-black" : "bg-gray-400"
+                      className={` rounded-full transition-all cursor-pointers duration-300 ${
+                        propertiesPage === i
+                          ? "bg-black w-4 h-4"
+                          : "bg-gray-400 w-2 h-2"
                       }`}
                       aria-label={`Go to page ${i + 1}`}
                     />
