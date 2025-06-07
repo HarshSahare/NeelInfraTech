@@ -73,14 +73,13 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </span>
           <span>{status}</span>
         </div>
-        <div
+        <Link
           className="bg-black font-400 font-poppins cursor-pointer text-[#F5F5F5] mt-5 w-fit  py-2 px-6 rounded-[23px] text-[11px]"
           style={{ padding: "15px 28px" }}
+          href={`/properties/${title.replaceAll(" ", "-").toLowerCase()}`}
         >
-          <Link href={`/properties/${title.replace(" ", "-").toLowerCase()}`}>
-            Learn More
-          </Link>
-        </div>
+          Learn More
+        </Link>
       </div>
     </div>
   );

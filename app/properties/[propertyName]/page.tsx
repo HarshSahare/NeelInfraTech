@@ -26,7 +26,7 @@ async function PropertiesDetail({
         <div className="absolute inset-0 md:w-[55%] w-full flex items-center  md:py-20 text-white">
           <div className="md:px-20 px-10 md:mt-[15%]">
             <h1 className="font-classica md:text-7xl text-5xl uppercase">
-              {propertyName.replace("-", " ")}
+              {propertyName.replaceAll("-", " ")}
             </h1>
             <div className="md:py-10 py-5 text-sm">
               Whether you&apos;re searching for a peaceful residential plot, a
@@ -51,11 +51,11 @@ async function PropertiesDetail({
               </Link>
               <a
                 download={
-                  propertyName.toLocaleLowerCase().replace("-", " ") +
+                  propertyName.toLocaleLowerCase().replaceAll("-", " ") +
                   " brochure.png"
                 }
                 href={
-                  Properties[propertyName.toLowerCase().replace("-", " ")]
+                  Properties[propertyName.toLowerCase().replaceAll("-", " ")]
                     .brochure
                 }
                 className="backdrop-blur-xl bg-[#D9D9D921] px-4 py-3 min-w-fit cursor-pointer"
@@ -79,7 +79,7 @@ async function PropertiesDetail({
         </div>
         <div className="md:flex-4 px-10">
           <div className="font-classica capitalize text-lg py-5 text-[#757279] font-[400]">
-            {propertyName.replace("-", " ")}
+            {propertyName.replaceAll("-", " ")}
           </div>
 
           <div className="w-fit">

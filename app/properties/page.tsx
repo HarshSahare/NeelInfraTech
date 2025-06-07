@@ -99,7 +99,7 @@ function Page() {
       image: "/images/property_6.png",
     },
     {
-      title: "Vrindavan Park Residentail and commercial plots",
+      title: "Vrindavan Park Residentail And Commercial Plots",
       status: "Remaining ",
       location: "South Nagpur",
       bedrooms: "1200 sq.ft",

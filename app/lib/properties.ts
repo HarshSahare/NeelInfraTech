@@ -15,7 +15,7 @@ export const Properties: { [key: string]: propertiesInterface } = {
   "sliver icon 4": {
     brochure: "/images/brochures/5836bdd0ce991ab98f9a391548307c31ba233ff8.png",
   },
-  "sliver mark 15": {
+  "silver park 15": {
     brochure: "/images/brochures/49dc9b634d845c15e196aede5c629511fa2482c5.png",
   },
   "sliver wind": {
