@@ -49,8 +49,11 @@ const PropertiesLandingSection = () => {
           Your Address Says It All
         </h2>
         <p className="text-[#6A5F6C] text-[13px]/[22px] heading font-poppins mb-[48px]">
-          From the heart of the city to nature-kissed suburbs, our handpicked
-          premium properties redefine luxury and lifestyle.
+          Where you live reflects who you are. This section features homes in
+          prime locations that offer comfort, convenience, and class. Whether
+          it's close to the city, surrounded by nature, or in a peaceful
+          community — the right address speaks for your lifestyle
+          without saying a word.
         </p>
         <Link
           href={"/properties"}
