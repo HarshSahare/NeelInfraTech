@@ -17,44 +17,64 @@ function Footer() {
         {/* Residential */}
         <div>
           <h4 className="font-[400] text-md text-[#121212] mb-3">
-            Residential
+            📍Our Projects
           </h4>
           <ul
             className="text-sm  text-[#727673]  space-y-3"
             style={{ paddingLeft: "0px" }}
           >
-            <li>The Alba Residences, Dorchester Collection, Dubai</li>
-            <li>AVA at Palm Jumeirah, Dorchester Collection, Dubai</li>
-            <li>ORLA Infinity, Dorchester Collection</li>
-            <li>ORLA, Dorchester Collection, Dubai</li>
-            <li>VELA, Dorchester Collection, Dubai</li>
-            <li>VELA Viento, Dorchester Collection, Dubai</li>
+            <li>Silver Star – Hingna, Nagpur</li>
+            <li>Silver Icon – Hingna, Nagpur</li>
+            <li>Vrindavan Park – South Nagpur</li>
+            <li>Rajat Bhomii – Jamtha, Nagpur</li>
+            <li>Silver Park – Wardha Road, Nagpur</li>
+            <li>Silver Wind – Wanadongri, Nagpur</li>
+            <li>Silver Wood – Shankarpur, Nagpur</li>
           </ul>
         </div>
 
         {/* Mixed Use */}
-        <div>
-          <h4 className="font-[400] text-md text-[#121212] mb-3">Mixed Use</h4>
-          <ul
-            className="text-sm  text-[#727673] space-y-3"
-            style={{ paddingLeft: "0px" }}
-          >
-            <li>The OPUS by OMNIYAT</li>
-            <li>The Lana, Dorchester Collection, Dubai</li>
-          </ul>
-        </div>
-
-        {/* Explore */}
         <div>
           <h4 className="font-[400] text-md text-[#121212] mb-3">Explore</h4>
           <ul
             className="text-sm text-[#727673]  space-y-3"
             style={{ paddingLeft: "0px" }}
           >
-            <Link href="/stories">Our Story</Link>
+            <li>
+              <Link href="/stories">Our Story</Link>
+            </li>
+            <li>
+              <Link
+                className="hover:text-white cursor-pointer"
+                href="/properties"
+              >
+                Our Properties
+              </Link>
+            </li>
+
             <li>
               <a href="#contact">Contact Us</a>
             </li>
+          </ul>
+        </div>
+
+        {/* Explore */}
+
+        <div>
+          <h4 className="font-[400] text-md text-[#121212] mb-3">
+            📞 Contact Us
+          </h4>
+          <ul
+            className="text-sm  text-[#727673] space-y-3"
+            style={{ paddingLeft: "0px" }}
+          >
+            <li>
+              <strong>Head Office:</strong> Neel Infratech Pvt. Ltd.
+            </li>
+            <li>[Office Address Line 1]</li>
+            <li>Nagpur, Maharashtra</li>
+            <li>📞 +91-XXXXXXXXXX</li>
+            <li>✉ info@neelinfratech.com</li>
           </ul>
         </div>
 
