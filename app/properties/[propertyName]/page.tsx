@@ -43,16 +43,14 @@ async function PropertiesDetail({
           height={1080}
           className="w-full h-full object-cover"
         />
-
-        <div className="absolute inset-0 md:w-[55%] w-full flex items-center  md:py-20 text-white">
-          <div className="md:px-20 px-10 md:mt-[15%]">
+        <div className="absolute inset-0 w-full h-full bg-[#0000007e]"></div>
+        <div className="absolute inset-0 md:w-[55%] w-full flex items-center mt-[var(--navbar-h)]  md:py-20 text-white">
+          <div className="md:px-20 px-10 ">
             <h1 className="font-classica md:text-7xl text-5xl uppercase">
-              {propertyName.replaceAll("-", " ")}
+              {propertyDetail.heroSection?.title}
             </h1>
             <div className="md:py-10 py-5 text-sm">
-              Whether you&apos;re searching for a peaceful residential plot, a
-              luxurious home, or <br /> a high-return commercial investment — we
-              have the perfect property waiting for you.
+              {propertyDetail.heroSection?.description}
             </div>
             <div className="flex flex-wrap md:gap-4 gap-2 text-sm">
               <div className="px-5 py-3 min-w-fit font-[400] bg-[#D9D9D93D] rounded-4xl">
@@ -67,18 +65,15 @@ async function PropertiesDetail({
             </div>
 
             <div className="flex flex-wrap capitalize gap-4 md:py-15 py-7 text-sm">
-              <Link href="#" className="bg-black px-4 py-3 min-w-fit">
+              <Link href="#contact" className="bg-black px-4 py-3 min-w-fit">
                 Contact Now
               </Link>
               <a
                 download={
                   propertyName.toLocaleLowerCase().replaceAll("-", " ") +
-                  " brochure.png"
+                  " brochure.pdf"
                 }
-                href={
-                  Properties[propertyName.toLowerCase().replaceAll("-", " ")]
-                    .brochure
-                }
+                href={propertyDetail.brochure}
                 className="backdrop-blur-xl bg-[#D9D9D921] px-4 py-3 min-w-fit cursor-pointer"
               >
                 Download Brochure
@@ -213,16 +208,27 @@ async function PropertiesDetail({
 
         <div className="flex flex-col md:flex-row gap-5 px-10 md:px-20 py-20">
           <div className="flex-4">
-            <video
-              src={"/videos/properties_video_1.mp4"}
-              autoPlay
-              loop
-              muted
-              className="w-full h-auto object-cover"
-            ></video>
+            {propertyDetail.gallery?.content[0].type === "video" ? (
+              <video
+                src={propertyDetail.gallery?.content[0].src || ""}
+                autoPlay
+                loop
+                muted
+                className="w-full h-auto object-cover"
+              ></video>
+            ) : (
+              <Image
+                src={propertyDetail.gallery?.content[0].src || ""}
+                alt="Property Image"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
+              />
+            )}
 
             <div className="text-md text-[#6A5F6C] px-10 py-15 text-center">
-              At the heart of Neel Infratech’s growth and values is our founder
+              {propertyDetail.gallery?.text ||
+                `At the heart of Neel Infratech’s growth and values is our founder
               and visionary leader, Mr. Pitamber Ikar. With a deep-rooted
               passion for real estate and a sharp eye for market potential, he
               has transformed Neel Infratech into a name that stands for trust,
@@ -230,17 +236,27 @@ async function PropertiesDetail({
               brings years of experience, a strong network, and a mission-driven
               approach to every project. His leadership is grounded in integrity
               and driven by a genuine commitment to helping people build secure
-              and meaningful futures through smart property investment.
+              and meaningful futures through smart property investment.`}
             </div>
           </div>
           <div className="flex-2">
-            <video
-              src={"/videos/properties_video_2.mp4"}
-              autoPlay
-              loop
-              muted
-              className="w-full h-auto object-cover"
-            ></video>
+            {propertyDetail.gallery?.content[1].type === "video" ? (
+              <video
+                src={propertyDetail.gallery?.content[1].src || ""}
+                autoPlay
+                loop
+                muted
+                className="w-full h-auto object-cover"
+              ></video>
+            ) : (
+              <Image
+                src={propertyDetail.gallery?.content[1].src || ""}
+                alt="Property Image"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
+              />
+            )}
           </div>
         </div>
       </div>

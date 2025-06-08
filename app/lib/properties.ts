@@ -1,4 +1,8 @@
 export interface propertiesInterface {
+  heroSection?: {
+    title: string;
+    description: string;
+  };
   brochure: string;
   title: string;
   status: string;
@@ -8,6 +12,10 @@ export interface propertiesInterface {
   amenities: { text: string; image: string }[];
   bannerImage?: string;
   coordinates?: { lang: number; lat: number };
+  gallery?: {
+    text: string;
+    content: { type: "image" | "video"; src: string }[];
+  };
 }
 
 const defaultAminities = [
@@ -31,6 +39,11 @@ const defaultAminities = [
 
 export const Properties: { [key: string]: propertiesInterface } = {
   "silver park 15": {
+    heroSection: {
+      title: "Well-Planned Plots in a Growing Area",
+      description:
+        "Silver Park is designed for comfort, with easy access and everything you need nearby — a great choice for families and investors.",
+    },
     brochure: "/images/brochures/49dc9b634d845c15e196aede5c629511fa2482c5.png",
     title: "Silver Park 15",
     status: "Remaining ",
@@ -59,6 +72,11 @@ export const Properties: { [key: string]: propertiesInterface } = {
     },
   },
   "sliver wind": {
+    heroSection: {
+      title: "Open Spaces, Peaceful Vibes",
+      description:
+        "Silver Wind gives you the freedom to build the way you want — in a calm, clean environment that’s ready for the future.",
+    },
     brochure: "/images/brochures/9bcd24ab8cdaab82794f3ef78f2ceea49a044491.png",
     title: "Sliver Wind",
     status: "Sold Out",
@@ -87,6 +105,11 @@ export const Properties: { [key: string]: propertiesInterface } = {
     },
   },
   "rajatbhoomi 12": {
+    heroSection: {
+      title: "A Smart Investment for a Bright Future",
+      description:
+        "Rajat Bhomii brings you clear-title plots in a fast-developing area — ideal for both living and long-term growth.",
+    },
     brochure: "/images/brochures/286984f2a8f2913bfff5fe8b8b025dfa247ad186.png",
     title: "Rajatbhoomi 12",
     status: "Remaining ",
@@ -101,6 +124,11 @@ export const Properties: { [key: string]: propertiesInterface } = {
     },
   },
   "silver woods": {
+    heroSection: {
+      title: "Stay Close to Nature and the City",
+      description:
+        "Silver Wood offers green surroundings and easy access — perfect for those who want a balance between nature and city life.",
+    },
     brochure: "/images/brochures/ab33329a6128bef0e1c7adac077dfe149786e96a.png",
     title: "Silver Woods",
     status: "Sold Out",
@@ -111,7 +139,12 @@ export const Properties: { [key: string]: propertiesInterface } = {
   },
 
   "vrindavan park": {
-    brochure: "/images/brochures/edb4748d84e56b60dc84fbc870fa281483acc9ee.png",
+    heroSection: {
+      title: "Peaceful Living Starts Here",
+      description:
+        "Vrindavan Park in South Nagpur offers spacious plots surrounded by greenery, perfect for a calm and connected lifestyle",
+    },
+    brochure: "/images/brochures/Vrindavan Park  - Amenities.pdf",
     title: "Vrindavan Park",
     status: "Remaining ",
     location: "South Nagpur",
@@ -139,14 +172,41 @@ export const Properties: { [key: string]: propertiesInterface } = {
       lat: 21.0567504412474,
       lang: 78.97869402418362,
     },
+    gallery: {
+      text: `At the heart of Neel Infratech’s growth and values is our founder
+      and visionary leader, Mr. Pitamber Ikar. With a deep-rooted
+      passion for real estate and a sharp eye for market potential, he
+      has transformed Neel Infratech into a name that stands for trust,
+      transparency, and forward-thinking development in Nagpur. Mr. Ikar
+      brings years of experience, a strong network, and a mission-driven
+      approach to every project. His leadership is grounded in integrity
+      and driven by a genuine commitment to helping people build secure
+      and meaningful futures through smart property investment.`,
+      content: [
+        {
+          type: "video",
+          src: "/videos/properties_video_1.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/properties_video_2.mp4",
+        },
+      ],
+    },
   },
 
   "silver star": {
-    brochure: "/images/brochures/b220fac454177daa19da494a06a2aa59fb1f9676.png",
+    heroSection: {
+      title: "Live Like Every Day is a Holiday",
+      description:
+        "Silver Star offers well-planned plots in Hingna with a peaceful and resort-like environment — perfect for living or investing.",
+    },
+    brochure: "/images/brochures/Silver Star Brosher.pdf",
     title: "Silver Star",
     status: "Sold Out",
     location: "The Acres",
     bedrooms: "1030 sq.ft",
+    bannerImage: "/images/silver_star_header_image.jpg",
     image: "/images/property_2.png",
     amenities: [
       {
@@ -167,14 +227,18 @@ export const Properties: { [key: string]: propertiesInterface } = {
       },
     ],
     coordinates: {
-      // 21.126805274585244, 78.95745677638595
       lat: 21.1268052745852447,
       lang: 78.95745677638595,
     },
   },
 
   "silver icon 4": {
-    brochure: "/images/brochures/5836bdd0ce991ab98f9a391548307c31ba233ff8.png",
+    heroSection: {
+      title: "Build Your Future in a Prime Location",
+      description:
+        "Located in Hingna, Silver Icon gives you the right plot in the right place — great for building your dream or growing your investment.",
+    },
+    brochure: "/images/brochures/Silver Icon 3.pdf",
     title: "Silver Icon 4",
     status: "Sold Out",
     location: "The Acres",
@@ -202,6 +266,25 @@ export const Properties: { [key: string]: propertiesInterface } = {
     coordinates: {
       lat: 21.05525683783194,
       lang: 79.08641833172516,
+    },
+    gallery: {
+      text: `Silver Icon 4 is a testament to our commitment to quality and
+      innovation. This project features modern amenities, spacious
+      layouts, and a prime location that ensures both comfort and
+      convenience. Each unit is designed with meticulous attention to
+      detail, providing residents with a luxurious living experience.
+      Silver Icon 4 is not just a home; it's a lifestyle choice that
+      reflects our dedication to excellence in real estate development.`,
+      content: [
+        {
+          type: "image",
+          src: "/images/silver_icon_image.png",
+        },
+        {
+          type: "video",
+          src: "/videos/sliver_icon_video.mp4",
+        },
+      ],
     },
   },
 };
