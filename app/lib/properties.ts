@@ -1,4 +1,4 @@
-interface propertiesInterface {
+export interface propertiesInterface {
   brochure: string;
   title: string;
   status: string;
@@ -74,7 +74,7 @@ export const Properties: { [key: string]: propertiesInterface } = {
     image: "/images/property_2.png",
   },
 
-  "sliver icon 4": {
+  "silver icon 4": {
     brochure: "/images/brochures/5836bdd0ce991ab98f9a391548307c31ba233ff8.png",
     title: "Silver Icon 4",
     status: "Sold Out",

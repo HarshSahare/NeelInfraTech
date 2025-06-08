@@ -35,7 +35,7 @@ function Page() {
   const PopularProperties = [
     Properties["vrindavan park"],
     Properties["silver star"],
-    Properties["silver icon"],
+    Properties["silver icon 4"],
   ];
 
   // Calculate total pages given container and card widths
@@ -66,7 +66,6 @@ function Page() {
   function scrollToPage(
     container: HTMLDivElement | null,
     pageIndex: number,
-    cardsCount: number,
     setPage: React.Dispatch<React.SetStateAction<number>>
   ) {
     if (!container) return;
@@ -89,7 +88,6 @@ function Page() {
   // On manual scroll, update active page dots
   function onScroll(
     e: React.UIEvent<HTMLDivElement>,
-    cardsCount: number,
     setPage: React.Dispatch<React.SetStateAction<number>>
   ) {
     const container = e.currentTarget;
@@ -214,9 +212,7 @@ function Page() {
               <div className="min-w-[90vw] flex flex-col justify-center">
                 <div
                   ref={popularScrollRef}
-                  onScroll={(e) =>
-                    onScroll(e, PopularProperties.length, setPopularPage)
-                  }
+                  onScroll={(e) => onScroll(e, setPopularPage)}
                   className="flex gap-6 overflow-x-auto scrollbar-hide whitespace-nowrap px-0 scroll-snap-x scroll-smooth"
                 >
                   {PopularProperties.map((property, index) => (
@@ -238,11 +234,10 @@ function Page() {
                         scrollToPage(
                           popularScrollRef.current,
                           i,
-                          PopularProperties.length,
                           setPopularPage
                         )
                       }
-                      className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                      className={`w-4 h-4 rounded-full transition-all cursor-pointer duration-300 ${
                         popularPage === i ? "bg-black" : "bg-gray-400"
                       }`}
                       aria-label={`Go to page ${i + 1}`}
@@ -255,13 +250,7 @@ function Page() {
               <div className="min-w-[90vw] flex flex-col justify-center">
                 <div
                   ref={propertiesScrollRef}
-                  onScroll={(e) =>
-                    onScroll(
-                      e,
-                      Object.keys(Properties).length,
-                      setPropertiesPage
-                    )
-                  }
+                  onScroll={(e) => onScroll(e, setPropertiesPage)}
                   className="flex gap-6 overflow-x-auto scrollbar-hide whitespace-nowrap px-0 scroll-snap-x scroll-smooth"
                 >
                   {Object.values(Properties).map((property, index) => (
@@ -283,7 +272,6 @@ function Page() {
                         scrollToPage(
                           propertiesScrollRef.current,
                           i,
-                          Object.keys(Properties).length,
                           setPropertiesPage
                         )
                       }
