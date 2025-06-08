@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import PropertyCard from "../components/propertyCard";
 import ContactSection from "../components/sections/contactSection";
+import { Properties } from "../lib/properties";
 
 function Page() {
   const [activeIndex, setActiveIndex] = useState(0); // 0: Popular, 1: Properties
@@ -32,93 +33,9 @@ function Page() {
   ];
 
   const PopularProperties = [
-    {
-      title: "Vrindavan Park",
-      status: "Remaining ",
-      location: "South Nagpur",
-      bedrooms: "1200 sq.ft",
-      image: "/images/property_1.png",
-    },
-    {
-      title: "Silver Star",
-      status: "Sold Out",
-      location: "The Acres",
-      bedrooms: "1030 sq.ft",
-      image: "/images/property_2.png",
-    },
-    {
-      title: "Silver Icon",
-      status: "Sold Out",
-      location: "The Acres",
-      bedrooms: "1090 sq.ft",
-      image: "/images/property_3.png",
-    },
-  ];
-
-  const Properties = [
-    {
-      title: "Vrindavan Park",
-      status: "Remaining ",
-      location: "South Nagpur",
-      bedrooms: "1200 sq.ft",
-      image: "/images/property_1.png",
-    },
-    {
-      title: "Silver Star",
-      status: "Sold Out",
-      location: "The Acres",
-      bedrooms: "1030 sq.ft",
-      image: "/images/property_2.png",
-    },
-    {
-      title: "Silver Icon 4",
-      status: "Sold Out",
-      location: "The Acres",
-      bedrooms: "1090 sq.ft",
-      image: "/images/property_3.png",
-    },
-    {
-      title: "Silver Park 15",
-      status: "Remaining ",
-      location: "South Nagpur",
-      bedrooms: "1200 sq.ft",
-      image: "/images/property_4.png",
-    },
-    {
-      title: "Silver Woods",
-      status: "Sold Out",
-      location: "The Acres",
-      bedrooms: "1030 sq.ft",
-      image: "/images/property_5.png",
-    },
-    {
-      title: "Sliver Wind",
-      status: "Sold Out",
-      location: "The Acres",
-      bedrooms: "1090 sq.ft",
-      image: "/images/property_6.png",
-    },
-    {
-      title: "Vrindavan Park Residentail And Commercial Plots",
-      status: "Remaining ",
-      location: "South Nagpur",
-      bedrooms: "1200 sq.ft",
-      image: "/images/property_7.png",
-    },
-    {
-      title: "Silver Icon",
-      status: "Sold Out",
-      location: "The Acres",
-      bedrooms: "1090 sq.ft",
-      image: "/images/property_9.png",
-    },
-    {
-      title: "Rajatbhoomi 12",
-      status: "Remaining ",
-      location: "South Nagpur",
-      bedrooms: "1200 sq.ft",
-      image: "/images/property_10.png",
-    },
+    Properties["vrindavan park"],
+    Properties["silver star"],
+    Properties["silver icon"],
   ];
 
   // Calculate total pages given container and card widths
@@ -197,7 +114,7 @@ function Page() {
   );
   const propertiesPages = calculatePages(
     propertiesScrollRef.current,
-    Properties.length
+    Object.keys(Properties).length
   );
 
   return (
@@ -339,11 +256,15 @@ function Page() {
                 <div
                   ref={propertiesScrollRef}
                   onScroll={(e) =>
-                    onScroll(e, Properties.length, setPropertiesPage)
+                    onScroll(
+                      e,
+                      Object.keys(Properties).length,
+                      setPropertiesPage
+                    )
                   }
                   className="flex gap-6 overflow-x-auto scrollbar-hide whitespace-nowrap px-0 scroll-snap-x scroll-smooth"
                 >
-                  {Properties.map((property, index) => (
+                  {Object.values(Properties).map((property, index) => (
                     <div
                       key={index}
                       className="inline-block flex-shrink-0 w-[90vw] md:w-auto scroll-snap-align-start"
@@ -362,7 +283,7 @@ function Page() {
                         scrollToPage(
                           propertiesScrollRef.current,
                           i,
-                          Properties.length,
+                          Object.keys(Properties).length,
                           setPropertiesPage
                         )
                       }
