@@ -3,7 +3,22 @@ import ContactSection from "@/app/components/sections/contactSection";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Properties } from "@/app/lib/properties";
+import { Properties, propertiesInterface } from "@/app/lib/properties";
+
+function getRandomProperties(excludeKey: string): propertiesInterface[] {
+  const allKeys = Object.keys(Properties).filter((key) => key !== excludeKey);
+
+  // Shuffle the keys array
+  for (let i = allKeys.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [allKeys[i], allKeys[j]] = [allKeys[j], allKeys[i]];
+  }
+
+  // Select first two keys after shuffling
+  const selectedKeys = allKeys.slice(0, 2);
+
+  return selectedKeys.map((key) => Properties[key]);
+}
 
 async function PropertiesDetail({
   params,
@@ -11,12 +26,18 @@ async function PropertiesDetail({
   params: Promise<{ propertyName: string }>;
 }) {
   const propertyName = (await params).propertyName;
+  const propertyDetail =
+    Properties[propertyName.toLocaleLowerCase().replaceAll("-", " ")];
+  const propertyCards = getRandomProperties(
+    propertyName.toLocaleLowerCase().replaceAll("-", " ")
+  );
+
   return (
     <div className="flex flex-col">
       <div className="h-svh w-screen bg-amber-50">
         <div className="absolute bg-linear-to-b from-[#1212121a] to-[#12121275] inset-0"></div>
         <Image
-          src={"/images/propertiesBanner.png"}
+          src={propertyDetail.bannerImage || "/images/propertiesBanner.png"}
           alt="Properties Background"
           width={1920}
           height={1080}
@@ -69,13 +90,16 @@ async function PropertiesDetail({
 
       <div className="flex flex-col md:flex-row gap-10 md:gap-0 px-10 md:px-20 md:py-40 py-20">
         <div className="md:flex-3">
-          <Image
-            src={"/images/propertiesLocation.jpg"}
-            alt="Property 1"
-            width={500}
-            height={300}
-            className="w-full h-full object-cover"
-          />
+          <iframe
+            src={`https://www.google.com/maps?q=${propertyDetail.coordinates?.lat},${propertyDetail.coordinates?.lang}&z=13&output=embed`}
+            width="600"
+            height="450"
+            className="w-full h-full"
+            allowFullScreen
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
         <div className="md:flex-4 px-10">
           <div className="font-classica capitalize text-lg py-5 text-[#757279] font-[400]">
@@ -156,57 +180,28 @@ async function PropertiesDetail({
       <div className="">
         <div className="font-classica text-center">
           <div className="text-md text-[#757279]">Peace</div>
-          <div className="text-3xl py-3 uppercase font-[400]">Aminities</div>
+          <div className="text-3xl py-3 uppercase font-[400]">Amenities</div>
         </div>
 
         <div className="flex flex-wrap justify-around py-20 max-w-[80%] mx-auto">
-          <div className="flex min-w-[50px] flex-col justify-center items-center">
-            <Image
-              src={"/images/properties_aminities_1.svg"}
-              alt="Amenities 1"
-              width={50}
-              height={50}
-            />
-            <div className="text-md p-5 font-classica text-[#757279]">
-              24/7 Security
-            </div>
-          </div>
-
-          <div className="flex min-w-[50px] flex-col justify-center items-center">
-            <Image
-              src={"/images/properties_aminities_2.svg"}
-              alt="Amenities 1"
-              width={50}
-              height={50}
-            />
-            <div className="text-md p-5 font-classica text-[#757279]">
-              Playing Area
-            </div>
-          </div>
-
-          <div className="flex min-w-[50px] flex-col justify-center items-center">
-            <Image
-              src={"/images/properties_aminities_3.svg"}
-              alt="Amenities 1"
-              width={50}
-              height={50}
-            />
-            <div className="text-md p-5 font-classica text-[#757279]">
-              Garden
-            </div>
-          </div>
-
-          <div className="flex min-w-[50px] flex-col justify-center items-center">
-            <Image
-              src={"/images/properties_aminities_4.svg"}
-              alt="Amenities 1"
-              width={50}
-              height={50}
-            />
-            <div className="text-md p-5 font-classica text-[#757279]">
-              Coffee shop
-            </div>
-          </div>
+          {propertyDetail.amenities?.map(
+            (data: { text: string; image: string }, index) => (
+              <div
+                key={index}
+                className="flex min-w-[50px] flex-col justify-center items-center"
+              >
+                <Image
+                  src={data.image}
+                  alt={`Amenities ${index}`}
+                  width={50}
+                  height={50}
+                />
+                <div className="text-md p-5 font-classica text-[#757279]">
+                  {data.text}
+                </div>
+              </div>
+            )
+          )}
         </div>
       </div>
 
@@ -257,20 +252,16 @@ async function PropertiesDetail({
         </div>
 
         <div className="flex flex-wrap justify-center gap-10 py-20 w-[90%] md:w-full mx-auto">
-          <PropertyCard
-            image="/images/property-4.jpg"
-            title="Vrindavan Park"
-            location="South Nagpur"
-            bedrooms="1200 sq.ft"
-            status="Remaining"
-          />
-          <PropertyCard
-            image="/images/property-4.jpg"
-            title="Silver Star"
-            location="The Acres"
-            bedrooms="1030 sq.ft"
-            status="Sold Out"
-          />
+          {propertyCards.map((property, index) => (
+            <PropertyCard
+              key={index}
+              image={property.image}
+              title={property.title}
+              location={property.location}
+              bedrooms={property.bedrooms}
+              status={property.status}
+            />
+          ))}
         </div>
       </div>
 
