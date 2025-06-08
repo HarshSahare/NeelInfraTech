@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 const StorySection = () => {
   useEffect(() => {
@@ -86,9 +87,12 @@ const StorySection = () => {
       </div>
 
       <div className="">
-        <button className="bg-black text-white px-8 sm:px-12 py-3 text-sm hover:bg-gray-900 transition">
+        <Link
+          href={"/stories"}
+          className="bg-black text-white px-8 sm:px-12 py-3 text-sm hover:bg-gray-900 transition"
+        >
           Explore Our Journey
-        </button>
+        </Link>
       </div>
     </section>
   );

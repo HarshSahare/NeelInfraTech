@@ -4,6 +4,7 @@ import React from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 function VisionSection() {
   gsap.registerPlugin(ScrollTrigger);
@@ -87,9 +88,12 @@ function VisionSection() {
               className="w-full h-auto rounded-full object-contain"
             />
             <div className="absolute bottom-[-20px] h-[20%] w-full blur-md bg-white"></div>
-            <button className="absolute bottom-[9%] left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm sm:text-base z-10">
+            <Link
+              href="/stories"
+              className="absolute bottom-[9%] left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm sm:text-base z-10"
+            >
               Read More
-            </button>
+            </Link>
           </div>
         </div>
 

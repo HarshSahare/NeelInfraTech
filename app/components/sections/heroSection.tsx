@@ -5,6 +5,7 @@ import "./heroSection.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 function HeroSection() {
   gsap.registerPlugin(ScrollTrigger);
@@ -199,7 +200,7 @@ function HeroSection() {
                     <div
                       className={`button w-fit px-4 py-2 cursor-pointer bg-white rounded mt-5 transition-opacity delay-500 text-black `}
                     >
-                      Learn More
+                      <Link href="/properties">Learn More</Link>
                     </div>
                   </div>
                 </div>
@@ -226,7 +227,7 @@ function HeroSection() {
                     <div
                       className={`button w-fit px-4 py-2  cursor-pointer bg-white rounded mt-5 transition-opacity delay-500 text-black `}
                     >
-                      Learn More
+                      <Link href="/properties">Learn More</Link>
                     </div>
                   </div>
                 </div>
