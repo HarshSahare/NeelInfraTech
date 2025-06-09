@@ -35,7 +35,7 @@ function Page() {
   const PopularProperties = [
     Properties["vrindavan park"],
     Properties["silver star"],
-    Properties["silver icon 4"],
+    Properties["silver icon"],
   ];
 
   // Calculate total pages given container and card widths
