@@ -203,7 +203,7 @@ export const Properties: { [key: string]: propertiesInterface } = {
         "Located in Hingna, Silver Icon gives you the right plot in the right place — great for building your dream or growing your investment.",
     },
     brochure: "/images/brochures/Silver Icon 3.pdf",
-    title: "Silver Icon 4",
+    title: "Silver Icon",
     status: "Sold Out",
     location: "The Acres",
     bedrooms: "1090 sq.ft",
