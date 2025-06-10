@@ -19,7 +19,7 @@ function Page() {
 
   const featuredProperties = [
     {
-      src: "/images/propertiesDetailedImage1.png",
+      src: "/images/silver_star_header_image.jpg",
       title: "Silver Star",
       location: "Hingna Nagpur",
       desc: "Where Your Plot Comes with a Resort Lifestyle.",

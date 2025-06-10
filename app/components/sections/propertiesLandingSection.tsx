@@ -89,10 +89,8 @@ const PropertiesLandingSection = () => {
             </video>
 
             <div className="mt-2 flex items-center justify-between text-xs text-[#757378] font-classica">
-              <span>PALACE VILLAS – OSTRA</span>
-              <span className="mx-2">|</span>
-              <span>THE OASIS</span>
-              <span className="flex-grow max-w-[100px] border-t border-gray-300 ml-2"></span>
+              <span>Silver Star</span>
+              <span className="flex-grow border-t border-gray-300 ml-2"></span>
             </div>
           </div>
 
@@ -116,9 +114,7 @@ const PropertiesLandingSection = () => {
               className="w-full h-[260px] object-cover"
             />
             <div className="mt-2 flex items-center justify-between text-xs text-[#757378] font-classica">
-              <span>GOLF MEADOW AT EMAAR SOUTH</span>
-              <span className="mx-2">|</span>
-              <span>EMAAR SOUTH</span>
+              <span>Silver Star</span>
               <span className="flex-grow border-t border-gray-300 ml-2"></span>
             </div>
           </div>
@@ -137,9 +133,7 @@ const PropertiesLandingSection = () => {
               className="w-full h-[260px] object-cover"
             />
             <div className="mt-2 flex items-center justify-between text-xs text-[#757378] font-classica">
-              <span>ADDRESS GRAND DOWNTOWN</span>
-              <span className="mx-2">|</span>
-              <span>DOWNTOWN DUBAI</span>
+              <span>Vrindavan Park</span>
               <span className="flex-grow border-t border-gray-300 ml-2"></span>
             </div>
           </div>
