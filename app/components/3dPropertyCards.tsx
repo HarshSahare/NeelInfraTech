@@ -13,7 +13,7 @@ interface PropertyCardProps {
   ref?: React.RefObject<HTMLElement | null>;
 }
 
-const PropertyCard: React.FC<PropertyCardProps> = ({
+const PropertyCard3d: React.FC<PropertyCardProps> = ({
   image,
   title,
   location,
@@ -62,7 +62,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   return (
     <div
       ref={card}
-      className={`bg-[#D9D9D936] property-card  p-5 w-full md:w-[500px] max-w-lg flex-shrink-0 ${className}`}
+      className={`bg-[#D9D9D936] property-card  p-5 w-full flex-shrink-0 ${className}`}
       style={{
         clipPath: `path("M 30 0 L ${cardWidth - 30},${
           cardHeight * 0.1
@@ -151,4 +151,4 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   );
 };
 
-export default PropertyCard;
+export default PropertyCard3d;

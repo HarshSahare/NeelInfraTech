@@ -53,9 +53,9 @@ const PropertiesLandingSection = ({ className }: { className?: string }) => {
         <p className="text-[#6A5F6C] text-[13px]/[22px] heading font-poppins mb-[48px]">
           Where you live reflects who you are. This section features homes in
           prime locations that offer comfort, convenience, and class. Whether
-          it's close to the city, surrounded by nature, or in a peaceful
+          it&apos;s close to the city, surrounded by nature, or in a peaceful
           community — the right address speaks for your lifestyle
-          without saying a word.
+          without saying a word.
         </p>
         <Link
           href={"/properties"}
