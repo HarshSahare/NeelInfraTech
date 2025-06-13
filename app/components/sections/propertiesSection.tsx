@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Link from "next/link";
 
-const PropertiesSection = () => {
+const PropertiesSection = ({ className }: { className?: string }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const cardContainer = useRef<HTMLDivElement>(null);
   const [noOfDots, setNoOfDots] = useState([0]);
@@ -85,7 +85,7 @@ const PropertiesSection = () => {
   return (
     <section
       id="ourProperties"
-      className="w-[95.5%]  properties-container  flex flex-col  lg:ml-auto mx-auto px-6 py-20 lg:py-50"
+      className={`w-[95.5%]  properties-container  flex flex-col  lg:ml-auto mx-auto px-6  ${className}`}
     >
       <div className="flex flex-col lg:flex-row justify-between   gap-12 text-center lg:text-left">
         {/* Text Content */}

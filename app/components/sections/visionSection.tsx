@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 
-function VisionSection() {
+function VisionSection({ className }: { className?: string }) {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
@@ -45,7 +45,9 @@ function VisionSection() {
   }, []);
 
   return (
-    <div className="min-h-svh lg:py-50 py-20 overflow-hidden vision-container w-[95.5%]  mx-auto flex flex-col">
+    <div
+      className={`min-h-svh  overflow-hidden vision-container w-[95.5%]  mx-auto flex flex-col ${className}`}
+    >
       {/* Header Section */}
       <div className="text-center">
         <div className="uppercase font-classica text-[#757279] text-sm">

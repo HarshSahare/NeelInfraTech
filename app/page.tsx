@@ -28,15 +28,15 @@ export default function Home() {
     <>
       <ContactUsModel state={isModelOpen} setModelState={setIsModelOpen} />
       <HeroSection />
-      <AwardsSection />
+      <AwardsSection className="py-20 lg:py-50" />
       <PropertiesLandingSection />
-      <PropertiesSection />
+      <PropertiesSection className="py-20 lg:py-50" />
       <StorySection />
-      <VisionSection />
+      <VisionSection className="lg:py-50 py-20" />
       <DirectorsSection />
-      <NeelWaySection />
+      <NeelWaySection className="py-20 lg:py-50" />
       <TestimonialSection />
-      <ContactSection />
+      <ContactSection className="lg:my-50 my-20" />
     </>
   );
 }

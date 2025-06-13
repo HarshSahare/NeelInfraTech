@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 
-const PropertiesLandingSection = () => {
+const PropertiesLandingSection = ({ className }: { className?: string }) => {
   useGSAP(() => {
     const ctx = gsap.context(() => {
       gsap.from(".properties-landingpage-container .heading", {
@@ -34,7 +34,9 @@ const PropertiesLandingSection = () => {
   }, []);
 
   return (
-    <section className="flex properties-landingpage-container flex-col lg:flex-row gap-[75px] max-w-[93.5%] mx-auto">
+    <section
+      className={`flex properties-landingpage-container flex-col lg:flex-row gap-[75px] max-w-[93.5%] mx-auto ${className}`}
+    >
       {/* Left Column: Text Content */}
       <div className="lg:w-1/3  lg:mt-[151px] lg:mb-0 text-center lg:text-left ">
         <p className=" hidden lg:flex text-[10px] font-classica heading tracking-widest text-gray-500  items-center">

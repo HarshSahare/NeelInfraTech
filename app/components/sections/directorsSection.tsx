@@ -5,7 +5,11 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { DirectorsInfo } from "@/app/lib/directors";
 
-export default function DirectorsSection() {
+export default function DirectorsSection({
+  className,
+}: {
+  className?: string;
+}) {
   useGSAP(() => {
     const containers = document.querySelectorAll(".director-section > div");
     gsap.from(containers[0], {
@@ -65,7 +69,7 @@ export default function DirectorsSection() {
   };
 
   return (
-    <section className="bg-white px-4 md:px-10 director-section">
+    <section className={`bg-white px-4 md:px-10 director-section ${className}`}>
       <div className="text-left mb-8 px-4">
         <h2 className="text-[32px] sm:text-[40px] md:text-[45px] lg:text-5xl heading mt-5 text-[#161616] font-classica font-[400] leading-tight">
           Our Directors

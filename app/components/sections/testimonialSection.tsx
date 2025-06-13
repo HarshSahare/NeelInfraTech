@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaUserAlt } from "react-icons/fa";
 
-function TestimonialSection() {
+function TestimonialSection({ className }: { className?: string }) {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
@@ -91,7 +91,7 @@ function TestimonialSection() {
 
   return (
     <>
-      <div className="hidden lg:flex w-full testimonials-container min-h-svh relative justify-center items-center">
+      <div className={`hidden lg:flex w-full testimonials-container min-h-svh relative justify-center items-center ${className}`}>
         <div className="heading font-classica font-[400] text-3xl sm:text-4xl lg:text-5xl max-w-[700px] text-center z-10 text-[#161616]">
           What people think about Neel Infratech
         </div>
@@ -236,7 +236,7 @@ function TestimonialSection() {
         />
       </div>
 
-      <div className="lg:hidden w-full px-4 py-10 flex flex-col space-y-10">
+      <div className={`lg:hidden w-full px-4 py-10 flex flex-col space-y-10 ${className}`}>
         <h2 className="font-classica font-[400] text-2xl sm:text-3xl text-center text-[#161616]">
           What people think about Neel Infratech
         </h2>

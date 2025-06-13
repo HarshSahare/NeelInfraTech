@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const AwardsSection = () => {
+const AwardsSection = ({ className }: { className?: string }) => {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
@@ -35,7 +35,9 @@ const AwardsSection = () => {
   }, []);
 
   return (
-    <div className="bg-white awards-container text-black py-20 lg:py-50 flex items-center justify-center">
+    <div
+      className={`bg-white awards-container text-black  flex items-center justify-center ${className}`}
+    >
       <main className="text-center px-4 sm:px-6 w-full max-w-7xl">
         {/* "Awards & Recognition" */}
         <p className="text-xs sm:text-sm tracking-wide reward-heading font-classica text-gray-600">

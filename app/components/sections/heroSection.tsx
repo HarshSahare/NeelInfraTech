@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 
-function HeroSection() {
+function HeroSection({ className }: { className?: string }) {
   gsap.registerPlugin(ScrollTrigger);
   const svg = useRef<SVGSVGElement>(null);
   const path = useRef<SVGPathElement>(null);
@@ -147,7 +147,9 @@ function HeroSection() {
   };
 
   return (
-    <div className="w-full relative hero-section min-h-screen bg-black overflow-hidden">
+    <div
+      className={`w-full relative hero-section min-h-screen bg-black overflow-hidden ${className}`}
+    >
       <div className="overlay bg-[#12121277] absolute top-0 left-0 h-full w-full z-2"></div>
       <video
         className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 z-1 `}

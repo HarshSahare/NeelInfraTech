@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 
-const StorySection = () => {
+const StorySection = ({ className }: { className?: string }) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
   }, []);
@@ -40,7 +40,7 @@ const StorySection = () => {
   return (
     <section
       id="story"
-      className="bg-white px-4 md:px-20 text-center story-container"
+      className={`bg-white px-4 md:px-20 text-center story-container ${className}`}
     >
       <div className="mx-auto">
         <p className="text-sm md:text-base font-classica font-[400] tracking-wider text-[#757279] uppercase mb-3 heading">

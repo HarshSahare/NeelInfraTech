@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-const NeelWaySection = () => {
+const NeelWaySection = ({ className }: { className?: string }) => {
   return (
-    <section className="w-full way-section-container bg-white py-20 lg:py-50">
+    <section className={`w-full way-section-container bg-white  ${className}`}>
       <div className="text-left mb-8 px-4 sm:px-10 md:px-20">
         <p className="text-xs sm:text-sm font-classica heading tracking-widest text-gray-500 flex items-center">
           YOUR FOREVER
