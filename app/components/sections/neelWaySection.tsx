@@ -18,7 +18,7 @@ const NeelWaySection = ({ className }: { className?: string }) => {
         {/* Large Left Image */}
         <div className="relative overflow-hidden md:row-span-2 md:col-span-2">
           <Image
-            src="/images/family-1.jpg"
+            src="/images/storiesImage6.png"
             alt="Family Walking"
             fill
             className="object-cover rounded-md left-image"
@@ -31,7 +31,7 @@ const NeelWaySection = ({ className }: { className?: string }) => {
         {/* Top Right Image */}
         <div className="relative overflow-hidden">
           <Image
-            src="/images/family-2.jpg"
+            src="/images/storiesImage9.png"
             alt="Family Beach Fun"
             fill
             className="object-cover right-image rounded-md"
@@ -44,7 +44,7 @@ const NeelWaySection = ({ className }: { className?: string }) => {
         {/* Bottom Right Image (Text Right-Aligned) */}
         <div className="relative overflow-hidden">
           <Image
-            src="/images/family-3.jpg"
+            src="/images/storiesImage12.png"
             alt="Family Feeling"
             fill
             className="object-cover right-image rounded-md"
