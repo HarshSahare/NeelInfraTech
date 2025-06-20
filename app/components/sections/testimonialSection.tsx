@@ -67,39 +67,50 @@ function TestimonialSection({ className }: { className?: string }) {
 
   const testimonials = [
     {
-      name: "Praful Gourkar",
-      msg: "I purchased property from Neel Infratech and Dandekar Sir, and I’m extremely happy with my decision. In just 5 years, my investment has tripled. The experience was smooth, and the returns have been truly rewarding.",
-      img: "/images/testimonial-image1.jpg",
+      name: "Shubhash Umade",
+      msg: "I bought a plot in Vrindavan Park 3, and from the start of the documentation process to the end, everything was absolutely clear and well-managed. I'm extremely happy with the transparency and support provided throughout. Buying a plot from Neel Infratech was a smooth and satisfying experience!",
+      img: "/images/Shubhash Umade.jpg",
+      propertyImg: "/images/propertiesBanner.png",
     },
 
     {
-      name: "Arun Kelzale",
-      msg: "I bought a property and farmhouse from Neel Infratech through Chaudhari Sir, and I’m very happy with the experience. Their service, company reputation, and documentation process are all excellent.",
-      img: "/images/testimonial-image2.jpg",
+      name: "Rajesh bandate",
+      msg: "I purchased a plot near Wardha Road through Neel Infratech, and I must say — it was a great experience. The company's behavior was professional, the property had a clear title, and the entire process was trustworthy. Finding a good plot on Wardha Road is tough, but Neel Infratech made it possible. I'm genuinely happy with my decision",
+      img: "/images/Rajesh bandate.jpg",
+      propertyImg: "/images/silver_star_header_image.jpg",
     },
     {
-      name: "Vilas Kadam",
-      msg: "Everything about Dekate Sir is commendable — his behavior, communication, and support throughout the process were excellent. I’m truly happy with my purchase.",
-      img: "/images/testimonial-image3.jpg",
+      name: "Gangaram Sakhatkar ACP",
+      msg: "Neel Infratech delivered exactly what they promised. Their commitment, proper documentation, and constant support made the entire process smooth. I'm truly happy to have purchased my plot through them.",
+      img: "/images/Gangaram Sakhatkar.jpg",
+      propertyImg: "/images/landingPropertiesImage3.jpg",
     },
     {
-      name: "Praful Gourkar",
-      msg: "I bought property from Neel Infratech with the guidance of Onkar Sir, and I’m very happy with the experience. My investment has already brought me good profit, and I was so satisfied that I later purchased another property at Neel Farms.",
-      img: "/images/testimonial-image4.jpg",
+      name: "Hemant Bhisikar",
+      msg: "I bought a property from Neel Infratech in 2020 when the prices were quite low. Looking back, it was one of the best decisions I made — within just 5 years, the property value has tripled! I'm extremely happy with my investment and thankful to Neel Infratech for the opportunity.",
+      img: "/images/Hemant Bhisikar.jpg",
+      propertyImg: "/images/propertiesLandingImage2.jpg",
     },
   ];
 
   return (
     <>
-      <div className={`hidden lg:flex w-full testimonials-container min-h-svh relative justify-center items-center ${className}`}>
+      <div
+        className={`hidden lg:flex w-full testimonials-container min-h-svh relative justify-center items-center ${className}`}
+      >
         <div className="heading font-classica font-[400] text-3xl sm:text-4xl lg:text-5xl max-w-[700px] text-center z-10 text-[#161616]">
-          What people think about Neel Infratech
+          Testimonials
         </div>
 
         <div className="max-w-[300px] absolute left top-[10.9%] text-xs sm:text-sm lg:text-[12px] left-[4%] bg-[#e6e6e6] py-5 px-7 rounded-2xl">
           <div className="top flex items-center gap-2">
-            <div className="p-3 bg-[#9c9c9c7a]  rounded-[50%] ">
-              <FaUserAlt />
+            <div className="bg-[#9c9c9c7a]  rounded-[50%] overflow-hidden ">
+              <Image
+                src={testimonials[0].img}
+                alt={testimonials[0].name + " image"}
+                height={50}
+                width={50}
+              />
             </div>
             <div className="font-classica text-[#161616B8] font-[400] flex flex-col">
               <p className="text-sm sm:text-base">{testimonials[0].name}</p>
@@ -122,14 +133,14 @@ function TestimonialSection({ className }: { className?: string }) {
         </div>
 
         <Image
-          src={"/images/testimonial-image1.jpg"}
+          src={testimonials[0].propertyImg}
           alt="property Image"
           height={173}
           width={278}
           className="absolute top-[5.4%] up left-[25%] object-cover w-[278px] h-[153px] rounded-2xl"
         />
         <Image
-          src={"/images/testimonial-image2.jpg"}
+          src={testimonials[1].propertyImg}
           alt="property Image"
           height={219}
           width={235}
@@ -138,8 +149,13 @@ function TestimonialSection({ className }: { className?: string }) {
 
         <div className="max-w-[300px] right absolute top-[5.4%] text-xs sm:text-sm lg:text-[10px] left-[68.4%] bg-[#e6e6e6] py-5 px-7 rounded-2xl">
           <div className="top flex items-center gap-2">
-            <div className="p-3 bg-[#9c9c9c7a]  rounded-[50%] ">
-              <FaUserAlt />
+            <div className="bg-[#9c9c9c7a]  rounded-[50%] overflow-hidden">
+              <Image
+                src={testimonials[1].img}
+                alt={testimonials[1].name + " image"}
+                height={50}
+                width={50}
+              />
             </div>
             <div className="font-classica text-[#161616B8] font-[400] flex flex-col">
               <p className="text-sm sm:text-base">{testimonials[1].name}</p>
@@ -162,7 +178,7 @@ function TestimonialSection({ className }: { className?: string }) {
         </div>
 
         <Image
-          src={"/images/testimonial-image3.jpg"}
+          src={testimonials[2].propertyImg}
           alt="property Image"
           height={219}
           width={235}
@@ -171,8 +187,13 @@ function TestimonialSection({ className }: { className?: string }) {
 
         <div className="max-w-[300px] absolute right right-[4.5%] text-xs sm:text-sm lg:text-[10px] bottom-[18.4%] bg-[#e6e6e6] p-5 px-7 rounded-2xl">
           <div className="top flex items-center gap-2">
-            <div className="p-3 bg-[#9c9c9c7a]  rounded-[50%] ">
-              <FaUserAlt />
+            <div className=" bg-[#9c9c9c7a]  rounded-[50%] overflow-hidden ">
+              <Image
+                src={testimonials[2].img}
+                alt={testimonials[2].name + " image"}
+                height={50}
+                width={50}
+              />
             </div>
             <div className="font-classica text-[#161616B8] font-[400] flex flex-col">
               <p className="text-sm sm:text-base">{testimonials[2].name}</p>
@@ -195,7 +216,7 @@ function TestimonialSection({ className }: { className?: string }) {
         </div>
 
         <Image
-          src={"/images/testimonial-image4.jpg"}
+          src={testimonials[3].propertyImg}
           alt="property Image"
           height={292}
           width={162}
@@ -204,8 +225,13 @@ function TestimonialSection({ className }: { className?: string }) {
 
         <div className="max-w-[300px] down absolute bottom-[3%] text-xs sm:text-sm lg:text-[10px] left-[18.5%] bg-[#e6e6e6] py-5 px-7 rounded-2xl">
           <div className="top flex items-center gap-2">
-            <div className="p-3 bg-[#9c9c9c7a]  rounded-[50%] ">
-              <FaUserAlt />
+            <div className=" bg-[#9c9c9c7a]  rounded-[50%] overflow-hidden ">
+              <Image
+                src={testimonials[3].img}
+                alt={testimonials[3].name + " image"}
+                height={50}
+                width={50}
+              />
             </div>
             <div className="font-classica text-[#161616B8] font-[400] flex flex-col">
               <p className="text-sm sm:text-base">{testimonials[3].name}</p>
@@ -228,7 +254,7 @@ function TestimonialSection({ className }: { className?: string }) {
         </div>
 
         <Image
-          src={"/images/testimonial-image5.jpg"}
+          src={"/images/WhatsApp Image 2025-06-08 at 12.40.43_3b2a511a.jpg"}
           alt="property Image"
           height={219}
           width={160}
@@ -236,17 +262,24 @@ function TestimonialSection({ className }: { className?: string }) {
         />
       </div>
 
-      <div className={`lg:hidden w-full px-4 py-10 flex flex-col space-y-10 ${className}`}>
+      <div
+        className={`lg:hidden w-full px-4 py-10 flex flex-col space-y-10 ${className}`}
+      >
         <h2 className="font-classica font-[400] text-2xl sm:text-3xl text-center text-[#161616]">
-          What people think about Neel Infratech
+          Testimonials
         </h2>
 
         {/* Testimonial 1 */}
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-[#D9D9D940] rounded-2xl p-5 space-y-4">
             <div className="flex items-center gap-2">
-              <div className="p-3 bg-[#9c9c9c7a]  rounded-[50%] ">
-                <FaUserAlt />
+              <div className="bg-[#9c9c9c7a]  rounded-[50%] overflow-hidden ">
+                <Image
+                  src={testimonial.img}
+                  alt={testimonial.name + " image"}
+                  height={50}
+                  width={50}
+                />
               </div>
               <div className="text-[#161616B8] font-classica font-[400]">
                 <p className="text-base">{testimonial.name}</p>
@@ -267,7 +300,7 @@ function TestimonialSection({ className }: { className?: string }) {
               {testimonial.msg}
             </p>
             <Image
-              src={testimonial.img}
+              src={testimonial.propertyImg}
               alt="Testimonial Property 1"
               width={600}
               height={300}
