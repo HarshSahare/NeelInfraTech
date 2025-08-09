@@ -35,12 +35,12 @@ export default function Home() {
 
       <AwardsSection className="py-20 lg:py-50" />
       <PropertiesSection />
-      <StorySection className="py-20 lg:py-50" />
-      <VisionSection />
-      <DirectorsSection className="py-20 lg:py-50" />
-      <NeelWaySection />
-      <TestimonialSection className="my-20 lg:my-50" />
-      <ContactSection />
+
+      <VisionSection className="py-20 lg:py-50" />
+      <DirectorsSection />
+      <NeelWaySection className="py-20 lg:py-50" />
+      <TestimonialSection />
+      <ContactSection className="py-20 lg:py-50" />
     </>
   );
 }
