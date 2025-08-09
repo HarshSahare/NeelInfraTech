@@ -99,7 +99,7 @@ const PropertiesSection = ({ className }: { className?: string }) => {
             <div className="w-[50%] border-t max-w-[150px] mx-auto heading border-gray-300"></div>
           </div>
           <h2 className="text-4xl font-classica heading font-[400]   leading-snug">
-            The Future Has a <br /> New Address
+            Premium property with a premium location
           </h2>
           <p className="text-[#6A5F6C] heading text-[11px]/[20px] font-poppins py-5">
             Be the first to own tomorrow’s most iconic addresses.
