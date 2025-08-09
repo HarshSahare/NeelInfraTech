@@ -32,8 +32,9 @@ export default function Home() {
       <HeroSection />
       <CommitmentSection className="py-20 min-h-screen lg:py-50" />
       <PropertiesLandingSection />
-      <PropertiesSection className="py-20 lg:py-50" />
-      <AwardsSection />
+
+      <AwardsSection className="py-20 lg:py-50" />
+      <PropertiesSection />
       <StorySection className="py-20 lg:py-50" />
       <VisionSection />
       <DirectorsSection className="py-20 lg:py-50" />
