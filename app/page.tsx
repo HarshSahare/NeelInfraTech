@@ -7,11 +7,9 @@ import NeelWaySection from "./components/sections/neelWaySection";
 import PropertiesLandingSection from "./components/sections/propertiesLandingSection";
 import PropertiesSection from "./components/sections/propertiesSection";
 import AwardsSection from "./components/sections/rewardsSection";
-import StorySection from "./components/sections/storySection";
 import TestimonialSection from "./components/sections/testimonialSection";
 import VisionSection from "./components/sections/visionSection";
 import DirectorsSection from "./components/sections/directorsSection";
-import Cards3dSection from "./components/sections/cards3dSection";
 import CommitmentSection from "./components/sections/commitmentSection";
 
 export default function Home() {
