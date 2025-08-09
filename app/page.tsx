@@ -12,6 +12,7 @@ import TestimonialSection from "./components/sections/testimonialSection";
 import VisionSection from "./components/sections/visionSection";
 import DirectorsSection from "./components/sections/directorsSection";
 import Cards3dSection from "./components/sections/cards3dSection";
+import CommitmentSection from "./components/sections/commitmentSection";
 
 export default function Home() {
   const [isModelOpen, setIsModelOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function Home() {
     <>
       <ContactUsModel state={isModelOpen} setModelState={setIsModelOpen} />
       <HeroSection />
-      <Cards3dSection className="py-20 lg:py-50" />
+      <CommitmentSection className="py-20 min-h-screen lg:py-50" />
       <PropertiesLandingSection />
       <PropertiesSection className="py-20 lg:py-50" />
       <AwardsSection />
