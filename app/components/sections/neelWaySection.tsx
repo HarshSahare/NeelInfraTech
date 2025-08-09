@@ -10,7 +10,7 @@ const NeelWaySection = ({ className }: { className?: string }) => {
           <span className="flex-grow border-t heading max-w-[100px] sm:max-w-[150px] border-gray-300 ml-4"></span>
         </p>
         <h2 className="text-[32px] sm:text-[40px] md:text-[45px] lg:text-5xl heading mt-5 text-[#161616] font-classica font-[400] leading-tight">
-          A NEEL WAY OF LIFE
+          From One Family to Thousand
         </h2>
       </div>
 
