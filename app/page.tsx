@@ -40,7 +40,7 @@ export default function Home() {
       <DirectorsSection />
       <NeelWaySection className="py-20 lg:py-50" />
       <TestimonialSection />
-      <ContactSection className="py-20 lg:py-50" />
+      <ContactSection className="my-20 lg:my-50" />
     </>
   );
 }
