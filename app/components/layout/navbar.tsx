@@ -107,11 +107,11 @@ function Navbar() {
         } opacity-0 fadeIn delay-7s`}
       >
         <div className="w-screen hidden md:flex bg-white  overflow-hidden">
-          <div className="flex-3 p-2 flex pl-30 text-xl items-center ">
+          <div className="flex-4 p-2 flex pl-30 text-xl items-center ">
             <MdLocalPhone className="mr-2" />
             +91 XXXXXXXXXX
           </div>
-          <div className="flex-2 p-2 flex items-center pr-40 justify-end relative">
+          <div className="flex-1 p-2 flex items-center pr-40 justify-end relative">
             <div
               className="bg-[#1b1b1b] w-full absolute inset-0 z-1"
               style={{ transform: "skew(313deg, 0deg) scale(1.2)" }}

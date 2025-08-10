@@ -31,8 +31,8 @@ export default function Home() {
       <CommitmentSection className="pt-20 pb-15  bg-[#1b1b1b]" />
       <PropertiesLandingSection className="pt-20 pb-15 min-h-screen " />
       <AwardsSection className="pt-15 pb-5 bg-[#1b1b1b]" />
-      <PropertiesSection className="py-15 lg:py-30" />
-      <VisionSection />
+      <PropertiesSection className="py-15" />
+      <VisionSection className="py-15" />
       <DirectorsSection className="bg-[#1b1b1b] p-5" />
       <NeelWaySection className="py-20 lg:py-50" />
       <TestimonialSection />
