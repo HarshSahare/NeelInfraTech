@@ -34,9 +34,9 @@ export default function Home() {
       <PropertiesSection className="py-15" />
       <VisionSection className="py-15" />
       <DirectorsSection className="bg-[#1b1b1b] p-5" />
-      <NeelWaySection className="py-20 lg:py-50" />
+      <NeelWaySection className="py-15" />
       <TestimonialSection />
-      <ContactSection className="my-20 lg:my-50" />
+      <ContactSection className="my-15" />
     </>
   );
 }

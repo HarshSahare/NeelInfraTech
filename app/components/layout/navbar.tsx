@@ -102,7 +102,7 @@ function Navbar() {
     <>
       <div
         ref={navbar}
-        className={`fixed flex items-center top-0 left-0 z-50 w-full min-h-[var(--navbar-h)] backdrop-blur-md ${
+        className={`fixed  md:block flex items-center top-0 left-0 z-50 w-full min-h-[var(--navbar-h)] backdrop-blur-md ${
           isMenuOpen ? "bg-black/80" : "bg-[#00000042]"
         } opacity-0 fadeIn delay-7s`}
       >
