@@ -33,7 +33,7 @@ export default function Home() {
       <AwardsSection className="pt-15 pb-5 bg-[#1b1b1b]" />
       <PropertiesSection className="py-15 lg:py-30" />
       <VisionSection />
-      <DirectorsSection />
+      <DirectorsSection className="bg-[#1b1b1b] p-5" />
       <NeelWaySection className="py-20 lg:py-50" />
       <TestimonialSection />
       <ContactSection className="my-20 lg:my-50" />

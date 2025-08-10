@@ -69,9 +69,9 @@ export default function DirectorsSection({
   };
 
   return (
-    <section className={`bg-white px-4 md:px-10 director-section ${className}`}>
+    <section className={` px-4 md:px-10 director-section ${className}`}>
       <div className="text-left mb-8 px-4">
-        <h2 className="text-[32px] sm:text-[40px] md:text-[45px] lg:text-5xl heading mt-5 text-[#161616] font-classica font-[400] leading-tight">
+        <h2 className="text-[32px] sm:text-[40px] md:text-[45px] lg:text-5xl heading mt-5 text-white font-classica font-[400] leading-tight">
           Our Directors
         </h2>
       </div>
@@ -85,18 +85,22 @@ export default function DirectorsSection({
             ref={(el) => {
               cardRefs.current[index] = el;
             }}
-            className="flex-shrink-0 flex flex-col border border-gray-200 shadow-md rounded-md"
+            className="flex-shrink-0 flex flex-col border-1 border-gray-200  rounded-md pt-5 pb-2"
           >
-            <Image
-              src={data.image}
-              alt={data.name}
-              width={index === 1 ? 500 : 400} // different widths
-              height={350}
-              className="object-contain h-[350px] w-auto rounded-t-md"
-            />
+            <div className="flex justify-center relative">
+              <Image
+                src={data.image}
+                alt={data.name}
+                width={500}
+                height={350}
+                className="object-contain h-[350px] w-auto rounded-t-md z-1"
+              />
+              <div className="absolute w-full h-[40%] bottom-0 left-0 bg-gradient-to-t from-[#1b1b1b] to-transparent z-2"></div>
+            </div>
+
             <div className="p-4 text-center">
-              <p className="text-lg font-semibold text-gray-800">{data.name}</p>
-              <p className="text-sm italic text-gray-500 mt-1">{data.quote}</p>
+              <p className="text-lg font-semibold text-white">{data.name}</p>
+              <p className="text-sm italic text-white mt-2">{data.quote}</p>
             </div>
           </div>
         ))}
@@ -106,14 +110,14 @@ export default function DirectorsSection({
       <div className="flex justify-center gap-10 text-2xl text-gray-700 mt-4">
         <button
           onClick={() => scroll("left")}
-          className="hover:text-black transition cursor-pointer"
+          className="text-white transition cursor-pointer"
           aria-label="Scroll Left"
         >
           ←
         </button>
         <button
           onClick={() => scroll("right")}
-          className="hover:text-black transition cursor-pointer"
+          className="text-white transition cursor-pointer"
           aria-label="Scroll Right"
         >
           →
