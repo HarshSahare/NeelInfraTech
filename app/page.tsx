@@ -30,9 +30,9 @@ export default function Home() {
       <HeroSection />
       <CommitmentSection className="pt-20 pb-15  bg-[#1b1b1b]" />
       <PropertiesLandingSection className="pt-20 pb-15 min-h-screen " />
-      <AwardsSection className="py-20 lg:py-50" />
-      <PropertiesSection />
-      <VisionSection className="py-20 lg:py-50" />
+      <AwardsSection className="pt-15 pb-5 bg-[#1b1b1b]" />
+      <PropertiesSection className="py-20 lg:py-50" />
+      <VisionSection />
       <DirectorsSection />
       <NeelWaySection className="py-20 lg:py-50" />
       <TestimonialSection />
