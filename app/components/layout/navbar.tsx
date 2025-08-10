@@ -4,6 +4,10 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
+import { MdLocalPhone } from "react-icons/md";
+import { FaFacebookF } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaYoutube } from "react-icons/fa";
 
 function Navbar() {
   const prevY = useRef(0);
@@ -98,11 +102,47 @@ function Navbar() {
     <>
       <div
         ref={navbar}
-        className={`fixed top-0 left-0 z-50 w-full h-[var(--navbar-h)] backdrop-blur-md ${
+        className={`fixed top-0 left-0 z-50 w-full min-h-[var(--navbar-h)] backdrop-blur-md ${
           isMenuOpen ? "bg-black/80" : "bg-[#00000042]"
         } opacity-0 fadeIn delay-7s`}
       >
-        <div className="w-[90%] mx-auto h-full items-center grid grid-cols-3">
+        <div className="w-screen hidden md:flex bg-white  overflow-hidden">
+          <div className="flex-3 p-2 flex pl-30 text-xl items-center ">
+            <MdLocalPhone className="mr-2" />
+            +91 XXXXXXXXXX
+          </div>
+          <div className="flex-2 p-2 flex items-center pr-40 justify-end relative">
+            <div
+              className="bg-[#1b1b1b] w-full absolute inset-0 z-1"
+              style={{ transform: "skew(313deg, 0deg) scale(1.2)" }}
+            ></div>
+            <div className="z-2 flex gap-5 text-white text-xl">
+              <Link
+                href="https://www.facebook.com/share/1ZHPYBvYHi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF />
+              </Link>
+              <Link
+                href="https://www.instagram.com/neel_infratech_"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <RiInstagramFill />
+              </Link>
+              <Link
+                href="https://youtube.com/@neelinfratech1514"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-[90%] p-5 mx-auto h-full items-center grid grid-cols-3">
           {/* Desktop Left */}
           <div className="hidden md:flex gap-10 font-classica text-[#bab4bba8]">
             <Link className="hover:text-white cursor-pointer" href="/stories">
@@ -158,8 +198,6 @@ function Navbar() {
             </button>
           </div>
         </div>
-
-        {/* Mobile Dropdown */}
       </div>
 
       <div
