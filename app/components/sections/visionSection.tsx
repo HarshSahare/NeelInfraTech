@@ -46,7 +46,7 @@ function VisionSection({ className }: { className?: string }) {
 
   return (
     <div
-      className={`min-h-svh  overflow-hidden vision-container w-[95.5%]  mx-auto flex flex-col ${className}`}
+      className={`overflow-hidden vision-container w-[95.5%]  mx-auto flex flex-col ${className}`}
     >
       {/* Header Section */}
       <div className="text-center">
