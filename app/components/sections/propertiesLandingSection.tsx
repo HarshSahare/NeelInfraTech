@@ -116,7 +116,7 @@ export default function PropertiesLandingSection({
               className="flex-shrink-0 p-2"
               style={{ width: `${100 / visibleCount}%` }}
             >
-              <div className="w-full aspect-[4/3] relative rounded-lg overflow-hidden">
+              <div className="w-screen md:w-full aspect-[4/3] relative rounded-lg overflow-hidden">
                 <Image
                   src={src}
                   alt={`Property ${idx}`}
