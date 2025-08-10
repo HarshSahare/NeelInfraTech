@@ -28,7 +28,7 @@ export default function Home() {
     <>
       <ContactUsModel state={isModelOpen} setModelState={setIsModelOpen} />
       <HeroSection />
-      <CommitmentSection className="pt-20 pb-15 min-h-screen bg-black" />
+      <CommitmentSection className="pt-20 pb-15  bg-[#1b1b1b]" />
       <PropertiesLandingSection className="pt-20 pb-15 min-h-screen " />
       <AwardsSection className="py-20 lg:py-50" />
       <PropertiesSection />
