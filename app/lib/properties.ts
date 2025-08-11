@@ -14,7 +14,7 @@ export interface propertiesInterface {
   coordinates?: { lang: number; lat: number };
   gallery?: {
     text: string;
-    content: { type: "image" | "video"; src: string }[];
+    content?git: { type: "image" | "video"; src: string }[];
   };
 }
 
@@ -38,59 +38,6 @@ const defaultAminities = [
 ];
 
 export const Properties: { [key: string]: propertiesInterface } = {
-  "silver park": {
-    heroSection: {
-      title: "Well-Planned Plots in a Growing Area",
-      description:
-        "Silver Park is designed for comfort, with easy access and everything you need nearby — a great choice for families and investors.",
-    },
-    brochure: "/images/brochures/49dc9b634d845c15e196aede5c629511fa2482c5.png",
-    title: "Silver Park",
-    status: "Remaining ",
-    location: "South Nagpur",
-    bedrooms: "1200 sq.ft",
-    image: "/images/property_4.png",
-    amenities: defaultAminities,
-    // 21.04323551391982, 79.07361559621259
-    coordinates: {
-      lat: 21.04323551391982,
-      lang: 79.07361559621259,
-    },
-  },
-  "sliver wind": {
-    heroSection: {
-      title: "Open Spaces, Peaceful Vibes",
-      description:
-        "Silver Wind gives you the freedom to build the way you want — in a calm, clean environment that’s ready for the future.",
-    },
-    brochure: "/images/brochures/9bcd24ab8cdaab82794f3ef78f2ceea49a044491.png",
-    title: "Sliver Wind",
-    status: "Sold Out",
-    location: "The Acres",
-    bedrooms: "1090 sq.ft",
-    image: "/images/property_6.png",
-    amenities: defaultAminities,
-    // 21.108754888495717, 78.97638653807044
-    coordinates: {
-      lat: 21.108754888495717,
-      lang: 78.97638653807044,
-    },
-  },
-
-  "silver woods": {
-    heroSection: {
-      title: "Stay Close to Nature and the City",
-      description:
-        "Silver Wood offers green surroundings and easy access — perfect for those who want a balance between nature and city life.",
-    },
-    brochure: "/images/brochures/ab33329a6128bef0e1c7adac077dfe149786e96a.png",
-    title: "Silver Woods",
-    status: "Sold Out",
-    location: "The Acres",
-    bedrooms: "1030 sq.ft",
-    image: "/images/property_5.png",
-    amenities: defaultAminities,
-  },
   "vrindavan park": {
     heroSection: {
       title: "Peaceful Living Starts Here",
@@ -126,15 +73,7 @@ export const Properties: { [key: string]: propertiesInterface } = {
       lang: 78.97869402418362,
     },
     gallery: {
-      text: `At the heart of Neel Infratech’s growth and values is our founder
-      and visionary leader, Mr. Pitamber Ikar. With a deep-rooted
-      passion for real estate and a sharp eye for market potential, he
-      has transformed Neel Infratech into a name that stands for trust,
-      transparency, and forward-thinking development in Nagpur. Mr. Ikar
-      brings years of experience, a strong network, and a mission-driven
-      approach to every project. His leadership is grounded in integrity
-      and driven by a genuine commitment to helping people build secure
-      and meaningful futures through smart property investment.`,
+      text: `Discover Vrindavan Park, located near Samruddhi Circle, offering both residential and commercial plots in a prime, well-connected area. Enjoy smooth connectivity with our high-quality cement roads and easy access to the Samruddhi Circle Highway.<br>Relax at our exclusive clubhouse, surrounded by lush gardens, or stay active with our scenic walking track. The community features a safe and vibrant kids' play area, ensuring fun for the whole family. With an elegantly designed layout, Vrindavan Park combines convenience, nature, and luxury in one perfect location.`,
       content: [
         {
           type: "video",
@@ -232,13 +171,7 @@ export const Properties: { [key: string]: propertiesInterface } = {
       lang: 79.08641833172516,
     },
     gallery: {
-      text: `Silver Icon 4 is a testament to our commitment to quality and
-      innovation. This project features modern amenities, spacious
-      layouts, and a prime location that ensures both comfort and
-      convenience. Each unit is designed with meticulous attention to
-      detail, providing residents with a luxurious living experience.
-      Silver Icon 4 is not just a home; it's a lifestyle choice that
-      reflects our dedication to excellence in real estate development.`,
+      text: `Silver Icon offers ready-to-construct plots with Registry and RL mutation, ensuring a hassle-free process with no hidden costs. Enjoy comprehensive after-sale support for getting building plans sanctioned by NMRDA, plus assistance with contractors and architects.<br>Located 1.5 km from Besa Square and just 2 km from the International Airport, Silver Icon offers easy access to the North and South Metro stations and city buses that run every 30 minutes. The project also features 24 x 7 water supply from Maharashtra Jeevan Pradhikaran.<br>The site is designed with wide cement roads, underground electrification, and stormwater drainage systems, all as per NMRDA standards. Avenue plantation and a walking track add to the serene environment`,
       content: [
         {
           type: "image",
@@ -268,6 +201,9 @@ export const Properties: { [key: string]: propertiesInterface } = {
     coordinates: {
       lat: 21.12164099615062,
       lang: 79.0726076743336,
+    },
+    gallery: {
+      text: `Rajatbhomi is perfectly positioned, offering great connectivity to the central city while being surrounded by a host of conveniences. With Metro Stations and Samruddhi Mahamarg nearby, commuting is hassle-free. Prestigious educational institutions and renowned engineering colleges are just a short distance away.<br>The National Cancer Institute, along with lifestyle and spiritual destinations like the Iscon Temple, are in close proximity. As the area continues to grow in popularity, the benefits in terms of accessibility, convenience, and overall value will only increase.`,
     },
   },
 };
