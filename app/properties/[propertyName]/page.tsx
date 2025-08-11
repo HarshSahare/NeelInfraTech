@@ -208,7 +208,8 @@ async function PropertiesDetail({
 
         <div className="flex flex-col md:flex-row gap-5 px-10 md:px-20 py-20">
           <div className="flex-4">
-            {propertyDetail.gallery?.content[0].type === "video" ? (
+            {propertyDetail.gallery?.content &&
+            propertyDetail.gallery?.content[0].type === "video" ? (
               <video
                 src={propertyDetail.gallery?.content[0].src || ""}
                 autoPlay
@@ -218,7 +219,11 @@ async function PropertiesDetail({
               ></video>
             ) : (
               <Image
-                src={propertyDetail.gallery?.content[0].src || ""}
+                src={
+                  (propertyDetail.gallery?.content &&
+                    propertyDetail.gallery?.content[0].src) ||
+                  ""
+                }
                 alt="Property Image"
                 width={600}
                 height={400}
@@ -240,7 +245,8 @@ async function PropertiesDetail({
             </div>
           </div>
           <div className="flex-2">
-            {propertyDetail.gallery?.content[1].type === "video" ? (
+            {propertyDetail.gallery?.content &&
+            propertyDetail.gallery?.content[1].type === "video" ? (
               <video
                 src={propertyDetail.gallery?.content[1].src || ""}
                 autoPlay
@@ -250,7 +256,11 @@ async function PropertiesDetail({
               ></video>
             ) : (
               <Image
-                src={propertyDetail.gallery?.content[1].src || ""}
+                src={
+                  (propertyDetail.gallery?.content &&
+                    propertyDetail.gallery?.content[1].src) ||
+                  ""
+                }
                 alt="Property Image"
                 width={600}
                 height={400}

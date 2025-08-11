@@ -1,10 +1,10 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import ContactSection from "../components/sections/contactSection";
 
 import { Properties } from "../lib/properties";
-import { calculatePages, scrollToPage, onScroll } from "../lib/utils";
+import { scrollToPage, onScroll } from "../lib/utils";
 import Carousel from "./Carousel";
 import PropertyTabs from "./PropertyTabs";
 import FeaturedProperties from "./FeaturedProperties";
@@ -37,27 +37,6 @@ export default function Page() {
     Properties["silver star"],
     Properties["silver icon"],
   ];
-
-  // Force recalculation on resize
-  const [windowWidth, setWindowWidth] = useState(0);
-  useEffect(() => {
-    function handleResize() {
-      setWindowWidth(window.innerWidth);
-    }
-    window.addEventListener("resize", handleResize);
-    handleResize(); // initial call
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Recalculate pages on window resize or refs change
-  const popularPages = calculatePages(
-    popularScrollRef.current,
-    PopularProperties.length
-  );
-  const propertiesPages = calculatePages(
-    propertiesScrollRef.current,
-    Object.keys(Properties).length
-  );
 
   return (
     <div className="flex flex-col">

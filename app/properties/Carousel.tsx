@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import PropertyCard from "../components/propertyCard";
+import { propertiesInterface } from "../lib/properties";
 
 export interface CarouselProps {
-  items: any[];
-  scrollRef: React.RefObject<HTMLDivElement | null>; // allow null here
+  items: propertiesInterface[];
+  scrollRef: React.RefObject<HTMLDivElement | null>;
   page: number;
   setPage: React.Dispatch<React.SetStateAction<number>>;
   onScroll: (e: React.UIEvent<HTMLDivElement>) => void;
@@ -23,7 +24,6 @@ export default function Carousel({
   onScroll,
   scrollToPage,
 }: CarouselProps) {
-  // Calculate pages count based on container width and cards count
   const calculatePages = (): number => {
     const container = scrollRef.current;
     if (!container || items.length === 0) return 0;
