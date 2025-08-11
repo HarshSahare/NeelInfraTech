@@ -3,6 +3,9 @@ import React from "react";
 import { DirectorsInfo } from "../lib/directors";
 
 function StoriesPage() {
+  const galleryBaseUrl = "/images/gallery/img";
+  const totalImages = 32;
+
   return (
     <div className="flex flex-col">
       <div className="h-svh w-screen bg-amber-50">
@@ -220,7 +223,7 @@ function StoriesPage() {
         </div>
       </div>
 
-      <div id="gallery">
+      <div id="">
         <div className="font-classica text-center">
           <div className="text-md text-[#757279]">Memories</div>
           <div className="text-3xl py-3 uppercase font-[400]">
@@ -228,87 +231,22 @@ function StoriesPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-5 px-5 lg:px-20 py-10 lg:py-20 gap-5 lg:gap-10">
-          <div className="col-span-1 rounded-lg overflow-hidden">
-            <Image
-              src={"/images/storiesImage7.png"}
-              alt="happy moments image"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="col-span-3 rounded-lg overflow-hidden">
-            <Image
-              src={"/images/storiesImage6.png"}
-              alt="happy moments image"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="col-span-1 rounded-lg overflow-hidden">
-            <Image
-              src={"/images/storiesImage5.png"}
-              alt="happy moments image"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="col-span-1 rounded-lg overflow-hidden">
-            <Image
-              src={"/images/storiesImage8.png"}
-              alt="happy moments image"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="col-span-3 rounded-lg overflow-hidden">
-            <Image
-              src={"/images/storiesImage9.png"}
-              alt="happy moments image"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="col-span-1 rounded-lg overflow-hidden">
-            <Image
-              src={"/images/storiesImage10.png"}
-              alt="happy moments image"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="col-span-1 rounded-lg overflow-hidden">
-            <Image
-              src={"/images/storiesImage11.png"}
-              alt="happy moments image"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="col-span-3 rounded-lg overflow-hidden">
-            <Image
-              src={"/images/storiesImage12.png"}
-              alt="happy moments image"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="col-span-1 rounded-lg overflow-hidden">
-            <Image
-              src={"/images/storiesImage5.png"}
-              alt="happy moments image"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-cover"
-            />
+        <div className="px-5 lg:px-20 py-10 lg:py-20">
+          <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-5">
+            {Array.from({ length: totalImages }).map((_, i) => (
+              <div
+                key={i}
+                className="mb-5 break-inside-avoid overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <Image
+                  src={galleryBaseUrl + (i + 1) + ".jpg"}
+                  alt={`happy moments image ${i + 1}`}
+                  width={1920}
+                  height={1080}
+                  className="w-full h-auto hover:scale-[1.02] transition-transform duration-300"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
