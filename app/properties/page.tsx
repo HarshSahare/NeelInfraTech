@@ -157,13 +157,13 @@ function Page() {
                   alt="property image"
                   width={1200}
                   height={700}
-                  className="w-full aspect-video z-1"
+                  className="w-full aspect-video z-1 rounded-2xl"
                 />
                 <div className="font-classica absolute bottom-0 left-0 text-white z-2  px-8 py-5 text-3xl uppercase font-[500]">
                   {card.title}
                 </div>
               </div>
-              <div className="px-8 py-5  text-[#757279] ">
+              <div className=" py-5  text-[#757279] ">
                 <div className="flex  items-center gap-2 text-xl">
                   <FaLocationDot className="text-xl" />
                   {card.location}
