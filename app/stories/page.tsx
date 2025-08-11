@@ -220,7 +220,7 @@ function StoriesPage() {
         </div>
       </div>
 
-      <div className="">
+      <div id="gallery">
         <div className="font-classica text-center">
           <div className="text-md text-[#757279]">Memories</div>
           <div className="text-3xl py-3 uppercase font-[400]">

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const NeelWaySection = ({ className }: { className?: string }) => {
   return (
@@ -53,6 +54,14 @@ const NeelWaySection = ({ className }: { className?: string }) => {
             It’s A Feeling That Stays Forever.
           </div>
         </div>
+      </div>
+      <div className="flex justify-center mt-5">
+        <Link
+          href="/stories#gallery"
+          className=" bg-black text-white px-6 py-2 text-sm sm:text-base z-10"
+        >
+          View More
+        </Link>
       </div>
     </section>
   );
