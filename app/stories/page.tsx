@@ -98,7 +98,6 @@ function StoriesPage() {
 
       <div className="flex lg:flex-row flex-col w-[90%] mx-auto py-20 gap-10 lg:gap-0 lg:py-40">
         <div className="lg:flex-2 flex-1 relative">
-        
           <Image
             alt="property image"
             src="/images/storiesImage3.png"
@@ -146,18 +145,21 @@ function StoriesPage() {
           }`}
           key={index}
         >
-          <div className=" flex-1 relative">
-            <Image
-              alt="property image"
-              src={director.image}
-              width={1920}
-              height={1080}
-              className="w-full lg:h-full xl:h-auto object-cover"
-            />
-            <div
-              className="absolute w-full h-[50%] bottom-0 left-0"
-              style={{ background: "linear-gradient(to top , #fff , #fff0)" }}
-            ></div>
+          <div className=" flex-1 ">
+            <div className="h-fit relative">
+              <Image
+                alt="property image"
+                src={director.image}
+                width={1920}
+                height={1080}
+                className="w-full lg:h-full xl:h-auto object-cover"
+              />
+
+              <div
+                className="absolute w-full h-[50%] bottom-0 left-0"
+                style={{ background: "linear-gradient(to top , #fff , #fff0)" }}
+              ></div>
+            </div>
           </div>
           <div className="lg:flex-3 flex-1 flex items-center justify-center">
             <div className="lg:px-30 ">
