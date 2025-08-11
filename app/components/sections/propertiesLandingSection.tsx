@@ -5,10 +5,14 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const initialImages = [
-  "/images/landingPropertiesImage3.jpg",
-  "/images/propertiesLandingImage2.jpg",
-  "/images/landingPropertiesImage3.jpg",
-  "/images/propertiesLandingImage2.jpg",
+  "/images/slider/img1.jpg",
+  "/images/slider/img2.jpg",
+  "/images/slider/img3.jpg",
+  "/images/slider/img4.jpg",
+  "/images/slider/img5.jpg",
+  "/images/slider/img6.jpg",
+  "/images/slider/img7.jpg",
+  "/images/slider/img8.jpg",
 ];
 
 export default function PropertiesLandingSection({
