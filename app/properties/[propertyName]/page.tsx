@@ -285,7 +285,7 @@ async function PropertiesDetail({
               title={property.title}
               location={property.location}
               bedrooms={property.bedrooms}
-              status={property.status}
+              sold={property.sold}
             />
           ))}
         </div>

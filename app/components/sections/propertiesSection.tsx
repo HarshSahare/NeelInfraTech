@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Link from "next/link";
+import { Properties } from "@/app/lib/properties";
 
 const PropertiesSection = ({ className }: { className?: string }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -120,27 +121,16 @@ const PropertiesSection = ({ className }: { className?: string }) => {
             className="flex overflow-x-scroll scrollbar-hide"
           >
             <div className="w-full md:w-fit flex gap-5 scroll">
-              <PropertyCard
-                image="/images/property_1.png"
-                title="Vrindavan Park"
-                location="South Nagpur"
-                bedrooms="1200 sq.ft"
-                status="Remaining"
-              />
-              <PropertyCard
-                image="/images/property_2.png"
-                title="Silver Star"
-                location="The Acres"
-                bedrooms="1030 sq.ft"
-                status="Sold Out"
-              />
-              <PropertyCard
-                image="/images/property_3.png"
-                title="Silver Icon"
-                location="The Acres"
-                bedrooms="1090 sq.ft"
-                status="Sold Out"
-              />
+              {Object.values(Properties).map((property, index) => (
+                <PropertyCard
+                  image={property.image}
+                  title={property.title}
+                  location={property.location}
+                  bedrooms={property.bedrooms}
+                  sold={property.sold}
+                  key={index}
+                />
+              ))}
             </div>
 
             {/* Add more cards if needed */}

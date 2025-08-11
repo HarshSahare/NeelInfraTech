@@ -8,7 +8,7 @@ interface PropertyCardProps {
   title: string;
   location: string;
   bedrooms: string;
-  status: string;
+  sold: boolean;
   className?: string;
   ref?: React.RefObject<HTMLElement | null>;
 }
@@ -18,7 +18,7 @@ const PropertyCard3d: React.FC<PropertyCardProps> = ({
   title,
   location,
   bedrooms,
-  status,
+  sold,
   className,
 }) => {
   const card = useRef<HTMLDivElement | null>(null);
@@ -135,7 +135,7 @@ const PropertyCard3d: React.FC<PropertyCardProps> = ({
               height={12}
             />
           </span>
-          <span>{status}</span>
+          <span>{sold ? "Sold Out " : "Remaining"}</span>
         </div>
         <div className="w-fit mt-5 h-fit ">
           <Link
