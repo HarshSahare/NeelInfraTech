@@ -7,7 +7,7 @@ import ContactSection from "../components/sections/contactSection";
 import { Properties } from "../lib/properties";
 
 function Page() {
-  const [activeIndex, setActiveIndex] = useState(0); // 0: Popular, 1: Properties
+  const [activeIndex, setActiveIndex] = useState(0);
 
   // Refs to the scroll containers
   const popularScrollRef = useRef<HTMLDivElement>(null);
@@ -226,7 +226,7 @@ function Page() {
                 </div>
 
                 {/* Dots for Popular */}
-                <div className="flex justify-center gap-3 mt-6">
+                <div className="flex justify-center items-center gap-3 mt-6">
                   {Array.from({ length: popularPages }, (_, i) => (
                     <button
                       key={i}
@@ -237,8 +237,10 @@ function Page() {
                           setPopularPage
                         )
                       }
-                      className={`w-4 h-4 rounded-full transition-all cursor-pointer duration-300 ${
-                        popularPage === i ? "bg-black" : "bg-gray-400"
+                      className={`rounded-full transition-all cursor-pointer duration-300 ${
+                        popularPage === i
+                          ? "bg-black w-4 h-4"
+                          : "bg-gray-400 w-2 h-2"
                       }`}
                       aria-label={`Go to page ${i + 1}`}
                     />
