@@ -14,7 +14,7 @@ export interface propertiesInterface {
   coordinates?: { lang: number; lat: number };
   gallery?: {
     text: string;
-    content?git: { type: "image" | "video"; src: string }[];
+    content?: { type: "image" | "video"; src: string }[];
   };
 }
 
