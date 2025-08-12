@@ -194,34 +194,7 @@ function StoriesPage() {
         </div>
       ))}
 
-      <div className="md:py-20 px-10">
-        <div className="font-classica text-center">
-          <div className="text-md text-[#757279]">Our Vision </div>
-          <div className="text-3xl py-3 uppercase font-[400]">
-            Our Commitment
-          </div>
-        </div>
-        <div className="py-20 mx-auto w-full max-w-[500px]">
-          <Image
-            src={"/images/storiesImage4.png"}
-            alt="vision image"
-            width={1920}
-            height={1080}
-            className="w-full h-auto object-cover"
-          />
-        </div>
-        <div className="text-center w-full max-w-[1000px] mx-auto">
-          At Neel Infratech, we believe that real estate is more than just
-          buying and selling property — it’s about building trust, fulfilling
-          dreams, and creating long-term value for every client. Our commitment
-          is to stand by our clients at every step, offering honest advice,
-          complete transparency, and personalized service that continues even
-          after the deal is done.
-        </div>
-        <div className="w-fit mx-auto bg-black text-white font-classica px-6 py-2 md:my-20 my-15">
-          Contact Us
-        </div>
-      </div>
+    
 
       <div id="">
         <div className="font-classica text-center">
