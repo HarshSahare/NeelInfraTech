@@ -20,25 +20,6 @@ export interface propertiesInterface {
   highlights?: { measurement: string; unit: string; text: string }[];
 }
 
-const defaultAminities = [
-  {
-    text: "24/7 Security",
-    image: "/images/properties_aminities_1.svg",
-  },
-  {
-    text: "Playing Area",
-    image: "/images/properties_aminities_2.svg",
-  },
-  {
-    text: "Garden",
-    image: "/images/properties_aminities_3.svg",
-  },
-  {
-    text: "Coffee shop",
-    image: "/images/properties_aminities_4.svg",
-  },
-];
-
 export const Properties: { [key: string]: propertiesInterface } = {
   "vrindavan park": {
     heroSection: {
@@ -54,15 +35,15 @@ export const Properties: { [key: string]: propertiesInterface } = {
     image: "/images/property_1.png",
     amenities: [
       {
-        text: "24/7 Security",
-        image: "/images/properties_aminities_1.svg",
+        text: "Walking Track",
+        image: "/images/walking_icon.png",
       },
       {
-        text: "Playing Area",
+        text: "Kids Playing Area",
         image: "/images/properties_aminities_2.svg",
       },
       {
-        text: "Garden",
+        text: "Lush Garden",
         image: "/images/properties_aminities_3.svg",
       },
       {
@@ -221,20 +202,20 @@ export const Properties: { [key: string]: propertiesInterface } = {
     image: "/images/property_3.png",
     amenities: [
       {
-        text: "24/7 Security",
-        image: "/images/properties_aminities_1.svg",
+        text: "GAZEBO",
+        image: "/images/gazebo.png",
       },
       {
-        text: "Playing Area",
-        image: "/images/properties_aminities_2.svg",
+        text: "Ecoloqical Plantation",
+        image: "/images/plant.png",
       },
       {
-        text: "Garden",
+        text: "Open Lawn",
         image: "/images/properties_aminities_3.svg",
       },
       {
-        text: "Walking Area",
-        image: "/images/walking_icon.png",
+        text: "Seating Area",
+        image: "/images/sitting.png",
       },
     ],
     highlights: [
@@ -295,7 +276,24 @@ export const Properties: { [key: string]: propertiesInterface } = {
     location: "South Nagpur",
     bedrooms: "1200 sq.ft",
     image: "/images/property_10.png",
-    amenities: defaultAminities,
+    amenities: [
+      {
+        text: "24/7 Security",
+        image: "/images/properties_aminities_1.svg",
+      },
+      {
+        text: "Playing Area",
+        image: "/images/properties_aminities_2.svg",
+      },
+      {
+        text: "Gazebo",
+        image: "/images/gazebo.png",
+      },
+      {
+        text: "Open Lawn",
+        image: "/images/properties_aminities_3.svg",
+      },
+    ],
     coordinates: {
       lat: 21.12164099615062,
       lang: 79.0726076743336,
