@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-interface PropertyCardProps {
+export interface PropertyCardProps {
   image: string;
   title: string;
   location: string;
