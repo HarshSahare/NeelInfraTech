@@ -42,7 +42,7 @@ export default function PropertiesLandingSection({
 
   const resetAutoplay = () => {
     if (autoplayRef.current) clearInterval(autoplayRef.current);
-    autoplayRef.current = setInterval(() => slide(direction.current), 3000);
+    autoplayRef.current = setInterval(() => slide(direction.current), 2000);
   };
 
   const slide = (dir: number) => {
