@@ -199,6 +199,7 @@ export const Properties: { [key: string]: propertiesInterface } = {
     sold: true,
     location: "The Acres",
     bedrooms: "1090 sq.ft",
+    bannerImage: "/images/propertiesDetailedImage2.png",
     image: "/images/property_3.png",
     amenities: [
       {
