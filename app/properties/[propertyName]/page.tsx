@@ -188,7 +188,9 @@ async function PropertiesDetail({
 
             <div
               className="text-md text-[#6A5F6C] px-10 py-15 text-center"
-              dangerouslySetInnerHTML={{ __html: propertyDetail.gallery?.text }}
+              dangerouslySetInnerHTML={{
+                __html: propertyDetail.gallery?.text || "",
+              }}
             ></div>
           </div>
           <div className="flex-2">
