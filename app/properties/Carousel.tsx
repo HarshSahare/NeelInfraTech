@@ -19,14 +19,14 @@ export default function Carousel({
   onScroll,
 }: CarouselProps) {
   const [totalPages, setTotalPages] = useState(1);
-  const [cardsPerPage, setCardsPerPage] = useState(1);
+
   const [pageWidth, setPageWidth] = useState(0);
 
   const calculateLayout = useCallback(() => {
     const container = scrollRef.current;
     if (!container || items.length === 0) {
       setTotalPages(1);
-      setCardsPerPage(1);
+     
       setPageWidth(0);
       return;
     }
@@ -36,7 +36,7 @@ export default function Carousel({
 
     // If everything fits (no scroll), single page
     if (sw <= cw + 1) {
-      setCardsPerPage(items.length || 1);
+      
       setPageWidth(cw);
       setTotalPages(1);
       setPage(0);
@@ -57,7 +57,7 @@ export default function Carousel({
     const pw = perPage * cardOuterWidth;
     const pages = Math.max(1, Math.ceil(items.length / perPage));
 
-    setCardsPerPage(perPage);
+    
     setPageWidth(pw);
     setTotalPages(pages);
 
