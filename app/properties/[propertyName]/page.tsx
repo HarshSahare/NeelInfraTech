@@ -109,65 +109,20 @@ async function PropertiesDetail({
           </div>
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2  md:gap-10 gap-5 px-5 md:py-10 py-3">
-            <div className="text-[#6A5F6C]">
-              <div className="text-sm/relaxed py-5 ">
-                <span className="text-5xl text-black font-classica">10</span>Min
-                <div className="">
-                  from Samruddhi Mahamarg
-                  <br /> Expressway – for fast intercity travel.
+            {propertyDetail.highlights?.map((data, index) => (
+              <div className="text-[#6A5F6C]" key={index}>
+                <div className="text-sm/relaxed py-5 ">
+                  <span className="text-5xl text-black font-classica">
+                    {data.measurement}
+                  </span>
+                  {data.unit}
+                  <div
+                    className="capitalize"
+                    dangerouslySetInnerHTML={{ __html: data.text }}
+                  ></div>
                 </div>
               </div>
-            </div>
-
-            <div className="text-[#6A5F6C]">
-              <div className="text-sm/relaxed py-5 ">
-                <span className="text-5xl text-black font-classica">1</span>Min
-                <div className="">
-                  Outer Ring Road – seamless access
-                  <br /> to every part of Nagpur.
-                </div>
-              </div>
-            </div>
-
-            <div className="text-[#6A5F6C]">
-              <div className="text-sm/relaxed py-5 ">
-                <span className="text-5xl text-black font-classica">5</span>Min
-                <div className="">
-                  Hingna Metro Station – connect to the
-                  <br /> city with ease.
-                </div>
-              </div>
-            </div>
-
-            <div className="text-[#6A5F6C]">
-              <div className="text-sm/relaxed py-5 ">
-                <span className="text-5xl text-black font-classica">7</span>Min
-                <div className="">
-                  D-Mart Hingna – daily essentials just a
-                  <br /> short drive away.
-                </div>
-              </div>
-            </div>
-
-            <div className="text-[#6A5F6C]">
-              <div className="text-sm/relaxed py-5 ">
-                <span className="text-5xl text-black font-classica">10</span>Min
-                <div className="">
-                  MIHAN & AIIMS – close to major
-                  <br /> employment & medical hubs.
-                </div>
-              </div>
-            </div>
-
-            <div className="text-[#6A5F6C]">
-              <div className="text-sm/relaxed py-5 ">
-                <span className="text-5xl text-black font-classica">3</span>Min
-                <div className="">
-                  Outer Ring Road – seamless access
-                  <br /> to every part of Nagpur.
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -231,18 +186,10 @@ async function PropertiesDetail({
               />
             )}
 
-            <div className="text-md text-[#6A5F6C] px-10 py-15 text-center">
-              {propertyDetail.gallery?.text ||
-                `At the heart of Neel Infratech’s growth and values is our founder
-              and visionary leader, Mr. Pitamber Ikar. With a deep-rooted
-              passion for real estate and a sharp eye for market potential, he
-              has transformed Neel Infratech into a name that stands for trust,
-              transparency, and forward-thinking development in Nagpur. Mr. Ikar
-              brings years of experience, a strong network, and a mission-driven
-              approach to every project. His leadership is grounded in integrity
-              and driven by a genuine commitment to helping people build secure
-              and meaningful futures through smart property investment.`}
-            </div>
+            <div
+              className="text-md text-[#6A5F6C] px-10 py-15 text-center"
+              dangerouslySetInnerHTML={{ __html: propertyDetail.gallery?.text }}
+            ></div>
           </div>
           <div className="flex-2">
             {propertyDetail.gallery?.content &&
