@@ -4,7 +4,7 @@ import { DirectorsInfo } from "../lib/directors";
 
 function StoriesPage() {
   const galleryBaseUrl = "/images/gallery/img";
-  const totalImages = 32;
+  const totalImages = 31;
 
   return (
     <div className="flex flex-col">
@@ -193,8 +193,6 @@ function StoriesPage() {
           </div>
         </div>
       ))}
-
-    
 
       <div id="">
         <div className="font-classica text-center">
