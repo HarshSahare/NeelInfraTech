@@ -9,7 +9,7 @@ function CommitmentBox({
   description: string;
 }) {
   return (
-    <div className="flex flex-col max-w-[400px] rounded-xl p-5 px-8 min-h-[400px]  border-1 border-white text-white">
+    <div className="flex flex-col max-w-[400px] rounded-xl p-5 px-8 min-h-[400px]  border-1 border-white text-white commitmentBox">
       <Image
         src="/homeIcon.svg"
         alt="home icon"

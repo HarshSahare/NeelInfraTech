@@ -1,7 +1,11 @@
 import React from "react";
 import CommitmentBox from "./commitmentBox";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function CommitmentSection({ className }: { className?: string }) {
+  gsap.registerPlugin(ScrollTrigger);
   const commitments = [
     {
       heading: "Strategically Located Properties",
@@ -25,12 +29,24 @@ function CommitmentSection({ className }: { className?: string }) {
     },
   ];
 
+  useGSAP(() => {
+    gsap.from(".commitmentBox", {
+      y: "+=100%",
+      stagger: 0.2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".commitmentContainer",
+        start: "top bottom-=20%",
+      },
+    });
+  }, []);
+
   return (
-    <div className={`${className}`}>
+    <div className={`${className} overflow-hidden`}>
       <div className="text-center text-5xl text-white font-medium font-classica my-5">
         Our Commitments
       </div>
-      <div className="flex flex-wrap justify-center gap-5 mt-20">
+      <div className="flex flex-wrap justify-center gap-5 mt-20 commitmentContainer">
         {commitments.map((commitment, index) => (
           <CommitmentBox
             heading={commitment.heading}
