@@ -246,3 +246,9 @@ async function PropertiesDetail({
 }
 
 export default PropertiesDetail;
+
+export async function generateStaticParams() {
+  return Object.keys(Properties).map((key) => ({
+    propertyName: key.replace(" ", "-"),
+  }));
+}
