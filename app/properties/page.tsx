@@ -4,7 +4,7 @@ import Image from "next/image";
 import ContactSection from "../components/sections/contactSection";
 
 import { Properties } from "../lib/properties";
-import { scrollToPage, onScroll } from "../lib/utils";
+import { onScroll } from "../lib/utils";
 import Carousel from "./Carousel";
 import PropertyTabs from "./PropertyTabs";
 import FeaturedProperties from "./FeaturedProperties";
@@ -86,7 +86,6 @@ export default function Page() {
                 page={popularPage}
                 setPage={setPopularPage}
                 onScroll={(e) => onScroll(e, setPopularPage)}
-                scrollToPage={scrollToPage}
               />
             </div>
 
@@ -98,7 +97,6 @@ export default function Page() {
                 page={propertiesPage}
                 setPage={setPropertiesPage}
                 onScroll={(e) => onScroll(e, setPropertiesPage)}
-                scrollToPage={scrollToPage}
               />
             </div>
           </div>
