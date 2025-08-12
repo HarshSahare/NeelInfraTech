@@ -1,5 +1,3 @@
-import { FaCircle } from "react-icons/fa6";
-import { FaRegCircle } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,7 +7,6 @@ export interface PropertyCardProps {
   title: string;
   location: string;
   bedrooms: string;
-  sold: boolean;
   className?: string;
   ref?: React.RefObject<HTMLElement | null>;
 }
@@ -19,7 +16,6 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   title,
   location,
   bedrooms,
-  sold,
   className,
 }) => {
   return (
@@ -63,16 +59,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             <span>{bedrooms}</span>
           </div>
         </div>
-        <div className="flex items-center text-poppins font-[400] text-[#EF6692]  text-xs gap-2">
-          <span>
-            {sold ? (
-              <FaCircle width={15} height={12} className="text-red-500" />
-            ) : (
-              <FaRegCircle width={15} height={12} className="text-red-500" />
-            )}
-          </span>
-          <span>{sold ? "Sold Out" : "Remaining"}</span>
-        </div>
+
         <div className="w-fit mt-5 h-fit ">
           <Link
             className="bg-black font-400 font-poppins cursor-pointer text-[#F5F5F5]   py-2 px-6 rounded-[23px] text-[11px]"

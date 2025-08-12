@@ -5,7 +5,6 @@ export interface propertiesInterface {
   };
   brochure: string;
   title: string;
-  sold: boolean;
   location: string;
   bedrooms: string;
   image: string;
@@ -29,7 +28,6 @@ export const Properties: { [key: string]: propertiesInterface } = {
     },
     brochure: "/images/brochures/Vrindavan Park  - Amenities.pdf",
     title: "Vrindavan Park",
-    sold: false,
     location: "South Nagpur",
     bedrooms: "1200 sq.ft",
     image: "/images/property_1.png",
@@ -110,7 +108,6 @@ export const Properties: { [key: string]: propertiesInterface } = {
     },
     brochure: "/images/brochures/Silver Star Brosher.pdf",
     title: "Silver Star",
-    sold: true,
     location: "The Acres",
     bedrooms: "1030 sq.ft",
     bannerImage: "/images/silver_star_header_image.jpg",
@@ -196,7 +193,6 @@ export const Properties: { [key: string]: propertiesInterface } = {
     },
     brochure: "/images/brochures/Silver Icon 3.pdf",
     title: "Silver Icon",
-    sold: true,
     location: "The Acres",
     bedrooms: "1090 sq.ft",
     bannerImage: "/images/propertiesDetailedImage2.png",
@@ -273,7 +269,6 @@ export const Properties: { [key: string]: propertiesInterface } = {
     },
     brochure: "/images/brochures/286984f2a8f2913bfff5fe8b8b025dfa247ad186.png",
     title: "Rajatbhoomi",
-    sold: false,
     location: "South Nagpur",
     bedrooms: "1200 sq.ft",
     image: "/images/property_10.png",
