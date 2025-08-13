@@ -6,15 +6,10 @@ import ContactSection from "../components/sections/contactSection";
 import { Properties } from "../lib/properties";
 import { onScroll } from "../lib/utils";
 import Carousel from "./Carousel";
-import PropertyTabs from "./PropertyTabs";
 import FeaturedProperties from "./FeaturedProperties";
 
 export default function Page() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const popularScrollRef = useRef<HTMLDivElement>(null);
   const propertiesScrollRef = useRef<HTMLDivElement>(null);
-
-  const [popularPage, setPopularPage] = useState(0);
   const [propertiesPage, setPropertiesPage] = useState(0);
 
   const featuredProperties = [
@@ -68,37 +63,22 @@ export default function Page() {
       <FeaturedProperties properties={featuredProperties} />
 
       <section>
-        <PropertyTabs
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        />
-
+        <div className="font-classica text-center mb-8">
+          <div className="uppercase text-md text-[#757279]">Property</div>
+          <div className="text-3xl uppercase font-[400] w-fit mx-auto my-3">
+            On Going Projects
+          </div>
+        </div>
         <div className="relative w-[90vw] overflow-hidden py-10 mx-auto">
-          <div
-            className="flex w-[180vw] transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${activeIndex * 90}vw)` }}
-          >
-            {/* Popular Properties Carousel */}
-            <div className="min-w-[90vw] flex flex-col justify-center">
-              <Carousel
-                items={PopularProperties}
-                scrollRef={popularScrollRef}
-                page={popularPage}
-                setPage={setPopularPage}
-                onScroll={(e) => onScroll(e, setPopularPage)}
-              />
-            </div>
-
-            {/* All Properties Carousel */}
-            <div className="min-w-[90vw] flex flex-col justify-center">
-              <Carousel
-                items={Object.values(Properties)}
-                scrollRef={propertiesScrollRef}
-                page={propertiesPage}
-                setPage={setPropertiesPage}
-                onScroll={(e) => onScroll(e, setPropertiesPage)}
-              />
-            </div>
+          {/* All Properties Carousel */}
+          <div className="min-w-[90vw] flex flex-col justify-center">
+            <Carousel
+              items={Object.values(Properties)}
+              scrollRef={propertiesScrollRef}
+              page={propertiesPage}
+              setPage={setPropertiesPage}
+              onScroll={(e) => onScroll(e, setPropertiesPage)}
+            />
           </div>
         </div>
       </section>

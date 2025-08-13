@@ -18,7 +18,7 @@ export default function FeaturedProperties({
   properties,
 }: FeaturedPropertiesProps) {
   return (
-    <section className="py-20 lg:py-40">
+    <section className="py-20">
       <h2 className="text-center font-classica">
         <span className="text-md text-[#757279]">Feature</span> <br />
         <span className="text-3xl uppercase">Properties</span>
