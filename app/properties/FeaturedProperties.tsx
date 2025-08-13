@@ -40,7 +40,7 @@ export default function FeaturedProperties({
             </div>
             <div className=" py-5  text-[#757279] ">
               <div className="flex  items-center gap-2 text-xl">
-                <FaLocationDot className="text-xl" />
+                <FaLocationDot className="text-xl capitalize" />
                 {card.location}
               </div>
               <div className="text-md py-2">{card.desc}</div>

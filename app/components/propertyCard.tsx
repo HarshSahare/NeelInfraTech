@@ -45,7 +45,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
                 height={12}
               />
             </span>
-            <span>{location}</span>
+            <span className="capitalize">{location}</span>
           </div>
           <div className="flex flex-1 items-center gap-1">
             <span>

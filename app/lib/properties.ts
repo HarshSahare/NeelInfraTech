@@ -1,7 +1,8 @@
 export interface propertiesInterface {
-  heroSection?: {
+  heroSection: {
     title: string;
     description: string;
+    highlights: string[];
   };
   brochure: string;
   title: string;
@@ -9,14 +10,14 @@ export interface propertiesInterface {
   bedrooms: string;
   image: string;
   amenities: { text: string; image: string }[];
-  bannerImage?: string;
-  coordinates?: { lang: number; lat: number };
-  gallery?: {
+  bannerImage: string;
+  coordinates: { lang: number; lat: number };
+  gallery: {
     text: string;
     content?: { type: "image" | "video"; src: string }[];
   };
 
-  highlights?: { measurement: string; unit: string; text: string }[];
+  highlights: { measurement: string; unit: string; text: string }[];
 }
 
 export const Properties: { [key: string]: propertiesInterface } = {
@@ -25,10 +26,12 @@ export const Properties: { [key: string]: propertiesInterface } = {
       title: "Peaceful Living Starts Here",
       description:
         "Vrindavan Park in South Nagpur offers spacious plots surrounded by greenery, perfect for a calm and connected lifestyle",
+      highlights: ["Samrudhi Expressway", "Mihan", "Cancer Hospital"],
     },
     brochure: "/images/brochures/Vrindavan Park  - Amenities.pdf",
     title: "Vrindavan Park",
     location: "South Nagpur",
+    bannerImage: "/images/propertiesBanner.png",
     bedrooms: "1200 sq.ft",
     image: "/images/property_1.png",
     amenities: [
@@ -105,10 +108,15 @@ export const Properties: { [key: string]: propertiesInterface } = {
       title: "Live Like Every Day is a Holiday",
       description:
         "Silver Star offers well-planned plots in Hingna with a peaceful and resort-like environment — perfect for living or investing.",
+      highlights: [
+        "Samrudhi Expressway",
+        "Hingna MIDC & Logistic Zone",
+        "Airport",
+      ],
     },
     brochure: "/images/brochures/Silver Star Brosher.pdf",
     title: "Silver Star",
-    location: "The Acres",
+    location: "Nagalwadi near higna",
     bedrooms: "1030 sq.ft",
     bannerImage: "/images/silver_star_header_image.jpg",
     image: "/images/property_2.png",
@@ -190,10 +198,11 @@ export const Properties: { [key: string]: propertiesInterface } = {
       title: "Build Your Future in a Prime Location",
       description:
         "Located in Hingna, Silver Icon gives you the right plot in the right place — great for building your dream or growing your investment.",
+      highlights: ["Besa Square", "The International Airport", "metro station"],
     },
     brochure: "/images/brochures/Silver Icon 3.pdf",
     title: "Silver Icon",
-    location: "The Acres",
+    location: "Gotal Panjri Nagpur",
     bedrooms: "1090 sq.ft",
     bannerImage: "/images/propertiesDetailedImage2.png",
     image: "/images/property_3.png",
@@ -266,10 +275,16 @@ export const Properties: { [key: string]: propertiesInterface } = {
       title: "A Smart Investment for a Bright Future",
       description:
         "Rajat Bhomii brings you clear-title plots in a fast-developing area — ideal for both living and long-term growth.",
+      highlights: [
+        "WAINGANGA Engineering College",
+        "Metro station phase 2",
+        "MIHAN",
+      ],
     },
     brochure: "/images/brochures/286984f2a8f2913bfff5fe8b8b025dfa247ad186.png",
     title: "Rajatbhoomi",
-    location: "South Nagpur",
+    bannerImage: "/images/rajatbhumiBannerImage.png",
+    location: "Dogargaon Nagpur",
     bedrooms: "1200 sq.ft",
     image: "/images/property_10.png",
     amenities: [

@@ -37,7 +37,7 @@ async function PropertiesDetail({
       <div className="h-svh w-screen bg-amber-50">
         <div className="absolute bg-linear-to-b from-[#1212121a] to-[#12121275] inset-0"></div>
         <Image
-          src={propertyDetail.bannerImage || "/images/propertiesBanner.png"}
+          src={propertyDetail.bannerImage}
           alt="Properties Background"
           width={1920}
           height={1080}
@@ -47,21 +47,20 @@ async function PropertiesDetail({
         <div className="absolute inset-0 md:w-[55%] w-full flex items-center mt-[var(--navbar-h)]  md:py-20 text-white">
           <div className="md:px-20 px-10 ">
             <h1 className="font-classica md:text-7xl text-5xl uppercase">
-              {propertyDetail.heroSection?.title}
+              {propertyDetail.heroSection.title}
             </h1>
             <div className="md:py-10 py-5 text-sm">
-              {propertyDetail.heroSection?.description}
+              {propertyDetail.heroSection.description}
             </div>
-            <div className="flex flex-wrap md:gap-4 gap-2 text-sm">
-              <div className="px-5 py-3 min-w-fit font-[400] bg-[#D9D9D93D] rounded-4xl">
-                Samrudhi Expressway
-              </div>
-              <div className="px-5 py-3 min-w-fit font-[400] bg-[#D9D9D93D] rounded-4xl">
-                Mihan
-              </div>
-              <div className="px-5 py-3 min-w-fit font-[400] bg-[#D9D9D93D] rounded-4xl">
-                Cancer Hospital
-              </div>
+            <div className="flex flex-wrap md:gap-4 gap-2 text-sm ">
+              {propertyDetail.heroSection.highlights.map((highlight, index) => (
+                <div
+                  key={index}
+                  className="px-5 py-3 min-w-fit font-[400] bg-[#D9D9D93D] rounded-4xl capitalize"
+                >
+                  {highlight}
+                </div>
+              ))}
             </div>
 
             <div className="flex flex-wrap capitalize gap-4 md:py-15 py-7 text-sm">
@@ -86,7 +85,7 @@ async function PropertiesDetail({
       <div className="flex flex-col md:flex-row gap-10 md:gap-0 px-10 md:px-20 md:py-40 py-20">
         <div className="md:flex-3">
           <iframe
-            src={`https://www.google.com/maps?q=${propertyDetail.coordinates?.lat},${propertyDetail.coordinates?.lang}&z=13&output=embed`}
+            src={`https://www.google.com/maps?q=${propertyDetail.coordinates.lat},${propertyDetail.coordinates.lang}&z=13&output=embed`}
             width="600"
             height="450"
             className="w-full h-full"

@@ -21,13 +21,13 @@ export default function Page() {
     {
       src: "/images/silver_star_header_image.jpg",
       title: "Silver Star",
-      location: "Hingna Nagpur",
+      location: Properties["silver star"].location,
       desc: "Where Your Plot Comes with a Resort Lifestyle.",
     },
     {
       src: "/images/propertiesDetailedImage2.png",
       title: "Silver Icon",
-      location: "Hingna Nagpur",
+      location: Properties["silver icon"].location,
       desc: "Where Your Plot Comes with a Resort Lifestyle.",
     },
   ];
