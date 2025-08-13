@@ -10,7 +10,7 @@ function VideoComponent({
   src: string;
   className?: string;
 }) {
-  const [muted, setMuted] = useState<Boolean>(true);
+  const [muted, setMuted] = useState<boolean>(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleOnClick = () => {
