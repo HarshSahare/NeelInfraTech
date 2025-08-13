@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Properties, propertiesInterface } from "@/app/lib/properties";
+import VideoComponent from "@/app/components/videoComponent";
 
 function getRandomProperties(excludeKey: string): propertiesInterface[] {
   const allKeys = Object.keys(Properties).filter((key) => key !== excludeKey);
@@ -164,13 +165,7 @@ async function PropertiesDetail({
           <div className="flex-4">
             {propertyDetail.gallery?.content &&
             propertyDetail.gallery?.content[0].type === "video" ? (
-              <video
-                src={propertyDetail.gallery?.content[0].src || ""}
-                autoPlay
-                loop
-                muted
-                className="w-full h-auto object-cover"
-              ></video>
+              <VideoComponent src={propertyDetail.gallery.content[0].src} />
             ) : (
               <Image
                 src={
@@ -195,13 +190,7 @@ async function PropertiesDetail({
           <div className="flex-2">
             {propertyDetail.gallery?.content &&
             propertyDetail.gallery?.content[1].type === "video" ? (
-              <video
-                src={propertyDetail.gallery?.content[1].src || ""}
-                autoPlay
-                loop
-                muted
-                className="w-full h-auto object-cover"
-              ></video>
+              <VideoComponent src={propertyDetail.gallery.content[1].src} />
             ) : (
               <Image
                 src={
