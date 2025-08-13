@@ -60,12 +60,12 @@ export const Properties: { [key: string]: propertiesInterface } = {
       text: `Discover Vrindavan Park, located near Samruddhi Circle, offering both residential and commercial plots in a prime, well-connected area. Enjoy smooth connectivity with our high-quality cement roads and easy access to the Samruddhi Circle Highway.<br>Relax at our exclusive clubhouse, surrounded by lush gardens, or stay active with our scenic walking track. The community features a safe and vibrant kids' play area, ensuring fun for the whole family. With an elegantly designed layout, Vrindavan Park combines convenience, nature, and luxury in one perfect location.`,
       content: [
         {
-          type: "video",
-          src: "/videos/properties_video_1.mp4",
+          type: "image",
+          src: "/images/properties/vrindavanPark.jpg",
         },
         {
           type: "video",
-          src: "/videos/properties_video_2.mp4",
+          src: "/videos/vrindavanPark.mp4",
         },
       ],
     },
