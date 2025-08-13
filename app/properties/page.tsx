@@ -27,12 +27,6 @@ export default function Page() {
     },
   ];
 
-  const PopularProperties = [
-    Properties["vrindavan park"],
-    Properties["silver star"],
-    Properties["silver icon"],
-  ];
-
   return (
     <div className="flex flex-col">
       <div className="h-svh w-full bg-black-50 relative">
