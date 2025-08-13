@@ -310,6 +310,16 @@ export const Properties: { [key: string]: propertiesInterface } = {
       lang: 79.0726076743336,
     },
     gallery: {
+      content: [
+        {
+          type: "image",
+          src: "/images/rajatbhumiImage.png",
+        },
+        {
+          type: "video",
+          src: "/videos/rajatbhumi.mp4",
+        },
+      ],
       text: `Rajatbhomi is perfectly positioned, offering great connectivity to the central city while being surrounded by a host of conveniences. With Metro Stations and Samruddhi Mahamarg nearby, commuting is hassle-free. Prestigious educational institutions and renowned engineering colleges are just a short distance away.<br>The National Cancer Institute, along with lifestyle and spiritual destinations like the Iscon Temple, are in close proximity. As the area continues to grow in popularity, the benefits in terms of accessibility, convenience, and overall value will only increase.`,
     },
     highlights: [
