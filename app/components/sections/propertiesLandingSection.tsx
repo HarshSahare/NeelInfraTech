@@ -89,7 +89,7 @@ export default function PropertiesLandingSection({
   return (
     <section className={`max-w-[93.5%] mx-auto py-10 ${className}`}>
       {/* Top Section */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4">
+      <div className="flex flex-col lg:flex-row font-classica justify-between items-start lg:items-center mb-8 gap-4">
         <div>
           <p className="text-[10px] tracking-widest text-gray-500 mb-2">
             PROPERTIES
@@ -97,7 +97,7 @@ export default function PropertiesLandingSection({
           <h2 className="text-[40px] font-[400] leading-snug">
             Your Dream Property
           </h2>
-          <p className="text-[#6A5F6C] text-[13px]/[22px] mt-4 max-w-4xl">
+          <p className="text-[#6A5F6C] font-poppins text-[13px]/[22px] mt-4 max-w-4xl">
             Where you live reflects who you are. This section features homes in
             prime locations that offer comfort, convenience, and class.
           </p>
