@@ -62,6 +62,7 @@ export default function Page() {
           className="w-full h-full object-cover"
           priority
         />
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 w-full flex items-center md:py-20 bg-red text-white px-10 md:px-20 md:mt-[5%]">
           <div>
             <h1 className="font-classica md:text-7xl text-4xl uppercase">
