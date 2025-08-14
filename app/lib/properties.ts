@@ -264,7 +264,7 @@ export const Properties: { [key: string]: propertiesInterface } = {
         },
         {
           type: "video",
-          src: "/videos/sliver_icon_video.mp4",
+          src: "/videos/silverIcon.mp4",
         },
       ],
     },
