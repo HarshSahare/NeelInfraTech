@@ -70,6 +70,7 @@ function TestimonialSection({ className }: { className?: string }) {
       msg: "I bought a plot in Vrindavan Park 3, and from the start of the documentation process to the end, everything was absolutely clear and well-managed. I'm extremely happy with the transparency and support provided throughout. Buying a plot from Neel Infratech was a smooth and satisfying experience!",
       img: "/images/Shubhash Umade.jpg",
       propertyImg: "/images/propertiesBanner.png",
+      rating: "3.5",
     },
 
     {
@@ -77,18 +78,21 @@ function TestimonialSection({ className }: { className?: string }) {
       msg: "I purchased a plot near Wardha Road through Neel Infratech, and I must say — it was a great experience. The company's behavior was professional, the property had a clear title, and the entire process was trustworthy. Finding a good plot on Wardha Road is tough, but Neel Infratech made it possible. I'm genuinely happy with my decision",
       img: "/images/Rajesh bandate.jpg",
       propertyImg: "/images/silver_star_header_image.jpg",
+      rating: "4.1",
     },
     {
       name: "Gangaram Sakhatkar ACP",
       msg: "Neel Infratech delivered exactly what they promised. Their commitment, proper documentation, and constant support made the entire process smooth. I'm truly happy to have purchased my plot through them.",
       img: "/images/Gangaram Sakhatkar.jpg",
       propertyImg: "/images/landingPropertiesImage3.jpg",
+      rating: "5",
     },
     {
       name: "Hemant Bhisikar",
       msg: "I bought a property from Neel Infratech in 2020 when the prices were quite low. Looking back, it was one of the best decisions I made — within just 5 years, the property value has tripled! I'm extremely happy with my investment and thankful to Neel Infratech for the opportunity.",
       img: "/images/Hemant Bhisikar.jpg",
       propertyImg: "/images/propertiesLandingImage2.jpg",
+      rating: "4",
     },
   ];
 
@@ -167,7 +171,7 @@ function TestimonialSection({ className }: { className?: string }) {
                   width={15}
                   height={10}
                 />
-                3.5
+                {testimonials[1].rating}
               </div>
             </div>
           </div>
@@ -205,7 +209,7 @@ function TestimonialSection({ className }: { className?: string }) {
                   width={15}
                   height={10}
                 />
-                3.5
+                {testimonials[2].rating}
               </div>
             </div>
           </div>
@@ -243,7 +247,7 @@ function TestimonialSection({ className }: { className?: string }) {
                   width={15}
                   height={10}
                 />
-                3.5
+                {testimonials[3].rating}
               </div>
             </div>
           </div>
@@ -291,7 +295,7 @@ function TestimonialSection({ className }: { className?: string }) {
                     height={10}
                     className="mx-2"
                   />
-                  3.5
+                  {testimonial.rating}
                 </div>
               </div>
             </div>
