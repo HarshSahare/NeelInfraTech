@@ -7,6 +7,7 @@ import { Properties } from "../lib/properties";
 import { onScroll } from "../lib/utils";
 import Carousel from "./Carousel";
 import FeaturedProperties from "./FeaturedProperties";
+import CompletedCards from "../components/sections/completedCards";
 
 export default function Page() {
   const propertiesScrollRef = useRef<HTMLDivElement>(null);
@@ -24,6 +25,29 @@ export default function Page() {
       title: "Silver Icon",
       location: Properties["silver icon"].location,
       desc: "Where Your Plot Comes with a Resort Lifestyle.",
+    },
+  ];
+
+  const completedProperties = [
+    {
+      src: "/images/Completed Projects/silver wood.png",
+      title: "Silver Wood",
+      location: "Near NCI & Jamtha",
+    },
+    {
+      src: "/images/Completed Projects/dhanbhoomi.png",
+      title: "Dhanbhoomi",
+      location: "Near Hingna Road",
+    },
+    {
+      src: "/images/Completed Projects/silver park.png",
+      title: "Silver Park",
+      location: "Dongargaon, Jammtha",
+    },
+    {
+      src: "/images/Completed Projects/silver wind.png",
+      title: "Silver Wind",
+      location: "Near Hingna Road",
     },
   ];
 
@@ -74,6 +98,26 @@ export default function Page() {
               onScroll={(e) => onScroll(e, setPropertiesPage)}
             />
           </div>
+        </div>
+      </section>
+
+      <section className="p-10">
+        <div className="font-classica text-center mb-8">
+          <div className="uppercase text-md text-[#757279]">Property</div>
+          <div className="text-3xl uppercase font-[400] w-fit mx-auto my-3">
+            Completed Projects
+          </div>
+        </div>
+        <div className="relative w-[90vw] flex flex-wrap gap-5 justify-around py-10 mx-auto">
+          {completedProperties.map((prop, index) => (
+            <CompletedCards
+              src={prop.src}
+              title={prop.title}
+              key={index}
+              index={index}
+              location={prop.location}
+            />
+          ))}
         </div>
       </section>
 
