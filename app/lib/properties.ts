@@ -312,8 +312,8 @@ export const Properties: { [key: string]: propertiesInterface } = {
     gallery: {
       content: [
         {
-          type: "image",
-          src: "/images/rajatbhumiImage.png",
+          type: "video",
+          src: "/videos/rajbhumi gallery video1.mp4",
         },
         {
           type: "video",
