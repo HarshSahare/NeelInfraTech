@@ -60,8 +60,8 @@ export const Properties: { [key: string]: propertiesInterface } = {
       text: `Discover Vrindavan Park, located near Samruddhi Circle, offering both residential and commercial plots in a prime, well-connected area. Enjoy smooth connectivity with our high-quality cement roads and easy access to the Samruddhi Circle Highway.<br>Relax at our exclusive clubhouse, surrounded by lush gardens, or stay active with our scenic walking track. The community features a safe and vibrant kids' play area, ensuring fun for the whole family. With an elegantly designed layout, Vrindavan Park combines convenience, nature, and luxury in one perfect location.`,
       content: [
         {
-          type: "image",
-          src: "/images/properties/vrindavanPark.jpg",
+          type: "video",
+          src: "/videos/vrindavanPark2.mp4",
         },
         {
           type: "video",
@@ -183,8 +183,8 @@ export const Properties: { [key: string]: propertiesInterface } = {
       text: `Nestled in the growing locale of Hingna, Silver Star offers the perfect blend of serenity and urban convenience. This thoughtfully planned property by Neel Infratech provides a resort-like living experience with modern amenities, green landscapes, and peaceful surroundings. With close connectivity to educational hubs, tech parks, and key transport routes, Silver Star is ideal for both residential comfort and long-term investment. It reflects the group’s commitment to sustainable development and quality living spaces in Nagpur's expanding real estate landscape.      `,
       content: [
         {
-          type: "image",
-          src: "/images/silver_star_image.jpg",
+          type: "video",
+          src: "/videos/silver_star_video2.mp4",
         },
         {
           type: "video",
