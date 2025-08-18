@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaLocationDot } from "react-icons/fa6";
 
@@ -25,7 +26,13 @@ export default function FeaturedProperties({
       </h2>
       <div className="flex flex-col lg:flex-row gap-10 w-[80%] mx-auto py-15">
         {properties.map((card, i) => (
-          <div className="flex-1" key={i}>
+          <Link
+            href={`/properties/${card.title
+              .toLowerCase()
+              .replaceAll(" ", "-")}`}
+            className="flex-1"
+            key={i}
+          >
             <div className="relative">
               <Image
                 src={card.src}
@@ -45,7 +52,7 @@ export default function FeaturedProperties({
               </div>
               <div className="text-md py-2">{card.desc}</div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
