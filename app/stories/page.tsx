@@ -143,10 +143,10 @@ function StoriesPage() {
         <div
           className={`flex ${
             index % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse md:text-right"
-          } flex-col w-[90%] mx-auto  gap-10 lg:gap-0  text-center md:text-left  ${
-            index % 2 == 0 ? "py-0" : "py-20"
+          } flex-col w-[90%] mx-auto  gap-10 lg:gap-0  text-center md:text-left py-20 "
           }`}
           key={index}
+          id={`director-${index}`}
         >
           <div className=" flex-1 ">
             <div className="h-fit relative">

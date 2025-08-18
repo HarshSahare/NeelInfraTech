@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DirectorsInfo } from "@/app/lib/directors";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,29 +64,35 @@ export default function DirectorsSection({
         className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide py-6"
       >
         {DirectorsInfo.map((data, index) => (
-          <div
+          <Link
+            href={`/stories#director-${index}`}
             key={index}
-            ref={(el) => {
-              cardRefs.current[index] = el;
-            }}
-            className="flex-shrink-0 flex flex-col border border-gray-200 rounded-md pt-5 pb-2 bg-[#1b1b1b]"
+            className="flex-shrink-0 flex flex-col border border-gray-200 rounded-md pt-5 pb-2 bg-[#1b1b1b] group cursor-pointer overflow-hidden"
           >
-            <div className="flex justify-center relative">
-              <Image
-                src={data.image}
-                alt={data.name}
-                width={500}
-                height={350}
-                className="object-contain h-[350px] w-auto rounded-t-md z-[1]"
-              />
-              <div className="absolute w-full h-[40%] bottom-0 left-0 bg-gradient-to-t from-[#1b1b1b] to-transparent z-[2]" />
-            </div>
+            <div
+              ref={(el) => {
+                cardRefs.current[index] = el;
+              }}
+              className="flex flex-col"
+            >
+              <div className="flex justify-center relative transition-transform duration-300 ease-in-out group-hover:scale-105">
+                <Image
+                  src={data.image}
+                  alt={data.name}
+                  width={500}
+                  height={350}
+                  className="object-contain h-[350px] w-auto rounded-t-md z-[1]"
+                />
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[3]" />
+                <div className="absolute w-full h-[40%] bottom-0 left-0 bg-gradient-to-t from-[#1b1b1b] to-transparent z-[2]" />
+              </div>
 
-            <div className="p-4 text-center">
-              <p className="text-lg font-semibold text-white">{data.name}</p>
-              <p className="text-sm italic text-white mt-2">{data.quote}</p>
+              <div className="p-4 text-center">
+                <p className="text-lg font-semibold text-white">{data.name}</p>
+                <p className="text-sm italic text-white mt-2">{data.quote}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
