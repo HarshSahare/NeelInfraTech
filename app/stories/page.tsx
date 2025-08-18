@@ -99,7 +99,10 @@ function StoriesPage() {
         </div>
       </div>
 
-      <div className="flex lg:flex-row flex-col w-[90%] mx-auto py-20 gap-10 lg:gap-0 lg:py-40">
+      <div
+        className="flex lg:flex-row flex-col w-[90%] mx-auto py-20 gap-10 lg:gap-0 lg:py-40"
+        id="Owner"
+      >
         <div className="lg:flex-2 flex-1 relative">
           <Image
             alt="property image"

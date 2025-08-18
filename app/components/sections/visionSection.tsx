@@ -91,7 +91,7 @@ function VisionSection({ className }: { className?: string }) {
             />
             <div className="absolute bottom-[-20px] h-[20%] w-full blur-md bg-white"></div>
             <Link
-              href="/stories"
+              href="/stories#Owner"
               className="absolute bottom-[9%] left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm sm:text-base z-10"
             >
               Read More
