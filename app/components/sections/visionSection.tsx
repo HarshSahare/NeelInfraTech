@@ -55,7 +55,7 @@ function VisionSection({ className }: { className?: string }) {
         </div>
         <div className="mt-5">
           <h2 className="uppercase font-classica text-4xl sm:text-5xl md:text-[75px] font-[400] text-center">
-            Mr. Pitambar Ikar
+            Mr. Pitambar Ikhar
           </h2>
           <p className="text-[#44404096] font-poppins text-sm sm:text-base mt-2">
             Founder & CEO Of NEEL INFRATECH
