@@ -8,6 +8,7 @@ import { MdLocalPhone } from "react-icons/md";
 import { FaFacebookF } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa";
+import { ContactLinks } from "@/app/lib/contactLinks";
 
 function Navbar() {
   const prevY = useRef(0);
@@ -118,21 +119,21 @@ function Navbar() {
             ></div>
             <div className="z-2 flex gap-5 text-white text-xl">
               <Link
-                href="https://www.facebook.com/share/1ZHPYBvYHi/"
+                href={ContactLinks.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaFacebookF />
               </Link>
               <Link
-                href="https://www.instagram.com/neel_infratech_"
+                href={ContactLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <RiInstagramFill />
               </Link>
               <Link
-                href="https://youtube.com/@neelinfratech1514"
+                href={ContactLinks.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
               >

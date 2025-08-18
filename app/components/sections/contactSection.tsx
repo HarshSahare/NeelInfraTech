@@ -1,4 +1,6 @@
+import { ContactLinks } from "@/app/lib/contactLinks";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const ContactSection = ({ className }: { className?: string }) => {
@@ -36,34 +38,25 @@ const ContactSection = ({ className }: { className?: string }) => {
             </p>
 
             <div className="flex gap-4 items-center mt-6 sm:mt-8 text-2xl">
-              <Image
-                src={"/images/facebook-white-outline.png"}
-                className="cursor-pointer w-10 h-10"
-                alt="facebook"
-                width={41}
-                height={41}
-              />
-              <Image
-                src={"/images/instagram-white-outline.png"}
-                className="cursor-pointer w-10 h-10"
-                alt="Instagram"
-                width={41}
-                height={41}
-              />
-              <Image
-                src={"/images/thread-white-outline.png"}
-                className="cursor-pointer w-10 h-10"
-                alt="threads"
-                width={41}
-                height={41}
-              />
-              <Image
-                src={"/images/linkedin-white-outline.png"}
-                className="cursor-pointer w-10 h-10"
-                alt="linkedin"
-                width={41}
-                height={41}
-              />
+              <Link href={ContactLinks.facebook}>
+                <Image
+                  src={"/images/facebook-white-outline.png"}
+                  className="cursor-pointer w-10 h-10"
+                  alt="facebook"
+                  width={41}
+                  height={41}
+                />
+              </Link>
+
+              <Link href={ContactLinks.instagram}>
+                <Image
+                  src={"/images/instagram-white-outline.png"}
+                  className="cursor-pointer w-10 h-10"
+                  alt="Instagram"
+                  width={41}
+                  height={41}
+                />
+              </Link>
             </div>
           </div>
         </div>
