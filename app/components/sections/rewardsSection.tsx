@@ -105,14 +105,12 @@ const AwardsSection = ({ className }: { className?: string }) => {
           </li>
           <li>
             <span className="text-red-600">35 Projects </span> Completion
-            Certified
+            Certificates
           </li>
         </ul>
 
         {/* Decorative footer lines */}
-        <div className="flex flex-col items-center mt-20 space-y-4">
-          <div className="w-full max-w-3xl h-[1px] bg-gray-200" />
-          <div className="w-full max-w-2xl mt-2 h-[1px] bg-gray-200" />
+        <div className="flex flex-col items-center mt-20 mb-5 space-y-4">
           <div className="w-full max-w-xl mt-2 h-[1px] bg-gray-200 mb-4" />
         </div>
       </main>
