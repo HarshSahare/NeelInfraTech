@@ -4,7 +4,7 @@ import { DirectorsInfo } from "../lib/directors";
 
 function StoriesPage() {
   const galleryBaseUrl = "/images/gallery/img";
-  const totalImages = 31;
+  const totalImages = 30;
 
   return (
     <div className="flex flex-col">
