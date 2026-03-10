@@ -100,11 +100,11 @@ const AwardsSection = ({ className }: { className?: string }) => {
 
         <ul className="mt-40 uppercase font-classica w-fit mx-auto text-4xl font-bold">
           <li className="mb-10">
-            Successful <span className="text-red-600">Sold Out</span> 85
+            Successful <span className="text-red-600">Sold Out</span> 95+
             Projects
           </li>
           <li>
-            <span className="text-red-600">35 Projects </span> Completion
+            <span className="text-red-600">55+ Projects </span> Completion
             Certificates
           </li>
         </ul>
