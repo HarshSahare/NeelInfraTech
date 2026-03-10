@@ -4,7 +4,7 @@ import { DirectorsInfo } from "../lib/directors";
 
 function StoriesPage() {
   const galleryBaseUrl = "/images/gallery/img";
-  const totalImages = 34;
+  const totalImages = 31;
 
   return (
     <div className="flex flex-col">
@@ -86,15 +86,20 @@ function StoriesPage() {
 
             <div className="h-[0.5px] w-[50%] translate-x-[50%] md:translate-x-0 bg-[#6A5F6C] my-6 md:10"></div>
 
-            <div className="text-md text-[#6A5F6C]">
-              At Neel Infratech, our mission is simple — to make real estate
-              transparent, accessible, and truly rewarding for everyone. We aim
-              to help people not just buy land, but secure their dreams and
-              create lasting value through smart property choices. We envision a
-              future where Neel Infratech becomes a leading name in Nagpur’s
-              real estate industry, known for trust, integrity, and meaningful
-              customer relationships.
-            </div>
+            <ul className="text-md text-[#6A5F6C] uppercase list-disc">
+              <li>
+                Partnership of company with our great leaders, customers & staff
+                till 2026
+              </li>
+              <li>Resale Counters for our customers till 2027</li>
+              <li>
+                To teach those land mafias who looted your hard earned money
+              </li>
+              <li>
+                To teach those organizational mafias who cheated with your
+                incentives and tds
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -122,7 +127,7 @@ function StoriesPage() {
               Our Leader
             </div>
             <div className="font-classica font-[400]   uppercase lg:text-5xl text-3xl">
-              Mr. Pitambar ikar
+              Mr. Pitambar Ikhar
             </div>
 
             <div className="h-[0.5px] w-[50%] translate-x-[50%] md:translate-x-0 bg-[#6A5F6C] my-6 md:10"></div>
