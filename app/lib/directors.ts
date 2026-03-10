@@ -62,19 +62,6 @@ export const DirectorsInfo: DirectorsInfoInterface[] = [
     quoteAuthor: "Mr. Gagaram Sakharkar",
   },
   {
-    name: "Mr. Onkar Sonwani Sir",
-    quote: `""Irade nek ho aur mehnat sacchi ho toh har sapna haqiqat ban sakta hai."`,
-    description: `
-      Onkar Sir began his journey of hard work and ambition at the young age of 20. Starting with network marketing, he moved into health product-based marketing, where he gained valuable experience in sales, communication, and team building.
-      <br/><br/>Through his network, he met Ikar Sir, which led him to enter the world of real estate. That decision changed his life. With determination and the support of Neel Infratech, he turned dreams into reality—buying a house and multiple plots in Nagpur, securing a stable and successful future for his family.
-      `,
-    image: "/images/directors/onkar.png",
-    subDescription:
-      "“Onkar Sir guided us throughout the entire process, making it easy and trustworthy. Thanks to his support, we confidently invested with Neel Infratech. The location, planning, and transparency were impressive — and we’re already seeing growth in our investment.”",
-    quoteAuthor: "Mr. Wakodekar",
-  },
-
-  {
     name: "Mr. Dekate Sir",
     quote: `"Jab tak thakte nahi, tab tak haarte nahi."`,
     description: `
