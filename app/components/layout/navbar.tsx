@@ -53,7 +53,7 @@ function Navbar() {
       navbar.current?.classList.add(
         "transition-opacity",
         "duration-500",
-        "opacity-100"
+        "opacity-100",
       );
     }, 8000);
 
@@ -182,14 +182,16 @@ function Navbar() {
           {/* Mobile Layout */}
           <div className="flex items-center justify-between w-full md:hidden col-span-3 px-2">
             <div>
-              <Image
-                className="h-auto"
-                src="/images/logo.png"
-                alt="logo"
-                width={160}
-                height={32}
-                quality={80}
-              />
+              <Link href={"/"}>
+                <Image
+                  className="h-auto"
+                  src="/images/logo.png"
+                  alt="logo"
+                  width={160}
+                  height={32}
+                  quality={80}
+                />
+              </Link>
             </div>
             <button
               className="text-white text-3xl cursor-pointer"
