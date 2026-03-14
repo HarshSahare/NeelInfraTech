@@ -7,6 +7,7 @@ export interface PropertyCardProps {
   title: string;
   location: string;
   bedrooms: string;
+  brochure: string;
   className?: string;
   ref?: React.RefObject<HTMLElement | null>;
 }
@@ -16,6 +17,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   title,
   location,
   bedrooms,
+  brochure,
   className,
 }) => {
   return (
@@ -60,7 +62,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
         </div>
 
-        <div className="w-fit mt-5 h-fit ">
+        <div className="w-fit mt-5 h-fit">
           <Link
             className="bg-black font-400 font-poppins cursor-pointer text-[#F5F5F5]   py-2 px-6 rounded-[23px] text-[11px]"
             style={{ padding: "15px 28px" }}
@@ -68,6 +70,16 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           >
             Learn More
           </Link>
+          <a
+            download={
+              title.toLocaleLowerCase().replaceAll("-", " ") + " brochure.pdf"
+            }
+            href={brochure}
+            style={{ padding: "15px 28px" }}
+            className="backdrop-blur-xl bg-[#d9d9d900] min-w-fit cursor-pointer font-400 mx-2 font-poppins text-black border-1 border-black py-2 px-6 rounded-[23px] text-[11px]"
+          >
+            Download Brochure
+          </a>
         </div>
       </div>
     </div>
