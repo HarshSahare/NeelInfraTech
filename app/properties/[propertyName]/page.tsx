@@ -30,7 +30,7 @@ async function PropertiesDetail({
   const propertyDetail =
     Properties[propertyName.toLocaleLowerCase().replaceAll("-", " ")];
   const propertyCards = getRandomProperties(
-    propertyName.toLocaleLowerCase().replaceAll("-", " ")
+    propertyName.toLocaleLowerCase().replaceAll("-", " "),
   );
 
   return (
@@ -150,7 +150,7 @@ async function PropertiesDetail({
                   {data.text}
                 </div>
               </div>
-            )
+            ),
           )}
         </div>
       </div>
@@ -222,6 +222,7 @@ async function PropertiesDetail({
               title={property.title}
               location={property.location}
               bedrooms={property.bedrooms}
+              brochure={property.brochure}
             />
           ))}
         </div>
