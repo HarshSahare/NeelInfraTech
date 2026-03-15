@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "googleapis": "^171.4.0",
     "install": "^0.13.0",
     "next": "15.2.8",
     "react": "^19.0.0",
