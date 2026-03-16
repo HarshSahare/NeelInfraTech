@@ -1,9 +1,44 @@
 import { ContactLinks } from "@/app/lib/contactLinks";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const ContactSection = ({ className }: { className?: string }) => {
+  const [data, setData] = useState({ Name: "", Mobile: "", Email: "" });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/append", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          values: [data.Name, data.Mobile, data.Email],
+          header: ["Name", "Mobile", "Email"],
+          sheetName: "Contact Requests",
+        }),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        alert("Your request has been submitted!");
+        setData({ Name: "", Mobile: "", Email: "" });
+      } else {
+        alert("There was an error submitting your request.");
+      }
+    } catch (error) {
+      alert("Something went wrong.");
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div
       id="contact"
@@ -64,12 +99,15 @@ const ContactSection = ({ className }: { className?: string }) => {
 
       {/* Right Section */}
       <div className="w-full md:w-1/2 p-6 sm:p-12 bg-white flex flex-col justify-center">
-        <form className="space-y-8 px-10">
+        <form className="space-y-8 px-10" onSubmit={handleSubmit}>
           <div>
             <label className="block text-base sm:text-lg font-[400] font-classica">
               NAME
             </label>
             <input
+              value={data.Name}
+              required
+              onChange={(e) => setData({ ...data, Name: e.target.value })}
               type="text"
               className="w-full border-b border-black outline-none py-2"
             />
@@ -81,7 +119,13 @@ const ContactSection = ({ className }: { className?: string }) => {
             </label>
             <div className="flex items-center border-b border-black py-2">
               <span>+91</span>
-              <input type="tel" className="ml-4 w-full outline-none" />
+              <input
+                className="ml-4 w-full outline-none"
+                type="tel"
+                required
+                value={data.Mobile}
+                onChange={(e) => setData({ ...data, Mobile: e.target.value })}
+              />
             </div>
           </div>
 
@@ -91,26 +135,25 @@ const ContactSection = ({ className }: { className?: string }) => {
             </label>
             <input
               type="email"
+              value={data.Email}
+              required
+              onChange={(e) => setData({ ...data, Email: e.target.value })}
               className="w-full border-b border-black outline-none py-2"
             />
           </div>
 
-          <div className="space-y-4 text-sm font-classica font-[400] mt-12">
-            <label className="flex items-center gap-2">
-              <input type="checkbox" />
-              TERM AND CONDITION
-            </label>
-            <label className="flex items-center gap-2">
-              <input type="checkbox" />
-              PRIVACY POLICIES
-            </label>
-          </div>
-
           <button
             type="submit"
-            className="bg-black w-full text-white py-4 px-6 text-sm tracking-widest"
+            className="bg-black w-full text-white py-4 px-6 text-sm tracking-widest cursor-pointer"
           >
-            REQUEST A CALLBACK
+            {loading ? (
+              <span className="flex justify-center items-center gap-2">
+                <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                Submitting...
+              </span>
+            ) : (
+              "REQUEST A CALLBACK"
+            )}
           </button>
         </form>
       </div>
