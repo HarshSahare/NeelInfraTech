@@ -68,8 +68,6 @@ function VisionSection({ className }: { className?: string }) {
         {/* Left Text */}
         <div className="md:flex-1 font-classica text-xs sm:text-sm text-[#918F8F] font-[400] flex flex-col justify-end px-4 md:px-0 pb-10 md:pb-20">
           <div className="mb-4 md:pl-12">
-            <p>APR 30 2025</p>
-            <div className="h-[0.2px] w-[40%] my-3 bg-[#918F8F]"></div>
             <p className="text-left">
               Today, his vision continues to guide a dedicated team, committed
               to building
@@ -109,8 +107,6 @@ function VisionSection({ className }: { className?: string }) {
               work, and <br className="hidden sm:block" />
               unwavering belief.
             </p>
-            <div className="h-[0.2px] w-[40%] my-3 bg-[#918F8F]"></div>
-            <p>Nov 21 2017</p>
           </div>
         </div>
       </div>

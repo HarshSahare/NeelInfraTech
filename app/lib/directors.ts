@@ -62,7 +62,7 @@ export const DirectorsInfo: DirectorsInfoInterface[] = [
     quoteAuthor: "Mr. Gagaram Sakharkar",
   },
   {
-    name: "Mr. Dekate Sir",
+    name: "Mr. Prashantgi Dekate Sir",
     quote: `"Jab tak thakte nahi, tab tak haarte nahi."`,
     description: `
       Born in Kargaon village, Nagpur, Dekate Sir came from a humble farming background. After completing his M.A. in English Literature from Morris College along with B.Ed. and BML, he began working as a Junior College Lecturer in 1995.

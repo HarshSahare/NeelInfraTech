@@ -8,7 +8,7 @@ function Footer() {
       <div className="text-center font-classica py-10">
         <h2 className="text-6xl font-[400] tracking-wide">NEEL INFRATECH</h2>
         <p className="text-3xl text-[#727673] text-center mt-5">
-          The Art of Living
+          Time Bound Delivery with Development
         </p>
       </div>
 
@@ -71,8 +71,11 @@ function Footer() {
             <li>
               <strong>Head Office:</strong> Neel Infratech Pvt. Ltd.
             </li>
-            <li>[Office Address Line 1]</li>
-            <li>Nagpur, Maharashtra</li>
+            <li>
+              Flat No. 201-202, 2<sup>nd</sup> Floor, 16, Ujjwal Co-op Ho.
+              Society, Narendra Nagar Sqaure, Ring Road
+            </li>
+            <li>Nagpur - 440015, Maharashtra</li>
             <li>📞 +91-XXXXXXXXXX</li>
             <li>✉ info@neelinfratech.com</li>
           </ul>
