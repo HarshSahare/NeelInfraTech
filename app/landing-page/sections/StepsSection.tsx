@@ -42,13 +42,12 @@ export default function StepsSection() {
           </h2>
 
           <p className="text-gray-500 text-sm max-w-2xl font-poppins mx-auto">
-            We've streamlined the journey from interest to ownership. Each stage
-            moves you closer to securing your plot in Nagpur’s best
+            We&apos;ve streamlined the journey from interest to ownership. Each
+            stage moves you closer to securing your plot in Nagpur&apos;s best
             neighborhoods.
           </p>
         </div>
 
-        {/* Timeline */}
         <div className="relative">
           {/* Line */}
 

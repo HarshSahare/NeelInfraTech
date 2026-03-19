@@ -46,6 +46,7 @@ function ContactUsModel({
         alert("There was an error submitting your request.");
       }
     } catch (error) {
+      console.error("Error submitting form:", error);
       alert("Something went wrong.");
     }
 

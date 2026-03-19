@@ -1,8 +1,3 @@
-"use client";
-
-import Image from "next/image";
-import { FaPlay } from "react-icons/fa";
-
 export default function ClientStoriesSection() {
   return (
     <section className="py-24">

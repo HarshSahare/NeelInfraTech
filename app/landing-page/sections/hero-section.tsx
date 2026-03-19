@@ -10,7 +10,7 @@ function HeroSection() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/append", {
+      await fetch("/api/append", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
