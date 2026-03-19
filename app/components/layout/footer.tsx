@@ -69,7 +69,7 @@ function Footer() {
             style={{ paddingLeft: "0px" }}
           >
             <li>
-              <strong>Head Office:</strong> Neel Infratech Pvt. Ltd.
+              <strong>Office:</strong> Neel Infratech Pvt. Ltd.
             </li>
             <li>
               Flat No. 201-202, 2<sup>nd</sup> Floor, 16, Ujjwal Co-op Ho.
