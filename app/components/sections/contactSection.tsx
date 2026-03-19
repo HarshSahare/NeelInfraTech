@@ -1,3 +1,4 @@
+"use client";
 import { ContactLinks } from "@/app/lib/contactLinks";
 import Image from "next/image";
 import Link from "next/link";
