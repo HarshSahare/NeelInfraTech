@@ -4,25 +4,25 @@ import { FaWpforms, FaCar, FaPhoneAlt, FaMapMarkedAlt } from "react-icons/fa";
 
 const steps = [
   {
-    icon: <FaWpforms size={20} />,
+    icon: <FaWpforms size={35} />,
     title: "Fill the Lead Form",
     desc1: "Name + Mobile + Date",
     desc2: "Select your preferred site visit date",
   },
   {
-    icon: <FaCar size={20} />,
+    icon: <FaCar size={35} />,
     title: "Free Pickup Arranged",
     desc1: "From Nagpur City",
     desc2: "Complimentary pickup & drop for all visitors",
   },
   {
-    icon: <FaPhoneAlt size={20} />,
+    icon: <FaPhoneAlt size={35} />,
     title: "Call / WhatsApp",
     desc1: "+91",
     desc2: "Instant response — talk to our plot advisor",
   },
   {
-    icon: <FaMapMarkedAlt size={20} />,
+    icon: <FaMapMarkedAlt size={35} />,
     title: "Visit the Site",
     desc1: "See it. Believe it. Invest.",
     desc2: "Walk the land near MIHAN & Samruddhi Expressway",
@@ -53,7 +53,7 @@ export default function StepsSection() {
 
           {/* Steps */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 text-center relative">
-            <div className="hidden md:block absolute left-0 right-0 top-3 w-full h-[2px] bg-black" />
+            <div className="hidden md:block absolute left-0 right-0 top-3 w-full h-[5px] bg-black" />
             {steps.map((step, index) => (
               <div key={index} className="relative flex flex-col items-center">
                 {/* Number Circle */}
@@ -62,10 +62,10 @@ export default function StepsSection() {
                 </div>
 
                 {/* Icon */}
-                <div className="mb-4 text-black">{step.icon}</div>
+                <div className="mb-6 text-black">{step.icon}</div>
 
                 {/* Title */}
-                <h3 className="font-medium mb-2  font-classica">
+                <h3 className="font-medium  text-xl mb-2  font-classica">
                   {step.title}
                 </h3>
 

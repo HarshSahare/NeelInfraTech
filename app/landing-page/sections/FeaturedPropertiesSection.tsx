@@ -49,7 +49,7 @@ export default function FeaturedPropertiesSection() {
 
                 {/* Content */}
                 <div className="mt-4 flex flex-col flex-grow">
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
+                  <h3 className="font-semibold text-2xl mb-2">{item.title}</h3>
 
                   {/* Description */}
                   <p

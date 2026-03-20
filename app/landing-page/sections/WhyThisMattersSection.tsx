@@ -51,7 +51,7 @@ export default function WhyThisMattersSection() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-12">
-          <p className="text-xs tracking-widest font-classica font-semibold mb-2">
+          <p className="text-xs tracking-widest font-poppins font-semibold mb-2">
             Growth
           </p>
           <h2 className="text-3xl md:text-4xl font-classica mb-4">
@@ -78,17 +78,13 @@ export default function WhyThisMattersSection() {
           ))}
         </div>
 
-        {/* Content Panel */}
-        <div className="border border-black border-t-0 bg-white p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center">
-          {/* LEFT CONTENT */}
+        <div className="border border-black border-t-0 bg-white p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center font-poppins">
           <div className="md:w-1/2">
-            <p className="text-xs uppercase mb-2">{current.label}</p>
-
-            <h3 className="text-xl md:text-2xl font-semibold mb-4 leading-snug">
+            <p className="text-md uppercase mb-2">{current.label}</p>
+            <h3 className="text-xl md:text-4xl mb-4 leading-snug font-classica">
               {current.title}
             </h3>
-
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-md leading-relaxed">
               {current.desc}
             </p>
           </div>

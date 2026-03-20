@@ -45,11 +45,11 @@ const features = [
 
 export default function FeaturesGridSection() {
   return (
-    <section className="py-24]">
+    <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">
-          <p className="text-xs uppercase font-classica font-semibold  text-black mb-2">
+          <p className="text-md  font-poppins font-semibold  text-black mb-2">
             Built
           </p>
 
