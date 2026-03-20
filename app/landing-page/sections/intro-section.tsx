@@ -12,10 +12,10 @@ const features = [
 
 export default function IntroSection() {
   return (
-    <section className="py-16 ">
+    <section className="py-30">
       <div className="lg:max-w-[calc(100%-20rem)] mx-auto px-6 text-center">
         {/* Top Images + Text */}
-        <div className="flex xl:flex-row flex-col items-center justify-center gap-6 mb-10">
+        <div className="flex xl:flex-row flex-col items-center justify-center gap-6 mb-25">
           {/* Left Image */}
           <div className="m-auto">
             <Image
@@ -60,7 +60,7 @@ export default function IntroSection() {
             {features.slice(0, 4).map((item, index) => (
               <div
                 key={index}
-                className="bg-[#F0F0F0] lg:max-w-60 flex-1 min-w-[200px] rounded-xl py-3 px-6 font-poppins text-xl font-medium flex mx-auto text-center items-center justify-center"
+                className="bg-[#F0F0F0] lg:max-w-60 flex-1 min-w-[200px] rounded-xl py-8 px-6 font-semibold font-poppins text-xl  flex mx-auto text-center items-center justify-center"
               >
                 {item}
               </div>
@@ -71,7 +71,7 @@ export default function IntroSection() {
             {features.slice(4, 6).map((item, index) => (
               <div
                 key={index}
-                className="bg-[#F0F0F0] lg:max-w-60 flex-1 min-w-[200px] rounded-xl py-3 px-6 font-poppins text-xl font-medium flex mx-auto text-center items-center justify-center"
+                className="bg-[#F0F0F0] lg:max-w-60 flex-1 min-w-[200px] rounded-xl py-6 px-6 font-semibold font-poppins text-xl flex mx-auto text-center items-center justify-center"
               >
                 {item}
               </div>

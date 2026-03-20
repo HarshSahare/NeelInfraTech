@@ -33,7 +33,7 @@ export default function WhyInvestorsSection() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-12">
-          <p className="text-xs uppercase font-semibold font-classica text-black mb-2">
+          <p className="text-sm uppercase font-semibold font-poppins text-black mb-2">
             Returns
           </p>
 

@@ -33,7 +33,7 @@ export default function ValueComparisonSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">
-          <p className="text-xs uppercase tracking-widest font-classica mb-2 font-semibold ">
+          <p className="text-xs uppercase tracking-widest font-poppins mb-2 font-semibold ">
             Value
           </p>
 

@@ -51,15 +51,15 @@ export default function ExclusivePropertiesSection() {
         {/* Heading */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-14">
           <div>
-            <p className="text-xs  font-semibold font-classica uppercase text-black mb-3">
+            <p className="text-xs  font-semibold font-poppins uppercase text-black mb-3">
               ● Our Properties
             </p>
-            <h2 className="text-3xl md:text-5xl font-classica  leading-tight">
+            <h2 className="text-3xl md:text-5xl font-extralight font-classica  leading-tight">
               Exclusive properties <br /> crafted for excellence
             </h2>
           </div>
 
-          <p className="text-gray-500 max-w-md mt-4 md:mt-0 text-sm font-poopins">
+          <p className="text-gray-500 max-w-md mt-4 md:mt-0 text-md font-poopins">
             Luxury homes featuring refined architecture, modern amenities, and
             prime locations.
           </p>
