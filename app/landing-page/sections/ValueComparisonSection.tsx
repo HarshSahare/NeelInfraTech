@@ -5,25 +5,25 @@ const comparisons = [
     name: "Godrej City",
     subtitle: "Premium location pricing",
     price: "₹8500",
-    image: "/logos/godrej.png",
+    image: "/images/landing-page-1/competitor-1.png",
   },
   {
     name: "Kalpataru Ardence",
     subtitle: "Strategic value positioning",
     price: "₹1200",
-    image: "/logos/kalpataru.png",
+    image: "/images/landing-page-1/competitor-2.png",
   },
   {
     name: "Lodha Group",
     subtitle: "Strategic value positioning",
     price: "₹1200",
-    image: "/logos/lodha.png",
+    image: "/images/landing-page-1/competitor-3.png",
   },
   {
     name: "Singapore Life City",
     subtitle: "Strategic value positioning",
     price: "₹1200",
-    image: "/logos/singapore.png",
+    image: "/images/landing-page-1/competitor-4.png",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function ValueComparisonSection() {
             >
               {/* Logo Box */}
               <div className="flex justify-center mb-6">
-                <div className="relative w-[140px] h-[140px] border rounded-xl flex items-center justify-center">
+                <div className="relative w-full  md:w-[500px] aspect-square border rounded-xl flex items-center justify-center">
                   <Image
                     src={item.image}
                     alt={item.name}

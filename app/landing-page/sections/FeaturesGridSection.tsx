@@ -9,37 +9,37 @@ const features = [
   {
     title: "Electricity Access",
     desc: "Reliable electricity connection available to ensure uninterrupted power for your future home",
-    image: "/features/electricity.jpg",
+    image: "/images/landing-page-1/property-feature-2.png",
   },
   {
     title: "Water Supply Provision",
     desc: "Planned water supply system to provide a consistent and dependable water source",
-    image: "/features/water.jpg",
+    image: "/images/landing-page-1/property-feature-3.png",
   },
   {
     title: "Planned Plot Layout",
     desc: "Well-designed plot arrangement that ensures proper space utilization and organized development",
-    image: "/features/layout.jpg",
+    image: "/images/landing-page-1/property-feature-4.png",
   },
   {
     title: "Green Surroundings",
     desc: "Peaceful environment surrounded by greenery, offering fresh air and a relaxing lifestyle",
-    image: "/features/green.jpg",
+    image: "/images/landing-page-1/property-feature-5.png",
   },
   {
     title: "Investment-Friendly Location",
     desc: "Strategically located in a rapidly developing area with strong potential for property value growth",
-    image: "/features/location.jpg",
+    image: "/images/landing-page-1/property-feature-6.png",
   },
   {
     title: "Luxurious Clubhouse",
     desc: "A modern clubhouse with premium amenities designed for relaxation, recreation, and social gatherings",
-    image: "/features/clubhouse.jpg",
+    image: "/images/landing-page-1/property-feature-7.png",
   },
   {
     title: "Kids Play Area",
     desc: "Safe and fun play zone where children can enjoy outdoor activities and stay active",
-    image: "/features/kids.jpg",
+    image: "/images/landing-page-1/property-feature-8.png",
   },
 ];
 
