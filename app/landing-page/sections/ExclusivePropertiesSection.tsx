@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import gsap from "gsap";
 import { Properties } from "@/app/lib/properties";
+import Link from "next/link";
 
 export default function ExclusivePropertiesSection() {
   const [current, setCurrent] = useState(0);
@@ -134,7 +135,11 @@ export default function ExclusivePropertiesSection() {
               </div>
 
               <button className="w-full bg-black text-white py-2.5 sm:py-3 rounded-full hover:bg-gray-800 transition text-sm sm:text-base">
-                Property details
+                <Link
+                  href={`/properties/${main.title.toLocaleLowerCase().replaceAll(" ", "-")}`}
+                >
+                  Property details
+                </Link>
               </button>
             </div>
           </div>
