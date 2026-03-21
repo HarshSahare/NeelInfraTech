@@ -151,6 +151,12 @@ function Navbar() {
             </Link>
             <Link
               className="hover:text-white cursor-pointer"
+              href="/why-choose-us"
+            >
+              Why Choose Us
+            </Link>
+            <Link
+              className="hover:text-white cursor-pointer"
               href="/properties"
             >
               Our Properties
@@ -229,6 +235,9 @@ function Navbar() {
           </Link>
           <Link href="/stories" onClick={() => setIsMenuOpen(false)}>
             Our Story
+          </Link>
+          <Link href="/why-choose-us" onClick={() => setIsMenuOpen(false)}>
+            Why Choose Us
           </Link>
           <Link href="/properties" onClick={() => setIsMenuOpen(false)}>
             Our Properties
