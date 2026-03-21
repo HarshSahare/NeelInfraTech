@@ -18,7 +18,7 @@ const steps = [
   {
     icon: <FaPhoneAlt size={35} />,
     title: "Call / WhatsApp",
-    desc1: "+91",
+    desc1: "",
     desc2: "Instant response — talk to our plot advisor",
   },
   {

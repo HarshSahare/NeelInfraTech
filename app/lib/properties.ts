@@ -26,7 +26,15 @@ export const Properties: { [key: string]: propertiesInterface } = {
       title: "Peaceful Living Starts Here",
       description:
         "Vrindavan Park in South Nagpur offers spacious plots surrounded by greenery, perfect for a calm and connected lifestyle",
-      highlights: ["Samrudhi Expressway", "Mihan", "Cancer Hospital"],
+      highlights: [
+        "Near to Samruddhi Expressway",
+        "10 mins to SEZ MIHAN",
+        "Cancer Hospital",
+        "800 meter from the new outer ringroad",
+        "Near to Nagpur International Airport",
+        "Neighbour to Kalpatru & Lodha",
+        "Near upcoming Naveen Nagpur IBFC",
+      ],
     },
     brochure: "/brochures/Vrindavan Park  - Amenities.pdf",
     title: "Vrindavan Park",
@@ -111,7 +119,8 @@ export const Properties: { [key: string]: propertiesInterface } = {
       highlights: [
         "Samrudhi Expressway",
         "Hingna MIDC & Logistic Zone",
-        "Airport",
+        "Near easy access to Nagpur Airport",
+        "Near Nagalwadi Metro station",
       ],
     },
     brochure: "/brochures/Silver Star.pdf",
@@ -198,7 +207,13 @@ export const Properties: { [key: string]: propertiesInterface } = {
       title: "Build Your Future in a Prime Location",
       description:
         "Located in Hingna, Silver Icon gives you the right plot in the right place — great for building your dream or growing your investment.",
-      highlights: ["Besa Square", "The International Airport", "metro station"],
+      highlights: [
+        "Besa Square",
+        "The International Airport",
+        "Near Metro Station",
+        "Near Dmart",
+        "Near Godrej Township",
+      ],
     },
     brochure: "/brochures/Silver Icon.pdf",
     title: "Silver Icon",

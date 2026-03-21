@@ -12,6 +12,18 @@ export default function ExclusivePropertiesSection() {
 
   const properties = Object.values(Properties);
 
+  const highlight = [];
+
+  for (const property of properties) {
+    if (property.heroSection?.highlights) {
+      const h = property.heroSection.highlights.concat(
+        property.amenities?.map((x) => x.text) || [],
+      );
+      highlight.push(h);
+    } else {
+      highlight.push([]);
+    }
+  }
   const getIndex = (offset: number) => {
     return (current + offset + properties.length) % properties.length;
   };
@@ -61,8 +73,8 @@ export default function ExclusivePropertiesSection() {
           </div>
 
           <p className="text-gray-500 max-w-md mt-3 md:mt-0 text-sm sm:text-md font-poppins">
-            Luxury homes featuring refined architecture, modern amenities, and
-            prime locations.
+            Your land. Your investment. Your future. — Premium residential plots
+            with unmatched growth potential.
           </p>
         </div>
 
@@ -81,10 +93,10 @@ export default function ExclusivePropertiesSection() {
           {/* MAIN CARD */}
           <div
             ref={cardRef}
-            className="relative bg-white rounded-2xl shadow-xl flex flex-col md:flex-row overflow-hidden w-full md:w-[850px] z-10 h-[420px] md:h-[300px]"
+            className="relative bg-white rounded-2xl shadow-xl flex flex-col md:flex-row overflow-hidden w-full md:w-[850px] z-10"
           >
             {/* Image */}
-            <div className="w-full md:w-1/2 h-[50%] md:h-full relative">
+            <div className="w-full aspect-video md:w-1/2 h-auto relative">
               <Image
                 src={main.bannerImage}
                 alt={main.title}
@@ -110,12 +122,14 @@ export default function ExclusivePropertiesSection() {
                 </h3>
 
                 <div className="flex gap-2 sm:gap-3 flex-wrap mb-4 sm:mb-6">
-                  <div className="px-2 sm:px-3 py-1 bg-gray-100 rounded-full text-xs sm:text-sm">
-                    {main.amenities[2].text}
-                  </div>
-                  <div className="px-2 sm:px-3 py-1 bg-gray-100 rounded-full text-xs sm:text-sm">
-                    {main.amenities[0].text}
-                  </div>
+                  {highlight[current].map((highlight, index) => (
+                    <div
+                      key={index}
+                      className="px-2 sm:px-3 py-1 bg-gray-100 rounded-full text-xs sm:text-sm"
+                    >
+                      {highlight}
+                    </div>
+                  ))}
                 </div>
               </div>
 
