@@ -20,7 +20,6 @@ export default function ExclusivePropertiesSection() {
   const left = properties[getIndex(-1)];
   const right = properties[getIndex(1)];
 
-  // ✅ Animate on index change (better than setTimeout)
   useEffect(() => {
     if (!cardRef.current) return;
 
@@ -46,20 +45,22 @@ export default function ExclusivePropertiesSection() {
   };
 
   return (
-    <section className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 sm:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-14">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 sm:mb-14">
           <div>
-            <p className="text-xs  font-semibold font-poppins uppercase text-black mb-3">
+            <p className="text-[10px] sm:text-xs font-semibold font-poppins uppercase text-black mb-2 sm:mb-3">
               ● Our Properties
             </p>
-            <h2 className="text-3xl md:text-5xl font-extralight font-classica  leading-tight">
-              Exclusive properties <br /> crafted for excellence
+
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extralight font-classica leading-tight">
+              Exclusive properties <br className="hidden sm:block" /> crafted
+              for excellence
             </h2>
           </div>
 
-          <p className="text-gray-500 max-w-md mt-4 md:mt-0 text-md font-poopins">
+          <p className="text-gray-500 max-w-md mt-3 md:mt-0 text-sm sm:text-md font-poppins">
             Luxury homes featuring refined architecture, modern amenities, and
             prime locations.
           </p>
@@ -67,7 +68,7 @@ export default function ExclusivePropertiesSection() {
 
         {/* Slider */}
         <div className="relative flex items-center justify-center">
-          {/* LEFT CARD */}
+          {/* LEFT CARD (unchanged desktop) */}
           <div className="hidden md:block absolute left-16 transform scale-90 opacity-40">
             <Image
               src={left.bannerImage}
@@ -84,7 +85,7 @@ export default function ExclusivePropertiesSection() {
             className="bg-white rounded-2xl shadow-xl flex flex-col md:flex-row overflow-hidden w-full md:w-[850px] z-10"
           >
             {/* Image */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 h-[220px] sm:h-[300px] md:h-auto">
               <Image
                 src={main.bannerImage}
                 alt={main.title}
@@ -96,37 +97,37 @@ export default function ExclusivePropertiesSection() {
             </div>
 
             {/* Content */}
-            <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+            <div className="w-full md:w-1/2 p-4 sm:p-6 md:p-8 flex flex-col justify-between">
               <div>
-                <p className="text-sm text-gray-500 mb-2">
+                <p className="text-xs sm:text-sm text-gray-500 mb-2">
                   <span className="font-semibold text-black">{main.title}</span>{" "}
                   • {main.location}
                 </p>
 
-                <h3 className="text-2xl font-semibold mb-4">
+                <h3 className="text-lg sm:text-2xl font-semibold mb-3 sm:mb-4">
                   {main.bedrooms}
-                  <span className="text-sm text-gray-400 font-normal">
+                  <span className="text-xs sm:text-sm text-gray-400 font-normal">
                     / Listed price
                   </span>
                 </h3>
 
-                <div className="flex gap-3 flex-wrap mb-6">
-                  <div className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+                <div className="flex gap-2 sm:gap-3 flex-wrap mb-4 sm:mb-6">
+                  <div className="px-2 sm:px-3 py-1 bg-gray-100 rounded-full text-xs sm:text-sm">
                     {main.amenities[2].text}
                   </div>
-                  <div className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+                  <div className="px-2 sm:px-3 py-1 bg-gray-100 rounded-full text-xs sm:text-sm">
                     {main.amenities[0].text}
                   </div>
                 </div>
               </div>
 
-              <button className="w-full bg-black text-white py-3 rounded-full hover:bg-gray-800 transition">
+              <button className="w-full bg-black text-white py-2.5 sm:py-3 rounded-full hover:bg-gray-800 transition text-sm sm:text-base">
                 Property details
               </button>
             </div>
           </div>
 
-          {/* RIGHT CARD */}
+          {/* RIGHT CARD (unchanged desktop) */}
           <div className="hidden md:block absolute right-16 transform scale-90 opacity-40">
             <Image
               src={right.image}
@@ -140,16 +141,16 @@ export default function ExclusivePropertiesSection() {
           {/* ARROWS */}
           <button
             onClick={prev}
-            className="absolute left-2 md:left-24 w-10 h-10 flex items-center justify-center bg-white shadow-lg rounded-full hover:scale-110 transition"
+            className="absolute left-1 sm:left-4 md:left-24 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-white shadow-lg rounded-full hover:scale-110 transition"
           >
-            <FaArrowLeft size={14} />
+            <FaArrowLeft size={12} />
           </button>
 
           <button
             onClick={next}
-            className="absolute right-2 md:right-24 w-10 h-10 flex items-center justify-center bg-white shadow-lg rounded-full hover:scale-110 transition"
+            className="absolute right-1 sm:right-4 md:right-24 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-white shadow-lg rounded-full hover:scale-110 transition"
           >
-            <FaArrowRight size={14} />
+            <FaArrowRight size={12} />
           </button>
         </div>
       </div>
