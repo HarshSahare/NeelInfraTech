@@ -55,10 +55,16 @@ function HeroSection() {
             {/* Chips */}
             <div className="pointer-container font-poppins flex flex-wrap gap-2 sm:gap-5 my-6 sm:my-10">
               <div className="backdrop-blur-md bg-white/20 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm">
+                Metro Connectivity
+              </div>
+              <div className="backdrop-blur-md bg-white/20 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm">
+                Easy Access to Nagpur Airport
+              </div>
+              <div className="backdrop-blur-md bg-white/20 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm">
                 Near Godrej City
               </div>
               <div className="backdrop-blur-md bg-white/20 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm">
-                Near New Nagpur CBD
+                Near New Nagpur CCD
               </div>
               <div className="backdrop-blur-md bg-white/20 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm">
                 Just 10 Min From MIHAN
