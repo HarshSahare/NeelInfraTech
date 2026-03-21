@@ -90,7 +90,7 @@ function HeroSection() {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 required
-                className="w-screen max-w-xs bg-[#EFF1F9] rounded-xs py-2 px-3 outline-none"
+                className="w-[100%] bg-[#EFF1F9] rounded-xs py-2 px-3 outline-none"
               />
 
               <label className="block mt-5 mb-1 text-xs text-[#5E6366]">
@@ -105,7 +105,7 @@ function HeroSection() {
                 }
                 required
                 placeholder="8654321970"
-                className="w-screen max-w-xs bg-[#EFF1F9] rounded-xs py-2 px-3 outline-none"
+                className="w-[100%] bg-[#EFF1F9] rounded-xs py-2 px-3 outline-none"
               />
 
               <button
