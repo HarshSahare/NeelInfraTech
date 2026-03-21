@@ -5,6 +5,12 @@ import Image from "next/image";
 
 const tabs = [
   {
+    label: "Market demand",
+    title: "Rising Property Demand",
+    desc: "Increasing population and job opportunities are driving consistent demand for residential and investment plots.",
+    image: "/images/landing-page-1/CCD_banner.png",
+  },
+  {
     label: "Capital growth",
     title: "Nagpur Gets Mahindra’s Biggest Plant",
     desc: "Mahindra & Mahindra will build its largest integrated auto and tractor manufacturing facility in Nagpur. The project includes an investment of ₹15,000 crore, is expected to create around 10,000 jobs, and production is planned to begin in 2028, strengthening the region’s industrial growth and investment potential.",
@@ -15,12 +21,6 @@ const tabs = [
     title: "Naveen Nagpur IBFC Set to Redefine Central India’s Growth",
     desc: "The Naveen Nagpur International Business & Finance Center (IBFC) marks a massive ₹11,300 crore infrastructure push, transforming Nagpur into a smart, future-ready economic hub. With a sprawling 1,710-acre master plan, world-class amenities, and seamless connectivity via the Samruddhi Mahamarg, this landmark development blends finance, sustainability, and modern urban living—positioning Central India for unprecedented growth and global investment.",
     image: "/images/landing-page-1/infrastrucure-boom.jpg",
-  },
-  {
-    label: "Market demand",
-    title: "Rising Property Demand",
-    desc: "Increasing population and job opportunities are driving consistent demand for residential and investment plots.",
-    image: "/images/landing-page-1/CCD_banner.png",
   },
 ];
 

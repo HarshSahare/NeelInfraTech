@@ -10,7 +10,6 @@ import FeaturedPropertiesSection from "./sections/FeaturedPropertiesSection";
 import StatsSection from "./sections/StatsSection";
 import ClientStoriesSection from "./sections/ClientStoriesSection";
 import ValueComparisonSection from "./sections/ValueComparisonSection";
-import CTASection from "./sections/CTASection";
 import ContactSection from "../components/sections/contactSection";
 
 function LandingPage() {
