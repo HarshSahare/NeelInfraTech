@@ -14,31 +14,31 @@ const tabs = [
     label: "Developer presence",
     title: "Top developers entering the region",
     desc: "Increased developer activity signals strong future appreciation and infrastructure improvements.",
-    image: "/growth.jpg",
+    image: "/images/landing-page-1/developerPresence.avif",
   },
   {
     label: "Highway access",
     title: "Seamless highway connectivity",
     desc: "Direct access to major highways boosts accessibility and property value.",
-    image: "/growth.jpg",
+    image: "/images/landing-page-1/highwayAccess.jpg",
   },
   {
     label: "Commercial hub",
     title: "Growing commercial ecosystem",
     desc: "More offices, retail, and businesses bring demand for residential plots.",
-    image: "/growth.jpg",
+    image: "/images/landing-page-1/commercialHub.webp",
   },
   {
     label: "Infrastructure pace",
     title: "Rapid infrastructure development",
     desc: "Government-backed infrastructure ensures long-term growth.",
-    image: "/growth.jpg",
+    image: "/images/landing-page-1/infrastructurePace.webp",
   },
   {
     label: "Market momentum",
     title: "Strong real estate momentum",
     desc: "Consistent demand increase makes it a high ROI zone.",
-    image: "/growth.jpg",
+    image: "/images/landing-page-1/realestateGrowth.jpg",
   },
 ];
 
