@@ -20,7 +20,7 @@ const tabs = [
     label: "Market demand",
     title: "Rising Property Demand",
     desc: "Increasing population and job opportunities are driving consistent demand for residential and investment plots.",
-    image: "/images/landing-page-1/CCD banner.png",
+    image: "/images/landing-page-1/CCD_banner.png",
   },
 ];
 

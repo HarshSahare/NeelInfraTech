@@ -8,7 +8,7 @@ const tabs = [
     label: "CCD expansion",
     title: "New Nagpur CCD spans seventeen hundred acres",
     desc: "The emerging commercial district creates unprecedented demand for surrounding land. This proximity positions your investment directly in the path of growth.",
-    image: "/images/landing-page-1/ccd banner.png",
+    image: "/images/landing-page-1/CCD_banner.png",
   },
   {
     label: "Developer presence",
