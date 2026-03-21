@@ -1,7 +1,9 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 function HeroSection() {
+  const router = useRouter();
   const [formData, setFormData] = useState({ name: "", mobile: "" });
   const [loading, setLoading] = useState(false);
 
@@ -22,6 +24,7 @@ function HeroSection() {
         }),
       });
       setFormData({ name: "", mobile: "" });
+      router.push("/thankyou");
     } catch (error) {
       console.error("Error submitting form:", error);
     } finally {

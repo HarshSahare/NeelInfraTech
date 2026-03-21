@@ -2,9 +2,11 @@
 import { ContactLinks } from "@/app/lib/contactLinks";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const ContactSection = ({ className }: { className?: string }) => {
+  const router = useRouter();
   const [data, setData] = useState({ Name: "", Mobile: "", Email: "" });
   const [loading, setLoading] = useState(false);
 
@@ -28,8 +30,7 @@ const ContactSection = ({ className }: { className?: string }) => {
       const result = await res.json();
 
       if (result.success) {
-        alert("Your request has been submitted!");
-        setData({ Name: "", Mobile: "", Email: "" });
+        router.push("/thankyou");
       } else {
         alert("There was an error submitting your request.");
       }

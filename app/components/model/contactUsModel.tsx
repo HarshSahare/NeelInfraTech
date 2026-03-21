@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { FaUser, FaEnvelope } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
@@ -12,6 +13,7 @@ function ContactUsModel({
   state: boolean;
   setModelState: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     Name: "",
@@ -39,7 +41,7 @@ function ContactUsModel({
       const result = await res.json();
 
       if (result.success) {
-        alert("Your request has been submitted!");
+        router.push("/thankyou");
         setData({ Name: "", Email: "", Phone: "", Message: "" });
         setModelState(false);
       } else {
