@@ -68,30 +68,28 @@ export default function ExclusivePropertiesSection() {
 
         {/* Slider */}
         <div className="relative flex items-center justify-center">
-          {/* LEFT CARD (unchanged desktop) */}
-          <div className="hidden md:block absolute left-16 transform scale-90 opacity-40">
+          {/* LEFT CARD (desktop only) */}
+          <div className="hidden md:block absolute left-16 w-[200px] h-[260px] overflow-hidden rounded-xl transform scale-90 opacity-40">
             <Image
               src={left.bannerImage}
               alt="left property"
-              width={200}
-              height={260}
-              className="rounded-xl object-cover shadow-md"
+              fill
+              className="object-cover"
             />
           </div>
 
           {/* MAIN CARD */}
           <div
             ref={cardRef}
-            className="bg-white rounded-2xl shadow-xl flex flex-col md:flex-row overflow-hidden w-full md:w-[850px] z-10"
+            className="relative bg-white rounded-2xl shadow-xl flex flex-col md:flex-row overflow-hidden w-full md:w-[850px] z-10 h-[420px] md:h-[300px]"
           >
             {/* Image */}
-            <div className="w-full md:w-1/2 h-[220px] sm:h-[300px] md:h-auto">
+            <div className="w-full md:w-1/2 h-[50%] md:h-full relative">
               <Image
                 src={main.bannerImage}
                 alt={main.title}
-                width={500}
-                height={400}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
                 priority
               />
             </div>
@@ -127,31 +125,47 @@ export default function ExclusivePropertiesSection() {
             </div>
           </div>
 
-          {/* RIGHT CARD (unchanged desktop) */}
-          <div className="hidden md:block absolute right-16 transform scale-90 opacity-40">
+          {/* RIGHT CARD (desktop only) */}
+          <div className="hidden md:block absolute right-16 w-[200px] h-[260px] overflow-hidden rounded-xl transform scale-90 opacity-40">
             <Image
-              src={right.image}
+              src={right.bannerImage}
               alt="right property"
-              width={200}
-              height={260}
-              className="rounded-xl object-cover shadow-md"
+              fill
+              className="object-cover"
             />
           </div>
 
-          {/* ARROWS */}
+          {/* DESKTOP ARROWS */}
           <button
             onClick={prev}
-            className="absolute left-1 sm:left-4 md:left-24 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-white shadow-lg rounded-full hover:scale-110 transition"
+            className="hidden md:flex absolute left-24 z-20 w-10 h-10 items-center justify-center bg-white shadow-lg rounded-full hover:scale-110 transition"
           >
-            <FaArrowLeft size={12} />
+            <FaArrowLeft size={14} />
           </button>
 
           <button
             onClick={next}
-            className="absolute right-1 sm:right-4 md:right-24 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-white shadow-lg rounded-full hover:scale-110 transition"
+            className="hidden md:flex absolute right-24 z-20 w-10 h-10 items-center justify-center bg-white shadow-lg rounded-full hover:scale-110 transition"
           >
-            <FaArrowRight size={12} />
+            <FaArrowRight size={14} />
           </button>
+
+          {/* MOBILE ARROWS (BOTTOM CENTER) */}
+          <div className="md:hidden absolute -bottom-14 left-1/2 -translate-x-1/2 flex gap-4 z-20">
+            <button
+              onClick={prev}
+              className="w-10 h-10 flex items-center justify-center bg-white shadow-lg rounded-full active:scale-95"
+            >
+              <FaArrowLeft size={14} />
+            </button>
+
+            <button
+              onClick={next}
+              className="w-10 h-10 flex items-center justify-center bg-white shadow-lg rounded-full active:scale-95"
+            >
+              <FaArrowRight size={14} />
+            </button>
+          </div>
         </div>
       </div>
     </section>
