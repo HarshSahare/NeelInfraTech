@@ -67,12 +67,12 @@ function HeroSection() {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 font-poppins w-full sm:w-auto">
-              <button className="primary-CTA bg-black px-6 py-3 w-full sm:w-auto">
+              <a
+                href="#contact"
+                className="primary-CTA bg-black px-6 py-3 w-full sm:w-auto cursor-pointer"
+              >
                 Contact Now
-              </button>
-              <button className="secondary-CTA backdrop-blur-md bg-white/20 px-6 py-3 w-full sm:w-auto">
-                Book A Site Visit
-              </button>
+              </a>
             </div>
           </div>
         </div>
