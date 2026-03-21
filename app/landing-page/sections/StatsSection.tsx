@@ -52,7 +52,7 @@ export default function StatsSection() {
           {/* RIGHT IMAGE */}
           <div className="relative w-full h-[300px] md:h-[400px]">
             <Image
-              src="/stats.jpg"
+              src="/images/landing-page-1/statsImage.png"
               alt="community"
               fill
               className="object-cover rounded-md"
