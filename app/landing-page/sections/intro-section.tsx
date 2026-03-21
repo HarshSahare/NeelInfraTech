@@ -12,10 +12,10 @@ const features = [
 
 export default function IntroSection() {
   return (
-    <section className="py-30">
-      <div className="lg:max-w-[calc(100%-20rem)] mx-auto px-6 text-center">
-        {/* Top Images + Text */}
-        <div className="flex xl:flex-row flex-col items-center justify-center gap-6 mb-25">
+    <section className="py-16 sm:py-24 lg:py-30">
+      <div className="lg:max-w-[calc(100%-20rem)] mx-auto px-4 sm:px-6 text-center">
+        {/* Top Section */}
+        <div className="flex xl:flex-row flex-col items-center justify-center gap-6 sm:gap-10 mb-12 sm:mb-20 lg:mb-25">
           {/* Left Image */}
           <div className="m-auto">
             <Image
@@ -23,17 +23,18 @@ export default function IntroSection() {
               alt="building"
               width={800}
               height={800}
-              className="max-w-xs"
+              className="max-w-[140px] sm:max-w-xs"
             />
           </div>
 
           {/* Center Text */}
-          <div className="flex-1 text-center">
-            <p className="font-poppins text-[#757279] mb-4 text-sm flex gap-2 justify-center items-center">
+          <div className="flex-1 text-center max-w-xl">
+            <p className="font-poppins text-[#757279] mb-3 text-xs sm:text-sm flex gap-2 justify-center items-center">
               <FaLocationDot />
               Location Advantage
             </p>
-            <p className="text-black text-base md:text-2xl leading-relaxed font-classica">
+
+            <p className="text-black text-sm sm:text-lg md:text-2xl leading-relaxed font-classica">
               Strategically located premium plots in Nagpur offering excellent
               connectivity, modern infrastructure, and high return on
               investment. A perfect opportunity for both end users and
@@ -48,19 +49,18 @@ export default function IntroSection() {
               alt="city"
               width={800}
               height={800}
-              className="max-w-xs"
+              className="max-w-[140px] sm:max-w-xs"
             />
           </div>
         </div>
 
-        {/* Feature Pills */}
-
+        {/* Desktop Pills (UNCHANGED DESIGN, just responsive spacing) */}
         <div className="hidden xl:block">
           <div className="bg-[#E5E5E5] w-fit mx-auto p-2 rounded-xl flex flex-wrap gap-2">
             {features.slice(0, 4).map((item, index) => (
               <div
                 key={index}
-                className="bg-[#F0F0F0] lg:max-w-60 flex-1 min-w-[200px] rounded-xl py-8 px-6 font-semibold font-poppins text-xl  flex mx-auto text-center items-center justify-center"
+                className="bg-[#F0F0F0] lg:max-w-60 flex-1 min-w-[200px] rounded-xl py-8 px-6 font-semibold font-poppins text-xl flex mx-auto text-center items-center justify-center"
               >
                 {item}
               </div>
@@ -79,12 +79,13 @@ export default function IntroSection() {
           </div>
         </div>
 
+        {/* Mobile Pills */}
         <div className="block xl:hidden">
-          <div className="bg-[#E5E5E5] w-fit mx-auto p-2 rounded-xl flex flex-wrap gap-2">
+          <div className="bg-[#E5E5E5] mx-auto p-2 rounded-xl flex flex-wrap gap-2">
             {features.map((item, index) => (
               <div
                 key={index}
-                className="bg-[#F0F0F0] flex-1 min-w-[200px] rounded-xl py-3 px-6 font-poppins text-xl font-medium flex text-center items-center justify-center"
+                className="bg-[#F0F0F0] flex-1 min-w-[140px] rounded-lg py-2 px-3 font-poppins text-sm sm:text-base font-medium flex text-center items-center justify-center"
               >
                 {item}
               </div>

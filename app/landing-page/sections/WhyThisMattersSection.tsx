@@ -47,51 +47,75 @@ export default function WhyThisMattersSection() {
   const current = tabs[active];
 
   return (
-    <section className="py-24 ">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-16 sm:py-20 md:py-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <p className="text-xs tracking-widest font-poppins font-semibold mb-2">
+        <div className="text-center mb-10 sm:mb-12">
+          <p className="text-[10px] sm:text-xs tracking-widest font-poppins font-semibold mb-2">
             Growth
           </p>
-          <h2 className="text-3xl md:text-4xl font-classica mb-4">
+
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-classica mb-3 sm:mb-4">
             Why this matters
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-sm font-poopins">
+
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm font-poppins">
             This location sits at the intersection of major infrastructure
             development and commercial expansion. The numbers tell a clear story
             about appreciation potential.
           </p>
         </div>
 
-        {/* Tabs */}
-        <div className="flex flex-wrap border border-b-0 border-black rounded-t-lg overflow-hidden">
-          {tabs.map((tab, index) => (
-            <button
-              key={index}
-              onClick={() => setActive(index)}
-              className={`flex-1 capitalize px-6 py-3 font-poppins text-md border-r border-black last:border-r-0 transition font-bold cursor-pointer
+        {/* Tabs / Dropdown */}
+        <div className="border border-b-0 border-black rounded-t-lg overflow-hidden">
+          {/* Desktop Tabs (UNCHANGED) */}
+          <div className="hidden md:flex">
+            {tabs.map((tab, index) => (
+              <button
+                key={index}
+                onClick={() => setActive(index)}
+                className={`flex-1 capitalize px-6 py-3 font-poppins text-md border-r border-black last:border-r-0 transition font-bold cursor-pointer
                 ${active === index ? "border-b-0" : "border-b"}`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Mobile Dropdown */}
+          <div className="md:hidden p-3 bg-white">
+            <select
+              value={active}
+              onChange={(e) => setActive(Number(e.target.value))}
+              className="w-full border border-black rounded-md px-4 py-2 font-poppins text-sm outline-none bg-white"
             >
-              {tab.label}
-            </button>
-          ))}
+              {tabs.map((tab, index) => (
+                <option key={index} value={index}>
+                  {tab.label}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
-        <div className="border border-black border-t-0 bg-white p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center font-poppins">
-          <div className="md:w-1/2">
-            <p className="text-md uppercase mb-2">{current.label}</p>
-            <h3 className="text-xl md:text-4xl mb-4 leading-snug font-classica">
+        {/* Content */}
+        <div className="border border-black border-t-0 bg-white p-4 sm:p-6 md:p-10 flex flex-col md:flex-row gap-6 md:gap-8 items-center font-poppins">
+          {/* Text */}
+          <div className="md:w-1/2 text-center md:text-left">
+            <p className="text-xs sm:text-sm uppercase mb-2">{current.label}</p>
+
+            <h3 className="text-lg sm:text-2xl md:text-4xl mb-3 sm:mb-4 leading-snug font-classica">
               {current.title}
             </h3>
-            <p className="text-gray-600 text-md leading-relaxed">
+
+            <p className="text-gray-600 text-sm sm:text-md leading-relaxed">
               {current.desc}
             </p>
           </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="md:w-1/2">
-            <div className="relative w-full h-[260px] md:h-[500px]">
+          {/* Image */}
+          <div className="md:w-1/2 w-full">
+            <div className="relative w-full h-[200px] sm:h-[260px] md:h-[500px]">
               <Image
                 src={current.image}
                 alt="growth"
