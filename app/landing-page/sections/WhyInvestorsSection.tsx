@@ -20,7 +20,7 @@ const tabs = [
     label: "Infrastructure boom",
     title: "Naveen Nagpur IBFC Set to Redefine Central India’s Growth",
     desc: "The Naveen Nagpur International Business & Finance Center (IBFC) marks a massive ₹11,300 crore infrastructure push, transforming Nagpur into a smart, future-ready economic hub. With a sprawling 1,710-acre master plan, world-class amenities, and seamless connectivity via the Samruddhi Mahamarg, this landmark development blends finance, sustainability, and modern urban living—positioning Central India for unprecedented growth and global investment.",
-    image: "/images/landing-page-1/infrastrucure-boom.jpg",
+    image: "/images/landing-page-1/infrastrucure-boom.png",
   },
 ];
 
