@@ -9,6 +9,7 @@ export interface PropertyCardProps {
   bedrooms: string;
   brochure: string;
   className?: string;
+  highlights?: string[];
   ref?: React.RefObject<HTMLElement | null>;
 }
 
@@ -18,6 +19,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   location,
   bedrooms,
   brochure,
+  highlights,
   className,
 }) => {
   return (
@@ -61,6 +63,19 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             <span>{bedrooms}</span>
           </div>
         </div>
+
+        {highlights && (
+          <div className="flex gap-2 sm:gap-3 overflow-x-auto whitespace-nowrap pb-2 mb-4 sm:mb-6 scrollbar-hide">
+            {highlights.map((highlight, index) => (
+              <div
+                key={index}
+                className="inline-block px-3 py-1 bg-gray-200 rounded-full text-xs sm:text-sm shrink-0"
+              >
+                {highlight}
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="w-fit mt-5 h-fit">
           <Link

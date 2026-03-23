@@ -53,7 +53,7 @@ const PropertiesSection = ({ className }: { className?: string }) => {
         if (!cards.length) return;
 
         const cardsPerView = Math.floor(
-          container.clientWidth / cards[0].clientWidth
+          container.clientWidth / cards[0].clientWidth,
         );
         const totalDots = Math.ceil(cards.length / cardsPerView);
         setNoOfDots(Array.from({ length: totalDots }, (_, i) => i));
@@ -74,10 +74,10 @@ const PropertiesSection = ({ className }: { className?: string }) => {
         if (!cards.length) return;
 
         const cardsPerView = Math.floor(
-          container.clientWidth / cards[0].clientWidth
+          container.clientWidth / cards[0].clientWidth,
         );
         const newIndex = Math.round(
-          container.scrollLeft / (cardsPerView * cards[0].clientWidth + 20)
+          container.scrollLeft / (cardsPerView * cards[0].clientWidth + 20),
         );
         setSelectedIndex(newIndex);
       }
@@ -96,7 +96,7 @@ const PropertiesSection = ({ className }: { className?: string }) => {
 
       setSelectedIndex(index);
       const cardsPerView = Math.floor(
-        container.clientWidth / cards[0].clientWidth
+        container.clientWidth / cards[0].clientWidth,
       );
       const scrollX = index * (cardsPerView * cards[0].clientWidth + 20);
 
@@ -146,7 +146,14 @@ const PropertiesSection = ({ className }: { className?: string }) => {
           >
             <div className="w-full md:w-fit flex gap-5">
               {Object.values(Properties).map((property, index) => (
-                <PropertyCard key={index} {...property} />
+                <PropertyCard
+                  key={index}
+                  bedrooms={property.bedrooms}
+                  brochure={property.brochure}
+                  image={property.image}
+                  location={property.location}
+                  title={property.title}
+                />
               ))}
             </div>
           </div>

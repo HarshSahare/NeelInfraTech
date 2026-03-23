@@ -3,26 +3,18 @@ import Image from "next/image";
 const comparisons = [
   {
     name: "Godrej City",
-    subtitle: "Premium location pricing",
-    price: "₹8500",
     image: "/images/landing-page-1/competitor-1.png",
   },
   {
     name: "Kalpataru Ardence",
-    subtitle: "Strategic value positioning",
-    price: "₹1200",
     image: "/images/landing-page-1/competitor-2.png",
   },
   {
     name: "Lodha Group",
-    subtitle: "Strategic value positioning",
-    price: "₹1200",
     image: "/images/landing-page-1/competitor-3.png",
   },
   {
     name: "Singapore Life City",
-    subtitle: "Strategic value positioning",
-    price: "₹1200",
     image: "/images/landing-page-1/competitor-4.png",
   },
 ];
@@ -63,24 +55,6 @@ export default function ValueComparisonSection() {
                     className="object-contain p-4"
                   />
                 </div>
-              </div>
-
-              {/* Name */}
-              <div className="text-center mb-6">
-                <h3 className="font-medium">{item.name}</h3>
-                <p className="text-xs text-gray-500 mt-1">{item.subtitle}</p>
-              </div>
-
-              {/* Price */}
-              <div className="h-[1px] bg-gray-300 w-full " />
-
-              <div>
-                <div className="flex justify-between text-xs text-gray-500 my-2">
-                  <span>Price per sq ft</span>
-                  <span className="font-semibold text-black">{item.price}</span>
-                </div>
-
-                <div className="h-[1px] bg-gray-300 w-full" />
               </div>
             </div>
           ))}

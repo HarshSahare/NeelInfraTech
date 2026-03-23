@@ -6,7 +6,7 @@ const stats = [
     label: "Projects successfully sold",
   },
   {
-    value: "550+",
+    value: "55+",
     label: "Projects Completion Certificates",
   },
   {

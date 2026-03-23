@@ -5,7 +5,6 @@ import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import gsap from "gsap";
 import { Properties } from "@/app/lib/properties";
-import Link from "next/link";
 
 export default function ExclusivePropertiesSection() {
   const [current, setCurrent] = useState(0);
@@ -115,13 +114,6 @@ export default function ExclusivePropertiesSection() {
                   • {main.location}
                 </p>
 
-                <h3 className="text-lg sm:text-2xl font-semibold mb-3 sm:mb-4">
-                  {main.bedrooms}
-                  <span className="text-xs sm:text-sm text-gray-400 font-normal">
-                    / Listed price
-                  </span>
-                </h3>
-
                 <div className="flex gap-2 sm:gap-3 flex-wrap mb-4 sm:mb-6">
                   {highlight[current].map((highlight, index) => (
                     <div
@@ -135,11 +127,7 @@ export default function ExclusivePropertiesSection() {
               </div>
 
               <button className="w-full bg-black text-white py-2.5 sm:py-3 rounded-full hover:bg-gray-800 transition text-sm sm:text-base">
-                <Link
-                  href={`/properties/${main.title.toLocaleLowerCase().replaceAll(" ", "-")}`}
-                >
-                  Property details
-                </Link>
+                <a href={`#contact`}>Get Property Details</a>
               </button>
             </div>
           </div>

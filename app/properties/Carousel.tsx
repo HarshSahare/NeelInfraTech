@@ -26,7 +26,7 @@ export default function Carousel({
     const container = scrollRef.current;
     if (!container || items.length === 0) {
       setTotalPages(1);
-     
+
       setPageWidth(0);
       return;
     }
@@ -36,7 +36,6 @@ export default function Carousel({
 
     // If everything fits (no scroll), single page
     if (sw <= cw + 1) {
-      
       setPageWidth(cw);
       setTotalPages(1);
       setPage(0);
@@ -45,7 +44,7 @@ export default function Carousel({
 
     // Find first visible child element and compute its outer width (width + margin-right)
     const firstCardEl = Array.from(container.children).find(
-      (c) => (c as HTMLElement).offsetWidth > 0
+      (c) => (c as HTMLElement).offsetWidth > 0,
     ) as HTMLElement | undefined;
 
     const cardOuterWidth = firstCardEl
@@ -57,7 +56,6 @@ export default function Carousel({
     const pw = perPage * cardOuterWidth;
     const pages = Math.max(1, Math.ceil(items.length / perPage));
 
-    
     setPageWidth(pw);
     setTotalPages(pages);
 
@@ -101,7 +99,7 @@ export default function Carousel({
 
     const maxScrollLeft = Math.max(
       0,
-      container.scrollWidth - container.clientWidth
+      container.scrollWidth - container.clientWidth,
     );
     const target = Math.min(pageIndex * pageWidth, maxScrollLeft);
 
@@ -118,7 +116,7 @@ export default function Carousel({
     const container = e.currentTarget;
     const maxScrollLeft = Math.max(
       0,
-      container.scrollWidth - container.clientWidth
+      container.scrollWidth - container.clientWidth,
     );
 
     if (maxScrollLeft <= 1) {
@@ -146,7 +144,7 @@ export default function Carousel({
       const progress = container.scrollLeft / maxScrollLeft;
       const newPage = Math.max(
         0,
-        Math.min(Math.round(progress * (totalPages - 1)), totalPages - 1)
+        Math.min(Math.round(progress * (totalPages - 1)), totalPages - 1),
       );
       if (newPage !== page) setPage(newPage);
     }
@@ -168,7 +166,15 @@ export default function Carousel({
             className="inline-block flex-shrink-0 w-[90vw] md:w-auto"
             style={{ scrollSnapAlign: "start" }}
           >
-            <PropertyCard {...item} className="w-full" />
+            <PropertyCard
+              bedrooms={item.bedrooms}
+              brochure={item.brochure}
+              image={item.image}
+              location={item.location}
+              title={item.title}
+              highlights={item.heroSection.highlights.slice(0, 4)}
+              className="w-full"
+            />
           </div>
         ))}
       </div>
