@@ -11,7 +11,6 @@ import { FaYoutube } from "react-icons/fa";
 import { ContactLinks } from "@/app/lib/contactLinks";
 
 function Navbar() {
-  const prevY = useRef(0);
   const mobile_menu = useRef<HTMLDivElement>(null);
   const mobile_menu_container = useRef<HTMLDivElement>(null);
   const navbar = useRef<HTMLDivElement>(null);
