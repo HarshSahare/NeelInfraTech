@@ -15,7 +15,6 @@ function Navbar() {
   const mobile_menu = useRef<HTMLDivElement>(null);
   const mobile_menu_container = useRef<HTMLDivElement>(null);
   const navbar = useRef<HTMLDivElement>(null);
-  const [loaded, setLoaded] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const timeline = gsap.timeline();
   const isMenuOpenRef = useRef(isMenuOpen);
@@ -47,54 +46,6 @@ function Navbar() {
   }, [isMenuOpen]);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoaded(true);
-      navbar.current?.classList.remove("opacity-0", "fadeIn", "delay-7s");
-      navbar.current?.classList.add(
-        "transition-opacity",
-        "duration-500",
-        "opacity-100",
-      );
-    }, 8000);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
-    if (!loaded) return;
-
-    const handleScroll = () => {
-      const currentY = window.scrollY;
-
-      if (currentY > 100) {
-        navbar.current?.classList.remove("bg-[#00000042]");
-        navbar.current?.classList.add("bg-[#0000009c]");
-      } else {
-        navbar.current?.classList.add("bg-[#00000042]");
-        navbar.current?.classList.remove("bg-[#0000009c]");
-      }
-
-      if (!isMenuOpenRef.current) {
-        if (currentY > prevY.current) {
-          navbar.current?.classList.remove("opacity-100");
-          navbar.current?.classList.add("opacity-0", "pointer-events-none");
-        } else {
-          navbar.current?.classList.add("opacity-100");
-          navbar.current?.classList.remove("opacity-0", "pointer-events-none");
-        }
-      } else {
-        navbar.current?.classList.add("opacity-100");
-        navbar.current?.classList.remove("opacity-0", "pointer-events-none");
-      }
-
-      prevY.current = currentY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [loaded]);
-
-  useEffect(() => {
     navbar.current?.classList.add("opacity-100");
     navbar.current?.classList.remove("opacity-0", "pointer-events-none");
   }, [isMenuOpen]);
@@ -105,7 +56,7 @@ function Navbar() {
         ref={navbar}
         className={`fixed  md:block flex items-center top-0 left-0 z-50 w-full min-h-[var(--navbar-h)] backdrop-blur-md ${
           isMenuOpen ? "bg-black/80" : "bg-[#00000042]"
-        } opacity-0 fadeIn delay-7s`}
+        }`}
       >
         <div className="w-screen hidden md:flex bg-white  overflow-hidden">
           <div className="flex-4 p-2 flex pl-30 text-xl items-center ">
