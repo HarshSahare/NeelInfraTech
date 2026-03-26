@@ -234,3 +234,34 @@ function StoriesPage() {
 }
 
 export default StoriesPage;
+
+export const metadata = {
+  title: "About Neel Infra Tech | Trusted Real Estate Developer in Nagpur",
+
+  description:
+    "Learn about Neel Infra Tech, a trusted real estate developer in Nagpur offering premium residential and investment plots with transparency and long-term value.",
+
+  keywords: [
+    "Neel Infra Tech",
+    "real estate company in Nagpur",
+    "trusted property developer Nagpur",
+    "Nagpur real estate company",
+    "property developers in Nagpur",
+  ],
+
+  openGraph: {
+    title: "About Neel Infra Tech",
+    description:
+      "Discover the vision, mission, and leadership behind Neel Infra Tech in Nagpur.",
+    url: "https://www.neelinfratech.com/about",
+    siteName: "Neel Infra Tech",
+    images: [
+      {
+        url: "/images/storiesBanner.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+};
