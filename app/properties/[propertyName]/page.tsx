@@ -39,7 +39,7 @@ async function PropertiesDetail({
         <div className="absolute bg-linear-to-b from-[#1212121a] to-[#12121275] inset-0"></div>
         <Image
           src={propertyDetail.bannerImage}
-          alt="Properties Background"
+          alt={`${propertyDetail.title} plots in Nagpur`}
           width={1920}
           height={1080}
           className="w-full h-full object-cover"
@@ -170,7 +170,7 @@ async function PropertiesDetail({
                     propertyDetail.gallery?.content[0].src) ||
                   ""
                 }
-                alt="Property Image"
+                alt={`${propertyDetail.title} plots in Nagpur`}
                 width={600}
                 height={400}
                 className="w-full h-auto object-cover"
@@ -195,7 +195,7 @@ async function PropertiesDetail({
                     propertyDetail.gallery?.content[1].src) ||
                   ""
                 }
-                alt="Property Image"
+                alt={`${propertyDetail.title} plots in Nagpur`}
                 width={600}
                 height={400}
                 className="w-full h-auto object-cover"
@@ -236,4 +236,42 @@ export async function generateStaticParams() {
   return Object.keys(Properties).map((key) => ({
     propertyName: key.replace(" ", "-"),
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ propertyName: string }>;
+}) {
+  const propertyName = (await params).propertyName;
+  const property = Properties[propertyName.toLowerCase().replaceAll("-", " ")];
+
+  if (!property) return {};
+
+  const highlights = property.heroSection?.highlights || [];
+
+  return {
+    title: `${property.title} | Plots in Nagpur | Neel Infra Tech`,
+
+    description: `${property.title} offers premium residential plots in Nagpur with features like ${highlights.slice(0, 3).join(", ")}. Ideal for investment and future growth.`,
+
+    keywords: [
+      `${property.title} plots`,
+      "plots in Nagpur",
+      "residential plots in Nagpur",
+      ...highlights.map((h) => `${h} residential plots in Nagpur`),
+    ],
+
+    openGraph: {
+      title: property.title,
+      description: `Explore ${property.title} in Nagpur with ${highlights.join(", ")}`,
+      images: [
+        {
+          url: property.bannerImage,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+  };
 }
