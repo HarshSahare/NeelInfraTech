@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaLocationDot } from "react-icons/fa6";
+import { BsFillGrid1X2Fill } from "react-icons/bs";
 
 export interface PropertyCardProps {
   image: string;
@@ -42,23 +44,13 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         <div className="flex font-poppins font-[300] py-5 items-center  text-[#5D5B68] text-xs gap-4">
           <div className="flex flex-1 items-center  gap-1">
             <span>
-              <Image
-                src={"/images/home-outline.png"}
-                alt="house icon"
-                width={15}
-                height={12}
-              />
+              <FaLocationDot />
             </span>
             <span className="capitalize">{location}</span>
           </div>
           <div className="flex flex-1 items-center gap-1">
             <span>
-              <Image
-                src={"/images/bed-outline.png"}
-                alt="bed icon"
-                width={15}
-                height={12}
-              />
+              <BsFillGrid1X2Fill />
             </span>
             <span>{bedrooms}</span>
           </div>
@@ -86,9 +78,8 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             Learn More
           </Link>
           <a
-            download={
-              title.toLocaleLowerCase().replaceAll("-", " ") + " brochure.pdf"
-            }
+            target="_blank"
+            rel="noopener noreferrer"
             href={brochure}
             style={{ padding: "15px 28px" }}
             className="backdrop-blur-xl bg-[#d9d9d900] min-w-fit cursor-pointer font-400 mx-2 font-poppins text-black border-1 border-black py-2 px-6 rounded-[23px] text-[11px]"

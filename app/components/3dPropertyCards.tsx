@@ -2,6 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { FaLocationDot } from "react-icons/fa6";
+import { BsFillGrid1X2Fill } from "react-icons/bs";
 
 interface PropertyCardProps {
   image: string;
@@ -105,23 +107,13 @@ const PropertyCard3d: React.FC<PropertyCardProps> = ({
         <div className="flex font-poppins font-[300] py-5 items-center  text-[#5D5B68] text-xs gap-4">
           <div className="flex flex-1 items-center  gap-1">
             <span>
-              <Image
-                src={"/images/home-outline.png"}
-                alt="house icon"
-                width={15}
-                height={12}
-              />
+              <FaLocationDot />
             </span>
             <span>{location}</span>
           </div>
           <div className="flex flex-1 items-center gap-1">
             <span>
-              <Image
-                src={"/images/bed-outline.png"}
-                alt="bed icon"
-                width={15}
-                height={12}
-              />
+              <BsFillGrid1X2Fill />
             </span>
             <span>{bedrooms}</span>
           </div>

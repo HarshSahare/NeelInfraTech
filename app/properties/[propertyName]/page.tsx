@@ -69,10 +69,8 @@ async function PropertiesDetail({
                 Contact Now
               </Link>
               <a
-                download={
-                  propertyName.toLocaleLowerCase().replaceAll("-", " ") +
-                  " brochure.pdf"
-                }
+                target="_blank"
+                rel="noopener noreferrer"
                 href={propertyDetail.brochure}
                 className="backdrop-blur-xl bg-[#D9D9D921] px-4 py-3 min-w-fit cursor-pointer"
               >
