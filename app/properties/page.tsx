@@ -6,27 +6,12 @@ import ContactSection from "../components/sections/contactSection";
 import { Properties } from "../lib/properties";
 import { onScroll } from "../lib/utils";
 import Carousel from "./Carousel";
-import FeaturedProperties from "./FeaturedProperties";
 import CompletedCards from "../components/sections/completedCards";
+import ExclusivePropertiesSection from "../why-choose-us/sections/ExclusivePropertiesSection";
 
 export default function Page() {
   const propertiesScrollRef = useRef<HTMLDivElement>(null);
   const [propertiesPage, setPropertiesPage] = useState(0);
-
-  const featuredProperties = [
-    {
-      src: "/images/silver_star_header_image.jpg",
-      title: "Silver Star",
-      location: Properties["silver star"].location,
-      desc: "Where Your Plot Comes with a Resort Lifestyle.",
-    },
-    {
-      src: "/images/propertiesDetailedImage2.png",
-      title: "Silver Icon",
-      location: Properties["silver icon"].location,
-      desc: "Where Your Plot Comes with a Resort Lifestyle.",
-    },
-  ];
 
   const completedProperties = [
     {
@@ -79,7 +64,10 @@ export default function Page() {
         </div>
       </div>
 
-      <FeaturedProperties properties={featuredProperties} />
+      <ExclusivePropertiesSection
+        properties={Object.values(Properties)}
+        config={{ showButton: false }}
+      />
 
       <section>
         <div className="font-classica text-center mb-8">

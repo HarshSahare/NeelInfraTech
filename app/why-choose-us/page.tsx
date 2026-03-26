@@ -11,13 +11,16 @@ import StatsSection from "./sections/StatsSection";
 import ClientStoriesSection from "./sections/ClientStoriesSection";
 import ValueComparisonSection from "./sections/ValueComparisonSection";
 import ContactSection from "../components/sections/contactSection";
+import { Properties } from "../lib/properties";
+
+const properties = Object.values(Properties);
 
 function LandingPage() {
   return (
     <div>
       <HeroSection />
       <IntroSection />
-      <ExclusivePropertiesSection />
+      <ExclusivePropertiesSection properties={properties} />
       <WhyThisMattersSection />
       <ValueComparisonSection />
       <FeaturesGridSection />

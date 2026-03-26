@@ -127,7 +127,6 @@ async function PropertiesDetail({
 
       <div className="">
         <div className="font-classica text-center">
-          <div className="text-md text-[#757279]">Peace</div>
           <div className="text-3xl py-3 uppercase font-[400]">Amenities</div>
         </div>
 
