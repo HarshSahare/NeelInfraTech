@@ -20,7 +20,7 @@ function HeroSection() {
         body: JSON.stringify({
           values: [formData.name, formData.mobile],
           header: ["Name", "Mobile"],
-          sheetName: "landing page banner contact form",
+          sheetName: "Why Choose Us banner contact form",
         }),
       });
       setFormData({ name: "", mobile: "" });

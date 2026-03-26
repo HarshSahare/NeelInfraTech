@@ -34,7 +34,7 @@ function ContactUsModel({
         body: JSON.stringify({
           values: [data.Name, data.Email, data.Phone, data.Message],
           header: ["Name", "Email", "Phone", "Message"],
-          sheetName: "Contact Model Requests",
+          sheetName: "Contact Popup Requests",
         }),
       });
 
