@@ -48,8 +48,6 @@ export default function ExclusivePropertiesSection({
 
   const mergedConfig = { ...defaultConfig, ...config };
 
-  if (!properties?.length) return null;
-
   // Highlights builder
   const highlight = properties.map((property) => {
     if (property.heroSection?.highlights) {
@@ -91,6 +89,8 @@ export default function ExclusivePropertiesSection({
   const prev = () => {
     setCurrent((prev) => (prev - 1 + properties.length) % properties.length);
   };
+
+  if (!properties?.length) return null;
 
   return (
     <section className="py-16 sm:py-20 lg:py-24">
