@@ -67,12 +67,12 @@ const ContactSection = ({ className }: { className?: string }) => {
             INTEREST
           </h1>
 
-          <div className="mt-20 sm:mt-40">
+          <div className="mt-20 sm:mt-40 capitalize">
             <p className="text-base sm:text-lg font-classica font-[400] mt-6">
-              DISCOVER OUR PROJECT
+              fill the form to book your
             </p>
             <p className="text-base sm:text-lg font-classica font-[400] mt-2">
-              FIND A SALES BOUTIQUES
+              free site visit
             </p>
 
             <div className="flex gap-4 items-center mt-6 sm:mt-8 text-2xl">
