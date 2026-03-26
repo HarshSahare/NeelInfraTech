@@ -15,6 +15,7 @@ function Navbar() {
   const mobile_menu_container = useRef<HTMLDivElement>(null);
   const navbar = useRef<HTMLDivElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const timeline = gsap.timeline();
   const isMenuOpenRef = useRef(isMenuOpen);
 
@@ -49,12 +50,28 @@ function Navbar() {
     navbar.current?.classList.remove("opacity-0", "pointer-events-none");
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <div
         ref={navbar}
         className={`fixed  md:block flex items-center top-0 left-0 z-50 w-full min-h-[var(--navbar-h)] backdrop-blur-md ${
-          isMenuOpen ? "bg-black/80" : "bg-[#00000042]"
+          isMenuOpen
+            ? "bg-black/80"
+            : isScrolled
+              ? "bg-black/60"
+              : "bg-[#00000042]"
         }`}
       >
         <div className="w-screen hidden md:flex bg-white  overflow-hidden">
