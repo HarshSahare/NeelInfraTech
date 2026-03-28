@@ -74,6 +74,10 @@ function ContactUsModel({
           Get in Touch
         </div>
 
+        <h2 className="capitalize font-poppins text-gray-600">
+          fill the form to book your free site visit or get property details
+        </h2>
+
         <form className="space-y-4 mt-4" onSubmit={handleSubmit}>
           {/* Name Field */}
           <div className="relative">
@@ -94,7 +98,6 @@ function ContactUsModel({
             <input
               type="email"
               value={data.Email}
-              required
               onChange={(e) => setData({ ...data, Email: e.target.value })}
               placeholder="Email"
               className="w-full pl-10 pr-4 py-3 border placeholder:text-[#75727999] border-[#D1D5DB] rounded-md outline-none focus:ring-2 focus:ring-[#D1D5DB]"

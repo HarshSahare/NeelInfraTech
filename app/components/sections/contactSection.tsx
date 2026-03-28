@@ -139,7 +139,6 @@ const ContactSection = ({ className }: { className?: string }) => {
             <input
               type="email"
               value={data.Email}
-              required
               onChange={(e) => setData({ ...data, Email: e.target.value })}
               className="w-full border-b border-black outline-none py-2"
             />

@@ -9,6 +9,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa";
 import { ContactLinks } from "@/app/lib/contactLinks";
+import { Company } from "@/app/lib/company";
 
 function Navbar() {
   const mobile_menu = useRef<HTMLDivElement>(null);
@@ -77,7 +78,7 @@ function Navbar() {
         <div className="w-screen hidden md:flex bg-white  overflow-hidden">
           <div className="flex-4 p-2 flex pl-30 text-xl items-center ">
             <MdLocalPhone className="mr-2" />
-            +91 XXXXXXXXXX
+            {Company.phone}
           </div>
           <div className="flex-1 p-2 flex items-center pr-40 justify-end relative">
             <div
