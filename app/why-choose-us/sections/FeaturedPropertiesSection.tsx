@@ -53,12 +53,11 @@ export default function FeaturedPropertiesSection() {
 
                   {/* Description */}
                   <p
+                    dangerouslySetInnerHTML={{ __html: item.gallery.text }}
                     className={`text-sm text-gray-600 mb-2 transition-all ${
                       isExpanded ? "" : "line-clamp-3"
                     }`}
-                  >
-                    {item.gallery.text}
-                  </p>
+                  ></p>
 
                   {/* Toggle Button */}
                   <button
