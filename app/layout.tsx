@@ -25,9 +25,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Neel Infra Tech | Premium Plots in Nagpur",
+  title: "Neelinfratech | Premium Plots in Nagpur",
   description:
-    "Neel Infratech is a real estate consulting and land development company that helps investors build secure wealth through strategic land investments in Nagpur.",
+    "Neelinfratech is a real estate consulting and land development company that helps investors build secure wealth through strategic land investments in Nagpur.",
 
   keywords: [
     "plots in Nagpur",
@@ -38,14 +38,14 @@ export const metadata = {
     "premium plots in Nagpur",
   ],
 
-  authors: [{ name: "Neel Infra Tech" }],
+  authors: [{ name: "Neelinfratech" }],
 
   openGraph: {
-    title: "Neel Infra Tech",
+    title: "Neelinfratech",
     description:
-      "Neel Infratech is a real estate consulting and land development company that helps investors build secure wealth through strategic land investments in Nagpur.",
+      "Neelinfratech is a real estate consulting and land development company that helps investors build secure wealth through strategic land investments in Nagpur.",
     url: "https://www.neelinfratech.com",
-    siteName: "Neel Infra Tech",
+    siteName: "Neelinfratech",
     images: [
       {
         url: Properties["vrindavan park"].bannerImage,
