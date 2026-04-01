@@ -251,7 +251,7 @@ export async function generateMetadata({
   const highlights = property.heroSection?.highlights || [];
 
   return {
-    title: `${property.title} | Plots in Nagpur | Neel Infra Tech`,
+    title: `${property.title} | Plots in Nagpur | Neel Infratech`,
 
     description: `${property.title} offers premium residential plots in Nagpur with features like ${highlights.slice(0, 3).join(", ")}. Ideal for investment and future growth.`,
 

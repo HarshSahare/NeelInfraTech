@@ -236,13 +236,13 @@ function StoriesPage() {
 export default StoriesPage;
 
 export const metadata = {
-  title: "About Neel Infra Tech | Trusted Real Estate Developer in Nagpur",
+  title: "About Neel Infratech | Trusted Real Estate Developer in Nagpur",
 
   description:
-    "Learn about Neel Infra Tech, a trusted real estate developer in Nagpur offering premium residential and investment plots with transparency and long-term value.",
+    "Learn about Neel Infratech, a trusted real estate developer in Nagpur offering premium residential and investment plots with transparency and long-term value.",
 
   keywords: [
-    "Neel Infra Tech",
+    "Neel Infratech",
     "real estate company in Nagpur",
     "trusted property developer Nagpur",
     "Nagpur real estate company",
@@ -250,11 +250,11 @@ export const metadata = {
   ],
 
   openGraph: {
-    title: "About Neel Infra Tech",
+    title: "About Neel Infratech",
     description:
-      "Discover the vision, mission, and leadership behind Neel Infra Tech in Nagpur.",
+      "Discover the vision, mission, and leadership behind Neel Infratech in Nagpur.",
     url: "https://www.neelinfratech.com/about",
-    siteName: "Neel Infra Tech",
+    siteName: "Neel Infratech",
     images: [
       {
         url: "/images/storiesBanner.png",

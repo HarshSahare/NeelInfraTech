@@ -2,10 +2,10 @@ import ClientPage from "./ClientPage";
 
 export const metadata = {
   title:
-    "Residential & Investment Plots in Nagpur | All Projects | Neel Infra Tech",
+    "Residential & Investment Plots in Nagpur | All Projects | Neel Infratech",
 
   description:
-    "Browse all residential and investment plots in Nagpur by Neel Infra Tech. Explore ongoing and completed projects with high growth potential.",
+    "Browse all residential and investment plots in Nagpur by Neel Infratech. Explore ongoing and completed projects with high growth potential.",
 
   keywords: [
     "plots in Nagpur",
@@ -17,11 +17,11 @@ export const metadata = {
   ],
 
   openGraph: {
-    title: "Plots in Nagpur | Neel Infra Tech",
+    title: "Plots in Nagpur | Neel Infratech",
     description:
       "Explore all ongoing and completed plot projects in Nagpur with excellent connectivity.",
     url: "https://www.neelinfratech.com/properties",
-    siteName: "Neel Infra Tech",
+    siteName: "Neel Infratech",
     images: [
       {
         url: "/images/propertiesDetailedBanner.png",
