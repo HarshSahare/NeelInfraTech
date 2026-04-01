@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import Footer from "./components/layout/footer";
 import { Properties } from "./lib/properties";
+import Script from "next/script";
 
 const Classica = localFont({
   src: [
@@ -68,6 +69,20 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-MYJCPB51Q8"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MYJCPB51Q8');
+          `}
+        </Script>
       </body>
     </html>
   );
