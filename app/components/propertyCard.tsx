@@ -69,7 +69,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
         )}
 
-        <div className="w-fit mt-5 h-fit">
+        <div className="mt-5 flex flex-col sm:flex-row gap-2">
           <Link
             className="bg-black font-400 font-poppins cursor-pointer text-[#F5F5F5]   py-2 px-6 rounded-[23px] text-[11px]"
             style={{ padding: "15px 28px" }}
@@ -77,7 +77,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           >
             Learn More
           </Link>
-          <a
+          <Link
             target="_blank"
             rel="noopener noreferrer"
             href={brochure}
@@ -85,7 +85,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             className="backdrop-blur-xl bg-[#d9d9d900] min-w-fit cursor-pointer font-400 mx-2 font-poppins text-black border-1 border-black py-2 px-6 rounded-[23px] text-[11px]"
           >
             Download Brochure
-          </a>
+          </Link>
         </div>
       </div>
     </div>
