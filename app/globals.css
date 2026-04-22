@@ -1,7 +1,16 @@
 @import "tailwindcss";
 
 :root {
-    --navbar-h: 94px
+    --navbar-h: 94px;
+    --navy: #0B1629;
+    --blue: #1A3A6B;
+    --gold: #C9960C;
+    --gold-l: #FBF0D0;
+    --red: #C41E3A;
+    --white: #fff;
+    --light: #F4F6FB;
+    --text: #1A1A2E;
+    --muted: #6B7280
 }
 
 html,
