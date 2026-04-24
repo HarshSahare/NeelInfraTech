@@ -3,10 +3,12 @@
 import { useState } from "react";
 import styles from "./style.module.css";
 import { Company } from "../lib/company";
+import { useRouter } from "next/navigation";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -45,7 +47,7 @@ export default function ContactForm() {
         }),
       });
 
-      alert("Successfully sent the request");
+      router.push("/thankyou");
 
       setFormData({
         name: "",
@@ -65,7 +67,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className={styles.fb}>
+    <div className={styles.fb} id="contact">
       <h3>📋 Book Site Visit / Get Details</h3>
       <p>Executive will call within 2 hours</p>
 

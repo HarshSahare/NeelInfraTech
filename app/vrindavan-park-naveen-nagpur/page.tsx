@@ -8,8 +8,6 @@ export default function VrindavanPark() {
     <>
       <section className={styles.hero}>
         <div className={styles["hero-ring"]}></div>
-        <div className={styles["hero-ring2"]}></div>
-
         <div className={styles.tag}>Limited Plots · Hingna, Nagpur</div>
 
         <h1>
@@ -492,7 +490,7 @@ export default function VrindavanPark() {
       </section>
 
       {/* FORM */}
-      <section className={styles["form-sec"]} id="contact">
+      <section className={styles["form-sec"]} >
         <div className={styles["form-wrap"]}>
           <div className={styles.fl}>
             <div className={styles["sec-tag"]}>Get Full Details Free</div>
