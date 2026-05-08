@@ -1,5 +1,7 @@
 import { ProjectData } from "@/app/types/projectPage";
 import styles from "./project-page.module.css";
+import { Company } from "@/app/lib/company";
+import Link from "next/link";
 
 interface Props {
   project: ProjectData;
@@ -37,14 +39,14 @@ export default function ProjectHero({ project, onEnquire }: Props) {
               📅 Book a Site Visit
             </button>
 
-            <a
+            <Link
               className={`${styles.btn} ${styles.btnWa}`}
-              href={`wa.me${project.whatsappText}`}
+              href={`https://wa.me/${Company.phone}?text=${encodeURIComponent(project.whatsappText)}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               💬 Chat on WhatsApp
-            </a>
+            </Link>
           </div>
         </div>
       </div>
