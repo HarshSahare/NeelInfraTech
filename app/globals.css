@@ -10,7 +10,25 @@
     --white: #fff;
     --light: #F4F6FB;
     --text: #1A1A2E;
-    --muted: #6B7280
+    --muted: #6B7280;
+    --royal: #1e3a8a;
+    --royal-dark: #0f2566;
+    --royal-light: #4f6bc4;
+    --gold: #c9a449;
+    --cream: #faf7f2;
+    --ink: #1f1a1a;
+    --slate: #5a5050;
+    --line: #e8e2dc;
+    --white: #ffffff;
+    --maroon: #1e3a8a;
+    --maroon-dark: #0f2566;
+    --maroon-light: #4f6bc4;
+    --gold: #c9a449;
+    --cream: #faf7f2;
+    --ink: #1f1a1a;
+    --slate: #5a5050;
+    --line: #e8e2dc;
+    --white: #ffffff;
 }
 
 html,
