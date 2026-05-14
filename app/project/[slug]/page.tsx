@@ -38,3 +38,9 @@ export default async function Page({
 
   return <ProjectPage project={project} />;
 }
+
+export async function generateStaticParams() {
+  return Object.keys(projects).map((key) => ({
+    slug: key,
+  }));
+}
