@@ -9,7 +9,9 @@ import { FaFacebookF } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa";
 import { ContactLinks } from "@/app/lib/contactLinks";
+import { IoChevronDown } from "react-icons/io5";
 import { Company } from "@/app/lib/company";
+import { projects } from "@/app/lib/project";
 
 function Navbar() {
   const mobile_menu = useRef<HTMLDivElement>(null);
@@ -19,6 +21,7 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const timeline = gsap.timeline();
   const isMenuOpenRef = useRef(isMenuOpen);
+  const [isPropertiesOpen, setIsPropertiesOpen] = useState(false);
 
   useGSAP(() => {
     if (isMenuOpen) {
@@ -126,12 +129,28 @@ function Navbar() {
             >
               Why Choose Us
             </Link>
-            <Link
-              className="hover:text-white cursor-pointer"
-              href="/properties"
-            >
-              Our Properties
-            </Link>
+            <div className="relative group">
+              <Link
+                className="hover:text-white cursor-pointer flex items-center gap-1"
+                href="/properties"
+              >
+                Our Properties
+              </Link>
+
+              <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="bg-black/50 min-w-[220px] text-white flex flex-col shadow-lg">
+                  {Object.keys(projects).map((key) => (
+                    <Link
+                      key={key}
+                      href={`/project/${key}`}
+                      className="px-5 py-3 hover:bg-white hover:text-black transition-all"
+                    >
+                      {key.split("-").join(" ")}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Desktop Logo */}
@@ -210,9 +229,45 @@ function Navbar() {
           <Link href="/why-choose-us" onClick={() => setIsMenuOpen(false)}>
             Why Choose Us
           </Link>
-          <Link href="/properties" onClick={() => setIsMenuOpen(false)}>
-            Our Properties
-          </Link>
+          <div className="flex flex-col">
+            <div className="flex items-center justify-between">
+              <Link
+                href="/properties"
+                onClick={() => setIsMenuOpen(false)}
+                className="flex-1"
+              >
+                Our Properties
+              </Link>
+
+              <button
+                onClick={() => setIsPropertiesOpen((prev) => !prev)}
+                className="ml-3 p-1"
+              >
+                <IoChevronDown
+                  className={`transition-transform duration-300 ${
+                    isPropertiesOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+            </div>
+
+            <div
+              className={`overflow-hidden transition-all duration-300 flex flex-col pl-4 ${
+                isPropertiesOpen ? "max-h-60 mt-3" : "max-h-0"
+              }`}
+            >
+              {Object.keys(projects).map((key) => (
+                <Link
+                  key={key}
+                  href={`/project/${key}`}
+                  className="py-2 text-base text-gray-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {key.split("-").join(" ")}
+                </Link>
+              ))}
+            </div>
+          </div>
           <a href="#contact" onClick={() => setIsMenuOpen(false)}>
             Contact Us
           </a>

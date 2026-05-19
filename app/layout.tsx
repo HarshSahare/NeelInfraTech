@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import Footer from "./components/layout/footer";
 import { Properties } from "./lib/properties";
 import Script from "next/script";
+import FloatingWhatsapp from "./components/project-page/FloatingWhatsapp";
 
 const Classica = localFont({
   src: [
@@ -68,6 +69,9 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <FloatingWhatsapp
+          text={"I am interested in buying real estate plots in nagpur"}
+        />
         <Footer />
 
         <Script

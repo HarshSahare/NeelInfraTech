@@ -162,7 +162,7 @@ export const projects: Record<string, ProjectData> = {
     location: {
       title: "Three Highways. One Address.",
 
-      mapImage: "/images/projects/vp12/map.jpg",
+      mapImage: "/images/projects/vp12_map.jpg",
 
       items: [
         {

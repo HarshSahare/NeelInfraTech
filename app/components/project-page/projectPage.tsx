@@ -116,8 +116,6 @@ export default function ProjectPage({ project }: Props) {
         onEnquire={openModal}
       />
 
-      <FloatingWhatsapp text={project.whatsappText} />
-
       <EnquiryModal
         isOpen={open}
         onClose={closeModal}
