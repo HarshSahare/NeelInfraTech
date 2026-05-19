@@ -14,7 +14,6 @@ import LocationAdvantages from "./LocationAdvantages";
 import FAQSection from "./FAQSection";
 import FinalCTA from "./FinalCTA";
 import EnquiryModal from "./EnquiryModal";
-import FloatingWhatsapp from "./FloatingWhatsapp";
 import GallerySection from "./GallerySection";
 import DeveloperSection from "./DeveloperSection";
 
